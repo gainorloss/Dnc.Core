@@ -7,7 +7,7 @@ cd $packPath
 dotnet pack -c release -o bin/release
 $nugetPath=join-path $packPath 'bin/release/'
 cd $nugetPath
-dotnet nuget push Dnc.Core.1.0.7.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+dotnet nuget push Dnc.Core.1.0.7.1.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
 
 $packPath=join-path $workspace 'src/Dnc.AspNetCore'
 cd $packPath
