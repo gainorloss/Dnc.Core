@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.7</Version>
+    <Title>Dnc.Core</Title>
+    <Authors>gainorloss</Authors>
+    <Owners>gainorloss</Owners>
+    <Description>
+    基于StandardLibary的跨平台快速开发框架。
+      1.0.3:日志默认使用serilog输出到文件;
+      1.0.4:添加SqlBulkHelper操作批量更新;
+      1.0.5:
+       1.架构和入口大量调整，大量使用Extensions重构;
+       2.Reademe.md添加极简使用说明;
+       3.去除默认日志，采用默认日志Serilog。
+      1.0.6:添加大量Helpers和Extensions;
+      1.0.7:添加任务调度器。
+    </Description>
+    <PackageProjectUrl>https://gitee.com/gainorloss_259/Dnc.Core</PackageProjectUrl>
+    <RepositoryUrl>https://gitee.com/gainorloss_259/Dnc.Core</RepositoryUrl>
+    <PackageIconUrl>https://avatar.gitee.com/uploads/18/1183118_gainorloss_259.png!avatar100?1529623223</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.extensions.configuration" Version="2.2.0" />
+    <PackageReference Include="microsoft.extensions.configuration.environmentvariables" Version="2.2.0" />
+    <PackageReference Include="microsoft.extensions.configuration.json" Version="2.2.0" />
+    <PackageReference Include="microsoft.extensions.dependencyinjection" Version="2.2.0" />
+    <PackageReference Include="microsoft.extensions.logging" Version="2.2.0" />
+    <PackageReference Include="microsoft.extensions.logging.console" Version="2.2.0" />
+    <PackageReference Include="microsoft.extensions.logging.debug" Version="2.2.0" />
+    <PackageReference Include="quartz" Version="3.0.7" />
+    <PackageReference Include="serilog" Version="2.8.0" />
+    <PackageReference Include="serilog.extensions.logging" Version="2.0.2" />
+    <PackageReference Include="serilog.sinks.console" Version="3.1.1" />
+    <PackageReference Include="serilog.sinks.file" Version="4.0.0" />
+    <PackageReference Include="system.data.sqlclient" Version="4.6.0" />
+  </ItemGroup>
+</Project>
