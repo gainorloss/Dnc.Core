@@ -7,19 +7,21 @@
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
     <Description>
-    基于StandardLibary的跨平台快速开发框架。
+      A dotnet rapid development framework based on  standard library.Get some ideas from AngelSix's Dna.Framework.
+      基于StandardLibary的跨平台快速开发框架。
       1.0.3:日志默认使用serilog输出到文件;
       1.0.4:添加SqlBulkHelper操作批量更新;
       1.0.5:
-       1.架构和入口大量调整，大量使用Extensions重构;
-       2.Reademe.md添加极简使用说明;
-       3.去除默认日志，采用默认日志Serilog。
+        1.架构和入口大量调整，大量使用Extensions重构;
+        2.Reademe.md添加极简使用说明;
+      3.去除默认日志，采用默认日志Serilog。
       1.0.6:添加大量Helpers和Extensions;
       1.0.7:添加任务调度器。
     </Description>
-    <PackageProjectUrl>https://gitee.com/gainorloss_259/Dnc.Core</PackageProjectUrl>
-    <RepositoryUrl>https://gitee.com/gainorloss_259/Dnc.Core</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
     <PackageIconUrl>https://avatar.gitee.com/uploads/18/1183118_gainorloss_259.png!avatar100?1529623223</PackageIconUrl>
+    <Tags>dotnetcore;quartz;serilog;aspnetcore</Tags>
   </PropertyGroup>
 
   <ItemGroup>
