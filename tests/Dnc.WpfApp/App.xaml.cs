@@ -1,5 +1,4 @@
-﻿using Dnc.Framework;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Dnc.WpfApp
 {
@@ -10,12 +9,11 @@ namespace Dnc.WpfApp
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var framework = new DefaultFrameworkConstruction()
-                   .UseScheduleCenter()
-                   .Build();
-            framework.ScheduleCenter.RunScheduleAsync().Wait();//sample schedule.
-            framework.ScheduleCenter
-                .CreateAndRunScheduleAsync("gainorloss", "Dnc.WpfApp.Jobs.HelloJob", "* 5 13 ? * *", "Dnc.WpfApp.exe")
+            var construction = Framework.Construct<DefaultFrameworkConstruction>();
+            construction.Build();
+            construction.ScheduleCenter.RunScheduleAsync().Wait();//sample schedule.
+            construction.ScheduleCenter
+                .CreateAndRunScheduleAsync("gainorloss", "Dnc.WpfApp.Jobs.HelloJob", "0 32 9 ? * *", "Dnc.WpfApp.exe")
                 .Wait();
             base.OnStartup(e);
         }

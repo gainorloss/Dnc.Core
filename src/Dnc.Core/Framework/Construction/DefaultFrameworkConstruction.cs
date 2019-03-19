@@ -1,9 +1,4 @@
-﻿using Dnc.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dnc.Framework
+﻿namespace Dnc
 {
     /// <summary>
     /// Default framework construction.

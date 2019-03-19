@@ -1,22 +1,19 @@
 ﻿using Dnc.Dispatcher;
-using Dnc.Framework;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Dnc.Framework
+namespace Dnc
 {
     public class FrameworkConstruction
     {
         #region Public memebers.
+
         public IServiceCollection Services { get; set; }
         public IConfiguration Configuration { get; set; }
         public FrameworkEnvironment Environment { get; set; }
-
         public ScheduleCenter ScheduleCenter { get; set; }
-
+        public IServiceProvider ServiceProvider { get; set; }
         #endregion
 
         #region Default ctor.
@@ -28,5 +25,40 @@ namespace Dnc.Framework
             Services.AddSingleton(Environment);
         }
         #endregion
+
+
+        /// <summary>
+        /// The entrypoint for the framework.
+        /// </summary>
+        public void Build(IServiceProvider provider=null)
+        {
+            ServiceProvider = provider??Services.BuildServiceProvider();
+        }
+
+        
+        /// <summary>
+        /// Use hosted services.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public FrameworkConstruction UseHostedServices(IServiceCollection services)
+        {
+            Services = services;
+
+            return this;
+        }
+
+
+        /// <summary>
+        /// Use configuration.
+        /// </summary>
+        /// <param name="configuration"></param>
+        /// <returns></returns>
+        public FrameworkConstruction UseConfiguration(IConfiguration configuration)
+        {
+            Configuration = configuration;
+
+            return this;
+        }
     }
 }

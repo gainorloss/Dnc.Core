@@ -7,7 +7,7 @@ using Serilog.Events;
 using System;
 using System.IO;
 
-namespace Dnc.Framework
+namespace Dnc
 {
     /// <summary>
     /// Extension methods from framework.

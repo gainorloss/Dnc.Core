@@ -1,0 +1,3 @@
+2019-03-19 10:28:55.920 +08:00 [FTL] Framework start up in Development.
+2019-03-19 10:29:49.290 +08:00 [FTL] Framework start up in Development.
+2019-03-19 10:42:04.005 +08:00 [FTL] Framework start up in Development.

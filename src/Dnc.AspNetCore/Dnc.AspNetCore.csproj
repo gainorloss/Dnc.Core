@@ -7,4 +7,12 @@
     <Description>A rapid developement framework to use create aspnetcore web apps.</Description>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="microsoft.aspnetcore.hosting" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dnc.Core\Dnc.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.Framework
+namespace Dnc
 {
     /// <summary>
     /// Framework environment.

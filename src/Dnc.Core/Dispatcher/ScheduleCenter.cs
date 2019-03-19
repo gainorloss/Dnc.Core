@@ -17,18 +17,19 @@ namespace Dnc.Dispatcher
     public class ScheduleCenter
     {
         #region Private Members.
-        private static ISchedulerFactory _schedulerFactory;
+        private static IScheduler _scheduler;
         private static List<Schedule> _schedules = new List<Schedule>();
         #endregion 
 
         #region Static ctor.
         static ScheduleCenter()
         {
-            if (_schedulerFactory == null)
+            if (_scheduler == null)
             {
-                var nameValues = new NameValueCollection();
-                _schedulerFactory = new StdSchedulerFactory(nameValues);
+                var properties = new NameValueCollection();
+                var schedulerFactory = new StdSchedulerFactory(properties);
 
+                _scheduler = schedulerFactory.GetScheduler().Result;
                 _schedules.Add(new Schedule()
                 {
                     Name = "default",
@@ -46,8 +47,7 @@ namespace Dnc.Dispatcher
            string groupName = "default")
         {
             //get scheduler from scheduler factory.
-            var scheduler = await _schedulerFactory.GetScheduler();
-            await scheduler.Start();
+            await _scheduler.Start();
 
             var schedule = _schedules.SingleOrDefault(s => s.GroupName.Equals(groupName) && s.Name.Equals(name));
 
@@ -59,20 +59,22 @@ namespace Dnc.Dispatcher
             var assembly = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, schedule.AssemblyName));
             var job = assembly.CreateInstance(schedule.TypeName);
 
+            var key = $"{schedule.GroupName}-{schedule.Name}";
+
             var jobDetail = JobBuilder.Create(job.GetType())
-                .WithIdentity($"{schedule.GroupName}-{schedule.Name}")
+                .WithIdentity(key)
                 .Build();
 
             var schedueBuiler = CronScheduleBuilder.CronSchedule(schedule.CronExpression);
 
             var trigger = TriggerBuilder.Create()
                 .StartNow()
-                .WithIdentity($"{schedule.GroupName}-{schedule.Name}")
+                .WithIdentity(key)
                 .WithSchedule(schedueBuiler)
                 .ForJob(jobDetail)
                 .Build();
 
-            await scheduler.ScheduleJob(jobDetail, trigger);
+            await _scheduler.ScheduleJob(jobDetail, trigger);
         }
 
 
@@ -85,7 +87,7 @@ namespace Dnc.Dispatcher
             _schedules.Add(new Schedule(name, typeName, cronExpression, assemblyName, groupName));
 
             await RunScheduleAsync(name, groupName);
-        } 
+        }
         #endregion
     }
 }
