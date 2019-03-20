@@ -30,18 +30,18 @@ namespace Dnc
         public static FrameworkConstruction Construct<T>()
             where T : FrameworkConstruction, new()
         {
-            var construction = new T();
+            Construction = new T();
 
-            return construction;
+            return Construction;
         }
 
 
         public static FrameworkConstruction Construct<T>(T constructionInstance)
            where T : FrameworkConstruction
         {
-            var construction = constructionInstance;
+            Construction = constructionInstance;
 
-            return construction;
+            return Construction;
         }
     }
 }

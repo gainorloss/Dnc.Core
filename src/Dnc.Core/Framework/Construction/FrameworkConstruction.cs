@@ -30,9 +30,11 @@ namespace Dnc
         /// <summary>
         /// The entrypoint for the framework.
         /// </summary>
-        public void Build(IServiceProvider provider=null)
+        public FrameworkConstruction Build(IServiceProvider provider=null)
         {
             ServiceProvider = provider??Services.BuildServiceProvider();
+
+            return this;
         }
 
         
