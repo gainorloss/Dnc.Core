@@ -50,3 +50,5 @@ var framework = new DefaultFrameworkConstruction()
                 .CreateAndRunScheduleAsync("gainorloss", "Dnc.WpfApp.Jobs.HelloJob", "* 5 13 ? * *", "Dnc.WpfApp.exe")
                 .Wait();
 ```
+
+## Using TasksManager(Base on Parallel and Tasks).
