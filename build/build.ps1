@@ -2,12 +2,12 @@
 .description 
 Used to release my project,generate nuget and push it to nuget.org automatically.
 .example 
-build.ps1 -version 1.0.7.2
+build.ps1 -version 1.0.7.3
 #>
 [cmdletbinding()]
 param(
    [parameter(mandatory=$true)]
-   [string]$version=1.0.7.2,
+   [string]$version=1.0.7.3,
    [parameter(mandatory=$true)]
    [string]$version2=1.0.0
 )

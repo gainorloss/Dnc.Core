@@ -52,3 +52,20 @@ var framework = new DefaultFrameworkConstruction()
 ```
 
 ## Using TasksManager(Base on Parallel and Tasks).
+
+## LinqExtensions 
+
+```c#
+var items = Enumerable.Range(0, 100);//批次任务
+
+            items.Page(30, selected =>
+            {
+                System.Console.WriteLine(string.Join(",", selected));//同步处理
+            });
+
+            var log = items.Parallel(30, selected =>
+              {
+                  System.Console.WriteLine(string.Join(",", selected));//并行处理
+              });
+         System.Console.WriteLine(log);
+```
