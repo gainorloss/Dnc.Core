@@ -1,6 +1,7 @@
 ﻿# Dnc.Core
 
 ## First
+![Dnc.Core/1.0.7.3](https://www.nuget.org/packages/Dnc.Core/1.0.7.3)
 > install-package Dnc.Core
 
 
