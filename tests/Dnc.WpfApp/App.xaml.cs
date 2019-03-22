@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
+using Dnc.Extensions;
 
 namespace Dnc.WpfApp
 {
@@ -16,6 +18,12 @@ namespace Dnc.WpfApp
             framework.ScheduleCenter
                 .CreateAndRunScheduleAsync("gainorloss", "Dnc.WpfApp.Jobs.HelloJob", "0 32 9 ? * *", "Dnc.WpfApp.exe")
                 .Wait();
+
+            var items = Enumerable.Range(0, 1000000);
+            items.Page(100, selected =>
+            {
+                System.Console.WriteLine(string.Join(",",selected));
+            });
             base.OnStartup(e);
         }
     }
