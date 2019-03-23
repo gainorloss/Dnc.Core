@@ -41,5 +41,6 @@
     <PackageReference Include="serilog.sinks.console" Version="3.1.1" />
     <PackageReference Include="serilog.sinks.file" Version="4.0.0" />
     <PackageReference Include="system.data.sqlclient" Version="4.6.0" />
+    <PackageReference Include="system.diagnostics.performancecounter" Version="4.5.0" />
   </ItemGroup>
 </Project>

@@ -30,14 +30,18 @@ namespace Dnc.Dispatcher
                 var schedulerFactory = new StdSchedulerFactory(properties);
 
                 _scheduler = schedulerFactory.GetScheduler().Result;
-                _schedules.Add(new Schedule()
+
+                if (Framework.Construction.Environment.IsDevelopment)
                 {
-                    Name = "default",
-                    GroupName = "default",
-                    CronExpression = "* 30 11 ? * *",
-                    AssemblyName = "Dnc.Core.dll",
-                    TypeName = "Dnc.Dispatcher.HelloJob"
-                });
+                    _schedules.Add(new Schedule()
+                    {
+                        Name = "default",
+                        GroupName = "default",
+                        CronExpression = "*/1 * * ? * *",
+                        AssemblyName = "Dnc.Core.dll",
+                        TypeName = "Dnc.Dispatcher.HelloJob"
+                    });
+                }
             }
         }
         #endregion

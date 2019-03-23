@@ -1,4 +1,6 @@
 ﻿using Dnc.Dispatcher;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Quartz;
 using System;
 using System.Collections.Generic;
@@ -13,7 +15,9 @@ namespace Dnc.WpfApp.Jobs
     {
         public override async Task ExecuteJobAsync(IJobExecutionContext context)
         {
-            await Task.Run(() => Console.WriteLine($"{DateTime.Now.ToLongTimeString()}"));
+            await Task.Run(() => Framework.Construction.ServiceProvider
+            .GetRequiredService<ILogger>()
+            .LogInformation($"{DateTime.Now.ToLongTimeString()}"));
         }
     }
 }

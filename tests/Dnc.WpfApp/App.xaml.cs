@@ -1,7 +1,9 @@
 ﻿using System.Linq;
 using System.Threading;
 using System.Windows;
+using Dnc.Core.Helpers;
 using Dnc.Extensions;
+using Dnc.Helpers;
 using Dnc.Serializers;
 using Dnc.WpfApp.Tests;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,13 +17,22 @@ namespace Dnc.WpfApp
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var framework = new DefaultFrameworkConstruction()
+            var framework = Framework.Construct<DefaultFrameworkConstruction>()
                 .UseScheduleCenter()
                 .Build();
-            framework.ScheduleCenter.RunScheduleAsync().Wait();//sample schedule.
-            framework.ScheduleCenter
-                .CreateAndRunScheduleAsync("gainorloss", "Dnc.WpfApp.Jobs.HelloJob", "0 32 9 ? * *", "Dnc.WpfApp.exe")
-                .Wait();
+
+            var scheduler = framework.ScheduleCenter;
+
+            scheduler.RunScheduleAsync()
+                .ConfigureAwait(false)
+                .GetAwaiter();//sample schedule.
+
+            scheduler.CreateAndRunScheduleAsync("gainorloss",
+                "Dnc.WpfApp.Jobs.HelloJob",
+                "* */1 * ? * *",
+                "Dnc.WpfApp.exe")
+                .ConfigureAwait(false)
+                .GetAwaiter();
 
             var items = Enumerable.Range(0, 100);//批次任务
 
@@ -40,6 +51,7 @@ namespace Dnc.WpfApp
             //serializers.
             new SerializerTest(framework.ServiceProvider.GetRequiredService<IMessageSerializer>())
                 .Test();
+
             base.OnStartup(e);
         }
     }

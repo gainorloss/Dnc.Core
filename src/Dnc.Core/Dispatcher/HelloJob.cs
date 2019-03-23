@@ -1,4 +1,7 @@
-﻿using Quartz;
+﻿using Dnc.Helpers;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Quartz;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +14,11 @@ namespace Dnc.Dispatcher
     {
         public override async Task ExecuteJobAsync(IJobExecutionContext context)
         {
-            await Task.Run(() => Console.WriteLine($"{DateTime.Now.ToLongTimeString()}"));
+            await Task.Run(() =>
+            {
+                PerformanceMonitor.MonitorCurrentProcess();
+                //PerformanceMonitor.MonitorProcessByName("ET.Erp.Main");
+            });
         }
     }
 }
