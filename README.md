@@ -82,3 +82,10 @@ var items = Enumerable.Range(0, 100);//批次任务
               });
          System.Console.WriteLine(log);
 ```
+
+## Using PerformanceMonitor
+```c#
+            PerformanceMonitor.MonitorCurrentProcess();//Monitor current process.
+            PerformanceMonitor.MonitorProcessByName("dotnet");//Monitor dotnet.exe.
+```
+

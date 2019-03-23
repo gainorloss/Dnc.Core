@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.Core", "src\Dnc.Core\Dn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.AspNetCore", "src\Dnc.AspNetCore\Dnc.AspNetCore.csproj", "{F132CAE6-DB08-4226-9FE5-A29DD97EE18C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnc.API", "tests\Dnc.API\Dnc.API.csproj", "{F1E4BB90-0E72-41FB-9B49-1D6E41C9A9B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.API", "tests\Dnc.API\Dnc.API.csproj", "{F1E4BB90-0E72-41FB-9B49-1D6E41C9A9B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

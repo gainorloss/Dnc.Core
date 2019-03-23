@@ -23,16 +23,16 @@ namespace Dnc.WpfApp
 
             var scheduler = framework.ScheduleCenter;
 
-            scheduler.RunScheduleAsync()
-                .ConfigureAwait(false)
-                .GetAwaiter();//sample schedule.
+            //scheduler.RunScheduleAsync()
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter();//sample schedule.
 
-            scheduler.CreateAndRunScheduleAsync("gainorloss",
-                "Dnc.WpfApp.Jobs.HelloJob",
-                "* */1 * ? * *",
-                "Dnc.WpfApp.exe")
-                .ConfigureAwait(false)
-                .GetAwaiter();
+            //scheduler.CreateAndRunScheduleAsync("gainorloss",
+            //    "Dnc.WpfApp.Jobs.HelloJob",
+            //    "* */1 * ? * *",
+            //    "Dnc.WpfApp.exe")
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter();
 
             var items = Enumerable.Range(0, 100);//批次任务
 
@@ -52,6 +52,9 @@ namespace Dnc.WpfApp
             new SerializerTest(framework.ServiceProvider.GetRequiredService<IMessageSerializer>())
                 .Test();
 
+
+            PerformanceMonitor.MonitorCurrentProcess();//Monitor current process.
+            PerformanceMonitor.MonitorProcessByName("dotnet");//Monitor dotnet.exe.
             base.OnStartup(e);
         }
     }
