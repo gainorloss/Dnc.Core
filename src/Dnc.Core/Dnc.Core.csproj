@@ -33,6 +33,8 @@
     <PackageReference Include="microsoft.extensions.logging" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.logging.console" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.logging.debug" Version="2.2.0" />
+    <PackageReference Include="newtonsoft.json" Version="12.0.1" />
+    <PackageReference Include="protobuf-net" Version="2.4.0" />
     <PackageReference Include="quartz" Version="3.0.7" />
     <PackageReference Include="serilog" Version="2.8.0" />
     <PackageReference Include="serilog.extensions.logging" Version="2.0.2" />

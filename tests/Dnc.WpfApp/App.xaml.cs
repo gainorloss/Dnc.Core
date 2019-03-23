@@ -2,6 +2,9 @@
 using System.Threading;
 using System.Windows;
 using Dnc.Extensions;
+using Dnc.Serializers;
+using Dnc.WpfApp.Tests;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Dnc.WpfApp
 {
@@ -32,6 +35,11 @@ namespace Dnc.WpfApp
                   System.Console.WriteLine(string.Join(",", selected));//并行处理
               });
             System.Console.WriteLine(log);
+
+
+            //serializers.
+            new SerializerTest(framework.ServiceProvider.GetRequiredService<IMessageSerializer>())
+                .Test();
             base.OnStartup(e);
         }
     }
