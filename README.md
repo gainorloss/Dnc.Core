@@ -11,7 +11,7 @@
 ## Use this in the entry point of your application: 
 
 ```c#
-new DefaultFrameworkConstruction()
+var framework = Framework.Construct<DefaultFrameworkConstruction>()
                 .Build();
 ```
 
@@ -46,13 +46,22 @@ using Dnc.Helpers;
 3. Framework enable dispatcher.
 
 ```c#
-var framework = new DefaultFrameworkConstruction()
-                   .UseScheduleCenter()
-                   .Build();
-            framework.ScheduleCenter.RunScheduleAsync().Wait();//sample schedule.
-            framework.ScheduleCenter
-                .CreateAndRunScheduleAsync("gainorloss", "Dnc.WpfApp.Jobs.HelloJob", "* 5 13 ? * *", "Dnc.WpfApp.exe")
-                .Wait();
+var framework = Framework.Construct<DefaultFrameworkConstruction>()
+                .UseScheduleCenter()
+                .Build();
+           
+            var scheduler = framework.ScheduleCenter;
+
+            scheduler.RunScheduleAsync()
+                .ConfigureAwait(false)
+                .GetAwaiter();//sample schedule.
+
+            scheduler.CreateAndRunScheduleAsync("gainorloss",
+                "Dnc.WpfApp.Jobs.HelloJob",
+                "* */1 * ? * *",
+                "Dnc.WpfApp.exe")
+                .ConfigureAwait(false)
+                .GetAwaiter();
 ```
 
 ## Using TasksManager(Base on Parallel and Tasks).
