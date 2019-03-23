@@ -10,7 +10,8 @@
         public DefaultFrameworkConstruction()
         {
             this.Configure()
-                .UseDefaultLogger();
+                .UseDefaultLogger()
+                .UseDefaultSerializer();//use protobuf-net serializer.
         } 
         #endregion
     }

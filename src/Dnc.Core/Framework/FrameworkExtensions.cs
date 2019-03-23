@@ -1,4 +1,5 @@
 ﻿using Dnc.Dispatcher;
+using Dnc.Serializers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -71,6 +72,16 @@ namespace Dnc
             construction.ScheduleCenter = scheduleCenter;
 
             construction.Services.AddSingleton(scheduleCenter);
+
+            return construction;
+        }
+
+
+        public static FrameworkConstruction UseDefaultSerializer(this FrameworkConstruction construction,
+            Func<IServiceCollection, IMessageSerializer> configureSerializer = null)
+        {
+            var serializer =(configureSerializer?.Invoke(construction.Services))??new ProtobufSerializer();
+            construction.Services.AddSingleton<IMessageSerializer>(serializer);
 
             return construction;
         }
