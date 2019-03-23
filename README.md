@@ -3,7 +3,7 @@
 
 ## First
 
-[![Dnc.Core/1.0.7.3](https://img.shields.io/badge/nuget-1.0.7.3-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.0.7.3)
+[![Dnc.Core/1.0.7.4](https://img.shields.io/badge/nuget-1.0.7.4-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.0.7.4)
 
 > install-package Dnc.Core
 
