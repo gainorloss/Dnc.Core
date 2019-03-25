@@ -6,6 +6,7 @@ using Dnc.Extensions;
 using Dnc.Helpers;
 using Dnc.Serializers;
 using Dnc.WpfApp.Tests;
+using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Dnc.WpfApp
@@ -55,6 +56,17 @@ namespace Dnc.WpfApp
 
             PerformanceMonitor.MonitorCurrentProcess();//Monitor current process.
             PerformanceMonitor.MonitorProcessByName("dotnet");//Monitor dotnet.exe.
+
+
+            var hubConnection = new HubConnectionBuilder()
+                .WithUrl("http://localhost:5000/messagingHub")
+                .Build();
+            hubConnection.On<string>("ReceiveMessageAsync", message =>
+            {
+                MessageBox.Show(message);
+            });
+            hubConnection.StartAsync().ConfigureAwait(false).GetAwaiter();
+            hubConnection.InvokeAsync("SendMessageAsync").ConfigureAwait(false).GetAwaiter();
             base.OnStartup(e);
         }
     }
