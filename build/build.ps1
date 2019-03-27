@@ -36,4 +36,4 @@ cd $packPath
 dotnet pack -c release -o bin/release
 $nugetPath=join-path $packPath 'bin/release/'
 cd $nugetPath
-dotnet nuget push Dnc.AspNetCore.$version2.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+dotnet nuget push Dnc.WPF.$version3.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
