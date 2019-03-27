@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.1</Version>
+    <Title>Dnc.WPF</Title>
+    <Authors>gainorloss</Authors>
+    <Owners>gainorloss</Owners>
+    <Description>
+      A dotnet rapid development framework based on  standard library.Get some ideas from AngelSix's Dna.Framework.
+    </Description>
+    <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
+    <PackageIconUrl>https://avatar.gitee.com/uploads/18/1183118_gainorloss_259.png!avatar100?1529623223</PackageIconUrl>
+    <Tags>WPF</Tags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="propertychanged.fody" Version="2.6.0" />
+  </ItemGroup>
+
+</Project>
