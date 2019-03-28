@@ -11,7 +11,7 @@
         {
             this.Configure()
                 .UseDefaultLogger()
-                .UseDefaultSerializer();//use protobuf-net serializer.
+                .UseDefaultSerializer();//use json-net serializer.
         } 
         #endregion
     }

@@ -78,10 +78,18 @@ namespace Dnc
 
 
         public static FrameworkConstruction UseDefaultSerializer(this FrameworkConstruction construction,
-            Func<IServiceCollection, IMessageSerializer> configureSerializer = null)
+            Func<IMessageSerializer> configureSerializer = null)
         {
-            var serializer =(configureSerializer?.Invoke(construction.Services))??new NewtonsoftJsonSerializer();
-            construction.Services.AddSingleton<IMessageSerializer>(serializer);
+            var serializer =(configureSerializer?.Invoke())??new NewtonsoftJsonSerializer();
+            construction.Services.AddSingleton(serializer);
+
+            return construction;
+        }
+
+        public static FrameworkConstruction UseDefaultSerializer<T>(this FrameworkConstruction construction)
+            where T:class,IMessageSerializer
+        {
+            construction.Services.AddSingleton<IMessageSerializer,T>();
 
             return construction;
         }

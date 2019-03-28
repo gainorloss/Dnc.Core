@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dnc.WpfApp.Models
 {
-    [ProtoContract]
+    //[ProtoContract]
     public class Post
     {
         public Post()
@@ -21,13 +21,13 @@ namespace Dnc.WpfApp.Models
             Title = title;
             Content = content;
         }
-        [ProtoMember(1)]
+        //[ProtoMember(1)]
         public Guid Id { get; set; }
-        [ProtoMember(2)]
+        //[ProtoMember(2)]
         public string Title { get; set; }
-        [ProtoMember(3)]
+        //[ProtoMember(3)]
         public string Content { get; set; }
-        [ProtoMember(4)]
+        //[ProtoMember(4)]
         public DateTime CreateTime { get; set; }
     }
 }
