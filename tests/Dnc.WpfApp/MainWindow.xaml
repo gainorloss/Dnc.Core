@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dnc.WpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="800"
+        AllowsTransparency="True"
+         WindowStyle="None">
+    <StackPanel>
+        <TextBlock FontSize="20" Text="aha" FontFamily="黑体"></TextBlock>
+        <TextBlock FontSize="20" Text="aha" FontFamily="{StaticResource NSHDemiLight}"></TextBlock>
+        <TextBlock FontSize="20" Text="aha" FontFamily="{StaticResource NSHLight}"></TextBlock>
+        <TextBlock FontSize="20" Text="aha" FontFamily="{StaticResource NSHMedium}"></TextBlock>
+        <TextBlock FontSize="20" Text="aha" FontFamily="{StaticResource Semibold}" ></TextBlock>
+        <Button Content="哈哈"></Button>
+    </StackPanel>
 </Window>

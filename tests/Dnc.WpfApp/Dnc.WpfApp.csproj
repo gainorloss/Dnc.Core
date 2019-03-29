@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9AAEA85C-6910-42B8-A910-CB2F07CABF99}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Dnc.WpfApp</RootNamespace>
     <AssemblyName>Dnc.WpfApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
@@ -202,6 +202,7 @@
     </ApplicationDefinition>
     <Compile Include="Models\Post.cs" />
     <Compile Include="Tests\SerializerTest.cs" />
+    <Compile Include="ViewModels\MainWindowVm.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -215,6 +216,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -247,6 +252,14 @@
     <ProjectReference Include="..\..\src\Dnc.Core\Dnc.Core.csproj">
       <Project>{48C5AE35-74A1-49C7-BA9B-944C408A7659}</Project>
       <Name>Dnc.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Dnc.WPF.Ui\Dnc.WPF.Ui.csproj">
+      <Project>{c9b70fd1-3ea2-48ac-acbe-e867b3bc632f}</Project>
+      <Name>Dnc.WPF.Ui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Dnc.WPF\Dnc.WPF.csproj">
+      <Project>{F6E4C1E8-08A7-40A6-B94A-C50F8BE66D80}</Project>
+      <Name>Dnc.WPF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
