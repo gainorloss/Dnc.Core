@@ -86,5 +86,47 @@
   <ItemGroup>
     <Folder Include="Images\Logo\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Add_All_Left.png" />
+    <Content Include="Images\Add_All_Right.png" />
+    <Content Include="Images\basic_ico_add.png" />
+    <Content Include="Images\basic_ico_delete.png" />
+    <Content Include="Images\basic_ico_modify.png" />
+    <Content Include="Images\Check.png" />
+    <Content Include="Images\Check2.png" />
+    <Content Include="Images\Close.png" />
+    <Content Include="Images\Create.png" />
+    <Content Include="Images\Customize.png" />
+    <Content Include="Images\Details.png" />
+    <Content Include="Images\DownArrow.png" />
+    <Content Include="Images\Download.png" />
+    <Content Include="Images\DropdownArrow.png" />
+    <Content Include="Images\Edit-1.png" />
+    <Content Include="Images\Edit-L.png" />
+    <Content Include="Images\Edit.png" />
+    <Content Include="Images\Edit1.png" />
+    <Content Include="Images\Empty.png" />
+    <Content Include="Images\Eye-1.png" />
+    <Content Include="Images\Eye.png" />
+    <Content Include="Images\Import.png" />
+    <Content Include="Images\Info.png" />
+    <Content Include="Images\Logs.png" />
+    <Content Include="Images\Memo.png" />
+    <Content Include="Images\Next.png" />
+    <Content Include="Images\Ok.png" />
+    <Content Include="Images\Order-1.png" />
+    <Content Include="Images\Order.png" />
+    <Content Include="Images\Prior.png" />
+    <Content Include="Images\Refresh-L.png" />
+    <Content Include="Images\Return.png" />
+    <Content Include="Images\Save-1.png" />
+    <Content Include="Images\Search-L.png" />
+    <Content Include="Images\Setting.png" />
+    <Content Include="Images\Settings-1-Red.png" />
+    <Content Include="Images\Settings-1.png" />
+    <Content Include="Images\Settings-L.png" />
+    <Content Include="Images\Statistics.png" />
+    <Content Include="Images\Upload.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

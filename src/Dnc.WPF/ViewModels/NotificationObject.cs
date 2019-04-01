@@ -11,5 +11,10 @@ namespace Dnc.WPF.ViewModels
         : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
