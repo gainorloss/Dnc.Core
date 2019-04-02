@@ -40,6 +40,8 @@ namespace Dnc.WpfApp.ViewModels
         public int WindowRadius => mWindow.WindowState == WindowState.Maximized ? 0 : mWindowRadius;
 
         public CornerRadius WindowCornerRadius => new CornerRadius(WindowRadius);
+
+        public Thickness InnerContentPaddingThickness { get; set; } = new Thickness(0);
         #endregion
     }
 }

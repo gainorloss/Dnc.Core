@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text;
 using System.Windows.Data;
 
-namespace Dnc.WPF.Converters
+namespace Dnc.WPF
 {
     [ValueConversion(typeof(decimal), typeof(string))]
     public class CNYConverter

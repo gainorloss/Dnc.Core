@@ -19,8 +19,7 @@
                         <ControlTemplate TargetType="{x:Type Window}">
                             <Border Padding="{Binding OuterMarginSizeThickness,FallbackValue=10}">
                                 <Grid>
-                                    <Border Padding="{Binding OuterMarginSizeThickness,FallbackValue=10}" 
-                                            CornerRadius="{Binding WindowCornerRadius,FallbackValue=10}"
+                                    <Border CornerRadius="{Binding WindowCornerRadius,FallbackValue=10}"
                                             Background="{StaticResource ForegroundLightBrush}"></Border>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -36,13 +35,19 @@
                                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                             </Grid.ColumnDefinitions>
 
-                                            <Button Grid.Column="0" Style="{StaticResource SystemIconButton}" >
-                                                <Image Source="/Dnc.WPF.Ui;component/Images/Details.png"></Image>
+                                            <Button Grid.Column="0">
+                                                <Image Source="/Dnc.WPF.Ui;component/Images/Customize.png"></Image>
                                             </Button>
                                             <Viewbox Panel.ZIndex="1" Grid.Column="1">
                                                 <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Title,FallbackValue='Welcome to wpf.'}"></TextBlock>
                                             </Viewbox>
+                                            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                                <Button Content="-" Style="{StaticResource HoverlessButton}"></Button>
+                                                <Button Content="[ ]" Style="{StaticResource HoverlessButton}"></Button>
+                                                <Button Content="x" Style="{StaticResource HoverlessButton}"></Button>
+                                            </StackPanel>
                                         </Grid>
+                                        
                                         <Border BorderThickness="1" Grid.Row="1" Margin="0 0.2 0 0">
                                             <Border.BorderBrush>
                                                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
@@ -59,7 +64,10 @@
                                                 </LinearGradientBrush>
                                             </Border.Background>
                                         </Border>
-                                        <ContentPresenter Grid.Row="2"/>
+
+                                        <Grid Grid.Row="2" Margin="{Binding InnerContentPaddingThickness,FallbackValue=0}">
+                                            <ContentPresenter Content="{TemplateBinding Content}"></ContentPresenter>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </Border>
@@ -76,6 +84,6 @@
                       CaptionHeight="{Binding TitleHeight}"/>
     </WindowChrome.WindowChrome>
     <Grid>
-        <TextBlock FontSize="20" Text="aha" FontFamily="黑体"></TextBlock>
+        <Frame x:Name="MainFrame" Source="Pages/LoginPage.xaml"></Frame>
     </Grid>
 </Window>
