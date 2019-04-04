@@ -9,9 +9,12 @@
         x:Name="AppWindow"
         AllowsTransparency="True"
          WindowStyle="None"
+        Icon="Images/Customize.png"
         MinHeight="{Binding WindowMinimunHeight}"
-        MinWidth="{Binding WindowMinimumWidth}">
-    <Window.Resources>
+        MinWidth="{Binding WindowMinimumWidth}"
+        Style="{StaticResource MainWindow}">
+    
+    <!--<Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
             <Style.Setters>
                 <Setter Property="Template">
@@ -20,7 +23,11 @@
                             <Border Padding="{Binding OuterMarginSizeThickness,FallbackValue=10}">
                                 <Grid>
                                     <Border CornerRadius="{Binding WindowCornerRadius,FallbackValue=10}"
-                                            Background="{StaticResource ForegroundLightBrush}"></Border>
+                                            Background="{StaticResource ForegroundLightBrush}">
+                                        <Border.Effect>
+                                            <DropShadowEffect ShadowDepth="0" Opacity="0.2"></DropShadowEffect>
+                                        </Border.Effect>
+                                    </Border>
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="{Binding TitleHeightGridLength,FallbackValue=42}"></RowDefinition>
@@ -36,7 +43,7 @@
                                             </Grid.ColumnDefinitions>
 
                                             <Button Grid.Column="0">
-                                                <Image Source="/Dnc.WPF.Ui;component/Images/Customize.png"></Image>
+                                                <Image Source="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Icon}"></Image>
                                             </Button>
                                             <Viewbox Panel.ZIndex="1" Grid.Column="1">
                                                 <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Title,FallbackValue='Welcome to wpf.'}"></TextBlock>
@@ -76,7 +83,8 @@
                 </Setter>
             </Style.Setters>
         </Style>
-    </Window.Resources>
+    </Window.Resources>-->
+    
     <WindowChrome.WindowChrome>
         <WindowChrome ResizeBorderThickness="{Binding ResizeBorderThickness}"
                       GlassFrameThickness="0"
@@ -84,6 +92,6 @@
                       CaptionHeight="{Binding TitleHeight}"/>
     </WindowChrome.WindowChrome>
     <Grid>
-        <Frame x:Name="MainFrame" Source="Pages/LoginPage.xaml"></Frame>
+        <!--<Frame x:Name="MainFrame" Source="Pages/LoginPage.xaml"></Frame>-->
     </Grid>
 </Window>

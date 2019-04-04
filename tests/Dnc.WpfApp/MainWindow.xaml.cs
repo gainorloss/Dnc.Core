@@ -1,4 +1,5 @@
-﻿using Dnc.WpfApp.ViewModels;
+﻿using Dnc.WPF.Ui.ViewModels;
+using Dnc.WpfApp.ViewModels;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,8 @@ namespace Dnc.WpfApp
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainWindowVm(this);
+            //DataContext = new MainWindowVm(this);
+            DataContext = new WindowVm(this);
         }
     }
 }

@@ -270,6 +270,51 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataModels\" />
+    <Folder Include="Images\Logo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add_All_Left.png" />
+    <Resource Include="Images\Add_All_Right.png" />
+    <Resource Include="Images\basic_ico_add.png" />
+    <Resource Include="Images\basic_ico_delete.png" />
+    <Resource Include="Images\basic_ico_modify.png" />
+    <Resource Include="Images\Check.png" />
+    <Resource Include="Images\Check2.png" />
+    <Resource Include="Images\Close.png" />
+    <Resource Include="Images\Create.png" />
+    <Resource Include="Images\Customize.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Details.png" />
+    <Resource Include="Images\DownArrow.png" />
+    <Resource Include="Images\Download.png" />
+    <Resource Include="Images\DropdownArrow.png" />
+    <Resource Include="Images\Edit-1.png" />
+    <Resource Include="Images\Edit-L.png" />
+    <Resource Include="Images\Edit.png" />
+    <Resource Include="Images\Edit1.png" />
+    <Resource Include="Images\Empty.png" />
+    <Resource Include="Images\Eye-1.png" />
+    <Resource Include="Images\Eye.png" />
+    <Resource Include="Images\Import.png" />
+    <Resource Include="Images\Info.png" />
+    <Resource Include="Images\Logs.png" />
+    <Resource Include="Images\Memo.png" />
+    <Resource Include="Images\Next.png" />
+    <Resource Include="Images\Ok.png" />
+    <Resource Include="Images\Order-1.png" />
+    <Resource Include="Images\Order.png" />
+    <Resource Include="Images\Prior.png" />
+    <Resource Include="Images\Refresh-L.png" />
+    <Resource Include="Images\Return.png" />
+    <Resource Include="Images\Save-1.png" />
+    <Resource Include="Images\Search-L.png" />
+    <Resource Include="Images\Setting.png" />
+    <Resource Include="Images\Settings-1-Red.png" />
+    <Resource Include="Images\Settings-1.png" />
+    <Resource Include="Images\Settings-L.png" />
+    <Resource Include="Images\Statistics.png" />
+    <Resource Include="Images\Upload.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
