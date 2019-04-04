@@ -12,7 +12,8 @@
         Icon="Images/Customize.png"
         MinHeight="{Binding WindowMinimunHeight}"
         MinWidth="{Binding WindowMinimumWidth}"
-        Style="{StaticResource MainWindow}">
+        Style="{StaticResource MainWindow}"
+        >
     
     <!--<Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">

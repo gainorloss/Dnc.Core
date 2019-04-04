@@ -5,6 +5,8 @@ using Dnc.Core.Helpers;
 using Dnc.Extensions;
 using Dnc.Helpers;
 using Dnc.Serializers;
+using Dnc.Spiders;
+using Dnc.WpfApp.Spiders;
 using Dnc.WpfApp.Tests;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +22,7 @@ namespace Dnc.WpfApp
         {
             var framework = Framework.Construct<DefaultFrameworkConstruction>()
                 .UseScheduleCenter()
+                .UseDefaultSpider()
                 .Build();
 
             var scheduler = framework.ScheduleCenter;
@@ -53,7 +56,7 @@ namespace Dnc.WpfApp
             new SerializerTest(framework.ServiceProvider.GetRequiredService<IMessageSerializer>())
                 .Test();
 
-
+      
             PerformanceMonitor.MonitorCurrentProcess();//Monitor current process.
             PerformanceMonitor.MonitorProcessByName("dotnet");//Monitor dotnet.exe.
 

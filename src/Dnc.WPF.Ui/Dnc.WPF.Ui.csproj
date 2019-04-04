@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\WindowVm.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fonts\NotoSansHans-DemiLight.otf" />
@@ -83,6 +84,11 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Dnc.WPF\Dnc.WPF.csproj">
+      <Project>{F6E4C1E8-08A7-40A6-B94A-C50F8BE66D80}</Project>
+      <Name>Dnc.WPF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,7 +3,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:local="clr-namespace:Dnc.WPF.Ui">
-
+    <ResourceDictionary.MergedDictionaries>
+        <!--Order is important.-->
+        <ResourceDictionary Source="Colors.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="Fonts.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="Buttons.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="Texts.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    
     <Style TargetType="{x:Type Window}" x:Key="MainWindow">
         <Style.Setters>
             <Setter Property="Template">
@@ -35,7 +42,7 @@
                                             <Image Source="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Icon}"></Image>
                                         </Button>
                                         <Viewbox Panel.ZIndex="1" Grid.Column="1">
-                                            <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Title,FallbackValue='Welcome to wpf.'}"></TextBlock>
+                                            <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Title}"></TextBlock>
                                         </Viewbox>
                                         <StackPanel Grid.Column="2" Orientation="Horizontal">
                                             <Button Content="-" Style="{StaticResource HoverlessButton}"></Button>

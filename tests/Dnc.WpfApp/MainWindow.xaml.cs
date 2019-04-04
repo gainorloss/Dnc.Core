@@ -1,5 +1,4 @@
 ﻿using Dnc.WPF.Ui.ViewModels;
-using Dnc.WpfApp.ViewModels;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

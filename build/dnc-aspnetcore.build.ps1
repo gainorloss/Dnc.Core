@@ -11,7 +11,7 @@ param(
 )
 $workspace=split-path -Parent $psscriptroot
 echo $workspace
-
+dotnet publish -c release
 
 $packPath=join-path $workspace 'src/Dnc.AspNetCore'
 cd $packPath

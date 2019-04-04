@@ -1,5 +1,6 @@
 ﻿using Dnc.Dispatcher;
 using Dnc.Serializers;
+using Dnc.Spiders;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -90,6 +91,26 @@ namespace Dnc
             where T:class,IMessageSerializer
         {
             construction.Services.AddSingleton<IMessageSerializer,T>();
+
+            return construction;
+        }
+
+
+        public static FrameworkConstruction UseDefaultSpider(this FrameworkConstruction construction,
+           Func<ISpider> configureSpider = null)
+        {
+            var spider = (configureSpider?.Invoke()) ?? new PuppeteerSpider();
+            construction.Services.AddSingleton(spider);
+
+            return construction;
+        }
+
+
+
+        public static FrameworkConstruction UseDefaultSpider<T>(this FrameworkConstruction construction)
+           where T : class, ISpider
+        {
+            construction.Services.AddSingleton<ISpider, T>();
 
             return construction;
         }

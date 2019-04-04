@@ -2,23 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.7.4</Version>
+    <Version>1.0.7.5</Version>
     <Title>Dnc.Core</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
     <Description>
       A dotnet rapid development framework based on  standard library.Get some ideas from AngelSix's Dna.Framework.
       基于StandardLibary的跨平台快速开发框架。
-      1.0.3:日志默认使用serilog输出到文件;
-      1.0.4:添加SqlBulkHelper操作批量更新;
-      1.0.5:
-      1.架构和入口大量调整，大量使用Extensions重构;
-      2.Reademe.md添加极简使用说明;
-      3.去除默认日志，采用默认日志Serilog。
-      1.0.6:添加大量Helpers和Extensions;
-      1.0.7:添加任务调度器;
-      1.0.7.3:LinqExtension Page 和 Parallel分批次串行和并行处理任务;
-      1.0.7.4:加入PerformanceMonitor（性能监控器），默认调度执行本进程监控。
     </Description>
     <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
@@ -27,6 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="anglesharp" Version="0.11.0" />
     <PackageReference Include="messagepack" Version="1.7.3.4" />
     <PackageReference Include="messagepackanalyzer" Version="1.6.0" />
     <PackageReference Include="microsoft.aspnetcore.signalr" Version="1.1.0" />
@@ -39,6 +30,7 @@
     <PackageReference Include="microsoft.extensions.logging.debug" Version="2.2.0" />
     <PackageReference Include="newtonsoft.json" Version="12.0.1" />
     <PackageReference Include="protobuf-net" Version="2.4.0" />
+    <PackageReference Include="puppeteersharp" Version="1.13.0" />
     <PackageReference Include="quartz" Version="3.0.7" />
     <PackageReference Include="serilog" Version="2.8.0" />
     <PackageReference Include="serilog.extensions.logging" Version="2.0.2" />
