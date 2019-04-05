@@ -12,20 +12,64 @@ namespace Dnc.Spiders
     public class PuppeteerSpider
         : ISpider
     {
+        #region Private member.
+        private readonly IHtmlParser _htmlParser;
+        #endregion
+
+        #region Static ctor.
         static PuppeteerSpider()
         {
-            //new BrowserFetcher()
-            //   .DownloadAsync(BrowserFetcher.DefaultRevision);
+            new BrowserFetcher()
+               .DownloadAsync(BrowserFetcher.DefaultRevision)
+               .ConfigureAwait(false)
+               .GetAwaiter();
         }
-        public async Task<IEnumerable<T>> GetItemsAsync<T>(string url,
-            string selectors,
-            Func<IElement, T> buildItemFunc)
+        #endregion
+
+        #region Default ctor.
+        public PuppeteerSpider(IHtmlParser htmlParser)
         {
-            await new BrowserFetcher()
-                  .DownloadAsync(BrowserFetcher.DefaultRevision);
+            _htmlParser = htmlParser;
+        }
+        #endregion
+
+        #region Methods for getting item.
+        public async Task<IEnumerable<T>> GetItemsAsync<T>(string url,
+           string selectors,
+           Func<IElement, T> buildItemFunc)
+           where T : class, ISpiderItem, new()
+        {
+            var html = await GetHtmlContentUsingPuppeteer(url);
+            var elements = await _htmlParser.GetElementsAsync(html,selectors);
 
             var items = new List<T>();
 
+            foreach (var ele in elements)
+            {
+                var item = buildItemFunc.Invoke(ele);
+                items.Add(item);
+            }
+            return items;
+        }
+
+
+        public async Task<T> GetItemAsync<T>(string url,
+            string selector,
+            Func<IElement, T> buildItemFunc)
+            where T : class, ISpiderItem, new()
+        {
+            var html = await GetHtmlContentUsingPuppeteer(url);
+            var element = await _htmlParser.GetElementAsync(html, selector);
+
+            var item = buildItemFunc.Invoke(element);
+
+            return item;
+        } 
+        #endregion
+
+        #region Helper.
+        private async Task<string> GetHtmlContentUsingPuppeteer(string url)
+        {
             var option = new LaunchOptions()
             {
                 Headless = false
@@ -38,20 +82,10 @@ namespace Dnc.Spiders
                     await page.GoToAsync(url);
                     var html = await page.GetContentAsync();
 
-                    var parser = new HtmlParser();
-                    var doc = await parser.ParseDocumentAsync(html);
-
-                    var elements = doc.QuerySelectorAll(selectors);
-
-                    foreach (var ele in elements)
-                    {
-                        var item = buildItemFunc.Invoke(ele);
-                        items.Add(item);
-                    }
+                    return html;
                 }
             }
-
-            return items;
         }
+        #endregion
     }
 }
