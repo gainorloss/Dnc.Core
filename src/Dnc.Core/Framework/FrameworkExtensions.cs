@@ -1,4 +1,5 @@
 ﻿using Dnc.Dispatcher;
+using Dnc.Rpc;
 using Dnc.Serializers;
 using Dnc.Spiders;
 using Microsoft.Extensions.Configuration;
@@ -119,6 +120,16 @@ namespace Dnc
 
             return construction;
         }
+        #endregion
+
+        #region Configure rpc.
+        public static FrameworkConstruction UseDefaultRpc(this FrameworkConstruction construction)
+        {
+            construction.Services.AddSingleton<IRpcServer, GrpcServer>();
+            construction.Services.AddSingleton<IRpcClient, GrpcClient>();
+
+            return construction;
+        } 
         #endregion
     }
 }
