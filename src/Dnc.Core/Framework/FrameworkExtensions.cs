@@ -41,6 +41,7 @@ namespace Dnc
         }
 
 
+        #region Configure default logger.
         public static FrameworkConstruction UseDefaultLogger(this FrameworkConstruction construction)
         {
             Log.Logger = new LoggerConfiguration()
@@ -64,8 +65,9 @@ namespace Dnc
             construction.Services.AddTransient(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("dnc"));
             return construction;
         }
+        #endregion
 
-
+        #region Configure schedule center.
         public static FrameworkConstruction UseScheduleCenter(this FrameworkConstruction construction)
         {
             var scheduleCenter = new ScheduleCenter();
@@ -77,42 +79,46 @@ namespace Dnc
             return construction;
         }
 
+        #endregion
 
-        public static FrameworkConstruction UseDefaultSerializer(this FrameworkConstruction construction,
-            Func<IMessageSerializer> configureSerializer = null)
+        #region Configure serializer.
+        public static FrameworkConstruction UseDefaultSerializer(this FrameworkConstruction construction)
         {
-            var serializer =(configureSerializer?.Invoke())??new NewtonsoftJsonSerializer();
-            construction.Services.AddSingleton(serializer);
-
-            return construction;
-        }
-
-        public static FrameworkConstruction UseDefaultSerializer<T>(this FrameworkConstruction construction)
-            where T:class,IMessageSerializer
-        {
-            construction.Services.AddSingleton<IMessageSerializer,T>();
+            construction.Services.AddSingleton<IMessageSerializer, NewtonsoftJsonSerializer>();
 
             return construction;
         }
 
 
-        public static FrameworkConstruction UseDefaultSpider(this FrameworkConstruction construction,
-           Func<ISpider> configureSpider = null)
+        public static FrameworkConstruction UseSerializer<T>(this FrameworkConstruction construction,
+             Func<IServiceCollection, IMessageSerializer> configureMessageSerializer = null)
         {
-            var spider = (configureSpider?.Invoke()) ?? new PuppeteerSpider();
+            var serializer = configureMessageSerializer.Invoke(construction.Services);
+            construction.Services.AddSingleton<IMessageSerializer>(serializer);
+
+            return construction;
+        }
+        #endregion
+
+        #region Configure spider.
+        public static FrameworkConstruction UseDefaultSpider(this FrameworkConstruction construction)
+        {
+            construction.Services.AddSingleton<IHtmlParser, AngleSharpHtmlParser>();
+            construction.Services.AddSingleton<ISpider, PuppeteerSpider>();
+
+            return construction;
+        }
+
+
+        public static FrameworkConstruction UseSpider<T>(this FrameworkConstruction construction,
+            Func<IServiceCollection, ISpider> configureSpider = null)
+           where T : class, ISpider
+        {
+            var spider = configureSpider.Invoke(construction.Services);
             construction.Services.AddSingleton(spider);
 
             return construction;
         }
-
-
-
-        public static FrameworkConstruction UseDefaultSpider<T>(this FrameworkConstruction construction)
-           where T : class, ISpider
-        {
-            construction.Services.AddSingleton<ISpider, T>();
-
-            return construction;
-        }
+        #endregion
     }
 }
