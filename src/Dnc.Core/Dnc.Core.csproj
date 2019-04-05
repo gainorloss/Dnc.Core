@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.7.6</Version>
+    <Version>1.0.7.7</Version>
     <Title>Dnc.Core</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -12,11 +12,13 @@
     <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
     <PackageIconUrl>https://avatar.gitee.com/uploads/18/1183118_gainorloss_259.png!avatar100?1529623223</PackageIconUrl>
-    <Tags>dotnetcore;quartz;serilog;aspnetcore,spider,serializer</Tags>
+    <Tags>dotnetcore;quartz;serilog;aspnetcore,spider,serializer,rpc</Tags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="anglesharp" Version="0.11.0" />
+    <PackageReference Include="google.protobuf" Version="3.7.0" />
+    <PackageReference Include="grpc" Version="1.19.0" />
     <PackageReference Include="messagepack" Version="1.7.3.4" />
     <PackageReference Include="messagepackanalyzer" Version="1.6.0" />
     <PackageReference Include="microsoft.aspnetcore.signalr" Version="1.1.0" />
