@@ -1,4 +1,5 @@
 ﻿using Dnc.Dispatcher;
+using Dnc.Output;
 using Dnc.Rpc;
 using Dnc.Serializers;
 using Dnc.Spiders;
@@ -129,7 +130,17 @@ namespace Dnc
             construction.Services.AddSingleton<IRpcClient, GrpcClient>();
 
             return construction;
-        } 
+        }
         #endregion
+
+        #region Configure console output helper.
+        public static FrameworkConstruction UseDefaultConsoleOutputHelper(this FrameworkConstruction construction)
+        {
+            construction.Services.AddSingleton<IConsoleOutputHelper, ConsoleOutputHelper>();
+
+            return construction;
+        }
+        #endregion
+
     }
 }

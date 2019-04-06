@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.7.8</Version>
+    <Version>1.0.7.9</Version>
     <Title>Dnc.Core</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -39,5 +39,6 @@
     <PackageReference Include="serilog.sinks.file" Version="4.0.0" />
     <PackageReference Include="system.data.sqlclient" Version="4.6.0" />
     <PackageReference Include="system.diagnostics.performancecounter" Version="4.5.0" />
+    <PackageReference Include="system.drawing.common" Version="4.5.1" />
   </ItemGroup>
 </Project>

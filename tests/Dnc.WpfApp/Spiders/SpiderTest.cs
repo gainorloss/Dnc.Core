@@ -14,12 +14,13 @@ namespace Dnc.WpfApp.Spiders
         {
             _spider = spider;
         }
-        public async Task TestAsync()
+        public Task TestAsync()
         {
-            await _spider.GetItemsAsync<string>("https://www.qichacha.com/news", ".list-group", ele =>
-             {
-                 return "";
-             });
+            //await _spider.GetItemsAsync<string>("https://www.qichacha.com/news", ".list-group", ele =>
+            // {
+            //     return "";
+            // });
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Dnc.Spiders;
+﻿using Dnc.Output;
+using Dnc.Spiders;
 using Microsoft.Extensions.DependencyInjection;
 using PuppeteerSharp;
 using System;
@@ -9,22 +10,27 @@ namespace Dnc.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var framework = Framework
+            var fx = Framework
                 .Construct<DefaultFrameworkConstruction>()
+                .UseDefaultConsoleOutputHelper()
                 .UseDefaultSpider()
                 .Build();
 
-            // var spider = framework.ServiceProvider.GetRequiredService<ISpider>();
+            var sp = fx.ServiceProvider;
 
-            // spider
-            //    .GetItemsAsync<string>("https://www.qichacha.com/news", ".list-group", ele =>
+            var spider = sp.GetRequiredService<ISpider>();
+
+            // spider.GetItemsAsync<string>("https://www.qichacha.com/news", ".list-group", ele =>
             //{
             //    return "";
             //})
             //.Wait();
 
+         
+            var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
+            outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\u=1775280576,2212885380&fm=26&gp=0.jpg");
 
-             TestAsync().Wait();
+            //TestAsync().Wait();
 
             Console.Read();
             Console.WriteLine("Hello World!");
