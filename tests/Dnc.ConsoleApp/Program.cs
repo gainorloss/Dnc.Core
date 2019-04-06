@@ -28,7 +28,7 @@ namespace Dnc.ConsoleApp
 
          
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
-            outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\u=1775280576,2212885380&fm=26&gp=0.jpg");
+            outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
 
             //TestAsync().Wait();
 
