@@ -7,9 +7,9 @@ namespace Dnc.Rpc
 {
     public interface IRpcClient
     {
-        ClientBase<TClient> GetClient<TClient>(string host,
+        TClient GetClient<TClient>(string host,
             int port,
-            Func<Channel, ClientBase<TClient>> buildClientFunc)
+            Func<Channel, TClient> buildClientFunc)
             where TClient : ClientBase<TClient>;
     }
 }

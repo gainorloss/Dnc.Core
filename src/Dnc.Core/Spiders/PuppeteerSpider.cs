@@ -39,7 +39,7 @@ namespace Dnc.Spiders
            Func<IElement, T> buildItemFunc)
            where T : class, ISpiderItem, new()
         {
-            var html = await GetHtmlContentUsingPuppeteer(url);
+            var html = await GetHtmlContentUsingPuppeteerAsync(url);
             var elements = await _htmlParser.GetElementsAsync(html,selectors);
 
             var items = new List<T>();
@@ -58,7 +58,7 @@ namespace Dnc.Spiders
             Func<IElement, T> buildItemFunc)
             where T : class, ISpiderItem, new()
         {
-            var html = await GetHtmlContentUsingPuppeteer(url);
+            var html = await GetHtmlContentUsingPuppeteerAsync(url);
             var element = await _htmlParser.GetElementAsync(html, selector);
 
             var item = buildItemFunc.Invoke(element);
@@ -68,7 +68,7 @@ namespace Dnc.Spiders
         #endregion
 
         #region Helper.
-        private async Task<string> GetHtmlContentUsingPuppeteer(string url)
+        private async Task<string> GetHtmlContentUsingPuppeteerAsync(string url)
         {
             var option = new LaunchOptions()
             {
