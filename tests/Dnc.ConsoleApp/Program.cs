@@ -1,4 +1,5 @@
-﻿using Dnc.Output;
+﻿using Dnc.Compilers;
+using Dnc.Output;
 using Dnc.Spiders;
 using Microsoft.Extensions.DependencyInjection;
 using PuppeteerSharp;
@@ -14,6 +15,7 @@ namespace Dnc.ConsoleApp
                 .Construct<DefaultFrameworkConstruction>()
                 .UseDefaultConsoleOutputHelper()
                 .UseDefaultSpider()
+                .UseDefaultCompiler()
                 .Build();
 
             var sp = fx.ServiceProvider;
@@ -26,11 +28,30 @@ namespace Dnc.ConsoleApp
             //})
             //.Wait();
 
-         
+
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
 
             //TestAsync().Wait();
+
+            var compiler = sp.GetRequiredService<ICompiler>();
+
+            var script = @"  public class HelloWorld
+    {
+        public string String { get; set; }
+        public HelloWorld(string str)
+        {
+            String = str;
+        }
+    }
+new HelloWorld(Arg1).String";
+            var rt = compiler.RunAsync<string>(script,
+                  new Arg<string>() { Arg1 = "gainorloss" },
+                  nameSpace: "Dnc.ConsoleApp",
+                  references: typeof(HelloWorld).Assembly)
+                  .ConfigureAwait(false)
+                  .GetAwaiter()
+                  .GetResult();
 
             Console.Read();
             Console.WriteLine("Hello World!");

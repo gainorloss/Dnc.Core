@@ -1,4 +1,5 @@
-﻿using Dnc.Dispatcher;
+﻿using Dnc.Compilers;
+using Dnc.Dispatcher;
 using Dnc.Output;
 using Dnc.Rpc;
 using Dnc.Serializers;
@@ -137,6 +138,15 @@ namespace Dnc
         public static FrameworkConstruction UseDefaultConsoleOutputHelper(this FrameworkConstruction construction)
         {
             construction.Services.AddSingleton<IConsoleOutputHelper, ConsoleOutputHelper>();
+
+            return construction;
+        }
+        #endregion
+
+        #region Configure compiler.
+        public static FrameworkConstruction UseDefaultCompiler(this FrameworkConstruction construction)
+        {
+            construction.Services.AddSingleton<ICompiler, RoslynCompiler>();
 
             return construction;
         }

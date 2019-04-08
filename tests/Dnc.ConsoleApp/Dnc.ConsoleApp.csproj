@@ -7,6 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="anglesharp" Version="0.11.0" />
+    <PackageReference Include="microsoft.codeanalysis.csharp" Version="3.0.0" />
+    <PackageReference Include="microsoft.codeanalysis.csharp.scripting" Version="3.0.0" />
+    <PackageReference Include="microsoft.codeanalysis.scripting" Version="3.0.0" />
     <PackageReference Include="puppeteersharp" Version="1.13.0" />
   </ItemGroup>
 
