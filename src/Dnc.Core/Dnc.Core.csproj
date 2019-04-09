@@ -44,4 +44,8 @@
     <PackageReference Include="system.diagnostics.performancecounter" Version="4.5.0" />
     <PackageReference Include="system.drawing.common" Version="4.5.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Queries\" />
+  </ItemGroup>
 </Project>
