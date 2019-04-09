@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.Structure
+namespace Dnc.Structures
 {
     /// <summary>
     /// Structure tree constraint.
@@ -11,7 +11,7 @@ namespace Dnc.Structure
     {
         int Id { get; }
 
-        int ParentId { get; }
+        int? ParentId { get; }
 
         int Level { get; }
 
@@ -25,11 +25,12 @@ namespace Dnc.Structure
     /// Structure tree constraint (generic) <see cref="ITree"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface ITree<T>
+    public interface ITree<out T>
         : ITree
+        where T:class,new()
     {
-        T Parent { get; }
+        ITree<T> Parent { get; }
 
-        IEnumerable<T> Children { get; }
+        IEnumerable<ITree<T>> Children { get; }
     }
 }
