@@ -47,22 +47,24 @@ namespace Dnc
         #region Configure default logger.
         public static FrameworkConstruction UseDefaultLogger(this FrameworkConstruction construction)
         {
+            #region Serilog settings.
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-                .Enrich.FromLogContext()
-                .WriteTo.Console()
-                .WriteTo.File(Path.Combine("logs", "log.txt"),
-                 rollingInterval: RollingInterval.Day,
-                 rollOnFileSizeLimit: true)
-                .CreateLogger();
+                    .MinimumLevel.Debug()
+                    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+                    .Enrich.FromLogContext()
+                    .WriteTo.Console()
+                    .WriteTo.File(Path.Combine("logs", "log.txt"),
+                     rollingInterval: RollingInterval.Day,
+                     rollOnFileSizeLimit: true)
+                    .CreateLogger(); 
+            #endregion
 
             construction.Services.AddLogging(opt =>
             {
                 opt.AddConfiguration(construction.Configuration?.GetSection("Logging"));
                 //opt.AddConsole();
                 //opt.AddDebug();
-                opt.AddSerilog();
+                opt.AddSerilog(Log.Logger);
             });
 
             construction.Services.AddTransient(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("dnc"));

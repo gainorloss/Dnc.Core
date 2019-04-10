@@ -42,26 +42,23 @@ namespace Dnc.WPF.Ui
             switch (PageLoadAnimation)
             {
                 case PageAnimation.SlideAndFadeInFromRight:
-                    var sb = new Storyboard();
-
-                    var anim = new ThicknessAnimation()
-                    {
-                        Duration = TimeSpan.FromSeconds(SlideSeconds),
-                        DecelerationRatio = 0.9f,
-                        From = new Thickness(WindowWidth, 0, -WindowWidth, 0),
-                        To = new Thickness(0)
-                    };
-                    Storyboard.SetTargetProperty(anim, new PropertyPath("Margin"));
-                    sb.Children.Add(anim);
-
-                    sb.Begin(this);
-
-                    Visibility = Visibility.Visible;
-
-                    await Task.Delay((int)SlideSeconds*1000);
-
+                    await this.SlideAndFadeInAsync(SlideSeconds,WindowWidth);
                     break;
+                default:
+                    break;
+            }
+        }
+
+
+        public async Task AnimateOut()
+        {
+            if (PageUnloadAnimation == PageAnimation.None)
+                return;
+
+            switch (PageUnloadAnimation)
+            {
                 case PageAnimation.SlideAndFadeOutToLeft:
+                    await this.SlideAndFadeOutAsync(SlideSeconds, WindowWidth);
                     break;
                 default:
                     break;

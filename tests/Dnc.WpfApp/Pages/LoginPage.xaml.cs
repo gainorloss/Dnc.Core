@@ -28,7 +28,7 @@ namespace Dnc.WpfApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AnimateIn();
+            AnimateOut();
         }
     }
 }
