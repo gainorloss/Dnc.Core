@@ -18,7 +18,6 @@ namespace Dnc
         }
         #endregion
 
-
         #region Public props.
         public bool IsDevelopment { get; set; }
         public string Environment => IsDevelopment ? "Development" : "Production"; 

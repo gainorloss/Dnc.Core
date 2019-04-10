@@ -1,4 +1,6 @@
-﻿using Quartz;
+﻿using Dnc.Serializers;
+using Microsoft.Extensions.DependencyInjection;
+using Quartz;
 using Quartz.Impl;
 using System;
 using System.Collections.Generic;
@@ -65,9 +67,15 @@ namespace Dnc.Dispatcher
 
             var key = $"{schedule.GroupName}-{schedule.Name}";
 
+            var data = new Dictionary<string, object>
+            {
+                { "name", $"{schedule.GroupName}-{schedule.Name}" }
+            };
+
             var jobDetail = JobBuilder.Create(job.GetType())
                 .WithIdentity(key)
                 .Build();
+            jobDetail.JobDataMap.PutAll(data);
 
             var schedueBuiler = CronScheduleBuilder.CronSchedule(schedule.CronExpression);
 

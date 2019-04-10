@@ -33,12 +33,12 @@ namespace Dnc.WpfApp
             //    .ConfigureAwait(false)
             //    .GetAwaiter();//sample schedule.
 
-            //scheduler.CreateAndRunScheduleAsync("gainorloss",
-            //    "Dnc.WpfApp.Jobs.HelloJob",
-            //    "* */1 * ? * *",
-            //    "Dnc.WpfApp.exe")
-            //    .ConfigureAwait(false)
-            //    .GetAwaiter();
+            scheduler.CreateAndRunScheduleAsync("gainorloss",
+                "Dnc.WpfApp.Jobs.HelloJob",
+                "* */1 * ? * *",
+                "Dnc.WpfApp.exe")
+                .ConfigureAwait(false)
+                .GetAwaiter();
 
             var items = Enumerable.Range(0, 100);//批次任务
 
