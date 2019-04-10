@@ -1,9 +1,11 @@
 ﻿using Dnc.Compilers;
+using Dnc.Files;
 using Dnc.Output;
 using Dnc.Spiders;
 using Microsoft.Extensions.DependencyInjection;
 using PuppeteerSharp;
 using System;
+using Dnc.Extensions;
 
 namespace Dnc.ConsoleApp
 {
@@ -16,6 +18,7 @@ namespace Dnc.ConsoleApp
                 .UseDefaultConsoleOutputHelper()
                 .UseDefaultSpider()
                 .UseDefaultCompiler()
+                .UseDownloader()
                 .Build();
 
             var sp = fx.ServiceProvider;
@@ -49,6 +52,12 @@ new HelloWorld(Arg1).String";
                   new Arg<string>() { Arg1 = "gainorloss" },
                   nameSpace: "Dnc.ConsoleApp",
                   references: typeof(HelloWorld).Assembly)
+                  .ConfigureAwait(false)
+                  .GetAwaiter()
+                  .GetResult();
+
+            var downloader = sp.GetRequiredService<IDownloader>();
+            var result = downloader.DownloadRemoteImageAsync("https://goss3.vcg.com/creative/vcg/800/version23/VCG41471562191.jpg","c://")
                   .ConfigureAwait(false)
                   .GetAwaiter()
                   .GetResult();

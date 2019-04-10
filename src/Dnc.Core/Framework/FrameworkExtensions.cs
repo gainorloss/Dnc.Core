@@ -1,5 +1,6 @@
 ﻿using Dnc.Compilers;
 using Dnc.Dispatcher;
+using Dnc.Files;
 using Dnc.Output;
 using Dnc.Rpc;
 using Dnc.Serializers;
@@ -154,5 +155,13 @@ namespace Dnc
         }
         #endregion
 
+        #region Configure downloader.
+        public static FrameworkConstruction UseDownloader(this FrameworkConstruction construction)
+        {
+            construction.Services.AddScoped<IDownloader, FileDownloader>();
+
+            return construction;
+        }
+        #endregion
     }
 }
