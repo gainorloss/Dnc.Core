@@ -20,12 +20,14 @@ namespace Dnc.WpfApp
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var framework = Framework.Construct<DefaultFrameworkConstruction>()
+            var fx = Framework.Construct<DefaultFrameworkConstruction>()
                 .UseScheduleCenter()
                 .UseDefaultSpider()
                 .Build();
 
-            var scheduler = framework.ScheduleCenter;
+            var sp = fx.ServiceProvider;
+
+            var scheduler = fx.ScheduleCenter;
 
             //scheduler.RunScheduleAsync()
             //    .ConfigureAwait(false)
@@ -53,7 +55,7 @@ namespace Dnc.WpfApp
 
 
             //serializers.
-            new SerializerTest(framework.ServiceProvider.GetRequiredService<IMessageSerializer>())
+            new SerializerTest(fx.ServiceProvider.GetRequiredService<IMessageSerializer>())
                 .Test();
 
       
