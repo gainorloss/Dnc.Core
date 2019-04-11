@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dnc.WPF.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,14 +13,33 @@ namespace Dnc.WPF.Ui
     /// <summary>
     /// The basic class for a <see cref="Page"/>.
     /// </summary>
-    public class BasePage
+    public class BasePage<TViewModel>
         : Page
+        where TViewModel : NotificationObject, new()
     {
+        private TViewModel mVm;
         public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideAndFadeInFromRight;
 
         public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToLeft;
 
         public double SlideSeconds { get; set; } = 0.8;
+
+        public TViewModel Vm
+        {
+            get
+            {
+                return mVm;
+            }
+            set
+            {
+                if (mVm == value)
+                    return;
+
+                mVm = value;
+
+                DataContext = mVm;
+            }
+        }
 
         public BasePage()
         {
@@ -27,6 +47,8 @@ namespace Dnc.WPF.Ui
                 Visibility = Visibility.Collapsed;
 
             Loaded += BasePage_Loaded;
+
+            Vm = new TViewModel();
         }
 
         private async void BasePage_Loaded(object sender, RoutedEventArgs e)
@@ -42,7 +64,7 @@ namespace Dnc.WPF.Ui
             switch (PageLoadAnimation)
             {
                 case PageAnimation.SlideAndFadeInFromRight:
-                    await this.SlideAndFadeInAsync(SlideSeconds,WindowWidth);
+                    await this.SlideAndFadeInAsync(SlideSeconds, WindowWidth);
                     break;
                 default:
                     break;
