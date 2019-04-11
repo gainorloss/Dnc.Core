@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.0.2.2</Version>
+    <Version>0.0.2.3</Version>
     <Title>Dnc.WPF</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -11,7 +11,7 @@
     </Description>
     <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
-    <PackageIconUrl>https://avatar.gitee.com/uploads/18/1183118_gainorloss_259.png!avatar100?1529623223</PackageIconUrl>
+    <PackageIconUrl>https://avatars0.githubusercontent.com/u/26458238?s=800</PackageIconUrl>
     <Tags>WPF</Tags>
   </PropertyGroup>
 
