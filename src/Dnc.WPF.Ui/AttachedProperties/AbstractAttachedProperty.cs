@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 
-namespace Dnc.WPF
+namespace Dnc.WPF.Ui
 {
     /// <summary>
     /// Attached property abstract constraint.

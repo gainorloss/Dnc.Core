@@ -249,6 +249,7 @@
     <Compile Include="Models\Post.cs" />
     <Compile Include="Spiders\SpiderTest.cs" />
     <Compile Include="Tests\SerializerTest.cs" />
+    <Compile Include="ViewModels\LoginVm.cs" />
     <Page Include="Pages\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

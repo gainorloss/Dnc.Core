@@ -1,11 +1,11 @@
-﻿using Dnc.WPF.ValueConverters;
+﻿using DDnc.WPF.Ui;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Windows.Data;
 
-namespace Dnc.WPF
+namespace Dnc.WPF.Ui
 {
     [ValueConversion(typeof(decimal), typeof(string))]
     public class CNYConverter

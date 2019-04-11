@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Windows.Data;
+using System.ComponentModel;
 using System.Windows.Markup;
 
-namespace Dnc.WPF.ValueConverters
+namespace DDnc.WPF.Ui
 {
     /// <summary>
     /// Value converter base.

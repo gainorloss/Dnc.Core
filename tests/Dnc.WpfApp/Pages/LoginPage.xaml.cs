@@ -19,7 +19,7 @@ namespace Dnc.WpfApp
     /// <summary>
     /// LoginPage.xaml 的交互逻辑
     /// </summary>
-    public partial class LoginPage : BasePage
+    public partial class LoginPage : BasePage<LoginVm>
     {
         public LoginPage()
         {
