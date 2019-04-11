@@ -57,7 +57,7 @@ namespace Dnc
                     .WriteTo.File(Path.Combine("logs", "log.txt"),
                      rollingInterval: RollingInterval.Day,
                      rollOnFileSizeLimit: true)
-                    .CreateLogger(); 
+                    .CreateLogger();
             #endregion
 
             construction.Services.AddLogging(opt =>
@@ -110,7 +110,9 @@ namespace Dnc
         public static FrameworkConstruction UseDefaultSpider(this FrameworkConstruction construction)
         {
             construction.Services.AddSingleton<IHtmlParser, AngleSharpHtmlParser>();
-            construction.Services.AddSingleton<ISpider, PuppeteerSpider>();
+            construction.Services.AddSingleton<IHtmlDownloader, PuppeteerHtmlDownloader>();
+            construction.Services.AddSingleton<IUrlManager, MemoryUrlManager>();
+            construction.Services.AddSingleton<ISpider, DefaultSpider>();
 
             return construction;
         }

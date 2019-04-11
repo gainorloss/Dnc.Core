@@ -1,6 +1,6 @@
 ﻿using AngleSharp.Dom;
-using AngleSharp.Html.Dom;
-using AngleSharp.Html.Parser;
+using Dnc.Core.Spiders.Abstractions;
+using Dnc.Spiders;
 using PuppeteerSharp;
 using System;
 using System.Collections.Generic;
@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace Dnc.Spiders
 {
-    public class PuppeteerSpider
-        : ISpider
+    public class PuppeteerHtmlDownloader
+        :IHtmlDownloader
     {
         #region Private member.
         private readonly IHtmlParser _htmlParser;
         #endregion
 
         #region Static ctor.
-        static PuppeteerSpider()
+        static PuppeteerHtmlDownloader()
         {
             new BrowserFetcher()
                .DownloadAsync(BrowserFetcher.DefaultRevision)
@@ -27,7 +27,7 @@ namespace Dnc.Spiders
         #endregion
 
         #region Default ctor.
-        public PuppeteerSpider(IHtmlParser htmlParser)
+        public PuppeteerHtmlDownloader(IHtmlParser htmlParser)
         {
             _htmlParser = htmlParser;
         }
@@ -40,7 +40,7 @@ namespace Dnc.Spiders
            where T : class, ISpiderItem, new()
         {
             var html = await GetHtmlContentUsingPuppeteerAsync(url);
-            var elements = await _htmlParser.GetElementsAsync(html,selectors);
+            var elements = await _htmlParser.GetElementsAsync(html, selectors);
 
             var items = new List<T>();
 
@@ -64,7 +64,7 @@ namespace Dnc.Spiders
             var item = buildItemFunc.Invoke(element);
 
             return item;
-        } 
+        }
         #endregion
 
         #region Helper.
