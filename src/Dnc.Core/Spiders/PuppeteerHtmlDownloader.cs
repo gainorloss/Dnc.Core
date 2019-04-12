@@ -1,5 +1,4 @@
 ﻿using AngleSharp.Dom;
-using Dnc.Core.Spiders.Abstractions;
 using Dnc.Spiders;
 using PuppeteerSharp;
 using System;
@@ -10,12 +9,8 @@ using System.Threading.Tasks;
 namespace Dnc.Spiders
 {
     public class PuppeteerHtmlDownloader
-        :IHtmlDownloader
+        : IHtmlDownloader
     {
-        #region Private member.
-        private readonly IHtmlParser _htmlParser;
-        #endregion
-
         #region Static ctor.
         static PuppeteerHtmlDownloader()
         {
@@ -26,45 +21,11 @@ namespace Dnc.Spiders
         }
         #endregion
 
-        #region Default ctor.
-        public PuppeteerHtmlDownloader(IHtmlParser htmlParser)
+        #region Methods for getting html content.
+        public async Task<string> DownloadHtmlContentAsync(string url)
         {
-            _htmlParser = htmlParser;
-        }
-        #endregion
-
-        #region Methods for getting item.
-        public async Task<IEnumerable<T>> GetItemsAsync<T>(string url,
-           string selectors,
-           Func<IElement, T> buildItemFunc)
-           where T : class, ISpiderItem, new()
-        {
-            var html = await GetHtmlContentUsingPuppeteerAsync(url);
-            var elements = await _htmlParser.GetElementsAsync(html, selectors);
-
-            var items = new List<T>();
-
-            foreach (var ele in elements)
-            {
-                var item = buildItemFunc.Invoke(ele);
-                items.Add(item);
-            }
-            return items;
-        }
-
-
-        public async Task<T> GetItemAsync<T>(string url,
-            string selector,
-            Func<IElement, T> buildItemFunc)
-            where T : class, ISpiderItem, new()
-        {
-            var html = await GetHtmlContentUsingPuppeteerAsync(url);
-            var element = await _htmlParser.GetElementAsync(html, selector);
-
-            var item = buildItemFunc.Invoke(element);
-
-            return item;
-        }
+            return await GetHtmlContentUsingPuppeteerAsync(url);
+        } 
         #endregion
 
         #region Helper.

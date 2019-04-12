@@ -12,14 +12,6 @@ namespace Dnc.Spiders
     /// </summary>
     public interface IHtmlDownloader
     {
-        Task<IEnumerable<T>> GetItemsAsync<T>(string url,
-               string selectors,
-               Func<IElement, T> buildItemFunc)
-               where T : class, ISpiderItem, new();
-
-        Task<T> GetItemAsync<T>(string url,
-           string selector,
-           Func<IElement, T> buildItemFunc)
-            where T : class, ISpiderItem, new();
+        Task<string> DownloadHtmlContentAsync(string url);
     }
 }

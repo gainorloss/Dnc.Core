@@ -10,5 +10,7 @@ namespace Dnc.Spiders
     /// The interface of spider.
     /// </summary>
     public interface ISpider
-    { }
+    {
+        Task StartAsync(params string[] urls);
+    }
 }

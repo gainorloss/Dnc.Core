@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Dnc.Spiders
 {
@@ -9,7 +10,6 @@ namespace Dnc.Spiders
     /// </summary>
     public interface IPipelineProcessor
     {
-        void ProcessItem<T>(T item)
-            where T:class,ISpiderItem,new();
+        Task ProcessItemAsync(string url,string html);
     }
 }

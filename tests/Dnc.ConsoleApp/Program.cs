@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using PuppeteerSharp;
 using System;
 using Dnc.Extensions;
+using System.Threading.Tasks;
 
 namespace Dnc.ConsoleApp
 {
@@ -16,29 +17,20 @@ namespace Dnc.ConsoleApp
             var fx = Framework
                 .Construct<DefaultFrameworkConstruction>()
                 .UseDefaultConsoleOutputHelper()
-                .UseDefaultSpider()
+                .UseDefaultSpider(services=>services.AddSingleton<IPipelineProcessor,PipelineProcessor>())
                 .UseDefaultCompiler()
                 .UseDownloader()
                 .Build();
 
             var sp = fx.ServiceProvider;
 
-            var spider = sp.GetRequiredService<ISpider>();
-
-            // spider.GetItemsAsync<string>("https://www.qichacha.com/news", ".list-group", ele =>
-            //{
-            //    return "";
-            //})
-            //.Wait();
-
-
+            #region ConsoleOutputHelper.
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
+            #endregion
 
-            //TestAsync().Wait();
-
+            #region Compiler.
             var compiler = sp.GetRequiredService<ICompiler>();
-
             var script = @"  public class HelloWorld
     {
         public string String { get; set; }
@@ -54,19 +46,27 @@ new HelloWorld(Arg1).String";
                   references: typeof(HelloWorld).Assembly)
                   .ConfigureAwait(false)
                   .GetAwaiter()
-                  .GetResult();
+                  .GetResult(); 
+            #endregion
 
-            var downloader = sp.GetRequiredService<IDownloader>();
-            var result = downloader.DownloadRemoteImageAsync("https://goss3.vcg.com/creative/vcg/800/version23/VCG41471562191.jpg","c://")
-                  .ConfigureAwait(false)
-                  .GetAwaiter()
-                  .GetResult();
+            #region Downloader.
+            //var downloader = sp.GetRequiredService<IDownloader>();
+            //var result = downloader.DownloadRemoteImageAsync("https://goss3.vcg.com/creative/vcg/800/version23/VCG41471562191.jpg", "c://")
+            //      .ConfigureAwait(false)
+            //      .GetAwaiter()
+            //      .GetResult();
+            #endregion
+
+            var spider = sp.GetRequiredService<ISpider>();
+            spider.StartAsync("https://www.nuget.org/packages?q=dnc")
+                .ConfigureAwait(false)
+                .GetAwaiter() ;
 
             Console.Read();
             Console.WriteLine("Hello World!");
         }
 
-        private static async System.Threading.Tasks.Task TestAsync()
+        private static async Task TestAsync()
         {
             await new BrowserFetcher().DownloadAsync(BrowserFetcher.DefaultRevision);
             var browser = await Puppeteer.LaunchAsync(new LaunchOptions
