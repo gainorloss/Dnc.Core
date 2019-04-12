@@ -5,6 +5,7 @@ using Dnc.Extensions;
 using PuppeteerSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -47,13 +48,13 @@ namespace Dnc.Spiders
 
                 var html = await _htmlDownloader.DownloadHtmlContentAsync(url);
 
-                await _processor.ProcessItemAsync(url,html);
+                await _processor.ProcessItemAsync(url, html);
 
                 var eles = await _htmlParser.GetElementsAsync(html, "a");
 
                 if (eles != null && eles.Length > 0)
                 {
-                    eles.Parallel(1000,selected=>
+                    eles.Parallel(1000, selected =>
                     {
                         var newUrls = new List<string>();
                         foreach (var ele in selected)
