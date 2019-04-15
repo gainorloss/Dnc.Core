@@ -22,7 +22,7 @@ namespace Dnc.WpfApp
         {
             var fx = Framework.Construct<DefaultFrameworkConstruction>()
                 .UseScheduleCenter()
-                .UseDefaultSpider()
+                //.UseDefaultSpider()
                 .Build();
 
             var sp = fx.ServiceProvider;
