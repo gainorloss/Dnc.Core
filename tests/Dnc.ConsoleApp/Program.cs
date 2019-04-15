@@ -7,6 +7,7 @@ using PuppeteerSharp;
 using System;
 using Dnc.Extensions;
 using System.Threading.Tasks;
+using Dnc.Algorithm;
 
 namespace Dnc.ConsoleApp
 {
@@ -57,11 +58,14 @@ new HelloWorld(Arg1).String";
             //      .GetResult();
             #endregion
 
-            var spider = sp.GetRequiredService<ISpider>();
-            spider.StartAsync("https://www.nuget.org/packages?q=dnc")
-                .ConfigureAwait(false)
-                .GetAwaiter() ;
+            //var spider = sp.GetRequiredService<ISpider>();
+            //spider.StartAsync("https://www.nuget.org/packages?q=dnc")
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter();
 
+            var items =new int[] { 6, 3, 2, 7, 9, 10 };
+            items.QuickSort(0, 5);
+            items.BubbleSort();
             Console.Read();
             Console.WriteLine("Hello World!");
         }
