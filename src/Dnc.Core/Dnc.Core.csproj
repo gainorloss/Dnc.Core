@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="anglesharp" Version="0.11.0" />
+    <PackageReference Include="flurl.http" Version="2.4.1" />
     <PackageReference Include="google.protobuf" Version="3.7.0" />
     <PackageReference Include="grpc" Version="1.19.0" />
     <PackageReference Include="messagepack" Version="1.7.3.4" />

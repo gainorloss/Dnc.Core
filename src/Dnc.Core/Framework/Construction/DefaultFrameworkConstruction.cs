@@ -11,7 +11,8 @@
         {
             this.Configure()
                 .UseDefaultLogger()
-                .UseDefaultSerializer();//use json-net serializer.
+                .UseDefaultSerializer()
+                .UseAlarmer();//use json-net serializer.
         } 
         #endregion
     }

@@ -8,6 +8,7 @@ using System;
 using Dnc.Extensions;
 using System.Threading.Tasks;
 using Dnc.Algorithm;
+using Dnc.Alarmers;
 
 namespace Dnc.ConsoleApp
 {
@@ -18,7 +19,7 @@ namespace Dnc.ConsoleApp
             var fx = Framework
                 .Construct<DefaultFrameworkConstruction>()
                 .UseDefaultConsoleOutputHelper()
-                .UseDefaultSpider(services=>services.AddSingleton<IPipelineProcessor,PipelineProcessor>())
+                .UseDefaultSpider(services => services.AddSingleton<IPipelineProcessor, PipelineProcessor>())
                 .UseDefaultCompiler()
                 .UseDownloader()
                 .Build();
@@ -47,7 +48,7 @@ new HelloWorld(Arg1).String";
                   references: typeof(HelloWorld).Assembly)
                   .ConfigureAwait(false)
                   .GetAwaiter()
-                  .GetResult(); 
+                  .GetResult();
             #endregion
 
             #region Downloader.
@@ -63,9 +64,16 @@ new HelloWorld(Arg1).String";
             //    .ConfigureAwait(false)
             //    .GetAwaiter();
 
-            var items =new int[] { 6, 3, 2, 7, 9, 10 };
+            var items = new int[] { 6, 3, 2, 7, 9, 10 };
             items.QuickSort(0, 5);
             items.BubbleSort();
+
+            var alarmer = sp.GetRequiredService<IAlarmer>();
+            var isSuccess = alarmer.AlarmAdminUsingWechatAsync("您的服务器挂了", "库存同步调度失败请赶紧处理")
+                .ConfigureAwait(false)
+                .GetAwaiter()
+                .GetResult();
+
             Console.Read();
             Console.WriteLine("Hello World!");
         }

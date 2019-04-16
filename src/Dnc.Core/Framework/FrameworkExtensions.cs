@@ -1,4 +1,5 @@
-﻿using Dnc.Compilers;
+﻿using Dnc.Alarmers;
+using Dnc.Compilers;
 using Dnc.Dispatcher;
 using Dnc.Files;
 using Dnc.Output;
@@ -71,6 +72,14 @@ namespace Dnc
             construction.Services.AddTransient(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("dnc"));
             return construction;
         }
+        #endregion
+
+        #region Configure alarmer.
+        public static FrameworkConstruction UseAlarmer(this FrameworkConstruction construction)
+        {
+            construction.Services.AddSingleton<IAlarmer,Alarmer>();
+            return construction;
+        } 
         #endregion
 
         #region Configure schedule center.
