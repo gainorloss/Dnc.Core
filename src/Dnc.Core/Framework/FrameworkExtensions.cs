@@ -1,5 +1,8 @@
-﻿using Dnc.Alarmers;
+﻿using CSRedis;
+using Dnc.Alarmers;
 using Dnc.Compilers;
+using Dnc.Core.Data;
+using Dnc.Data;
 using Dnc.Dispatcher;
 using Dnc.Files;
 using Dnc.Output;
@@ -77,9 +80,9 @@ namespace Dnc
         #region Configure alarmer.
         public static FrameworkConstruction UseAlarmer(this FrameworkConstruction construction)
         {
-            construction.Services.AddSingleton<IAlarmer,Alarmer>();
+            construction.Services.AddSingleton<IAlarmer, Alarmer>();
             return construction;
-        } 
+        }
         #endregion
 
         #region Configure schedule center.
@@ -166,6 +169,28 @@ namespace Dnc
         {
             construction.Services.AddScoped<IDownloader, FileDownloader>();
 
+            return construction;
+        }
+        #endregion
+
+        #region Configure redis.
+        public static FrameworkConstruction UseRedis(this FrameworkConstruction construction,
+            Action<RedisConfigOptions> configRedisOptions = null)
+        {
+            var options = new RedisConfigOptions();
+            if (configRedisOptions != null)
+            {
+                configRedisOptions(options);
+            }
+            else
+            {
+                options = construction.Configuration.Get<RedisConfigOptions>();
+            }
+
+            var myConn = $"{options.Host}:{options.Port},password={options.Password},defaultDatabase = 0,poolsize = 10,ssl = false,writeBuffer = 10240,prefix = {options.InstanceName}";
+            var client = new CSRedisClient(myConn);
+            construction.Services.AddSingleton(sp => client);
+            construction.Services.AddSingleton<IRedis, CsRedis>();
             return construction;
         }
         #endregion
