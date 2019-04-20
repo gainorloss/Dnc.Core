@@ -22,14 +22,14 @@ namespace Dnc.Spiders
         #endregion
 
         #region Methods for getting html content.
-        public async Task<string> DownloadHtmlContentAsync(string url)
+        public async Task<string> DownloadHtmlContentAsync(string url, Func<Page,Task> beforeGetContentHandler = null)
         {
-            return await GetHtmlContentUsingPuppeteerAsync(url);
-        } 
+            return await GetHtmlContentUsingPuppeteerAsync(url, beforeGetContentHandler);
+        }
         #endregion
 
         #region Helper.
-        private async Task<string> GetHtmlContentUsingPuppeteerAsync(string url)
+        private async Task<string> GetHtmlContentUsingPuppeteerAsync(string url, Func<Page,Task> beforeGetContentHandler = null)
         {
             var option = new LaunchOptions()
             {
@@ -41,8 +41,8 @@ namespace Dnc.Spiders
                 using (var page = await browser.NewPageAsync())
                 {
                     await page.GoToAsync(url);
+                    await beforeGetContentHandler?.Invoke(page);//control browser before get content.
                     var html = await page.GetContentAsync();
-
                     return html;
                 }
             }

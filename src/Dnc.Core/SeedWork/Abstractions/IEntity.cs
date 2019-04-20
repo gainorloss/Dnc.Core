@@ -16,5 +16,6 @@ namespace Dnc.SeedWork
 
         bool CanBeSaved { get; } 
         #endregion
+
     }
 }

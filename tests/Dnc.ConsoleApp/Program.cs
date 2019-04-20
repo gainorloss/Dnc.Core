@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Dnc.Algorithm;
 using Dnc.Alarmers;
 using Dnc.Data;
+using Dnc.SeedWork;
 
 namespace Dnc.ConsoleApp
 {
@@ -23,7 +24,8 @@ namespace Dnc.ConsoleApp
                 .UseDefaultSpider(services => services.AddSingleton<IPipelineProcessor, PipelineProcessor>())
                 .UseDefaultCompiler()
                 .UseDownloader()
-               .UseRedis(opt =>
+                .UseMockRepository()
+                .UseRedis(opt =>
                {
                    opt.Host = "140.143.88.100";
                    opt.Port = 6379;
@@ -40,23 +42,23 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Compiler.
-            var compiler = sp.GetRequiredService<ICompiler>();
-            var script = @"  public class HelloWorld
-    {
-        public string String { get; set; }
-        public HelloWorld(string str)
-        {
-            String = str;
-        }
-    }
-new HelloWorld(Arg1).String";
-            var rt = compiler.RunAsync<string>(script,
-                  new Arg<string>() { Arg1 = "gainorloss" },
-                  nameSpace: "Dnc.ConsoleApp",
-                  references: typeof(HelloWorld).Assembly)
-                  .ConfigureAwait(false)
-                  .GetAwaiter()
-                  .GetResult();
+            //            var compiler = sp.GetRequiredService<ICompiler>();
+            //            var script = @"  public class HelloWorld
+            //    {
+            //        public string String { get; set; }
+            //        public HelloWorld(string str)
+            //        {
+            //            String = str;
+            //        }
+            //    }
+            //new HelloWorld(Arg1).String";
+            //            var rt = compiler.RunAsync<string>(script,
+            //                  new Arg<string>() { Arg1 = "gainorloss" },
+            //                  nameSpace: "Dnc.ConsoleApp",
+            //                  references: typeof(HelloWorld).Assembly)
+            //                  .ConfigureAwait(false)
+            //                  .GetAwaiter()
+            //                  .GetResult();
             #endregion
 
             #region Downloader.
@@ -65,6 +67,10 @@ new HelloWorld(Arg1).String";
             //      .ConfigureAwait(false)
             //      .GetAwaiter()
             //      .GetResult();
+
+            //PriceSpiderAsync(sp)
+            //    .ConfigureAwait(false)
+            //   .GetAwaiter();
             #endregion
 
             #region Spider.
@@ -88,12 +94,32 @@ new HelloWorld(Arg1).String";
             //    .GetResult(); 
             #endregion
 
-            var redis = sp.GetRequiredService<IRedis>();
-            var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
-            val = redis.TryGetOrCreate("firstname", () => "gainorloss");
+            //var redis = sp.GetRequiredService<IRedis>();
+            //var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
+            //val = redis.TryGetOrCreate("firstname", () => "gainorloss");
 
+            var mock = sp.GetRequiredService<IMockRepository>();
+            var hello = mock.Create<HelloWorld>();
+            var hellos = mock.CreateMultiple<HelloWorld>();
             Console.Read();
             Console.WriteLine("Hello World!");
+        }
+
+        private static async Task PriceSpiderAsync(IServiceProvider sp)
+        {
+            var downloader = sp.GetRequiredService<IHtmlDownloader>();
+            var parser = sp.GetRequiredService<IHtmlParser>();
+
+            var url = "https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.46db30909Ff9yt&id=577658727978&skuId=4611686596086115882&user_id=859515618&cat_id=2&is_b=1&rn=b63ddc1ba00d1050fce9ff69fff2724d";
+            var content = await downloader.DownloadHtmlContentAsync(url, async page =>
+            {
+                var closeBtn = await page.QuerySelectorAsync(".sufei-dialog-close");
+                var box = await closeBtn.BoundingBoxAsync();
+                var x = box.X + box.Width / 2;
+                var y = box.Y + box.Height / 2;
+                await page.Mouse.ClickAsync(x, y);
+                await page.WaitForNavigationAsync();
+            });
         }
 
         private static async Task TestAsync()

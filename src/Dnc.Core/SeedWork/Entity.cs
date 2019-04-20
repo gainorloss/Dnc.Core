@@ -28,7 +28,7 @@ namespace Dnc.SeedWork
         public virtual void GeneratePrimaryKey()
         { }
 
-        public virtual bool IsPrimaryKeyNone() => true; 
+        public virtual bool IsPrimaryKeyNone() => true;
         #endregion
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AngleSharp.Dom;
 using Dnc.Spiders;
+using PuppeteerSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +13,6 @@ namespace Dnc.Spiders
     /// </summary>
     public interface IHtmlDownloader
     {
-        Task<string> DownloadHtmlContentAsync(string url);
+        Task<string> DownloadHtmlContentAsync(string url, Func<Page, Task> beforeGetContentHandler = null);
     }
 }
