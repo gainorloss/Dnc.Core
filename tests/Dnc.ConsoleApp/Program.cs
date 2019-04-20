@@ -9,6 +9,7 @@ using Dnc.Extensions;
 using System.Threading.Tasks;
 using Dnc.Algorithm;
 using Dnc.Alarmers;
+using Dnc.Data;
 
 namespace Dnc.ConsoleApp
 {
@@ -22,13 +23,20 @@ namespace Dnc.ConsoleApp
                 .UseDefaultSpider(services => services.AddSingleton<IPipelineProcessor, PipelineProcessor>())
                 .UseDefaultCompiler()
                 .UseDownloader()
+               .UseRedis(opt =>
+               {
+                   opt.Host = "140.143.88.100";
+                   opt.Port = 6379;
+                   opt.InstanceName = "Dnc.Core";
+                   opt.Password = "p@ssw0rd";
+               })
                 .Build();
 
             var sp = fx.ServiceProvider;
 
             #region ConsoleOutputHelper.
-            var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
-            outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
+            //var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
+            //outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
             #endregion
 
             #region Compiler.
@@ -59,20 +67,30 @@ new HelloWorld(Arg1).String";
             //      .GetResult();
             #endregion
 
+            #region Spider.
             //var spider = sp.GetRequiredService<ISpider>();
             //spider.StartAsync("https://www.nuget.org/packages?q=dnc")
             //    .ConfigureAwait(false)
-            //    .GetAwaiter();
+            //    .GetAwaiter(); 
+            #endregion
 
-            var items = new int[] { 6, 3, 2, 7, 9, 10 };
-            items.QuickSort(0, 5);
-            items.BubbleSort();
+            #region Sort.
+            //var items = new int[] { 6, 3, 2, 7, 9, 10 };
+            //items.QuickSort(0, 5);
+            //items.BubbleSort(); 
+            #endregion
 
-            var alarmer = sp.GetRequiredService<IAlarmer>();
-            var isSuccess = alarmer.AlarmAdminUsingWechatAsync("您的服务器挂了", "库存同步调度失败请赶紧处理")
-                .ConfigureAwait(false)
-                .GetAwaiter()
-                .GetResult();
+            #region Alarmer.
+            //var alarmer = sp.GetRequiredService<IAlarmer>();
+            //var isSuccess = alarmer.AlarmAdminUsingWechatAsync("您的服务器挂了", "库存同步调度失败请赶紧处理")
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter()
+            //    .GetResult(); 
+            #endregion
+
+            var redis = sp.GetRequiredService<IRedis>();
+            var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
+            val = redis.TryGetOrCreate("firstname", () => "gainorloss");
 
             Console.Read();
             Console.WriteLine("Hello World!");

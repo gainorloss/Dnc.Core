@@ -14,5 +14,6 @@ namespace Dnc.Core.Data
         public string Password { get; set; }
 
         public string InstanceName { get; set; }
+        public int AvalanchePreventionSeconds { get; set; } = 30;
     }
 }

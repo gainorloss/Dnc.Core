@@ -187,10 +187,10 @@ namespace Dnc
                 options = construction.Configuration.Get<RedisConfigOptions>();
             }
 
-            var myConn = $"{options.Host}:{options.Port},password={options.Password},defaultDatabase = 0,poolsize = 10,ssl = false,writeBuffer = 10240,prefix = {options.InstanceName}";
+            var myConn = $"{options.Host}:{options.Port},password={options.Password},defaultDatabase = 0,poolsize = 10,ssl = false,writeBuffer = 10240,prefix = {options.InstanceName}:";
             var client = new CSRedisClient(myConn);
             construction.Services.AddSingleton(sp => client);
-            construction.Services.AddSingleton<IRedis, CsRedis>();
+            construction.Services.AddSingleton<IRedis>(sp => new CsRedis(sp.GetRequiredService<CSRedisClient>(), options.AvalanchePreventionSeconds));
             return construction;
         }
         #endregion
