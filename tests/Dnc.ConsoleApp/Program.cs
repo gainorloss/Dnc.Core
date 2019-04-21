@@ -13,6 +13,8 @@ using Dnc.Data;
 using Dnc.SeedWork;
 using Dnc.Dispatcher;
 using System.Threading;
+using Dnc.ObjectId;
+using System.Linq;
 
 namespace Dnc.ConsoleApp
 {
@@ -26,7 +28,6 @@ namespace Dnc.ConsoleApp
                 .UseDefaultSpider(services => services.AddSingleton<IPipelineProcessor, PipelineProcessor>())
                 .UseDefaultCompiler()
                 .UseDownloader()
-                .UseMockRepository()
                 .UseRedis(opt =>
                {
                    opt.Host = "140.143.88.100";
@@ -76,15 +77,15 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            var manager = sp.GetRequiredService<IAgentPool>();
-            var scheduler = sp.GetRequiredService<ScheduleCenter>();
+            //var manager = sp.GetRequiredService<IAgentPool>();
+            //var scheduler = sp.GetRequiredService<ScheduleCenter>();
 
-            scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll")
-                .ConfigureAwait(false)
-                .GetAwaiter();//start a scheduler to get proxies.
+            //scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll")
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter();//start a scheduler to get proxies.
 
-            Thread.Sleep(10000);
-            var item=manager.GetAgentAsync<BaseAgentSpiderItem>().Result;
+            //Thread.Sleep(10000);
+            //var item=manager.GetAgentAsync<BaseAgentSpiderItem>().Result;
 
             //var item= manager.GetProxyAsync<BaseProxySpiderItem>().Result;
             //var spider = sp.GetRequiredService<ISpider>();
@@ -114,6 +115,16 @@ namespace Dnc.ConsoleApp
             //var mock = sp.GetRequiredService<IMockRepository>();
             //var hello = mock.Create<HelloWorld>();
             //var hellos = mock.CreateMultiple<HelloWorld>();
+
+            var objectIdGenerator = sp.GetRequiredService<IObjectIdGenerator>();
+            Enumerable.Range(0, 10000).ToList()
+                .ForEach(i =>
+                {
+                    var uuid = objectIdGenerator.Uuid();
+                    var intGuid = objectIdGenerator.IntGuid();
+                    var combinedGuid = objectIdGenerator.CombinedGuid();
+                    Console.WriteLine($"{uuid},{intGuid},{combinedGuid}");
+                });
             Console.Read();
             Console.WriteLine("Hello World!");
         }
