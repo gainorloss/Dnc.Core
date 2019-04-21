@@ -85,7 +85,6 @@ namespace Dnc.Data
             return rt;
         }
 
-
         public async Task<T> TryGetOrCreateDistributelyAsync<T>(string key, Func<T> func, int expireMS)
         {
             var val = await _client.GetAsync<T>(key);
