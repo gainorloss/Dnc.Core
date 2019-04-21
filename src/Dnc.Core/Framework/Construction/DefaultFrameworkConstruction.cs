@@ -1,7 +1,7 @@
 ﻿namespace Dnc
 {
     /// <summary>
-    /// Default framework construction.
+    /// Default framework construction,default:use logger、serializer、alarmer、scheduleCenter.
     /// </summary>
     public class DefaultFrameworkConstruction
         : FrameworkConstruction
@@ -12,7 +12,8 @@
             this.Configure()
                 .UseDefaultLogger()
                 .UseDefaultSerializer()
-                .UseAlarmer();//use json-net serializer.
+                .UseAlarmer()
+                .UseScheduleCenter();//use json-net serializer.
         } 
         #endregion
     }

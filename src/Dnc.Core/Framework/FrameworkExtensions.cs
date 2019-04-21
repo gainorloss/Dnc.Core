@@ -118,24 +118,6 @@ namespace Dnc
         }
         #endregion
 
-        #region Configure spider.
-        public static FrameworkConstruction UseDefaultSpider(this FrameworkConstruction construction,
-            Action<IServiceCollection> configurePipelineProcessor)
-        {
-            if (configurePipelineProcessor == null)
-                throw new ArgumentNullException(nameof(configurePipelineProcessor));
-
-            configurePipelineProcessor?.Invoke(construction.Services);
-
-            construction.Services.AddSingleton<IHtmlParser, AngleSharpHtmlParser>();
-            construction.Services.AddSingleton<IHtmlDownloader, PuppeteerHtmlDownloader>();
-            construction.Services.AddSingleton<IUrlManager, MemoryUrlManager>();
-            construction.Services.AddSingleton<ISpider, DefaultSpider>();
-
-            return construction;
-        }
-        #endregion
-
         #region Configure rpc.
         public static FrameworkConstruction UseDefaultRpc(this FrameworkConstruction construction)
         {

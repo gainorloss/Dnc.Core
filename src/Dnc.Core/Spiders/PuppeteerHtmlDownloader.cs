@@ -41,7 +41,10 @@ namespace Dnc.Spiders
                 using (var page = await browser.NewPageAsync())
                 {
                     await page.GoToAsync(url);
-                    await beforeGetContentHandler?.Invoke(page);//control browser before get content.
+                    if (beforeGetContentHandler!=null)
+                    {
+                        await beforeGetContentHandler.Invoke(page);//control browser before get content.
+                    }
                     var html = await page.GetContentAsync();
                     return html;
                 }

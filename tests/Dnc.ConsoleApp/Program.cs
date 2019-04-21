@@ -11,6 +11,8 @@ using Dnc.Algorithm;
 using Dnc.Alarmers;
 using Dnc.Data;
 using Dnc.SeedWork;
+using Dnc.Dispatcher;
+using System.Threading;
 
 namespace Dnc.ConsoleApp
 {
@@ -74,10 +76,21 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
+            var manager = sp.GetRequiredService<IAgentPool>();
+            var scheduler = sp.GetRequiredService<ScheduleCenter>();
+
+            scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll")
+                .ConfigureAwait(false)
+                .GetAwaiter();//start a scheduler to get proxies.
+
+            Thread.Sleep(10000);
+            var item=manager.GetAgentAsync<BaseAgentSpiderItem>().Result;
+
+            //var item= manager.GetProxyAsync<BaseProxySpiderItem>().Result;
             //var spider = sp.GetRequiredService<ISpider>();
             //spider.StartAsync("https://www.nuget.org/packages?q=dnc")
             //    .ConfigureAwait(false)
-            //    .GetAwaiter(); 
+            //    .GetAwaiter();
             #endregion
 
             #region Sort.
@@ -98,9 +111,9 @@ namespace Dnc.ConsoleApp
             //var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
             //val = redis.TryGetOrCreate("firstname", () => "gainorloss");
 
-            var mock = sp.GetRequiredService<IMockRepository>();
-            var hello = mock.Create<HelloWorld>();
-            var hellos = mock.CreateMultiple<HelloWorld>();
+            //var mock = sp.GetRequiredService<IMockRepository>();
+            //var hello = mock.Create<HelloWorld>();
+            //var hellos = mock.CreateMultiple<HelloWorld>();
             Console.Read();
             Console.WriteLine("Hello World!");
         }
