@@ -18,4 +18,10 @@
     <ProjectReference Include="..\..\src\Dnc.Core\Dnc.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
