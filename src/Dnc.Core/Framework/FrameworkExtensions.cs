@@ -48,7 +48,6 @@ namespace Dnc
             return construction;
         }
 
-
         #region Configure default logger.
         public static FrameworkConstruction UseDefaultLogger(this FrameworkConstruction construction)
         {
@@ -123,15 +122,6 @@ namespace Dnc
         {
             construction.Services.AddSingleton<IRpcServer, GrpcServer>();
             construction.Services.AddSingleton<IRpcClient, GrpcClient>();
-
-            return construction;
-        }
-        #endregion
-
-        #region Configure console output helper.
-        public static FrameworkConstruction UseDefaultConsoleOutputHelper(this FrameworkConstruction construction)
-        {
-            construction.Services.AddSingleton<IConsoleOutputHelper, ConsoleOutputHelper>();
 
             return construction;
         }

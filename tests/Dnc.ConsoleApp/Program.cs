@@ -24,7 +24,7 @@ namespace Dnc.ConsoleApp
         {
             var fx = Framework
                 .Construct<DefaultFrameworkConstruction>()
-                .UseDefaultConsoleOutputHelper()
+                .UseConsoleOutputHelper()
                 .UseDefaultSpider(services => services.AddSingleton<IPipelineProcessor, PipelineProcessor>())
                 .UseDefaultCompiler()
                 .UseDownloader()
