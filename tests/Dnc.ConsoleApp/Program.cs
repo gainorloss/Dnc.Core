@@ -40,8 +40,17 @@ namespace Dnc.ConsoleApp
             var sp = fx.ServiceProvider;
 
             #region ConsoleOutputHelper.
-            //var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
+            var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             //outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
+            Enumerable.Range(1, 10).ToList()
+                .ForEach(i => Task.Factory.StartNew(() =>
+                {
+                    Thread.Sleep(500);
+                    outputHelper.Debug("Server error.");
+                    outputHelper.Info("Server error.");
+                    outputHelper.Warning("Server error.");
+                    outputHelper.Error("Server error.");
+                }));
             #endregion
 
             #region Compiler.
@@ -108,23 +117,30 @@ namespace Dnc.ConsoleApp
             //    .GetResult(); 
             #endregion
 
+            #region redis.
             //var redis = sp.GetRequiredService<IRedis>();
             //var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
-            //val = redis.TryGetOrCreate("firstname", () => "gainorloss");
+            //val = redis.TryGetOrCreate("firstname", () => "gainorloss"); 
+            #endregion
 
+            #region mock.
             //var mock = sp.GetRequiredService<IMockRepository>();
             //var hello = mock.Create<HelloWorld>();
-            //var hellos = mock.CreateMultiple<HelloWorld>();
+            //var hellos = mock.CreateMultiple<HelloWorld>(); 
+            #endregion
 
-            var objectIdGenerator = sp.GetRequiredService<IObjectIdGenerator>();
-            Enumerable.Range(0, 10000).ToList()
-                .ForEach(i =>
-                {
-                    var uuid = objectIdGenerator.Uuid();
-                    var intGuid = objectIdGenerator.IntGuid();
-                    var combinedGuid = objectIdGenerator.CombinedGuid();
-                    Console.WriteLine($"{uuid},{intGuid},{combinedGuid}");
-                });
+            #region object id generator.
+            //var objectIdGenerator = sp.GetRequiredService<IObjectIdGenerator>();
+            //Enumerable.Range(0, 10000).ToList()
+            //    .ForEach(i =>
+            //    {
+            //        var uuid = objectIdGenerator.Uuid();
+            //        var intGuid = objectIdGenerator.IntGuid();
+            //        var combinedGuid = objectIdGenerator.CombinedGuid();
+            //        Console.WriteLine($"{uuid},{intGuid},{combinedGuid}");
+            //    }); 
+            #endregion
+
             Console.Read();
             Console.WriteLine("Hello World!");
         }

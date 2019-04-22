@@ -11,11 +11,13 @@ namespace Dnc.Output
     public class ConsoleOutputHelper
         : IConsoleOutputHelper
     {
+        private static object mLock = new object();
+
         public void OutputImage(string imgPath)
         {
             #region Check image is existed or not.
             if (!File.Exists(imgPath))
-                throw new ArgumentException("The image is not existed."); 
+                throw new ArgumentException("The image is not existed.");
             #endregion
 
             #region Delete file before.
@@ -71,5 +73,37 @@ namespace Dnc.Output
             Console.Write(lines);
             #endregion
         }
+
+        public void Debug(string msg, string title = "Framework")
+            => BuildMessageAndOutput(msg, title, "debg", ConsoleColor.White);
+
+        public void Info(string msg, string title = "Framework")
+            => BuildMessageAndOutput(msg, title, "info", ConsoleColor.DarkGreen);
+
+        public void Warning(string msg, string title = "Framework")
+            => BuildMessageAndOutput(msg, title, "warn", ConsoleColor.DarkYellow);
+
+        public void Error(string msg, string title = "Framework")
+            => BuildMessageAndOutput(msg, title, "err", ConsoleColor.DarkRed);
+
+        #region Helper.
+        private void BuildMessageAndOutput(string msg, string title, string tag, ConsoleColor consoleColor)
+        {
+            lock (mLock)
+            {
+                var oldColor = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("[");
+                Console.Write($"{DateTime.Now.ToLongTimeString()}");
+                Console.ForegroundColor = consoleColor;
+                Console.Write($" {tag.PadRight(4, ' ').ToUpper()}");
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("]");
+                msg = $" {title}：{msg}";
+                Console.WriteLine(msg);
+                Console.ForegroundColor = oldColor;
+            }
+        }
+        #endregion
     }
 }
