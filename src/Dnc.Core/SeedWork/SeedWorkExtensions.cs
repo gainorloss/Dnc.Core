@@ -10,7 +10,7 @@ namespace Dnc
     /// <summary>
     /// Extension methods for module <see cref="SeedWork"/>
     /// </summary>
-    public static class SeedWorkExtensions
+    internal static class SeedWorkExtensions
     {
         public static FrameworkConstruction UseMockRepository(this FrameworkConstruction construction)
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dnc.ObjectId
 {
-    public static class ObjectIdGeneratorExtensions
+    internal static class ObjectIdGeneratorExtensions
     {
         /// <summary>
         /// Uses object id generator in framework ,get it from a <see cref="IObjectIdGenerator"/>.
@@ -14,7 +14,7 @@ namespace Dnc.ObjectId
         /// <returns></returns>
         public static FrameworkConstruction UseObjectIdGenerator(this FrameworkConstruction construction)
         {
-            construction.Services.AddSingleton<IObjectIdGenerator,ObjectIdGenerator>();
+            construction.Services.AddSingleton<IObjectIdGenerator, ObjectIdGenerator>();
             return construction;
         }
     }

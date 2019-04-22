@@ -30,7 +30,6 @@ namespace Dnc
             return services;
         }
 
-
         public static FrameworkConstruction Configure(this FrameworkConstruction construction,
             Action<IConfigurationBuilder> configure = null)
         {
@@ -66,20 +65,10 @@ namespace Dnc
             construction.Services.AddLogging(opt =>
             {
                 opt.AddConfiguration(construction.Configuration?.GetSection("Logging"));
-                //opt.AddConsole();
-                //opt.AddDebug();
                 opt.AddSerilog(Log.Logger);
             });
 
             construction.Services.AddTransient(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("dnc"));
-            return construction;
-        }
-        #endregion
-
-        #region Configure alarmer.
-        public static FrameworkConstruction UseAlarmer(this FrameworkConstruction construction)
-        {
-            construction.Services.AddSingleton<IAlarmer, Alarmer>();
             return construction;
         }
         #endregion
@@ -96,25 +85,6 @@ namespace Dnc
             return construction;
         }
 
-        #endregion
-
-        #region Configure serializer.
-        public static FrameworkConstruction UseDefaultSerializer(this FrameworkConstruction construction)
-        {
-            construction.Services.AddSingleton<IMessageSerializer, NewtonsoftJsonSerializer>();
-
-            return construction;
-        }
-
-
-        public static FrameworkConstruction UseSerializer<T>(this FrameworkConstruction construction,
-             Func<IServiceCollection, IMessageSerializer> configureMessageSerializer = null)
-        {
-            var serializer = configureMessageSerializer.Invoke(construction.Services);
-            construction.Services.AddSingleton<IMessageSerializer>(serializer);
-
-            return construction;
-        }
         #endregion
 
         #region Configure rpc.
