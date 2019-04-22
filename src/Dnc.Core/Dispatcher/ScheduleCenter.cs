@@ -77,7 +77,6 @@ namespace Dnc.Dispatcher
             await _scheduler.ScheduleJob(jobDetail, trigger);
         }
 
-
         public async Task CreateAndRunScheduleAsync(string name,
             string typeName,
             string cronExpression,
@@ -87,6 +86,12 @@ namespace Dnc.Dispatcher
             _schedules.Add(new Schedule(name, typeName, cronExpression, assemblyName, groupName));
 
             await RunScheduleAsync(name, groupName);
+        }
+
+        public void Shutdown()
+        {
+            if (_scheduler != null)
+                _scheduler.Shutdown();
         }
         #endregion
     }

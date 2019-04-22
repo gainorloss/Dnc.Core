@@ -175,7 +175,6 @@ namespace Dnc.ConsoleApp
             await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll");
 
             Thread.Sleep(10000);
-         
 
             var isbns = new List<string>
             {
@@ -208,7 +207,7 @@ namespace Dnc.ConsoleApp
                 var category = string.Join(";", categories);
                 outputHelper.Info(category,"当当营销分类");
             }
-
+            scheduler.Shutdown();
             #region Obsolete.
             //var item= manager.GetProxyAsync<BaseProxySpiderItem>().Result;
             //var spider = sp.GetRequiredService<ISpider>();
