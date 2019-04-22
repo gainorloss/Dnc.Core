@@ -15,6 +15,8 @@ using Dnc.Dispatcher;
 using System.Threading;
 using Dnc.ObjectId;
 using System.Linq;
+using System.Collections.Generic;
+using System.Text.Encodings.Web;
 
 namespace Dnc.ConsoleApp
 {
@@ -29,28 +31,28 @@ namespace Dnc.ConsoleApp
                 .UseDefaultCompiler()
                 .UseDownloader()
                 .UseRedis(opt =>
-               {
-                   opt.Host = "140.143.88.100";
-                   opt.Port = 6379;
-                   opt.InstanceName = "Dnc.Core";
-                   opt.Password = "p@ssw0rd";
-               })
+                {
+                    opt.Host = "140.143.88.100";
+                    opt.Port = 6379;
+                    opt.InstanceName = "Dnc.Core";
+                    opt.Password = "p@ssw0rd";
+                })
                 .Build();
 
             var sp = fx.ServiceProvider;
 
             #region ConsoleOutputHelper.
-            var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
+            //var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             //outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
-            Enumerable.Range(1, 10).ToList()
-                .ForEach(i => Task.Factory.StartNew(() =>
-                {
-                    Thread.Sleep(500);
-                    outputHelper.Debug("Server error.");
-                    outputHelper.Info("Server error.");
-                    outputHelper.Warning("Server error.");
-                    outputHelper.Error("Server error.");
-                }));
+            //Enumerable.Range(1, 10).ToList()
+            //    .ForEach(i => Task.Factory.StartNew(() =>
+            //    {
+            //        Thread.Sleep(500);
+            //        outputHelper.Debug("Server error.");
+            //        outputHelper.Info("Server error.");
+            //        outputHelper.Warning("Server error.");
+            //        outputHelper.Error("Server error.");
+            //    }));
             #endregion
 
             #region Compiler.
@@ -86,21 +88,9 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            //var manager = sp.GetRequiredService<IAgentPool>();
-            //var scheduler = sp.GetRequiredService<ScheduleCenter>();
-
-            //scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll")
-            //    .ConfigureAwait(false)
-            //    .GetAwaiter();//start a scheduler to get proxies.
-
-            //Thread.Sleep(10000);
-            //var item=manager.GetAgentAsync<BaseAgentSpiderItem>().Result;
-
-            //var item= manager.GetProxyAsync<BaseProxySpiderItem>().Result;
-            //var spider = sp.GetRequiredService<ISpider>();
-            //spider.StartAsync("https://www.nuget.org/packages?q=dnc")
-            //    .ConfigureAwait(false)
-            //    .GetAwaiter();
+            DangdangCategoryGetterAsync(sp)
+                .ConfigureAwait(false)
+                .GetAwaiter();
             #endregion
 
             #region Sort.
@@ -171,6 +161,61 @@ namespace Dnc.ConsoleApp
             });
             var page = await browser.NewPageAsync();
             await page.GoToAsync("http://www.google.com");
+        }
+
+        private static async Task DangdangCategoryGetterAsync(IServiceProvider sp)
+        {
+            var manager = sp.GetRequiredService<IAgentPool>();
+            var scheduler = sp.GetRequiredService<ScheduleCenter>();
+            var downloader = sp.GetRequiredService<IHtmlDownloader>();
+            var parser = sp.GetRequiredService<IHtmlParser>();
+            var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
+
+            //start a scheduler to get proxies.
+            await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll");
+
+            Thread.Sleep(10000);
+         
+
+            var isbns = new List<string>
+            {
+                "9787560099347",
+                "9787313171115",
+                "9787565600524",
+                "9787111575184"
+            };
+            foreach (var isbn in isbns)
+            {
+                var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
+                var agent = $"{item.Host}:{item.Port}";
+
+                var queryUrl = $"http://search.dangdang.com/?key={isbn}";
+                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl,agent: agent);
+                var li = await parser.GetElementAsync(queryHtml, "#search_nature_rg ul li");
+                var skuId = li.GetAttribute("sku");
+
+                var itemUrl = $"http://product.dangdang.com/{skuId}.html";
+                var itemHtml = await downloader.DownloadHtmlContentAsync(itemUrl, agent: agent);
+                var spans = await parser.GetElementsAsync(itemHtml, ".clearfix .fenlei .lie");
+                var categories = new List<string>();
+                foreach (var span in spans)
+                {
+                    var categoryNodes = span.QuerySelectorAll("a");
+                    var categoryNodeStrs = categoryNodes.Select(n => n.TextContent);
+                    categories.Add(string.Join("&gt", categoryNodeStrs));
+                }
+
+                var category = string.Join(";", categories);
+                outputHelper.Info(category,"当当营销分类");
+            }
+
+            #region Obsolete.
+            //var item= manager.GetProxyAsync<BaseProxySpiderItem>().Result;
+            //var spider = sp.GetRequiredService<ISpider>();
+            //spider.StartAsync("https://www.nuget.org/packages?q=dnc")
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter(); 
+            #endregion
         }
     }
 }

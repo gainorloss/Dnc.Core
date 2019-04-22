@@ -13,6 +13,6 @@ namespace Dnc.Spiders
     /// </summary>
     public interface IHtmlDownloader
     {
-        Task<string> DownloadHtmlContentAsync(string url, Func<Page, Task> beforeGetContentHandler = null);
+        Task<string> DownloadHtmlContentAsync(string url, Func<Page, Task> beforeGetContentHandler = null, string agent = null);
     }
 }
