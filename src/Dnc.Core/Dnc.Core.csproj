@@ -23,6 +23,7 @@
     <PackageReference Include="google.protobuf" Version="3.7.0" />
     <PackageReference Include="grpc" Version="1.19.0" />
     <PackageReference Include="libgit2sharp" Version="0.26.0" />
+    <PackageReference Include="mailkit" Version="2.1.4" />
     <PackageReference Include="messagepack" Version="1.7.3.4" />
     <PackageReference Include="messagepackanalyzer" Version="1.6.0" />
     <PackageReference Include="microsoft.aspnetcore.signalr" Version="1.1.0" />

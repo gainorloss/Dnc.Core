@@ -17,6 +17,8 @@ using Dnc.ObjectId;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.Encodings.Web;
+using Dnc.Senders;
+using Dnc.ViewEngines;
 
 namespace Dnc.ConsoleApp
 {
@@ -37,12 +39,13 @@ namespace Dnc.ConsoleApp
                     opt.InstanceName = "Dnc.Core";
                     opt.Password = "p@ssw0rd";
                 })
+                .UseMailSender()
                 .Build();
 
             var sp = fx.ServiceProvider;
 
             #region ConsoleOutputHelper.
-            //var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
+            var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             //outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
             //Enumerable.Range(1, 10).ToList()
             //    .ForEach(i => Task.Factory.StartNew(() =>
@@ -88,9 +91,9 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            DangdangCategoryGetterAsync(sp)
-                .ConfigureAwait(false)
-                .GetAwaiter();
+            //DangdangCategoryGetterAsync(sp)
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter();
             #endregion
 
             #region Sort.
@@ -129,6 +132,22 @@ namespace Dnc.ConsoleApp
             //        var combinedGuid = objectIdGenerator.CombinedGuid();
             //        Console.WriteLine($"{uuid},{intGuid},{combinedGuid}");
             //    }); 
+            #endregion
+
+            #region mail sender.
+            //var mailer = sp.GetRequiredService<IMailSender>();
+            //mailer.SendMailAsync("519564415@qq.com","this is a title","this is a content")
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter();
+            #endregion
+
+            #region view engine.
+            var viewEngine = sp.GetRequiredService<IViewEngine>();
+            var rt = viewEngine.ParseAsync("<h1>@Model.FirstName</h1><p>@Model.LastName</p>", new { FirstName = "gainorloss", LastName = "gain" })
+                  .ConfigureAwait(false)
+                  .GetAwaiter()
+                  .GetResult();
+            outputHelper.Info(rt);
             #endregion
 
             Console.Read();
@@ -189,7 +208,7 @@ namespace Dnc.ConsoleApp
                 var agent = $"{item.Host}:{item.Port}";
 
                 var queryUrl = $"http://search.dangdang.com/?key={isbn}";
-                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl,agent: agent);
+                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl, agent: agent);
                 var li = await parser.GetElementAsync(queryHtml, "#search_nature_rg ul li");
                 var skuId = li.GetAttribute("sku");
 
@@ -205,7 +224,7 @@ namespace Dnc.ConsoleApp
                 }
 
                 var category = string.Join(";", categories);
-                outputHelper.Info(category,"当当营销分类");
+                outputHelper.Info(category, "当当营销分类");
             }
             scheduler.Shutdown();
             #region Obsolete.
