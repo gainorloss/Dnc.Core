@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Dnc.Serializers;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,13 +16,16 @@ namespace Dnc.Spiders
         #region Private members.
         private readonly IHtmlDownloader _downloader;
         private readonly IHtmlParser _parser;
+        private readonly IMessageSerializer _serializer;
         #endregion
 
         #region Default ctor.
-        public XiCiAgentGetter(IHtmlDownloader downloader, IHtmlParser parser)
+        public XiCiAgentGetter(IHtmlDownloader downloader, IHtmlParser parser,
+            IMessageSerializer serializer)
         {
             _downloader = downloader;
             _parser = parser;
+            _serializer = serializer;
         }
         #endregion
 
@@ -67,7 +72,14 @@ namespace Dnc.Spiders
                 proxies.Add(instance);
             }
             return proxies;
-        } 
+        }
+
+        public async Task<bool> VerifyProxyAsync(string ip)
+        {
+            var url = $"http://ip.taobao.com/service/getIpInfo2.php?ip={ip}";
+            var json = await _downloader.DownloadHtmlContentAsync(url);
+            return !string.IsNullOrEmpty(json);
+        }
         #endregion
     }
 }

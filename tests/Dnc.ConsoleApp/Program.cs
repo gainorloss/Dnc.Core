@@ -29,8 +29,8 @@ namespace Dnc.ConsoleApp
             var fx = Framework
                 .Construct<DefaultFrameworkConstruction>()
                 .UseConsoleOutputHelper()
-                //.UseDefaultSpider(services => services.AddSingleton<IPipelineProcessor, PipelineProcessor>())
-                .UseAgentPool(services=> services.AddSingleton<IAgentPool,RedisAgentPool>())
+                .UseRedisAgentPool()
+                .UseHttpCodeHtmlDownloader()
                 .UseDefaultCompiler()
                 .UseDownloader()
                 .UseRedis(opt =>
@@ -190,6 +190,7 @@ namespace Dnc.ConsoleApp
             var downloader = sp.GetRequiredService<IHtmlDownloader>();
             var parser = sp.GetRequiredService<IHtmlParser>();
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
+            var agentGetter = sp.GetService<IAgentGetter>() as IAgentGetter;
 
             //start a scheduler to get proxies.
             await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll");

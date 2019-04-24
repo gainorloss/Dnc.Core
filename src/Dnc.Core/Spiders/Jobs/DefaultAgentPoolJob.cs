@@ -11,11 +11,13 @@ namespace Dnc.Spiders
     {
         public override async Task ExecuteJobAsync(IJobExecutionContext context)
         {
-            var agentGetter = ServiceProvider.GetRequiredService<IAgentGetter>();
-            var agentPool = ServiceProvider.GetRequiredService<IAgentPool>();
+            var agentGetter = mServiceProvider.GetRequiredService<IAgentGetter>();
+            var agentPool = mServiceProvider.GetRequiredService<IAgentPool>();
 
             var agents = await agentGetter.GetProxiesAsync<BaseAgentSpiderItem>();
+            agents = agents.Where(a => agentGetter.VerifyProxyAsync(a.Host).Result).ToList();
             await agentPool.ClearAndRefreshAgentPoolAsync(agents.ToArray());
+            mOutput.Info($"清空代理池并放入代理{agents.Count}个");
         }
     }
 }

@@ -12,5 +12,7 @@ namespace Dnc.Spiders
     {
         Task<IList<T>> GetProxiesAsync<T>(string url= "https://www.xicidaili.com/nn/")
             where T: BaseAgentSpiderItem,new();
+
+        Task<bool> VerifyProxyAsync(string ip);
     }
 }

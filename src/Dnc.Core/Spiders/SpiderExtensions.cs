@@ -8,45 +8,72 @@ namespace Dnc
     public static class SpiderExtensions
     {
         /// <summary>
-        /// Configures framework use default spider ,get it from a <see cref="ISpider"/>.
+        /// Configures  framework use agent getter,get it from a <see cref="IAgentPool"/> & a <see cref="IAgentGetter"/>.
         /// </summary>
         /// <param name="construction"></param>
-        /// <param name="configurePipelineProcessor"></param>
         /// <returns></returns>
-        public static FrameworkConstruction UseDefaultSpider(this FrameworkConstruction construction,
-            Action<IServiceCollection> configurePipelineProcessor)
+        public static FrameworkConstruction UseMemoryAgentPool(this FrameworkConstruction construction)
         {
-            if (configurePipelineProcessor == null)
-                throw new ArgumentNullException(nameof(configurePipelineProcessor));
-
-            configurePipelineProcessor?.Invoke(construction.Services);
-            construction.UseAgentPool();//based on agent getter.
-            construction.Services.AddSingleton<IUrlManager, MemoryUrlManager>();
-            construction.Services.AddSingleton<ISpider, DefaultSpider>();
+            construction.UseAgentGetter();
+            construction.Services.AddSingleton<IAgentPool, MemoryAgentPool>();
             return construction;
         }
 
         /// <summary>
-        /// Configures  framework use agent getter,get it from a <see cref="IAgentGetter"/> & a <see cref="IAgentPool"/>.
+        /// Configures  framework use agent getter,get it from a <see cref="IAgentPool"/>  & a <see cref="IAgentGetter"/>.
         /// </summary>
         /// <param name="construction"></param>
         /// <returns></returns>
-        public static FrameworkConstruction UseAgentPool(this FrameworkConstruction construction, 
-            Action<IServiceCollection> configureAgentPool=null)
+        public static FrameworkConstruction UseRedisAgentPool(this FrameworkConstruction construction)
+        {
+            construction.UseAgentGetter();
+            construction.Services.AddSingleton<IAgentPool, RedisAgentPool>();
+            return construction;
+        }
+
+        /// <summary>
+        /// Configures  framework use agent getter,get it from a <see cref="IHtmlDownloader"/> & a <see cref="IHtmlParser"/>.
+        /// </summary>
+        /// <param name="construction"></param>
+        /// <returns></returns>
+        public static FrameworkConstruction UsePuppeteerHtmlDownloader(this FrameworkConstruction construction)
+        {
+            construction.UseHtmlParser();
+            construction.Services.AddSingleton<IHtmlDownloader, PuppeteerHtmlDownloader>();
+            return construction;
+        }
+
+        /// <summary>
+        /// Configures  framework use agent getter,get it from a <see cref="IHtmlDownloader"/> & a <see cref="IHtmlParser"/>.
+        /// </summary>
+        /// <param name="construction"></param>
+        /// <returns></returns>
+        public static FrameworkConstruction UseHttpCodeHtmlDownloader(this FrameworkConstruction construction)
+        {
+            construction.UseHtmlParser();
+            construction.Services.AddSingleton<IHtmlDownloader,HttpRequestHtmlDownloader>();
+            return construction;
+        }
+
+        /// <summary>
+        /// Configures  framework use agent getter,get it from a <see cref="IAgentGetter"/>.
+        /// </summary>
+        /// <param name="construction"></param>
+        /// <returns></returns>
+        internal static FrameworkConstruction UseAgentGetter(this FrameworkConstruction construction)
+        {
+            construction.Services.AddSingleton<IAgentGetter, XiCiAgentGetter>();
+            return construction;
+        }
+
+        /// <summary>
+        /// Configures  framework use agent getter,get it from a <see cref="IAgentGetter"/>.
+        /// </summary>
+        /// <param name="construction"></param>
+        /// <returns></returns>
+        internal static FrameworkConstruction UseHtmlParser(this FrameworkConstruction construction)
         {
             construction.Services.AddSingleton<IHtmlParser, AngleSharpHtmlParser>();
-            construction.Services.AddSingleton<IHtmlDownloader, PuppeteerHtmlDownloader>();
-            construction.Services.AddSingleton<IAgentGetter, XiCiAgentGetter>();
-
-            if (configureAgentPool==null)
-            {
-                construction.Services.AddSingleton<IAgentPool, MemoryAgentPool>();
-            }
-            else
-            {
-                configureAgentPool?.Invoke(construction.Services);
-            }
-
             return construction;
         }
     }

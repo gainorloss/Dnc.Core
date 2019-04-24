@@ -49,8 +49,8 @@ namespace Dnc.Files
 
                   var savePath = Path.Combine(folder, fileName);
 
-                  var img = Image.FromStream(resStream);
-                  img.Save(savePath, ImageFormat.Png);
+                  var img = System.Drawing.Image.FromStream(resStream);
+                  img.Save(savePath, System.Drawing.Imaging.ImageFormat.Png);
 
                   return savePath;
               });
