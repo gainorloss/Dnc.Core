@@ -29,7 +29,8 @@ namespace Dnc.ConsoleApp
             var fx = Framework
                 .Construct<DefaultFrameworkConstruction>()
                 .UseConsoleOutputHelper()
-                .UseDefaultSpider(services => services.AddSingleton<IPipelineProcessor, PipelineProcessor>())
+                //.UseDefaultSpider(services => services.AddSingleton<IPipelineProcessor, PipelineProcessor>())
+                .UseAgentPool(services=> services.AddSingleton<IAgentPool,RedisAgentPool>())
                 .UseDefaultCompiler()
                 .UseDownloader()
                 .UseRedis(opt =>
@@ -91,9 +92,9 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            //DangdangCategoryGetterAsync(sp)
-            //    .ConfigureAwait(false)
-            //    .GetAwaiter();
+            DangdangCategoryGetterAsync(sp)
+                .ConfigureAwait(false)
+                .GetAwaiter();
             #endregion
 
             #region Sort.
@@ -142,12 +143,12 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region view engine.
-            var viewEngine = sp.GetRequiredService<IViewEngine>();
-            var rt = viewEngine.ParseAsync("<h1>@Model.FirstName</h1><p>@Model.LastName</p>", new { FirstName = "gainorloss", LastName = "gain" })
-                  .ConfigureAwait(false)
-                  .GetAwaiter()
-                  .GetResult();
-            outputHelper.Info(rt);
+            //var viewEngine = sp.GetRequiredService<IViewEngine>();
+            //var rt = viewEngine.ParseAsync("<h1>@Model.FirstName</h1><p>@Model.LastName</p>", new { FirstName = "gainorloss", LastName = "gain" })
+            //      .ConfigureAwait(false)
+            //      .GetAwaiter()
+            //      .GetResult();
+            //outputHelper.Info(rt);
             #endregion
 
             Console.Read();

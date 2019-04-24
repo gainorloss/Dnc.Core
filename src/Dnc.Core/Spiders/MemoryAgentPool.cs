@@ -15,14 +15,14 @@ namespace Dnc.Spiders
     {
         private static IList<BaseAgentSpiderItem> mAgents = new List<BaseAgentSpiderItem>();
         private static object _lock = new object();
-        public async Task<T> GetAgentAsync<T>() where T : BaseAgentSpiderItem
+        public async Task<T> GetAgentAsync<T>() where T : BaseAgentSpiderItem, new()
         {
             var random = new Random(DateTime.Now.GetHashCode()).Next(0, mAgents.Count());
 
             return await Task.FromResult(mAgents.ElementAt(random) as T);
         }
 
-        public async Task ClearAndRefreshAgentPoolAsync<T>(params T[] proxies) where T : BaseAgentSpiderItem
+        public async Task ClearAndRefreshAgentPoolAsync<T>(params T[] proxies) where T : BaseAgentSpiderItem, new()
         {
             if (proxies != null && proxies.Any())
             {

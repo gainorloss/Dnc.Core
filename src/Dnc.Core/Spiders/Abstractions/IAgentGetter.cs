@@ -10,7 +10,7 @@ namespace Dnc.Spiders
     /// </summary>
     public interface IAgentGetter
     {
-        Task<IEnumerable<T>> GetProxiesAsync<T>(string url= "https://www.xicidaili.com/nn/")
+        Task<IList<T>> GetProxiesAsync<T>(string url= "https://www.xicidaili.com/nn/")
             where T: BaseAgentSpiderItem,new();
     }
 }

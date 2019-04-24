@@ -9,12 +9,16 @@ namespace Dnc.Data
     {
         void Set<T>(string key, T t, int expireMS=20);
 
+        void Clear(string key);
+
         T TryGetOrCreate<T>(string key,
            Func<T> func,int expireMS = 20);
 
         T TryGetOrCreateDistributely<T>(string key, Func<T> func,int expireMS = 20);
 
         Task SetAsync<T>(string key, T t, int expireMS = 20);
+
+        Task ClearAsync(string key);
 
         Task<T> TryGetOrCreateAsync<T>(string key,
             Func<Task<T>> func,int expireMS = 20);

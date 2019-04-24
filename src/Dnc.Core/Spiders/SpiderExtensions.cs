@@ -31,12 +31,21 @@ namespace Dnc
         /// </summary>
         /// <param name="construction"></param>
         /// <returns></returns>
-        public static FrameworkConstruction UseAgentPool(this FrameworkConstruction construction)
+        public static FrameworkConstruction UseAgentPool(this FrameworkConstruction construction, 
+            Action<IServiceCollection> configureAgentPool=null)
         {
             construction.Services.AddSingleton<IHtmlParser, AngleSharpHtmlParser>();
             construction.Services.AddSingleton<IHtmlDownloader, PuppeteerHtmlDownloader>();
             construction.Services.AddSingleton<IAgentGetter, XiCiAgentGetter>();
-            construction.Services.AddSingleton<IAgentPool, MemoryAgentPool>();
+
+            if (configureAgentPool==null)
+            {
+                construction.Services.AddSingleton<IAgentPool, MemoryAgentPool>();
+            }
+            else
+            {
+                configureAgentPool?.Invoke(construction.Services);
+            }
 
             return construction;
         }

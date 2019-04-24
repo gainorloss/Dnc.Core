@@ -25,7 +25,7 @@ namespace Dnc.Spiders
         #endregion
 
         #region Methods for getting proxies.
-        public async Task<IEnumerable<T>> GetProxiesAsync<T>(string url) where T : BaseAgentSpiderItem, new()
+        public async Task<IList<T>> GetProxiesAsync<T>(string url) where T : BaseAgentSpiderItem, new()
         {
             var html = await _downloader.DownloadHtmlContentAsync(url);
             if (string.IsNullOrEmpty(html))

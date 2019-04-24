@@ -31,6 +31,13 @@ namespace Dnc.Data
         #region Sync.
         public void Set<T>(string key, T t, int expireMS) => _client.Set(key, t, RandomExpireMS(expireMS));
 
+        public void Clear(string key)
+        {
+            if (!_client.Exists(key))
+                return;
+            _client.Del(key);
+        }
+
         public T TryGetOrCreate<T>(string key, Func<T> func, int expireMS)
         {
             var val = _client.Get<T>(key);
@@ -65,6 +72,13 @@ namespace Dnc.Data
 
         #region Async.
         public async Task SetAsync<T>(string key, T t, int expireMS) => await _client.SetAsync(key, t, RandomExpireMS(expireMS));
+
+        public async Task ClearAsync(string key)
+        {
+            if (!await _client.ExistsAsync(key))
+                return;
+            await _client.DelAsync(key);
+        }
 
         /// <summary>
         /// Try get value from cache or create into cache async. 

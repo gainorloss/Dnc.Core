@@ -11,9 +11,9 @@ namespace Dnc.Spiders
     public interface IAgentPool
     {
         Task<T> GetAgentAsync<T>()
-            where T:BaseAgentSpiderItem;
+            where T:BaseAgentSpiderItem,new();
 
         Task ClearAndRefreshAgentPoolAsync<T>(params T[] proxies) 
-            where T : BaseAgentSpiderItem;
+            where T : BaseAgentSpiderItem, new();
     }
 }
