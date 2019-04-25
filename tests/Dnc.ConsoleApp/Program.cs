@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Text.Encodings.Web;
 using Dnc.Senders;
 using Dnc.ViewEngines;
+using Dnc.FaultToleranceProcessors;
 
 namespace Dnc.ConsoleApp
 {
@@ -30,7 +31,7 @@ namespace Dnc.ConsoleApp
                 .Construct<DefaultFrameworkConstruction>()
                 .UseConsoleOutputHelper()
                 .UseRedisAgentPool()
-                .UseHttpCodeHtmlDownloader()
+                .UseHttpRequestHtmlDownloader()
                 .UseDefaultCompiler()
                 .UseDownloader()
                 .UseRedis(opt =>
@@ -40,6 +41,7 @@ namespace Dnc.ConsoleApp
                     opt.InstanceName = "Dnc.Core";
                     opt.Password = "p@ssw0rd";
                 })
+                .UseFaultToleranceProcessor()
                 .UseMailSender()
                 .Build();
 
@@ -92,9 +94,9 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            DangdangCategoryGetterAsync(sp)
-                .ConfigureAwait(false)
-                .GetAwaiter();
+            //DangdangCategoryGetterAsync(sp)
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter();
             #endregion
 
             #region Sort.
@@ -151,6 +153,13 @@ namespace Dnc.ConsoleApp
             //outputHelper.Info(rt);
             #endregion
 
+            var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
+            faultToleranceProcessor.RetryAsync(async () =>
+            await Task.Run(() =>
+                 {
+                     var zero = 0;
+                     var a = 1 / zero;
+                 })).Wait();
             Console.Read();
             Console.WriteLine("Hello World!");
         }
