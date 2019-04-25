@@ -48,7 +48,7 @@ namespace Dnc
         /// </summary>
         /// <param name="construction"></param>
         /// <returns></returns>
-        public static FrameworkConstruction UseHttpCodeHtmlDownloader(this FrameworkConstruction construction)
+        public static FrameworkConstruction UseHttpRequestHtmlDownloader(this FrameworkConstruction construction)
         {
             construction.UseHtmlParser();
             construction.Services.AddSingleton<IHtmlDownloader,HttpRequestHtmlDownloader>();
