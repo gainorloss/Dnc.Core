@@ -193,9 +193,9 @@ namespace Dnc.ConsoleApp
             var agentGetter = sp.GetService<IAgentGetter>() as IAgentGetter;
 
             //start a scheduler to get proxies.
-            await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll");
+            //await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll");
 
-            Thread.Sleep(10000);
+            //Thread.Sleep(10000);
 
             var isbns = new List<string>
             {
@@ -206,16 +206,16 @@ namespace Dnc.ConsoleApp
             };
             foreach (var isbn in isbns)
             {
-                var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
-                var agent = $"{item.Host}:{item.Port}";
+                //var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
+                //var agent = $"{item.Host}:{item.Port}";
 
                 var queryUrl = $"http://search.dangdang.com/?key={isbn}";
-                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl, agent: agent);
+                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl);
                 var li = await parser.GetElementAsync(queryHtml, "#search_nature_rg ul li");
                 var skuId = li.GetAttribute("sku");
 
                 var itemUrl = $"http://product.dangdang.com/{skuId}.html";
-                var itemHtml = await downloader.DownloadHtmlContentAsync(itemUrl, agent: agent);
+                var itemHtml = await downloader.DownloadHtmlContentAsync(itemUrl);
                 var spans = await parser.GetElementsAsync(itemHtml, ".clearfix .fenlei .lie");
                 var categories = new List<string>();
                 foreach (var span in spans)
