@@ -30,8 +30,9 @@ namespace Dnc.ConsoleApp
             var fx = Framework
                 .Construct<DefaultFrameworkConstruction>()
                 .UseConsoleOutputHelper()
+                .UseXiCiAgentGetter()
                 .UseRedisAgentPool()
-                .UseHttpRequestHtmlDownloader()
+                .UsePuppeteerHtmlDownloader()
                 .UseDefaultCompiler()
                 .UseDownloader()
                 .UseRedis(opt =>
@@ -94,9 +95,9 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            //DangdangCategoryGetterAsync(sp)
-            //    .ConfigureAwait(false)
-            //    .GetAwaiter();
+            DangdangCategoryGetterAsync(sp)
+                .ConfigureAwait(false)
+                .GetAwaiter();
             #endregion
 
             #region Sort.
@@ -153,13 +154,16 @@ namespace Dnc.ConsoleApp
             //outputHelper.Info(rt);
             #endregion
 
-            var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
-            faultToleranceProcessor.RetryAsync(async () =>
-            await Task.Run(() =>
-                 {
-                     var zero = 0;
-                     var a = 1 / zero;
-                 })).Wait();
+            #region Fault tolerance.
+            //var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
+            //faultToleranceProcessor.RetryAsync(async () =>
+            //await Task.Run(() =>
+            //     {
+            //         var zero = 0;
+            //         var a = 1 / zero;
+            //     })).Wait(); 
+            #endregion
+
             Console.Read();
             Console.WriteLine("Hello World!");
         }
@@ -200,11 +204,11 @@ namespace Dnc.ConsoleApp
             var parser = sp.GetRequiredService<IHtmlParser>();
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             var agentGetter = sp.GetService<IAgentGetter>() as IAgentGetter;
-
+            var agentPool = sp.GetService<IAgentPool>() as IAgentPool;
             //start a scheduler to get proxies.
-            //await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll");
+            //await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "0 0 */3 ? * *", "Dnc.ConsoleApp.dll");
 
-            //Thread.Sleep(10000);
+            //await agentPool.ClearAndRefreshAgentPoolAsync<BaseAgentSpiderItem>();
 
             var isbns = new List<string>
             {
@@ -215,16 +219,16 @@ namespace Dnc.ConsoleApp
             };
             foreach (var isbn in isbns)
             {
-                //var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
-                //var agent = $"{item.Host}:{item.Port}";
+                var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
+                var agent = $"{item.Host}:{item.Port}";
 
                 var queryUrl = $"http://search.dangdang.com/?key={isbn}";
-                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl);
+                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl,agent: agent);
                 var li = await parser.GetElementAsync(queryHtml, "#search_nature_rg ul li");
                 var skuId = li.GetAttribute("sku");
 
                 var itemUrl = $"http://product.dangdang.com/{skuId}.html";
-                var itemHtml = await downloader.DownloadHtmlContentAsync(itemUrl);
+                var itemHtml = await downloader.DownloadHtmlContentAsync(itemUrl, agent: agent);
                 var spans = await parser.GetElementsAsync(itemHtml, ".clearfix .fenlei .lie");
                 var categories = new List<string>();
                 foreach (var span in spans)

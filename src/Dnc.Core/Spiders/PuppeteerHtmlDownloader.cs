@@ -1,9 +1,7 @@
-﻿using AngleSharp.Dom;
-using Dnc.Spiders;
-using PuppeteerSharp;
+﻿using PuppeteerSharp;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Dnc.Spiders
@@ -16,8 +14,7 @@ namespace Dnc.Spiders
         {
             new BrowserFetcher()
                .DownloadAsync(BrowserFetcher.DefaultRevision)
-               .ConfigureAwait(false)
-               .GetAwaiter();
+               .Wait();
         }
         #endregion
 
@@ -36,13 +33,21 @@ namespace Dnc.Spiders
                 Headless = false
             };
 
+            var args = new List<string>()
+            {
+                "--no-sandbox",
+                "--disable-setuid-sandbox"
+            };
+
+            if (!string.IsNullOrEmpty(agent))
+                args.Add($"--proxy-server={agent}");
+
+            option.Args = args.ToArray();
+
             using (var browser = await Puppeteer.LaunchAsync(option))
             {
                 using (var page = await browser.NewPageAsync())
                 {
-                    if (!string.IsNullOrEmpty(agent))
-                        await page.SetUserAgentAsync(agent);
-
                     await page.GoToAsync(url);
                     if (beforeGetContentHandler != null)
                     {
