@@ -1,25 +1,15 @@
-﻿using Dnc.Compilers;
-using Dnc.Files;
+﻿using Dnc.ConsoleApp.Services;
+using Dnc.Dispatcher;
+using Dnc.Extensions;
+using Dnc.FaultToleranceProcessors;
 using Dnc.Output;
 using Dnc.Spiders;
 using Microsoft.Extensions.DependencyInjection;
 using PuppeteerSharp;
 using System;
-using Dnc.Extensions;
-using System.Threading.Tasks;
-using Dnc.Algorithm;
-using Dnc.Alarmers;
-using Dnc.Data;
-using Dnc.SeedWork;
-using Dnc.Dispatcher;
-using System.Threading;
-using Dnc.ObjectId;
-using System.Linq;
 using System.Collections.Generic;
-using System.Text.Encodings.Web;
-using Dnc.Senders;
-using Dnc.ViewEngines;
-using Dnc.FaultToleranceProcessors;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Dnc.ConsoleApp
 {
@@ -43,11 +33,12 @@ namespace Dnc.ConsoleApp
                     opt.Password = "p@ssw0rd";
                 })
                 .UseFaultToleranceProcessor()
-                .UseMailSender()
-                .Build();
+                .UseMailSender();
+            fx.Build();
 
             var sp = fx.ServiceProvider;
-
+            var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
+            var testService = sp.GetRequiredService<ITestService>();
             #region ConsoleOutputHelper.
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             //outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
@@ -95,9 +86,7 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            DangdangCategoryGetterAsync(sp)
-                .ConfigureAwait(false)
-                .GetAwaiter();
+            //faultToleranceProcessor.WaitAndRetryAsync(async ()=>await DangdangCategoryGetterAsync(sp)).Wait();
             #endregion
 
             #region Sort.
@@ -155,7 +144,6 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Fault tolerance.
-            //var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
             //faultToleranceProcessor.RetryAsync(async () =>
             //await Task.Run(() =>
             //     {
@@ -219,11 +207,12 @@ namespace Dnc.ConsoleApp
             };
             foreach (var isbn in isbns)
             {
-                var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
-                var agent = $"{item.Host}:{item.Port}";
+                //var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
+                //var agent = $"{item.Host}:{item.Port}";
+                var agent = "1.198.73.10:9999";
 
                 var queryUrl = $"http://search.dangdang.com/?key={isbn}";
-                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl,agent: agent);
+                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl, agent: agent);
                 var li = await parser.GetElementAsync(queryHtml, "#search_nature_rg ul li");
                 var skuId = li.GetAttribute("sku");
 

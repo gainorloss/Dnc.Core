@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Dnc.Core.Extensions
+namespace Dnc.Extensions
 {
     /// <summary>
     /// Extension methods for string.

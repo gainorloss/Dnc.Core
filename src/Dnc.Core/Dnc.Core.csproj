@@ -35,6 +35,7 @@
     <PackageReference Include="microsoft.extensions.configuration.environmentvariables" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.configuration.json" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.dependencyinjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="2.1.0" />
     <PackageReference Include="microsoft.extensions.logging" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.logging.console" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.logging.debug" Version="2.2.0" />
