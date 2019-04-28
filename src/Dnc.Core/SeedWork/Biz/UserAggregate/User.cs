@@ -5,8 +5,8 @@ using System.Text;
 namespace Dnc.SeedWork
 {
     public class User
+        : Entity
     {
-        public int Id { get; set; }
         public string NickName { get; set; }
         public string RealName { get; set; }
         public string Phone { get; set; }

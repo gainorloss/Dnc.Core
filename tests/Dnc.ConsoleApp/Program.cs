@@ -30,7 +30,7 @@ namespace Dnc.ConsoleApp
             var fx = Framework
                 .Construct<DefaultFrameworkConstruction>()
                 .UseConsoleOutputHelper()
-                .UseRedisAgentPool()
+                .UseMemoryAgentPool()
                 .UseHttpRequestHtmlDownloader()
                 .UseDefaultCompiler()
                 .UseDownloader()
@@ -94,9 +94,9 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            //DangdangCategoryGetterAsync(sp)
-            //    .ConfigureAwait(false)
-            //    .GetAwaiter();
+            DangdangCategoryGetterAsync(sp)
+                .ConfigureAwait(false)
+                .GetAwaiter();
             #endregion
 
             #region Sort.
@@ -153,13 +153,13 @@ namespace Dnc.ConsoleApp
             //outputHelper.Info(rt);
             #endregion
 
-            var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
-            faultToleranceProcessor.RetryAsync(async () =>
-            await Task.Run(() =>
-                 {
-                     var zero = 0;
-                     var a = 1 / zero;
-                 })).Wait();
+            //var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
+            //faultToleranceProcessor.RetryAsync(async () =>
+            //await Task.Run(() =>
+            //     {
+            //         var zero = 0;
+            //         var a = 1 / zero;
+            //     })).Wait();
             Console.Read();
             Console.WriteLine("Hello World!");
         }
@@ -215,15 +215,16 @@ namespace Dnc.ConsoleApp
             foreach (var isbn in isbns)
             {
                 //var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
-                //var agent = $"{item.Host}:{item.Port}";
+                //var agent = $"{item.AgentType}://{item.Host}:{item.Port}";
+                var agent = "https://111.177.191.237:9999";
 
                 var queryUrl = $"http://search.dangdang.com/?key={isbn}";
-                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl);
+                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl,agent:agent);
                 var li = await parser.GetElementAsync(queryHtml, "#search_nature_rg ul li");
                 var skuId = li.GetAttribute("sku");
 
                 var itemUrl = $"http://product.dangdang.com/{skuId}.html";
-                var itemHtml = await downloader.DownloadHtmlContentAsync(itemUrl);
+                var itemHtml = await downloader.DownloadHtmlContentAsync(itemUrl, agent: agent);
                 var spans = await parser.GetElementsAsync(itemHtml, ".clearfix .fenlei .lie");
                 var categories = new List<string>();
                 foreach (var span in spans)
