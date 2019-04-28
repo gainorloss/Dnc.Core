@@ -1,16 +1,12 @@
-﻿using Dnc.Serializers;
+﻿using Dnc.Spiders;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Dnc.Spiders
 {
-    /// <summary>
-    /// Agent getter from web url:https://www.xicidaili.com/nn/.
-    /// </summary>
-    public class XiCiAgentGetter
+    public class SixNineAgentGetter
         : IAgentGetter
     {
         #region Private members.
@@ -19,7 +15,7 @@ namespace Dnc.Spiders
         #endregion
 
         #region Default ctor.
-        public XiCiAgentGetter(IHtmlDownloader downloader,
+        public SixNineAgentGetter(IHtmlDownloader downloader,
             IHtmlParser parser)
         {
             _downloader = downloader;
@@ -28,13 +24,13 @@ namespace Dnc.Spiders
         #endregion
 
         #region Methods for getting proxies.
-        public async Task<IList<T>> GetProxiesAsync<T>(string url) where T : BaseAgentSpiderItem, new()
+        public async Task<IList<T>> GetProxiesAsync<T>(string url = "http://www.89ip.cn/") where T : BaseAgentSpiderItem, new()
         {
             var html = await _downloader.DownloadHtmlContentAsync(url);
             if (string.IsNullOrEmpty(html))
                 return null;
 
-            var trs = await _parser.GetElementsAsync(html, "#ip_list tr");
+            var trs = await _parser.GetElementsAsync(html, "table tr");
             if (trs == null || trs.Length <= 1)
                 return null;
 
@@ -48,23 +44,16 @@ namespace Dnc.Spiders
                 if (tds == null || tds.Length != 10)
                     continue;
 
-                var host = tds[1].TextContent;
-                var port = tds[2].TextContent;
-                var address = tds[3].TextContent;
-                var anonymous = tds[4].TextContent.Equals("高匿");
-                var agentType = tds[5].TextContent;
-                var speed = tds[6].QuerySelector(".bar").GetAttribute("title");
-                var connectionTime = tds[7].QuerySelector(".bar").GetAttribute("title");
-                var aliveTime = tds[8].TextContent;
-                var verifyTime = tds[9].TextContent;
+                var host = tds[0].TextContent.Trim();
+                var port = tds[1].TextContent.Trim();
+                var address = tds[2].TextContent.Trim();
+                var verifyTime = tds[4].TextContent.Trim();
 
                 var instance = new T
                 {
                     Host = host,
                     Port = Convert.ToInt32(port),
                     Address = address,
-                    Anonymous = anonymous,
-                    AgentType = agentType,
                     VerifyTime = Convert.ToDateTime(verifyTime)
                 };
                 proxies.Add(instance);

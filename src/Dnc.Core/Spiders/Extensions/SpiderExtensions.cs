@@ -14,7 +14,6 @@ namespace Dnc
         /// <returns></returns>
         public static FrameworkConstruction UseMemoryAgentPool(this FrameworkConstruction construction)
         {
-            construction.UseAgentGetter();
             construction.Services.AddSingleton<IAgentPool, MemoryAgentPool>();
             return construction;
         }
@@ -26,7 +25,6 @@ namespace Dnc
         /// <returns></returns>
         public static FrameworkConstruction UseRedisAgentPool(this FrameworkConstruction construction)
         {
-            construction.UseAgentGetter();
             construction.Services.AddSingleton<IAgentPool, RedisAgentPool>();
             return construction;
         }
@@ -60,9 +58,20 @@ namespace Dnc
         /// </summary>
         /// <param name="construction"></param>
         /// <returns></returns>
-        internal static FrameworkConstruction UseAgentGetter(this FrameworkConstruction construction)
+        public static FrameworkConstruction UseXiCiAgentGetter(this FrameworkConstruction construction)
         {
             construction.Services.AddSingleton<IAgentGetter, XiCiAgentGetter>();
+            return construction;
+        }
+
+        /// <summary>
+        /// Configures  framework use agent getter,get it from a <see cref="IAgentGetter"/>.
+        /// </summary>
+        /// <param name="construction"></param>
+        /// <returns></returns>
+        public static FrameworkConstruction UseKuaiAgentGetter(this FrameworkConstruction construction)
+        {
+            construction.Services.AddSingleton<IAgentGetter, SixNineAgentGetter>();
             return construction;
         }
 

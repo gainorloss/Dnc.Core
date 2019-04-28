@@ -13,7 +13,7 @@ namespace Dnc.Spiders
         Task<T> GetAgentAsync<T>()
             where T:BaseAgentSpiderItem,new();
 
-        Task ClearAndRefreshAgentPoolAsync<T>(params T[] proxies) 
+        Task<int> ClearAndRefreshAgentPoolAsync<T>() 
             where T : BaseAgentSpiderItem, new();
     }
 }

@@ -26,11 +26,10 @@ namespace Dnc.Data
             {
                 affectedRows = base.SaveChanges();
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (DbUpdateConcurrencyException)
             {
                 throw;
-            }
-            catch (Exception ex)
+            }catch(Exception ex)
             {
                 throw;
             }

@@ -13,8 +13,19 @@ namespace Dnc.Spiders
     public class MemoryAgentPool
         : IAgentPool
     {
+        #region Private memebers.
+        private readonly IAgentGetter _agentGetter;
         private static IList<BaseAgentSpiderItem> mAgents = new List<BaseAgentSpiderItem>();
         private static object _lock = new object();
+        #endregion
+
+        #region Default ctor.
+        public MemoryAgentPool(IAgentGetter agentGetter)
+        {
+            _agentGetter = agentGetter;
+        }
+        #endregion
+
         public async Task<T> GetAgentAsync<T>() where T : BaseAgentSpiderItem, new()
         {
             var random = new Random(DateTime.Now.GetHashCode()).Next(0, mAgents.Count());
@@ -22,20 +33,22 @@ namespace Dnc.Spiders
             return await Task.FromResult(mAgents.ElementAt(random) as T);
         }
 
-        public async Task ClearAndRefreshAgentPoolAsync<T>(params T[] proxies) where T : BaseAgentSpiderItem, new()
+        public async Task<int> ClearAndRefreshAgentPoolAsync<T>() where T : BaseAgentSpiderItem, new()
         {
-            if (proxies != null && proxies.Any())
+            var agents = await _agentGetter.GetProxiesAsync<BaseAgentSpiderItem>();
+            agents = agents.Where(a => _agentGetter.VerifyProxyAsync(a.Host).Result).ToList();
+            if (agents != null && agents.Any())
             {
                 lock (_lock)
                 {
                     mAgents.Clear();
-                    foreach (var item in proxies)
+                    foreach (var item in agents)
                     {
                         mAgents.Add(item);
                     }
                 }
             }
-            await Task.FromResult(true);
+            return agents.Count;
         }
     }
 }
