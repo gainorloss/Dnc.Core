@@ -1,25 +1,16 @@
-﻿using Dnc.Compilers;
-using Dnc.Files;
+﻿using Dnc.ConsoleApp.Models;
+using Dnc.Data;
+using Dnc.Dispatcher;
 using Dnc.Output;
+using Dnc.SeedWork;
 using Dnc.Spiders;
 using Microsoft.Extensions.DependencyInjection;
 using PuppeteerSharp;
 using System;
-using Dnc.Extensions;
-using System.Threading.Tasks;
-using Dnc.Algorithm;
-using Dnc.Alarmers;
-using Dnc.Data;
-using Dnc.SeedWork;
-using Dnc.Dispatcher;
-using System.Threading;
-using Dnc.ObjectId;
-using System.Linq;
 using System.Collections.Generic;
-using System.Text.Encodings.Web;
-using Dnc.Senders;
-using Dnc.ViewEngines;
-using Dnc.FaultToleranceProcessors;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Dnc.ConsoleApp
 {
@@ -99,13 +90,13 @@ namespace Dnc.ConsoleApp
                 .GetAwaiter();
             #endregion
 
-            #region Sort.
+            #region sort.
             //var items = new int[] { 6, 3, 2, 7, 9, 10 };
             //items.QuickSort(0, 5);
             //items.BubbleSort(); 
             #endregion
 
-            #region Alarmer.
+            #region alarmer.
             //var alarmer = sp.GetRequiredService<IAlarmer>();
             //var isSuccess = alarmer.AlarmAdminUsingWechatAsync("您的服务器挂了", "库存同步调度失败请赶紧处理")
             //    .ConfigureAwait(false)
@@ -114,9 +105,13 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region redis.
-            //var redis = sp.GetRequiredService<IRedis>();
+            var redis = sp.GetRequiredService<IRedis>();
+            var mock = sp.GetRequiredService<IMockRepository>();
             //var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
             //val = redis.TryGetOrCreate("firstname", () => "gainorloss"); 
+
+            var count = redis.Count<Models.User>(1, "isFocused");
+            var items_count = redis.Like(1, "focus", mock.CreateMultiple<Models.User>().ToArray());
             #endregion
 
             #region mock.
@@ -153,13 +148,17 @@ namespace Dnc.ConsoleApp
             //outputHelper.Info(rt);
             #endregion
 
+            #region fault tolerance processor.
             //var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
             //faultToleranceProcessor.RetryAsync(async () =>
             //await Task.Run(() =>
             //     {
             //         var zero = 0;
             //         var a = 1 / zero;
-            //     })).Wait();
+            //     })).Wait(); 
+            #endregion
+
+
             Console.Read();
             Console.WriteLine("Hello World!");
         }
@@ -219,7 +218,7 @@ namespace Dnc.ConsoleApp
                 var agent = "https://111.177.191.237:9999";
 
                 var queryUrl = $"http://search.dangdang.com/?key={isbn}";
-                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl,agent:agent);
+                var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl, agent: agent);
                 var li = await parser.GetElementAsync(queryHtml, "#search_nature_rg ul li");
                 var skuId = li.GetAttribute("sku");
 
