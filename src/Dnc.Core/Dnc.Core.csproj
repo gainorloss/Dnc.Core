@@ -22,6 +22,7 @@
     <PackageReference Include="genfu" Version="1.5.6" />
     <PackageReference Include="google.protobuf" Version="3.7.0" />
     <PackageReference Include="grpc" Version="1.19.0" />
+    <PackageReference Include="idgen" Version="2.0.3" />
     <PackageReference Include="libgit2sharp" Version="0.26.0" />
     <PackageReference Include="mailkit" Version="2.1.4" />
     <PackageReference Include="messagepack" Version="1.7.3.4" />

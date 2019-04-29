@@ -2,6 +2,7 @@
 using Dnc.Dispatcher;
 using Dnc.Extensions;
 using Dnc.FaultToleranceProcessors;
+using Dnc.ObjectId;
 using Dnc.Output;
 using Dnc.Spiders;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,7 +39,7 @@ namespace Dnc.ConsoleApp
 
             var sp = fx.ServiceProvider;
             var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
-            var testService = sp.GetRequiredService<ITestService>();
+            //var testService = sp.GetRequiredService<ITestService>();
             #region ConsoleOutputHelper.
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             //outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
@@ -95,7 +96,7 @@ namespace Dnc.ConsoleApp
             //items.BubbleSort(); 
             #endregion
 
-            #region Alarmer.
+            #region alarmer.
             //var alarmer = sp.GetRequiredService<IAlarmer>();
             //var isSuccess = alarmer.AlarmAdminUsingWechatAsync("您的服务器挂了", "库存同步调度失败请赶紧处理")
             //    .ConfigureAwait(false)
@@ -116,15 +117,16 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region object id generator.
-            //var objectIdGenerator = sp.GetRequiredService<IObjectIdGenerator>();
-            //Enumerable.Range(0, 10000).ToList()
-            //    .ForEach(i =>
-            //    {
-            //        var uuid = objectIdGenerator.Uuid();
-            //        var intGuid = objectIdGenerator.IntGuid();
-            //        var combinedGuid = objectIdGenerator.CombinedGuid();
-            //        Console.WriteLine($"{uuid},{intGuid},{combinedGuid}");
-            //    }); 
+            var objectIdGenerator = sp.GetRequiredService<IObjectIdGenerator>();
+            Enumerable.Range(0, 10000).ToList()
+                .ForEach(i =>
+                {
+                    var uuid = objectIdGenerator.StringGuid();
+                    var intGuid = objectIdGenerator.IntGuid();
+                    var combinedGuid = objectIdGenerator.StringCombinedGuid();
+                    var snowflakeId = objectIdGenerator.IntSnowflakeId();
+                    Console.WriteLine($"{uuid},{intGuid},{combinedGuid},{snowflakeId}");
+                });
             #endregion
 
             #region mail sender.

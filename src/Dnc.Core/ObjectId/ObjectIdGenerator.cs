@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IdGen;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace Dnc.ObjectId
     public class ObjectIdGenerator
         : IObjectIdGenerator
     {
-        public string Uuid() => Guid.NewGuid().ToString("N");
+        public string StringGuid() => Guid.NewGuid().ToString("N");
 
         public long IntGuid()
         {
@@ -15,7 +16,7 @@ namespace Dnc.ObjectId
             return BitConverter.ToInt64(bytes, 0);
         }
 
-        public string CombinedGuid()
+        public string StringCombinedGuid()
         {
             byte[] guidArray = Guid.NewGuid().ToByteArray();
 
@@ -45,6 +46,12 @@ namespace Dnc.ObjectId
               guidArray.Length - 4, 4);
 
             return new Guid(guidArray).ToString("N");
+        }
+
+        public long IntSnowflakeId(int workerId)
+        {
+            var generator = new IdGenerator(workerId);
+            return generator.CreateId();
         }
     }
 }

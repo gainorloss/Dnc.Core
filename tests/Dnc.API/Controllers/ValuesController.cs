@@ -50,7 +50,7 @@ namespace Dnc.API.Controllers
             _logger.LogDebug($"redis:{value}");
             var abc = _mockRepository.Create<ABC>();
             var abcs = _mockRepository.CreateMultiple<ABC>();
-            var id = _objectIdGenerator.CombinedGuid();
+            var id = _objectIdGenerator.StringCombinedGuid();
             _logger.LogDebug($"redis:{value}");
             _logger.LogError(id);
             _alarmer.AlarmAdminUsingWechatAsync($"当前生成CombinedGuid:{id}", "警告");

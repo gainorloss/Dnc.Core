@@ -9,12 +9,7 @@ namespace Dnc.ObjectId
     /// </summary>
     public interface IObjectIdGenerator
     {
-        /// <summary>
-        /// Guid,uuid(32).
-        /// </summary>
-        /// <returns></returns>
-        string Uuid();
-
+        #region long id.
         /// <summary>
         /// Guid to long(19).
         /// </summary>
@@ -22,9 +17,26 @@ namespace Dnc.ObjectId
         long IntGuid();
 
         /// <summary>
+        /// snowflake id long(18).
+        /// </summary>
+        /// <param name="workerId"></param>
+        /// <returns></returns>
+        long IntSnowflakeId(int workerId = 0);
+        #endregion
+
+        #region string id.
+        /// <summary>
         /// combined guid/timestamp seq(32).
         /// </summary>
         /// <returns></returns>
-        string CombinedGuid();
+        string StringCombinedGuid();
+
+        /// <summary>
+        /// Guid,uuid(32).
+        /// </summary>
+        /// <returns></returns>
+        string StringGuid(); 
+        #endregion
+
     }
 }
