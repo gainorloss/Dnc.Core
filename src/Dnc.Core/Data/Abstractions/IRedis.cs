@@ -30,5 +30,10 @@ namespace Dnc.Data
             Func<Task<T>> func, int expireMS = 20);
 
         Task<T> TryGetOrCreateDistributelyAsync<T>(string key, Func<T> func, int expireMS = 20);
+        Task<long> LikeAsync<T>(object id, string desc, params T[] likedMembers);
+
+        Task<long> CountAsync<T>(object id, string desc, long increment = 1);
+
+        Task<long> RankAsync<T>(string desc, params Ranking<T>[] rankings);
     }
 }

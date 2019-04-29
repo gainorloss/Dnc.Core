@@ -73,29 +73,26 @@ namespace Dnc.Data
         {
             if (likedMembers == null)
                 throw new ArgumentNullException(nameof(likedMembers));
-            var storeKey = $"{typeof(T).Name}:{id}:{desc}_liking";
-            return _client.SAdd(storeKey, likedMembers);
+
+            return _client.SAdd(GenerateStoreKey<T>(nameof(Like), id, desc), likedMembers);
         }
 
-        public long Count<T>(object id,string desc, long increment)
+        public long Count<T>(object id, string desc, long increment)
         {
-            var storeKey = $"{typeof(T).Name}:{id}:{desc}_counter";
-            return _client.IncrBy(storeKey, increment);
+            return _client.IncrBy(GenerateStoreKey<T>(nameof(Count), id, desc), increment);
         }
 
         public long Rank<T>(string desc, params Ranking<T>[] rankings)
         {
             if (rankings == null)
                 throw new ArgumentNullException(nameof(rankings));
-         
+
             var items = new List<(double, object)>();
             foreach (var ranking in rankings)
             {
                 items.Add((ranking.Score, ranking.Ranked));
             }
-
-            var storeKey = $"{typeof(T).Name}:{desc}_ranking";
-            return _client.ZAdd(storeKey, items.ToArray());
+            return _client.ZAdd(GenerateStoreKey<T>(nameof(Rank), desc), items.ToArray());
         }
         #endregion
 
@@ -147,13 +144,35 @@ namespace Dnc.Data
                 return await TryGetOrCreateDistributelyAsync(key, func, expireMS);
             }
         }
+
+        public async Task<long> LikeAsync<T>(object id, string desc, params T[] likedMembers)
+        {
+            if (likedMembers == null)
+                throw new ArgumentNullException(nameof(likedMembers));
+
+            return await _client.SAddAsync(GenerateStoreKey<T>(nameof(Like), id, desc), likedMembers);
+        }
+
+        public async Task<long> CountAsync<T>(object id, string desc, long increment = 1) => await _client.IncrByAsync(GenerateStoreKey<T>(nameof(Count), id, desc), increment);
+
+        public async Task<long> RankAsync<T>(string desc, params Ranking<T>[] rankings)
+        {
+            if (rankings == null)
+                throw new ArgumentNullException(nameof(rankings));
+
+            var items = new List<(double, object)>();
+            foreach (var ranking in rankings)
+            {
+                items.Add((ranking.Score, ranking.Ranked));
+            }
+            return await _client.ZAddAsync(GenerateStoreKey<T>(nameof(Rank), desc), items.ToArray());
+        }
         #endregion
 
         #region Helper.
-        private int RandomExpireMS(int expireMS)
-        {
-            return expireMS + new Random().Next(0, _seconds + 1);
-        }
+        private int RandomExpireMS(int expireMS) => expireMS + new Random().Next(0, _seconds + 1);
+
+        private string GenerateStoreKey<T>(string operation, params object[] paras) => $"{typeof(T).Name}:{string.Join(":", paras)}_{operation.ToLower()}";
         #endregion
     }
 }
