@@ -8,9 +8,8 @@ namespace Dnc.SeedWork
     /// Design for comment.
     /// </summary>
     public class Comment
+        :Entity
     {
-        public int Id { get; set; }
-
         /// <summary>
         /// Commment which news?
         /// </summary>

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JetBrains.Annotations;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,9 +7,18 @@ using System.Text;
 
 namespace Dnc.Data
 {
-    public class ApplicationContext
+    public class ApplicationDbContext
         : DbContext
     {
+        #region Ctor.
+        protected ApplicationDbContext()
+        { }
+
+        public ApplicationDbContext(DbContextOptions options)
+            : base(options)
+        { }
+        #endregion
+
         public override int SaveChanges()
         {
             var affectedRows = 0;
@@ -19,8 +29,7 @@ namespace Dnc.Data
             catch (DbUpdateConcurrencyException)
             {
                 throw;
-            }
-            catch (Exception)
+            }catch(Exception ex)
             {
                 throw;
             }

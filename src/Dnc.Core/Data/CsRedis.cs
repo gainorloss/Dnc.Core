@@ -68,6 +68,35 @@ namespace Dnc.Data
                 return TryGetOrCreateDistributely(key, func, expireMS);
             }
         }
+
+        public long Like<T>(object id, string desc, params T[] likedMembers)
+        {
+            if (likedMembers == null)
+                throw new ArgumentNullException(nameof(likedMembers));
+            var storeKey = $"{typeof(T).Name}:{id}:{desc}_liking";
+            return _client.SAdd(storeKey, likedMembers);
+        }
+
+        public long Count<T>(object id,string desc, long increment)
+        {
+            var storeKey = $"{typeof(T).Name}:{id}:{desc}_counter";
+            return _client.IncrBy(storeKey, increment);
+        }
+
+        public long Rank<T>(string desc, params Ranking<T>[] rankings)
+        {
+            if (rankings == null)
+                throw new ArgumentNullException(nameof(rankings));
+         
+            var items = new List<(double, object)>();
+            foreach (var ranking in rankings)
+            {
+                items.Add((ranking.Score, ranking.Ranked));
+            }
+
+            var storeKey = $"{typeof(T).Name}:{desc}_ranking";
+            return _client.ZAdd(storeKey, items.ToArray());
+        }
         #endregion
 
         #region Async.

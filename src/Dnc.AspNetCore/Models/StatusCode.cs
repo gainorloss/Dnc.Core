@@ -4,10 +4,13 @@ namespace Dnc.AspNetCore.Models
 {
     public enum StatusCode
     {
-        [Description("成功")]
-        Success = 100,
-
-        [Description("失败")]
-        Failed = 200
+        [Description("Ok")]
+        Ok = 200,
+        [Description("Redirect")]
+        Redirect = 403,
+        [Description("NotFound")]
+        NotFound = 404,
+        [Description("ServerError")]
+        ServerError = 500
     }
 }

@@ -1,15 +1,18 @@
-﻿using Dnc.ConsoleApp.Services;
+﻿using Dnc.ConsoleApp.Models;
+using Dnc.Data;
 using Dnc.Dispatcher;
 using Dnc.Extensions;
 using Dnc.FaultToleranceProcessors;
 using Dnc.ObjectId;
 using Dnc.Output;
+using Dnc.SeedWork;
 using Dnc.Spiders;
 using Microsoft.Extensions.DependencyInjection;
 using PuppeteerSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Dnc.ConsoleApp
@@ -87,10 +90,12 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            //faultToleranceProcessor.WaitAndRetryAsync(async ()=>await DangdangCategoryGetterAsync(sp)).Wait();
+            DangdangCategoryGetterAsync(sp)
+                .ConfigureAwait(false)
+                .GetAwaiter();
             #endregion
 
-            #region Sort.
+            #region sort.
             //var items = new int[] { 6, 3, 2, 7, 9, 10 };
             //items.QuickSort(0, 5);
             //items.BubbleSort(); 
@@ -105,9 +110,13 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region redis.
-            //var redis = sp.GetRequiredService<IRedis>();
+            var redis = sp.GetRequiredService<IRedis>();
+            var mock = sp.GetRequiredService<IMockRepository>();
             //var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
             //val = redis.TryGetOrCreate("firstname", () => "gainorloss"); 
+
+            var count = redis.Count<Models.User>(1, "isFocused");
+            var items_count = redis.Like(1, "focus", mock.CreateMultiple<Models.User>().ToArray());
             #endregion
 
             #region mock.
@@ -145,7 +154,8 @@ namespace Dnc.ConsoleApp
             //outputHelper.Info(rt);
             #endregion
 
-            #region Fault tolerance.
+            #region fault tolerance processor.
+            //var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
             //faultToleranceProcessor.RetryAsync(async () =>
             //await Task.Run(() =>
             //     {
@@ -153,6 +163,7 @@ namespace Dnc.ConsoleApp
             //         var a = 1 / zero;
             //     })).Wait(); 
             #endregion
+
 
             Console.Read();
             Console.WriteLine("Hello World!");
@@ -194,11 +205,10 @@ namespace Dnc.ConsoleApp
             var parser = sp.GetRequiredService<IHtmlParser>();
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             var agentGetter = sp.GetService<IAgentGetter>() as IAgentGetter;
-            var agentPool = sp.GetService<IAgentPool>() as IAgentPool;
-            //start a scheduler to get proxies.
-            //await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "0 0 */3 ? * *", "Dnc.ConsoleApp.dll");
 
-            //await agentPool.ClearAndRefreshAgentPoolAsync<BaseAgentSpiderItem>();
+            //start a scheduler to get proxies.
+            //await scheduler.CreateAndRunScheduleAsync("spider", "Dnc.ConsoleApp.Jobs.ProxyManagerJob", "*/10 * * ? * *", "Dnc.ConsoleApp.dll");
+            //Thread.Sleep(10000);
 
             var isbns = new List<string>
             {
@@ -210,8 +220,8 @@ namespace Dnc.ConsoleApp
             foreach (var isbn in isbns)
             {
                 //var item = await manager.GetAgentAsync<BaseAgentSpiderItem>();
-                //var agent = $"{item.Host}:{item.Port}";
-                var agent = "1.198.73.10:9999";
+                //var agent = $"{item.AgentType}://{item.Host}:{item.Port}";
+                var agent = "https://111.177.191.237:9999";
 
                 var queryUrl = $"http://search.dangdang.com/?key={isbn}";
                 var queryHtml = await downloader.DownloadHtmlContentAsync(queryUrl, agent: agent);
