@@ -37,7 +37,7 @@ namespace Dnc.Spiders
         {
             var option = new LaunchOptions()
             {
-                Timeout = 30 * 1000,
+                Timeout = 60 * 1000,
                 Headless= !_env.IsDevelopment
             };
 
