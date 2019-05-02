@@ -78,7 +78,7 @@ namespace Dnc.Windows32
             );
 
         [DllImport("kernel32.dll")]
-        private static extern void CloseHandle
+        public static extern void CloseHandle
             (
                 IntPtr hObject
             );
@@ -118,6 +118,14 @@ namespace Dnc.Windows32
             int hProcess,
             int lpBaseAddress,
             byte[] buffer,
+            int size,
+            int lpNumberOfBytesWritten
+            );
+        [DllImport("Kernel32.dll ")]
+        public static extern Int32 ReadProcessMemory(
+            int hProcess,
+            int lpBaseAddress,
+             int[] buffer,
             int size,
             int lpNumberOfBytesWritten
             );
@@ -200,75 +208,33 @@ namespace Dnc.Windows32
         );
         #endregion
 
-        #region Process.
-        //获取窗体的进程标识ID
-        public static int GetPid(string windowTitle)
-        {
-            int rs = 0;
-            Process[] arrayProcess = Process.GetProcesses();
-            foreach (Process p in arrayProcess)
-            {
-                if (p.MainWindowTitle.IndexOf(windowTitle) != -1)
-                {
-                    rs = p.Id;
-                    break;
-                }
-            }
-
-            return rs;
-        }
-
-        //根据进程名获取PID
-        public static int GetPidByProcessName(string processName)
-        {
-            Process[] arrayProcess = Process.GetProcessesByName(processName);
-
-            foreach (Process p in arrayProcess)
-            {
-                return p.Id;
-            }
-            return 0;
-        }
-
-        //根据窗体标题查找窗口句柄（支持模糊匹配）
-        public static IntPtr FindWindow(string title)
-        {
-            Process[] ps = Process.GetProcesses();
-            foreach (Process p in ps)
-            {
-                if (p.MainWindowTitle.IndexOf(title) != -1)
-                {
-                    return p.MainWindowHandle;
-                }
-            }
-            return IntPtr.Zero;
-        }
-
-        //读取内存中的值
-        public static int ReadMemoryValue(int baseAddress, string processName)
-        {
-            try
-            {
-                byte[] buffer = new byte[4];
-                IntPtr byteAddress = Marshal.UnsafeAddrOfPinnedArrayElement(buffer, 0); //获取缓冲区地址
-                IntPtr hProcess = OpenProcess(0x1F0FFF, false, GetPid(processName));
-                ReadProcessMemory(hProcess, (IntPtr)baseAddress, byteAddress, 4, IntPtr.Zero); //将制定内存中的值读入缓冲区
-                CloseHandle(hProcess);
-                return Marshal.ReadInt32(byteAddress);
-            }
-            catch
-            {
-                return 0;
-            }
-        }
-
-        //将值写入指定内存地址中
-        public static void WriteMemoryValue(int baseAddress, string processName, int value)
-        {
-            IntPtr hProcess = OpenProcess(0x1F0FFF, false, GetPid(processName)); //0x1F0FFF 最高权限
-            WriteProcessMemory(hProcess, (IntPtr)baseAddress, new int[] { value }, 4, IntPtr.Zero);
-            CloseHandle(hProcess);
-        }
-        #endregion
+        [DllImport("user32.dll")]
+        public static extern bool Setcursorpos(int x, int y);
+        [DllImport("user32.dll")]
+        public static extern void Mouse_event(MouseEventFlag flags, int dx, int dy, uint data, UIntPtr extrainfo);
+        //键盘事件声明
+        [DllImport("user32.dll")]
+        public static extern byte MapVirtualKey(byte wCode, int wMap);
+        [DllImport("user32.dll")]
+        public static extern short GetKeyState(int nVirtKey);
+        [DllImport("user32.dll")]
+        public static extern void Keybd_event(byte bVk, byte bScan, uint dwFlags, uint dwExtraInfo);
+        //键盘事件声明winio
+        [DllImport("winio.dll")]
+        public static extern bool InitializeWinIo();
+        [DllImport("winio.dll")]
+        public static extern bool GetPortVal(IntPtr wPortAddr, out int pdwPortVal, byte bSize);
+        [DllImport("winio.dll")]
+        public static extern bool SetPortVal(uint wPortAddr, IntPtr dwPortVal, byte bSize);
+        [DllImport("winio.dll")]
+        public static extern byte MapPhysToLin(byte pbPhysAddr, uint dwPhysSize, IntPtr PhysicalMemoryHandle);
+        [DllImport("winio.dll")]
+        public static extern bool UnmapPhysicalMemory(IntPtr PhysicalMemoryHandle, byte pbLinAddr);
+        [DllImport("winio.dll")]
+        public static extern bool GetPhysLong(IntPtr pbPhysAddr, byte pdwPhysVal);
+        [DllImport("winio.dll")]
+        public static extern bool SetPhysLong(IntPtr pbPhysAddr, byte dwPhysVal);
+        [DllImport("winio.dll")]
+        public static extern void ShutdownWinIo();
     }
 }
