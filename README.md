@@ -1,7 +1,7 @@
 ﻿Dnc.Core
 ===
 
-Dnc.Core:[![Dnc.Core/1.0.8](https://img.shields.io/badge/nuget-1.0.8-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.0.8)
+Dnc.Core:[![Dnc.Core/1.0.8.1](https://img.shields.io/badge/nuget-1.0.8.1-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.0.8.1)
 
 Dnc.AspNetCore:[![Dnc.AspNetCore/1.0.0.3](https://img.shields.io/badge/nuget-1.0.0.3-blue.svg)](https://www.nuget.org/packages/Dnc.AspNetCore/1.0.0.3)
 
