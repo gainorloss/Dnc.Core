@@ -26,7 +26,7 @@ namespace Dnc.ConsoleApp
                 .Construct<DefaultFrameworkConstruction>()
                 .UseConsoleOutputHelper()
                 .UseXiCiAgentGetter()
-                .UseRedisAgentPool()
+                .UseMemoryAgentPool()
                 .UsePuppeteerHtmlDownloader()
                 .UseDefaultCompiler()
                 .UseDownloader()
@@ -189,23 +189,28 @@ namespace Dnc.ConsoleApp
                 "https://detail.tmall.com/item.htm?spm=a220o.1000855.w5001-15421479553.146.1f617840xeeCej&id=39248761854&rn=20828f401aa5df6381a396f3a50bb901&abbucket=20&scene=taobao_shop"
             };
             var ioQueue = sp.GetRequiredService<IQueue>();
+            var agentGetter = sp.GetService<IAgentGetter>() as IAgentGetter;
+
+            var proxies = await agentGetter.GetProxiesAsync<BaseAgentSpiderItem>();
+            proxies = proxies.Where(proxy => agentGetter.VerifyProxyAsync(proxy.Host).Result).ToList();
 
             foreach (var url in urls)
             {
-                ioQueue.Enqueue(async link =>await GetTianMaoPriceAsync(sp, url), url);
+                var proxy = proxies.ElementAt(new Random().Next(0, proxies.Count));
+                var agent = $"{proxy.AgentType}://{proxy.Host}:{proxy.Port}";
+                ioQueue.Enqueue(async link => await GetTianMaoPriceAsync(sp, url, agent), url);
                 //await GetTianMaoPriceAsync(sp, url);
             }
         }
 
-        private static async Task GetTianMaoPriceAsync(IServiceProvider sp, string url)
+        private static async Task GetTianMaoPriceAsync(IServiceProvider sp, string url, string agent)
         {
             var manager = sp.GetRequiredService<IAgentPool>();
             var downloader = sp.GetRequiredService<IHtmlDownloader>();
             var parser = sp.GetRequiredService<IHtmlParser>();
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
-            var agentGetter = sp.GetService<IAgentGetter>() as IAgentGetter;
 
-            var html = await downloader.DownloadHtmlContentAsync(url);
+            var html = await downloader.DownloadHtmlContentAsync(url, async page => await page.WaitForNavigationAsync(), agent: agent);
             var h1 = await parser.GetElementAsync(html, ".tb-detail-hd h1");
             var span = await parser.GetElementAsync(html, ".tm-price");
             var price = span.TextContent.Trim();

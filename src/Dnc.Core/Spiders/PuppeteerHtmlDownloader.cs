@@ -67,10 +67,6 @@ namespace Dnc.Spiders
                     {
                         await beforeGetContentHandler.Invoke(page);//control browser before get content.
                     }
-                    await page.WaitForNavigationAsync(new NavigationOptions()
-                    {
-                        Timeout = expireMS
-                    });
                     var html = await page.GetContentAsync();
                     return html;
                 }
