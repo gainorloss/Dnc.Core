@@ -2,30 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.0.2</Version>
+    <Version>0.0.2.3</Version>
     <Title>Dnc.WPF</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
     <Description>
-      A dotnet rapid development framework based on  standard library.Get some ideas from AngelSix's Dna.Framework.
+      基于StandardLibrary的WPF快速开发框架。
     </Description>
     <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
-    <PackageIconUrl>https://avatar.gitee.com/uploads/18/1183118_gainorloss_259.png!avatar100?1529623223</PackageIconUrl>
+    <PackageIconUrl>https://avatars0.githubusercontent.com/u/26458238?s=800</PackageIconUrl>
     <Tags>WPF</Tags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="propertychanged.fody" Version="2.6.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="PresentationFramework">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\PresentationFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xaml">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Xaml.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

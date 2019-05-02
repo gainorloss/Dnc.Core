@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.Core.Extensions
+namespace Dnc.Extensions
 {
     /// <summary>
     /// Extension methods for array.

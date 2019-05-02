@@ -31,12 +31,10 @@ namespace Dnc.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseSignalR(routes =>
             {
                 routes.MapHub<MessagingHub>("/messagingHub");
             });
-            app.UseDncCore();
             app.UseMvc();
         }
     }

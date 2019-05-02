@@ -1,7 +1,9 @@
-﻿namespace Dnc
+﻿using Dnc.ObjectId;
+
+namespace Dnc
 {
     /// <summary>
-    /// Default framework construction.
+    /// Default framework construction,default:use logger、serializer、alarmer、mock repostory、scheduleCenter、object id generator.
     /// </summary>
     public class DefaultFrameworkConstruction
         : FrameworkConstruction
@@ -11,7 +13,11 @@
         {
             this.Configure()
                 .UseDefaultLogger()
-                .UseDefaultSerializer();//use json-net serializer.
+                .UseDefaultSerializer()//use json-net serializer.
+                .UseAlarmer()//use alarmer.
+                .UseMockRepository()//use mock repository.
+                .UseScheduleCenter()//use scheduler.
+                .UseObjectIdGenerator();//object id generator.
         } 
         #endregion
     }

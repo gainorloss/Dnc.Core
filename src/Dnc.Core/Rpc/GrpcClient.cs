@@ -8,9 +8,9 @@ namespace Dnc.Rpc
     public class GrpcClient
          : IRpcClient
     {
-        public ClientBase<TClient> GetClient<TClient>(string host,
+        public TClient GetClient<TClient>(string host,
             int port,
-            Func<Channel, ClientBase<TClient>> buildClientFunc)
+            Func<Channel, TClient> buildClientFunc)
             where TClient : ClientBase<TClient>
         {
             var channel = new Channel(host, port, ChannelCredentials.Insecure);

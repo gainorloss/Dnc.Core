@@ -12,6 +12,7 @@ namespace Dnc.Extensions
     /// </summary>
     public static class LinqExtensions
     {
+        #region Page.
         /// <summary>
         /// Page the list.
         /// </summary>
@@ -34,9 +35,9 @@ namespace Dnc.Extensions
                 action?.Invoke(selected);
             }
         }
+        #endregion
 
-
-
+        #region Parallel.
         /// <summary>
         /// Parallel the list.
         /// </summary>
@@ -44,7 +45,7 @@ namespace Dnc.Extensions
         /// <param name="source">list</param>
         /// <param name="pageSize">count per page</param>
         /// <param name="action">what to do</param>
-        public static string Parallel<T>(this IEnumerable<T> source,
+        public static Tuple<int, long> Parallel<T>(this IEnumerable<T> source,
             int pageSize,
             Action<IEnumerable<T>> action)
         {
@@ -64,8 +65,45 @@ namespace Dnc.Extensions
             System.Threading.Tasks.Parallel.Invoke(actions.ToArray());
             sw.Stop();
 
-            var log =$"总计处理任务{source.Count()},耗时{sw.ElapsedMilliseconds}ms";
-            return log;
+            return new Tuple<int, long>(source.Count(), sw.ElapsedMilliseconds);
         }
+
+        /// <summary>
+        /// Parallel the list.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source">list</param>
+        /// <param name="pageSize">count per page</param>
+        /// <param name="action">what to do</param>
+        public static Tuple<int, long> Parallel<T>(this IEnumerable<T> source,
+            int pageSize,
+            Action<IEnumerable<T>> action,
+            int limit)
+        {
+            var sw = Stopwatch.StartNew();
+            var factory = Task.Factory;
+            var taskList = new List<Task>();
+
+            sw.Start();
+            source.Page(pageSize,
+                selected =>
+                {
+                    taskList.Add(factory.StartNew(() =>
+                    {
+                        action?.Invoke(selected);
+                    }));
+                    if (taskList.Count > limit)
+                    {
+                        taskList = taskList.Where(t => !t.IsCompleted && !t.IsCanceled && !t.IsFaulted).ToList();
+                        Task.WaitAny(taskList.ToArray());
+                    }
+                });
+
+            Task.WaitAll(taskList.ToArray());
+            sw.Stop();
+
+            return new Tuple<int, long>(source.Count(), sw.ElapsedMilliseconds);
+        } 
+        #endregion
     }
 }

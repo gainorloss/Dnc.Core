@@ -15,7 +15,7 @@ echo $workspace
 
 $packPath=join-path $workspace 'src/Dnc.AspNetCore.Ui'
 cd $packPath
-dotnet pack -c release -o bin/release
+dotnet pack -c release 
 $nugetPath=join-path $packPath 'bin/release/'
 cd $nugetPath
 dotnet nuget push Dnc.AspNetCore.Ui.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json

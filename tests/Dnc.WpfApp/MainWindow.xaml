@@ -93,6 +93,6 @@
                       CaptionHeight="{Binding TitleHeight}"/>
     </WindowChrome.WindowChrome>
     <Grid>
-        <!--<Frame x:Name="MainFrame" Source="Pages/LoginPage.xaml"></Frame>-->
+        <Frame x:Name="MainFrame" Source="Pages/LoginPage.xaml"></Frame>
     </Grid>
 </Window>

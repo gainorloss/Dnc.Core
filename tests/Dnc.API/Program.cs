@@ -20,7 +20,16 @@ namespace Dnc.API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .UseDncCore()
+            .UseDncCore(ctor =>
+            {
+                ctor.UseRedis(opt =>
+                {
+                    opt.Host = "140.143.88.100";
+                    opt.Password = "p@ssw0rd";
+                    opt.Port = 6379;
+                    opt.InstanceName = "Dnc.API";
+                });
+            })
                 .UseStartup<Startup>();
     }
 }

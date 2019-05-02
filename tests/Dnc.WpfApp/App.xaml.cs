@@ -20,23 +20,25 @@ namespace Dnc.WpfApp
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var framework = Framework.Construct<DefaultFrameworkConstruction>()
+            var fx = Framework.Construct<DefaultFrameworkConstruction>()
                 .UseScheduleCenter()
-                .UseDefaultSpider()
+                //.UseDefaultSpider()
                 .Build();
 
-            var scheduler = framework.ScheduleCenter;
+            var sp = fx.ServiceProvider;
+
+            var scheduler = fx.ScheduleCenter;
 
             //scheduler.RunScheduleAsync()
             //    .ConfigureAwait(false)
             //    .GetAwaiter();//sample schedule.
 
-            //scheduler.CreateAndRunScheduleAsync("gainorloss",
-            //    "Dnc.WpfApp.Jobs.HelloJob",
-            //    "* */1 * ? * *",
-            //    "Dnc.WpfApp.exe")
-            //    .ConfigureAwait(false)
-            //    .GetAwaiter();
+            scheduler.CreateAndRunScheduleAsync("gainorloss",
+                "Dnc.WpfApp.Jobs.HelloJob",
+                "* */1 * ? * *",
+                "Dnc.WpfApp.exe")
+                .ConfigureAwait(false)
+                .GetAwaiter();
 
             var items = Enumerable.Range(0, 100);//批次任务
 
@@ -53,7 +55,7 @@ namespace Dnc.WpfApp
 
 
             //serializers.
-            new SerializerTest(framework.ServiceProvider.GetRequiredService<IMessageSerializer>())
+            new SerializerTest(fx.ServiceProvider.GetRequiredService<IMessageSerializer>())
                 .Test();
 
       

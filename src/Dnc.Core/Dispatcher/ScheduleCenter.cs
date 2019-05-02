@@ -1,4 +1,6 @@
-﻿using Quartz;
+﻿using Dnc.Serializers;
+using Microsoft.Extensions.DependencyInjection;
+using Quartz;
 using Quartz.Impl;
 using System;
 using System.Collections.Generic;
@@ -30,18 +32,6 @@ namespace Dnc.Dispatcher
                 var schedulerFactory = new StdSchedulerFactory(properties);
 
                 _scheduler = schedulerFactory.GetScheduler().Result;
-
-                if (Framework.Construction.Environment.IsDevelopment)
-                {
-                    _schedules.Add(new Schedule()
-                    {
-                        Name = "default",
-                        GroupName = "default",
-                        CronExpression = "*/1 * * ? * *",
-                        AssemblyName = "Dnc.Core.dll",
-                        TypeName = "Dnc.Dispatcher.HelloJob"
-                    });
-                }
             }
         }
         #endregion
@@ -65,9 +55,15 @@ namespace Dnc.Dispatcher
 
             var key = $"{schedule.GroupName}-{schedule.Name}";
 
+            var data = new Dictionary<string, object>
+            {
+                { "name", $"{schedule.GroupName}-{schedule.Name}" }
+            };
+
             var jobDetail = JobBuilder.Create(job.GetType())
                 .WithIdentity(key)
                 .Build();
+            jobDetail.JobDataMap.PutAll(data);
 
             var schedueBuiler = CronScheduleBuilder.CronSchedule(schedule.CronExpression);
 
@@ -81,7 +77,6 @@ namespace Dnc.Dispatcher
             await _scheduler.ScheduleJob(jobDetail, trigger);
         }
 
-
         public async Task CreateAndRunScheduleAsync(string name,
             string typeName,
             string cronExpression,
@@ -91,6 +86,12 @@ namespace Dnc.Dispatcher
             _schedules.Add(new Schedule(name, typeName, cronExpression, assemblyName, groupName));
 
             await RunScheduleAsync(name, groupName);
+        }
+
+        public void Shutdown()
+        {
+            if (_scheduler != null)
+                _scheduler.Shutdown();
         }
         #endregion
     }

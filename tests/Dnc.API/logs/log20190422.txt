@@ -1,0 +1,846 @@
+2019-04-22 14:40:14.852 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:40:14.961 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:40:14.964 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:40:14.975 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:40:14.983 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:40:14.987 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:40:14.988 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 14:44:01.101 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:44:01.203 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:44:01.210 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:44:01.215 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:44:01.221 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:44:01.223 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:44:01.224 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 14:49:06.761 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:49:06.870 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:49:06.876 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:49:06.881 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:49:06.887 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:49:06.889 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:49:06.892 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 14:50:13.641 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:50:13.765 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:50:13.772 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:50:13.777 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:50:13.785 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:50:13.786 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:50:13.787 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 14:50:36.734 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:50:36.848 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:50:36.854 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:50:36.863 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:50:36.869 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:50:36.870 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:50:36.871 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 14:51:48.987 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:51:49.101 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:51:49.103 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:51:49.109 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:51:49.118 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:51:49.119 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:51:49.120 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 14:53:36.287 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:53:36.424 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:53:36.431 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:53:36.436 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:53:36.443 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:53:36.444 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:53:36.444 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 14:55:45.886 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:55:45.985 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:55:45.991 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:55:45.995 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:55:46.000 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:55:46.001 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:55:46.001 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 14:57:08.837 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 14:57:08.952 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 14:57:08.959 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 14:57:08.964 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 14:57:08.971 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 14:57:08.972 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 14:57:08.972 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:06:09.383 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:06:09.503 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:06:09.511 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:06:09.515 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:06:09.522 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:06:09.523 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:06:09.523 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:17:28.132 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:17:28.246 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:17:28.255 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:17:28.258 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:17:28.264 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:17:28.265 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:17:28.266 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:18:32.207 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:18:32.357 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:18:32.363 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:18:32.368 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:18:32.376 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:18:32.379 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:18:32.379 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:19:01.209 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:19:39.307 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values/get  
+2019-04-22 15:19:39.341 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:19:39.359 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:19:39.394 +08:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2019-04-22 15:19:39.534 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 168.1578ms
+2019-04-22 15:19:39.540 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:19:39.547 +08:00 [INF] Request finished in 241.749ms 400 application/problem+json; charset=utf-8
+2019-04-22 15:19:48.321 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values/get  
+2019-04-22 15:19:48.324 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:19:48.327 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:19:48.332 +08:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2019-04-22 15:19:48.334 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 3.8786ms
+2019-04-22 15:19:48.336 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:19:48.339 +08:00 [INF] Request finished in 17.6153ms 400 application/problem+json; charset=utf-8
+2019-04-22 15:20:24.513 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:20:24.519 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:20:24.536 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:20:24.600 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:20:24.662 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 55.0852ms.
+2019-04-22 15:20:24.665 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2019-04-22 15:20:24.667 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 127.3904ms
+2019-04-22 15:20:24.669 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:20:24.676 +08:00 [INF] Request finished in 162.3139ms 200 application/json; charset=utf-8
+2019-04-22 15:21:39.769 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:21:39.771 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:21:39.774 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:21:39.788 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:38:41.013 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:38:41.122 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:38:41.132 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:38:41.136 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:38:41.142 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:38:41.144 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:38:41.144 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:38:42.582 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:39:08.626 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:39:08.660 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:39:08.669 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:39:08.730 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:39:08.795 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 54.1388ms.
+2019-04-22 15:39:08.808 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2019-04-22 15:39:08.898 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 221.1595ms
+2019-04-22 15:39:08.900 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:39:08.906 +08:00 [INF] Request finished in 281.1264ms 200 application/json; charset=utf-8
+2019-04-22 15:41:14.646 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:41:14.765 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:41:14.771 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:41:14.774 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:41:14.779 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:41:14.780 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:41:14.780 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:41:16.218 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:41:42.904 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:41:43.016 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:41:43.022 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:41:43.026 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:41:43.032 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:41:43.033 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:41:43.034 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:41:44.540 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:41:56.315 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:41:56.431 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:41:56.439 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:41:56.443 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:41:56.449 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:41:56.451 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:41:56.452 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:41:57.895 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:47:51.895 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:47:51.999 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:47:52.006 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:47:52.010 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:47:52.015 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:47:52.019 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:47:52.019 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:47:53.458 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:47:59.010 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:47:59.047 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:47:59.054 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:47:59.115 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:48:33.800 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:48:33.931 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:48:33.944 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:48:33.957 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:48:33.963 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:48:33.964 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:48:33.964 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:48:35.589 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:48:46.123 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:48:46.158 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:48:46.167 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:48:46.228 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:48:46.388 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 148.9581ms.
+2019-04-22 15:48:46.399 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2019-04-22 15:48:46.420 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 246.41330000000002ms
+2019-04-22 15:48:46.424 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:48:46.430 +08:00 [INF] Request finished in 308.5471ms 200 application/json; charset=utf-8
+2019-04-22 15:49:46.363 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:49:46.367 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:49:46.369 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:49:46.392 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:49:46.396 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.2366ms.
+2019-04-22 15:49:46.399 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2019-04-22 15:49:46.403 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 30.7757ms
+2019-04-22 15:49:46.411 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:49:46.414 +08:00 [INF] Request finished in 50.831ms 200 application/json; charset=utf-8
+2019-04-22 15:50:59.514 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:50:59.617 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:50:59.626 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:50:59.630 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:50:59.636 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:50:59.638 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:50:59.639 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:51:01.070 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:51:24.125 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:51:24.159 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:51:24.168 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:51:24.234 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:51:24.296 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 50.9317ms.
+2019-04-22 15:51:24.306 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-04-22 15:51:24.430 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 250.89020000000002ms
+2019-04-22 15:51:24.433 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:51:24.438 +08:00 [INF] Request finished in 313.898ms 200 application/json; charset=utf-8
+2019-04-22 15:52:29.172 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:52:29.294 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:52:29.300 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:52:29.304 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:52:29.309 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:52:29.313 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:52:29.314 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:52:30.798 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:52:33.943 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:52:33.980 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:52:33.990 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:52:34.052 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:52:34.119 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 55.685900000000004ms.
+2019-04-22 15:52:34.129 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-04-22 15:52:34.261 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 265.5701ms
+2019-04-22 15:52:34.264 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:52:34.272 +08:00 [INF] Request finished in 332.9038ms 200 application/json; charset=utf-8
+2019-04-22 15:53:49.002 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:53:49.120 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:53:49.140 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:53:49.145 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:53:49.150 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:53:49.151 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:53:49.152 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:53:50.681 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:53:55.199 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:53:55.237 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:53:55.246 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:53:55.308 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:53:55.373 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 53.5125ms.
+2019-04-22 15:53:55.385 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-04-22 15:53:55.518 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 262.00120000000004ms
+2019-04-22 15:53:55.522 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:53:55.527 +08:00 [INF] Request finished in 329.3849ms 200 application/json; charset=utf-8
+2019-04-22 15:53:58.697 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:53:58.700 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:53:58.704 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:53:58.722 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:53:58.727 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.3234ms.
+2019-04-22 15:53:58.730 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-04-22 15:53:58.737 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 29.9218ms
+2019-04-22 15:53:58.739 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:53:58.741 +08:00 [INF] Request finished in 43.9307ms 200 application/json; charset=utf-8
+2019-04-22 15:53:59.342 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:53:59.345 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:53:59.348 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:53:59.361 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:53:59.363 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0935ms.
+2019-04-22 15:53:59.366 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-04-22 15:53:59.369 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 18.2212ms
+2019-04-22 15:53:59.376 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:53:59.381 +08:00 [INF] Request finished in 39.8045ms 200 application/json; charset=utf-8
+2019-04-22 15:53:59.914 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:53:59.916 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:53:59.919 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:53:59.933 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:53:59.939 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.1501ms.
+2019-04-22 15:53:59.944 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-04-22 15:53:59.947 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 24.7424ms
+2019-04-22 15:53:59.948 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:53:59.950 +08:00 [INF] Request finished in 37.1606ms 200 application/json; charset=utf-8
+2019-04-22 15:54:52.986 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:54:53.112 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:54:53.118 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:54:53.121 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:54:53.128 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:54:53.129 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:54:53.130 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:54:54.660 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:54:58.342 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:54:58.376 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:54:58.386 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:54:58.445 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:54:58.508 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 53.6439ms.
+2019-04-22 15:54:58.517 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-04-22 15:54:58.670 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 278.6053ms
+2019-04-22 15:54:58.672 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:54:58.679 +08:00 [INF] Request finished in 338.3472ms 200 application/json; charset=utf-8
+2019-04-22 15:56:18.233 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 15:56:18.353 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 15:56:18.360 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 15:56:18.365 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 15:56:18.372 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 15:56:18.378 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 15:56:18.379 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 15:56:19.891 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 15:56:24.817 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 15:56:24.851 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:56:24.860 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 15:56:24.922 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 15:56:24.988 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 55.648900000000005ms.
+2019-04-22 15:56:24.998 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-04-22 15:56:25.156 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 290.0084ms
+2019-04-22 15:56:25.159 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 15:56:25.166 +08:00 [INF] Request finished in 350.6494ms 200 application/json; charset=utf-8
+2019-04-22 16:04:29.588 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:04:29.701 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:04:29.708 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:04:29.711 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:04:29.716 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:04:29.718 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:04:29.719 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:04:32.451 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:37:10.372 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:37:10.485 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:37:10.490 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:37:10.493 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:37:10.498 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:37:10.500 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:37:10.501 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:37:12.026 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:37:15.823 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 16:37:15.857 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:37:15.867 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 16:37:15.925 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 16:37:16.145 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 210.6001ms.
+2019-04-22 16:37:16.154 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-04-22 16:37:16.321 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 446.88070000000005ms
+2019-04-22 16:37:16.323 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:37:16.329 +08:00 [INF] Request finished in 507.2859ms 200 application/json; charset=utf-8
+2019-04-22 16:38:58.103 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:38:58.235 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:38:58.238 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:38:58.241 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:38:58.246 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:38:58.251 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:38:58.251 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:41:40.992 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:41:41.154 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:41:41.162 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:41:41.166 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:41:41.173 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:41:41.176 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:41:41.176 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:42:07.749 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:42:07.880 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:42:07.882 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:42:07.886 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:42:07.892 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:42:07.893 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:42:07.894 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:42:34.192 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:42:34.348 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:42:34.364 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:42:34.368 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:42:34.376 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:42:34.378 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:42:34.378 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:42:47.131 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:42:47.262 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:42:47.269 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:42:47.273 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:42:47.281 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:42:47.282 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:42:47.283 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:42:57.327 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:43:47.857 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:43:47.993 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:43:48.000 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:43:48.005 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:43:48.012 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:43:48.014 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:43:48.016 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:43:49.477 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:44:14.370 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:44:14.503 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:44:14.510 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:44:14.516 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:44:14.523 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:44:14.524 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:44:14.525 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:44:16.015 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:45:27.731 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:45:27.876 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:45:27.882 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:45:27.886 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:45:27.893 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:45:27.894 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:45:27.895 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:45:29.337 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:46:06.180 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 16:46:06.216 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:46:06.228 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 16:46:06.286 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 16:46:06.294 +08:00 [DBG] aha
+2019-04-22 16:46:06.356 +08:00 [ERR] a610069c108d4825b891aa37011455d4
+2019-04-22 16:46:06.491 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 195.11260000000001ms.
+2019-04-22 16:46:06.501 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-04-22 16:46:06.698 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 462.12890000000004ms
+2019-04-22 16:46:06.701 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:46:06.710 +08:00 [INF] Request finished in 531.9079ms 200 application/json; charset=utf-8
+2019-04-22 16:47:37.425 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:47:37.561 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:47:37.567 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:47:37.572 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:47:37.578 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:47:37.581 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:47:37.581 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:47:39.072 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:47:55.400 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 16:47:55.434 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:47:55.445 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 16:47:55.504 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 16:47:55.512 +08:00 [DBG] aha
+2019-04-22 16:47:55.572 +08:00 [ERR] 16b59371b73d409dbfdcaa370114d5d1
+2019-04-22 16:47:55.713 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 192.24200000000002ms.
+2019-04-22 16:47:55.723 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-04-22 16:47:55.904 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 452.89840000000004ms
+2019-04-22 16:47:55.910 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:47:55.917 +08:00 [INF] Request finished in 518.029ms 200 application/json; charset=utf-8
+2019-04-22 16:49:21.738 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:49:21.868 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:49:21.878 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:49:21.883 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:49:21.890 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:49:21.895 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:49:21.895 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:50:00.167 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:50:00.317 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:50:00.324 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:50:00.328 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:50:00.336 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:50:00.337 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:50:00.338 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:50:54.316 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:50:54.449 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:50:54.452 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:50:54.459 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:50:54.467 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:50:54.468 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:50:54.469 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:52:21.464 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:52:21.597 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:52:21.604 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:52:21.611 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:52:21.617 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:52:21.618 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:52:21.618 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:52:25.420 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:52:32.292 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 16:52:32.327 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:52:32.337 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 16:52:32.394 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 16:52:32.402 +08:00 [DBG] aha
+2019-04-22 16:52:32.462 +08:00 [ERR] 4be1105b168d4d2f856eaa3701161a4b
+2019-04-22 16:52:32.605 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 200.43460000000002ms.
+2019-04-22 16:52:32.616 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-04-22 16:52:32.787 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 444.95640000000003ms
+2019-04-22 16:52:32.790 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:52:32.796 +08:00 [INF] Request finished in 505.5044ms 200 application/json; charset=utf-8
+2019-04-22 16:54:12.750 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 16:54:12.871 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 16:54:12.884 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 16:54:12.888 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 16:54:12.893 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 16:54:12.895 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 16:54:12.895 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 16:54:16.118 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 16:54:21.248 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 16:54:21.279 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:54:21.286 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 16:54:21.341 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 16:54:21.350 +08:00 [DBG] aha
+2019-04-22 16:54:21.406 +08:00 [ERR] 2ea5efa7a94d4ab2895caa37011699f7
+2019-04-22 16:54:21.544 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 193.1545ms.
+2019-04-22 16:54:21.552 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-04-22 16:54:21.747 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 456.7785ms
+2019-04-22 16:54:21.749 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 16:54:21.753 +08:00 [INF] Request finished in 505.5524ms 200 application/json; charset=utf-8
+2019-04-22 17:00:59.266 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 17:00:59.393 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 17:00:59.399 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 17:00:59.402 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 17:00:59.408 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 17:00:59.409 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 17:00:59.410 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 17:01:00.925 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 17:01:06.511 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 17:01:06.545 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 17:01:06.553 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 17:01:06.561 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 4.6609ms
+2019-04-22 17:01:06.567 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 17:01:06.569 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Dnc.Data.IRedis' while attempting to activate 'Dnc.API.Controllers.ValuesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-04-22 17:01:06.640 +08:00 [INF] Request finished in 130.1091ms 500 text/html; charset=utf-8
+2019-04-22 17:06:21.374 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 17:06:21.492 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 17:06:21.497 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 17:06:21.500 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 17:06:21.506 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 17:06:21.506 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 17:06:21.507 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 17:06:24.536 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 17:06:27.066 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 17:06:27.105 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 17:06:27.111 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 17:06:27.166 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 17:06:27.173 +08:00 [DBG] aha
+2019-04-22 17:06:27.257 +08:00 [DBG] redis:gainorloss
+2019-04-22 17:06:30.329 +08:00 [DBG] redis:gain
+2019-04-22 17:06:30.390 +08:00 [DBG] redis:gain
+2019-04-22 17:06:30.394 +08:00 [ERR] a4b47e3726ae4fde8012aa370119f03f
+2019-04-22 17:06:30.525 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3350.7268000000004ms.
+2019-04-22 17:06:30.534 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-04-22 17:06:30.706 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 3591.8116ms
+2019-04-22 17:06:30.708 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 17:06:30.712 +08:00 [INF] Request finished in 3647.1998ms 200 application/json; charset=utf-8
+2019-04-22 17:07:06.022 +08:00 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2019-04-22 17:07:06.157 +08:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-04-22 17:07:06.164 +08:00 [INF] Quartz Scheduler v.3.0.7.0 created.
+2019-04-22 17:07:06.168 +08:00 [INF] RAMJobStore initialized.
+2019-04-22 17:07:06.173 +08:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-04-22 17:07:06.174 +08:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2019-04-22 17:07:06.176 +08:00 [INF] Quartz scheduler version: 3.0.7.0
+2019-04-22 17:07:09.165 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-22 17:07:23.354 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/values  
+2019-04-22 17:07:23.387 +08:00 [INF] Executing endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 17:07:23.396 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Dnc.API.Controllers.ValuesController.Get (Dnc.API)
+2019-04-22 17:07:23.451 +08:00 [INF] Executing action method Dnc.API.Controllers.ValuesController.Get (Dnc.API) - Validation state: "Valid"
+2019-04-22 17:07:23.459 +08:00 [DBG] aha
+2019-04-22 17:07:23.541 +08:00 [DBG] redis:gainorloss
+2019-04-22 17:07:26.579 +08:00 [DBG] redis:gainorloss
+2019-04-22 17:07:26.633 +08:00 [DBG] redis:gainorloss
+2019-04-22 17:07:26.634 +08:00 [ERR] 215dd7b491644905b81aaa37011a3227
+2019-04-22 17:07:26.771 +08:00 [INF] Executed action method Dnc.API.Controllers.ValuesController.Get (Dnc.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3310.772ms.
+2019-04-22 17:07:26.778 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`3[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[Dnc.API.Models.ABC, Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Dnc.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-04-22 17:07:26.958 +08:00 [INF] Executed action Dnc.API.Controllers.ValuesController.Get (Dnc.API) in 3558.7777ms
+2019-04-22 17:07:26.960 +08:00 [INF] Executed endpoint 'Dnc.API.Controllers.ValuesController.Get (Dnc.API)'
+2019-04-22 17:07:26.963 +08:00 [INF] Request finished in 3610.614ms 200 application/json; charset=utf-8
