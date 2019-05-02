@@ -8,7 +8,13 @@ namespace Dnc
     /// Framework environment.
     /// </summary>
     public class FrameworkEnvironment
+        :IFrameworkEnvironment
     {
+        #region Public props.
+        public bool IsDevelopment { get; set; }
+        public string Environment => IsDevelopment ? "Development" : "Production";
+        #endregion
+
         #region Ctor.
         public FrameworkEnvironment()
         {
@@ -16,11 +22,6 @@ namespace Dnc
             IsDevelopment=true;
 #endif
         }
-        #endregion
-
-        #region Public props.
-        public bool IsDevelopment { get; set; }
-        public string Environment => IsDevelopment ? "Development" : "Production"; 
         #endregion
     }
 }

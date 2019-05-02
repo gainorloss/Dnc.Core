@@ -1,4 +1,5 @@
 ﻿using Dnc.ObjectId;
+using Dnc.Structures;
 
 namespace Dnc
 {
@@ -17,8 +18,9 @@ namespace Dnc
                 .UseAlarmer()//use alarmer.
                 .UseMockRepository()//use mock repository.
                 .UseScheduleCenter()//use scheduler.
-                .UseObjectIdGenerator();//object id generator.
-        } 
+                .UseObjectIdGenerator()
+                .UseQueue();//object id generator.
+        }
         #endregion
     }
 }

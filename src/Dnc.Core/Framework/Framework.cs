@@ -20,7 +20,7 @@ namespace Dnc
             if (logStarted)
             {
                 var logger = ServiceProvider.GetService<ILogger>();
-                var env = ServiceProvider.GetService<FrameworkEnvironment>();
+                var env = ServiceProvider.GetService<IFrameworkEnvironment>();
 
                 logger.LogCritical($"Dnc core  started in {env.Environment}...");
             }

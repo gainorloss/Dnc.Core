@@ -7,6 +7,7 @@ using Dnc.ObjectId;
 using Dnc.Output;
 using Dnc.SeedWork;
 using Dnc.Spiders;
+using Dnc.Structures;
 using Microsoft.Extensions.DependencyInjection;
 using PuppeteerSharp;
 using System;
@@ -90,9 +91,11 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region Spider.
-            DangdangCategoryGetterAsync(sp)
-                .ConfigureAwait(false)
-                .GetAwaiter();
+            //DangdangCategoryGetterAsync(sp)
+            //    .ConfigureAwait(false)
+            //    .GetAwaiter();
+            TianMaoPriceGetterAsync(sp)
+                .Wait();
             #endregion
 
             #region sort.
@@ -115,8 +118,8 @@ namespace Dnc.ConsoleApp
             //var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
             //val = redis.TryGetOrCreate("firstname", () => "gainorloss"); 
 
-            var count = redis.Count<Models.User>(1, "isFocused");
-            var items_count = redis.Like(1, "focus", mock.CreateMultiple<Models.User>().ToArray());
+            //var count = redis.Count<Models.User>(1, "isFocused");
+            //var items_count = redis.Like(1, "focus", mock.CreateMultiple<Models.User>().ToArray());
             #endregion
 
             #region mock.
@@ -126,16 +129,16 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region object id generator.
-            var objectIdGenerator = sp.GetRequiredService<IObjectIdGenerator>();
-            Enumerable.Range(0, 10000).ToList()
-                .ForEach(i =>
-                {
-                    var uuid = objectIdGenerator.StringGuid();
-                    var intGuid = objectIdGenerator.IntGuid();
-                    var combinedGuid = objectIdGenerator.StringCombinedGuid();
-                    var snowflakeId = objectIdGenerator.IntSnowflakeId();
-                    Console.WriteLine($"{uuid},{intGuid},{combinedGuid},{snowflakeId}");
-                });
+            //var objectIdGenerator = sp.GetRequiredService<IObjectIdGenerator>();
+            //Enumerable.Range(0, 10000).ToList()
+            //    .ForEach(i =>
+            //    {
+            //        var uuid = objectIdGenerator.StringGuid();
+            //        var intGuid = objectIdGenerator.IntGuid();
+            //        var combinedGuid = objectIdGenerator.StringCombinedGuid();
+            //        var snowflakeId = objectIdGenerator.IntSnowflakeId();
+            //        Console.WriteLine($"{uuid},{intGuid},{combinedGuid},{snowflakeId}");
+            //    });
             #endregion
 
             #region mail sender.
@@ -164,9 +167,68 @@ namespace Dnc.ConsoleApp
             //     })).Wait(); 
             #endregion
 
+            #region io queue.
+            var ioQueue = sp.GetRequiredService<IQueue>();
+            ioQueue.Enqueue(count =>
+            Enumerable.Range(0, 100)
+        .ToList()
+        .ForEach(i => Console.WriteLine(i)), 100);
+            #endregion
 
             Console.Read();
             Console.WriteLine("Hello World!");
+        }
+
+        private static async Task TianMaoPriceGetterAsync(IServiceProvider sp)
+        {
+            var urls = new List<string>
+            {
+                "https://detail.tmall.com/item.htm?spm=a220o.1000855.w5001-15421479553.143.7e9e412djTZhL1&id=528648187112&scene=taobao_shop",
+                "https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.11e33090FTHStI&id=577658727978&user_id=859515618&cat_id=2&is_b=1&rn=cdc7c780329bc679c19ae6b8c5c081be",
+                "https://detail.tmall.com/item.htm?spm=a220o.1000855.w5001-15421479553.144.7e9e412djTZhL1&id=45638137890&rn=1c166838ad2611e2f0ae4723c835c4c0&abbucket=10&scene=taobao_shop",
+                "https://detail.tmall.com/item.htm?spm=a220o.1000855.w5001-15421479553.146.1f617840xeeCej&id=39248761854&rn=20828f401aa5df6381a396f3a50bb901&abbucket=20&scene=taobao_shop"
+            };
+            var ioQueue = sp.GetRequiredService<IQueue>();
+
+            foreach (var url in urls)
+            {
+                ioQueue.Enqueue(async link =>await GetTianMaoPriceAsync(sp, url), url);
+                //await GetTianMaoPriceAsync(sp, url);
+            }
+        }
+
+        private static async Task GetTianMaoPriceAsync(IServiceProvider sp, string url)
+        {
+            var manager = sp.GetRequiredService<IAgentPool>();
+            var downloader = sp.GetRequiredService<IHtmlDownloader>();
+            var parser = sp.GetRequiredService<IHtmlParser>();
+            var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
+            var agentGetter = sp.GetService<IAgentGetter>() as IAgentGetter;
+
+            var html = await downloader.DownloadHtmlContentAsync(url);
+            var h1 = await parser.GetElementAsync(html, ".tb-detail-hd h1");
+            var span = await parser.GetElementAsync(html, ".tm-price");
+            var price = span.TextContent.Trim();
+            var title = h1.TextContent.Trim();
+            var lis = await parser.GetElementsAsync(html, "#J_AttrUL li");
+
+            var name = string.Empty;
+            var isbn = string.Empty;
+            foreach (var li in lis)
+            {
+                var content = li.TextContent.Trim();
+                if (content.Contains("书名"))
+                {
+                    name = content.Split(':')[1];
+                    continue;
+                }
+                if (content.Contains("ISBN编号"))
+                {
+                    isbn = content.Split(':')[1];
+                    continue;
+                }
+            }
+            Console.WriteLine($"{isbn}:【{name}】:{price}");
         }
 
         private static async Task PriceSpiderAsync(IServiceProvider sp)

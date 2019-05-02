@@ -11,7 +11,7 @@ namespace Dnc
 
         public IServiceCollection Services { get; set; }
         public IConfiguration Configuration { get; set; }
-        public FrameworkEnvironment Environment { get; set; }
+        public IFrameworkEnvironment Environment { get; set; }
         public ScheduleCenter ScheduleCenter { get; set; }
         public IServiceProvider ServiceProvider { get; set; }
         #endregion
@@ -25,7 +25,6 @@ namespace Dnc
             Services.AddSingleton(Environment);
         }
         #endregion
-
 
         /// <summary>
         /// The entrypoint for the framework.
