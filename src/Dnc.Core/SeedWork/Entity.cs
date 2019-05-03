@@ -3,7 +3,7 @@
 namespace Dnc.SeedWork
 {
     public abstract class Entity
-        : IEntity
+        : IEntity<long>
     {
         #region Public props.
         public StatusEnum Status { get; set; }
@@ -11,6 +11,8 @@ namespace Dnc.SeedWork
         public bool CanBeRemoved => ValidateBeforeRemoved();
 
         public bool CanBeSaved => ValidateBeforeSaved();
+
+        public long Id { get; set; }
         #endregion
 
         #region Virtual methods.

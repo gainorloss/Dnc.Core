@@ -8,5 +8,12 @@ namespace Dnc.SeedWork
     /// Interface for aggregation root.
     /// </summary>
     public interface IAggregationRoot
+        : IMessage
     { }
+
+    public interface IAggregationRoot<TAggregationRootId>
+      : IAggregationRoot
+    {
+        TAggregationRootId AggregationRootId { get; set; }
+    }
 }

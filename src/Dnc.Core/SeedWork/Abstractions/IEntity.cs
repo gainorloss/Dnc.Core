@@ -14,8 +14,12 @@ namespace Dnc.SeedWork
 
         bool CanBeRemoved { get; }
 
-        bool CanBeSaved { get; } 
+        bool CanBeSaved { get; }
         #endregion
-
+    }
+    public interface IEntity<TEntityId>
+        : IEntity
+    {
+        TEntityId Id { get; set; }
     }
 }
