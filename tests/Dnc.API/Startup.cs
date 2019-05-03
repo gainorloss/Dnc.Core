@@ -21,6 +21,8 @@ namespace Dnc.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSignalR();
+            //services.AddAPIDoc();
+            services.AddSwaggerAPIDoc();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -35,6 +37,7 @@ namespace Dnc.API
             {
                 routes.MapHub<MessagingHub>("/messagingHub");
             });
+            app.UseSwaggerAPIDoc();
             app.UseMvc();
         }
     }

@@ -1,0 +1,42 @@
+#################### 05/03/2019 18:57:48.5952486 ###############
+Message:    User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+StackTrace: at Microsoft.Extensions.Logging.LoggingExtensions.UsingProfileAsKeyRepositoryWithDPAPI(ILogger logger, String fullName)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.GetFallbackKeyRepositoryEncryptorPair()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory, IDefaultKeyStorageDirectories keyStorageDirectories)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+#################### 05/03/2019 19:05:17.1226476 ###############
+Message:    User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+StackTrace: at Microsoft.Extensions.Logging.LoggingExtensions.UsingProfileAsKeyRepositoryWithDPAPI(ILogger logger, String fullName)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.GetFallbackKeyRepositoryEncryptorPair()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory, IDefaultKeyStorageDirectories keyStorageDirectories)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+#################### 05/03/2019 19:06:12.5256501 ###############
+Message:    User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+StackTrace: at Microsoft.Extensions.Logging.LoggingExtensions.UsingProfileAsKeyRepositoryWithDPAPI(ILogger logger, String fullName)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.GetFallbackKeyRepositoryEncryptorPair()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory, IDefaultKeyStorageDirectories keyStorageDirectories)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+#################### 05/03/2019 19:07:57.3196907 ###############
+Message:    User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+StackTrace: at Microsoft.Extensions.Logging.LoggingExtensions.UsingProfileAsKeyRepositoryWithDPAPI(ILogger logger, String fullName)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.GetFallbackKeyRepositoryEncryptorPair()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory, IDefaultKeyStorageDirectories keyStorageDirectories)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+#################### 05/03/2019 19:09:36.5121679 ###############
+Message:    User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+StackTrace: at Microsoft.Extensions.Logging.LoggingExtensions.UsingProfileAsKeyRepositoryWithDPAPI(ILogger logger, String fullName)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.GetFallbackKeyRepositoryEncryptorPair()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory, IDefaultKeyStorageDirectories keyStorageDirectories)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+#################### 05/03/2019 19:42:50.2036913 ###############
+Message:    User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+StackTrace: at Microsoft.Extensions.Logging.LoggingExtensions.UsingProfileAsKeyRepositoryWithDPAPI(ILogger logger, String fullName)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.GetFallbackKeyRepositoryEncryptorPair()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory, IDefaultKeyStorageDirectories keyStorageDirectories)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager..ctor(IOptions`1 keyManagementOptions, IActivator activator, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
