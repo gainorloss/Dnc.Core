@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using LogDashboard;
+using Microsoft.AspNetCore.Builder;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,9 +15,11 @@ namespace Dnc.AspNetCore
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
-        public static IApplicationBuilder UseDncCore(this IApplicationBuilder app)
+        public static IApplicationBuilder UseDncCoreAPI(this IApplicationBuilder app)
         {
-            Framework.Construction.Build(app.ApplicationServices);
+            app.UseLogDashboard();
+            app.UseSwaggerAPIDoc();
+            app.UseMvc();
             return app;
         }
     }

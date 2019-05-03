@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.0.4</Version>
+    <Version>1.0.0.5</Version>
     <Title>Dnc.AspNetCore</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -16,9 +16,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="aspnetcore.apidoc" Version="2.2.0.3" />
+    <PackageReference Include="logdashboard" Version="1.2.1" />
     <PackageReference Include="microsoft.aspnetcore.hosting" Version="2.2.0" />
+    <PackageReference Include="microsoft.aspnetcore.mvc" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.mvc.abstractions" Version="2.2.0" />
+    <PackageReference Include="microsoft.aspnetcore.mvc.versioning" Version="3.1.2" />
     <PackageReference Include="microsoft.aspnetcore.mvc.viewfeatures" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.platformabstractions" Version="1.1.0" />
     <PackageReference Include="swashbuckle.aspnetcore" Version="4.0.1" />

@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Dnc.API.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/v{v:apiVersion}/[controller]/[action]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {

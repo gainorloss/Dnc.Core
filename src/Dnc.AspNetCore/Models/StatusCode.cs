@@ -6,7 +6,7 @@ namespace Dnc.AspNetCore.Models
     {
         [Description("Ok")]
         Ok = 200,
-        [Description("Redirect")]
+        [Description("Unauthenticated")]
         Redirect = 403,
         [Description("NotFound")]
         NotFound = 404,

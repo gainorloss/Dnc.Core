@@ -21,9 +21,8 @@ namespace Dnc.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSignalR();
-            //services.AddAPIDoc();
-            services.AddSwaggerAPIDoc();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDncCoreAPI();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,8 +36,7 @@ namespace Dnc.API
             {
                 routes.MapHub<MessagingHub>("/messagingHub");
             });
-            app.UseSwaggerAPIDoc();
-            app.UseMvc();
+            app.UseDncCoreAPI();
         }
     }
 }
