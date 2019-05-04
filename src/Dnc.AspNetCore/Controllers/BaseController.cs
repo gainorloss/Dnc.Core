@@ -6,15 +6,8 @@ using System.Text;
 
 namespace Dnc.AspNetCore.Controllers
 {
-    public class BaseController
+    public class BaseController:ControllerBase
     {
-        //public UserIdentity UserIdentity
-        //{
-        //    get
-        //    {
-        //        return User.ToUserIdentity();
-        //    }
-        //}
 
         public IActionResult Ajax(StatusCode statusCode,
             object data = null,
@@ -22,7 +15,7 @@ namespace Dnc.AspNetCore.Controllers
         {
             return new JsonResult(new AjaxResult()
             {
-                Status = statusCode == StatusCode.Ok,
+                Status = statusCode == Models.StatusCode.Ok,
                 Code = statusCode,
                 Msg = msg,
                 Data = data
