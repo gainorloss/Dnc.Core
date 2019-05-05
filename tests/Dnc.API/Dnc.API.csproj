@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>G:\Projects\Dnc.Core\tests\Dnc.API\apidocv1.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp2.2\apidocv1.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

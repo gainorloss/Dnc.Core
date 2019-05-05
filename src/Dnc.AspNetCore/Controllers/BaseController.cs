@@ -1,32 +1,36 @@
 ﻿using Dnc.AspNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Dnc.AspNetCore.Controllers
 {
-    public class BaseController
+    public class BaseController : ControllerBase
     {
-        //public UserIdentity UserIdentity
-        //{
-        //    get
-        //    {
-        //        return User.ToUserIdentity();
-        //    }
-        //}
-
-        public IActionResult Ajax(StatusCode statusCode,
+        [ApiExplorerSettings(IgnoreApi = true)]
+        public IActionResult Ajax(HttpStatusCodes statusCode,
             object data = null,
             string msg = null)
         {
-            return new JsonResult(new AjaxResult()
+            var ajaxResult = new AjaxResult()
             {
-                Status = statusCode == StatusCode.Ok,
+                Status = statusCode == HttpStatusCodes.Ok,
                 Code = statusCode,
                 Msg = msg,
                 Data = data
-            });
+            };
+
+            switch (statusCode)
+            {
+                case HttpStatusCodes.Ok:
+                    return Ok(ajaxResult);
+                case HttpStatusCodes.Unauthorized:
+                    return Unauthorized(ajaxResult);
+                case HttpStatusCodes.NotFound:
+                    return NotFound(ajaxResult);
+                case HttpStatusCodes.BadRequest:
+                    return BadRequest(ajaxResult);
+                default:
+                    return Ok(ajaxResult);
+            }
         }
     }
 }

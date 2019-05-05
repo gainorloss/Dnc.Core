@@ -1,4 +1,5 @@
-﻿using Dnc.AspNetCore.Extensions;
+﻿using Dnc.AspNetCore.Controllers;
+using Dnc.AspNetCore.Extensions;
 using Dnc.AspNetCore.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -43,11 +44,11 @@ namespace Dnc.AspNetCore.Filters
 
                     if (filterContext.HttpContext.Request.IsAjaxRequest())//检查请求头
                     {
-                        filterContext.Result = new JsonResult(
+                        filterContext.Result = new BadRequestObjectResult(
                             new AjaxResult()
                             {
                                 Status = true,
-                                Code = StatusCode.ServerError,
+                                Code = HttpStatusCodes.BadRequest,
                                 Msg = "系统出现异常，请联系管理员",
                             }//这个就是返回的结果
                         );
