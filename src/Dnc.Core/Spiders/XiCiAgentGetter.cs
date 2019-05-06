@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Flurl.Http;
 
 namespace Dnc.Spiders
 {
@@ -14,15 +15,12 @@ namespace Dnc.Spiders
         : IAgentGetter
     {
         #region Private members.
-        private readonly IHtmlDownloader _downloader;
         private readonly IHtmlParser _parser;
         #endregion
 
         #region Default ctor.
-        public XiCiAgentGetter(IHtmlDownloader downloader,
-            IHtmlParser parser)
+        public XiCiAgentGetter(IHtmlParser parser)
         {
-            _downloader = downloader;
             _parser = parser;
         }
         #endregion
@@ -30,7 +28,7 @@ namespace Dnc.Spiders
         #region Methods for getting proxies.
         public async Task<IList<T>> GetProxiesAsync<T>(string url) where T : BaseAgentSpiderItem, new()
         {
-            var html = await _downloader.DownloadHtmlContentAsync(url);
+            var html = await url.GetStringAsync();
             if (string.IsNullOrEmpty(html))
                 return null;
 
@@ -75,7 +73,7 @@ namespace Dnc.Spiders
         public async Task<bool> VerifyProxyAsync(string ip)
         {
             var url = $"http://ip.taobao.com/service/getIpInfo2.php?ip={ip}";
-            var json = await _downloader.DownloadHtmlContentAsync(url);
+            var json = await url.GetStringAsync();
             return !string.IsNullOrEmpty(json);
         }
         #endregion
