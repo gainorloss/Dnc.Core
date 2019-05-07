@@ -14,12 +14,12 @@ namespace Dnc.AspNetCore.Filters
     /// <summary>
     /// Global exception handlers.
     /// </summary>
-    public class APIGlobalLogExceptionFilter
+    public class ApiGlobalLogExceptionFilter
         : IExceptionFilter
     {
         private readonly IHostingEnvironment _env;
-        private readonly ILogger<APIGlobalLogExceptionFilter> _logger;
-        public APIGlobalLogExceptionFilter(ILogger<APIGlobalLogExceptionFilter> logger, IHostingEnvironment env)
+        private readonly ILogger<ApiGlobalLogExceptionFilter> _logger;
+        public ApiGlobalLogExceptionFilter(ILogger<ApiGlobalLogExceptionFilter> logger, IHostingEnvironment env)
         {
             _logger = logger;
             _env = env;

@@ -15,10 +15,15 @@ namespace Dnc.AspNetCore
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
-        public static IApplicationBuilder UseDncCoreAPI(this IApplicationBuilder app)
+        public static IApplicationBuilder UseAspNetCore(this IApplicationBuilder app, AspNetCoreType aspNetCoreType = AspNetCoreType.Api)
         {
             app.UseLogDashboard();
-            app.UseSwaggerAPIDoc();
+
+            if (aspNetCoreType== AspNetCoreType.Api)
+            {
+                app.UseSwaggerAPIDoc();
+            }
+
             app.UseMvc();
             return app;
         }

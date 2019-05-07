@@ -12,7 +12,6 @@ using System.Threading;
 namespace Dnc.API.Controllers
 {
     [Route("api/v{v:apiVersion}/[controller]/[action]")]
-    [ApiController]
     public class ValuesController : BaseController
     {
         private readonly IMockRepository _mockRepository;

@@ -21,7 +21,7 @@ namespace Dnc.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSignalR();
-            services.AddDncCoreAPI();
+            services.AddAspNetCore();
             services.AddMvc();
         }
 
@@ -36,7 +36,7 @@ namespace Dnc.API
             {
                 routes.MapHub<MessagingHub>("/messagingHub");
             });
-            app.UseDncCoreAPI();
+            app.UseAspNetCore();
         }
     }
 }
