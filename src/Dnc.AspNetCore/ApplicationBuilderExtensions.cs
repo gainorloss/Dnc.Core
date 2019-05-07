@@ -18,13 +18,27 @@ namespace Dnc.AspNetCore
         public static IApplicationBuilder UseAspNetCore(this IApplicationBuilder app, AspNetCoreType aspNetCoreType = AspNetCoreType.Api)
         {
             app.UseLogDashboard();
-
+            app.UseAuthentication();
             if (aspNetCoreType== AspNetCoreType.Api)
             {
                 app.UseSwaggerAPIDoc();
+                app.UseMvc();
             }
-
-            app.UseMvc();
+            else
+            {
+                app.UseMvc(routes =>
+                {
+                    routes.MapRoute(
+                       name: "static",
+                       template: "{area}/{controller=Home}-{action=Index}.html");
+                    routes.MapRoute(
+                        name: "area",
+                        template: "{area}/{controller=Home}/{action=Index}/{id?}");
+                    routes.MapRoute(
+                        name: "default",
+                        template: "{controller=Home}/{action=Index}/{id?}");
+                });
+            }
             return app;
         }
     }

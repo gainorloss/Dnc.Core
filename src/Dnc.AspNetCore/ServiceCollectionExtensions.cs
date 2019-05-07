@@ -1,6 +1,8 @@
 ﻿using Dnc.AspNetCore.Controllers;
 using Dnc.AspNetCore.Filters;
 using LogDashboard;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -14,6 +16,9 @@ namespace Dnc.AspNetCore
     {
         /// <summary>
         /// apidoc,api versioning,global log exception filter,log dashboard "/logdashboard".
+        /// mvc cookie authentication:login【/AccountArea/Account/SignIn】
+        /// logout:【/AccountArea/Account/SignOutAsync】
+        /// cookie name:【.Dnc.AspNetCore】
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
@@ -23,6 +28,20 @@ namespace Dnc.AspNetCore
             {
                 services.AddSwaggerAPIDoc();
                 services.AddAPIVersion();
+            }
+            else
+            {
+                services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+              .AddCookie(opt =>
+              {
+                  opt.LoginPath = "/AccountArea/Account/SignIn";
+                  opt.LogoutPath = "/AccountArea/Account/SignOutAsync";
+                  opt.Cookie.Path = "/";
+                  opt.Cookie = new CookieBuilder()
+                  {
+                      Name = ".Dnc.AspNetCore"
+                  };
+              }); ;
             }
 
             services.AddLogDashboard();

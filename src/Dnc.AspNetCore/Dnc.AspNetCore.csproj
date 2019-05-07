@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="logdashboard" Version="1.2.1" />
+    <PackageReference Include="microsoft.aspnetcore.authentication.cookies" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.hosting" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.mvc" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.mvc.abstractions" Version="2.2.0" />
