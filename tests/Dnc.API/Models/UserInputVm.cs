@@ -8,9 +8,7 @@ namespace Dnc.API.Models
 {
     public class UserInputVm
     {
-        [Required,MaxLength(10)]
         public string UName { get; set; }
-        [Required,MinLength(6)]
         public string Pwd { get; set; }
     }
 }

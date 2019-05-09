@@ -16,7 +16,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="logdashboard" Version="1.2.1" />
+    <PackageReference Include="autofac.extensions.dependencyinjection" Version="4.4.0" />
+    <PackageReference Include="fluentvalidation.aspnetcore" Version="8.3.0" />
     <PackageReference Include="microsoft.aspnetcore.authentication.cookies" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.hosting" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.mvc" Version="2.2.0" />
@@ -29,6 +30,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dnc.Core\Dnc.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Validations\" />
   </ItemGroup>
 
 </Project>

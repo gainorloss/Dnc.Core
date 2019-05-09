@@ -1,8 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Dnc.Extensions
 {
@@ -21,6 +18,12 @@ namespace Dnc.Extensions
                     services.AddScoped(@interface, assemblyName.GetImplementType(@interface));
                 }
             }
+            return services;
+        }
+
+        public static IServiceCollection UseAutofac(this IServiceCollection services)
+        {
+
             return services;
         }
     }

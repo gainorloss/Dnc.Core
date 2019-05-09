@@ -1,8 +1,4 @@
-﻿using LogDashboard;
-using Microsoft.AspNetCore.Builder;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.AspNetCore.Builder;
 namespace Dnc.AspNetCore
 {
     /// <summary>
@@ -17,7 +13,6 @@ namespace Dnc.AspNetCore
         /// <returns></returns>
         public static IApplicationBuilder UseAspNetCore(this IApplicationBuilder app, AspNetCoreType aspNetCoreType = AspNetCoreType.Api)
         {
-            app.UseLogDashboard();
             app.UseAuthentication();
             if (aspNetCoreType== AspNetCoreType.Api)
             {

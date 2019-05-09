@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Dnc.API
 {
@@ -18,11 +19,10 @@ namespace Dnc.API
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddSignalR();
-            services.AddAspNetCore();
-            services.AddMvc();
+            return services.AddAspNetCore(typeof(Program));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

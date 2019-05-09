@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Dnc.API.Models;
+using Dnc.API.Services;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,6 +15,16 @@ namespace Dnc.API.Controllers
     [ApiController]
     public class UsersController : Controller
     {
+        //private readonly IValidator<UserInputVm> _validator;
+        private readonly IUserAppService _userAppService;
+        public UsersController(
+            //IValidator<UserInputVm> validator
+            IUserAppService userAppService
+            )
+        {
+            _userAppService = userAppService;
+            //_validator = validator;
+        }
         // GET: api/<controller>
         [HttpGet]
         public IEnumerable<string> Get()
