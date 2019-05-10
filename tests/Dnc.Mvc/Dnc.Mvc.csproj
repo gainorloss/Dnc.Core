@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Dnc.AspNetCore.Ui\Dnc.AspNetCore.Ui.csproj" />
+    <ProjectReference Include="..\..\src\Dnc.AspNetCore\Dnc.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>
