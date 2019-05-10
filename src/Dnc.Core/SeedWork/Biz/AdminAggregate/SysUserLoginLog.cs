@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Dnc.Seedwork
 {
-    class SysUserLoginLog
+    public class SysUserLoginLog
+        :Entity
     {
+        public int UserId { get; set; }
+        public DateTime LoginTime { get; set; }
+        public string IPAddress { get; set; }
     }
 }

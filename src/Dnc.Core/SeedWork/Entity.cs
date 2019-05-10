@@ -6,7 +6,7 @@ namespace Dnc.Seedwork
         : IEntity<long>
     {
         #region Public props.
-        public StatusEnum Status { get; set; }
+        public DataStatusEnum DataStatus { get; set; }
 
         public bool CanBeRemoved => ValidateBeforeRemoved();
 
@@ -16,21 +16,11 @@ namespace Dnc.Seedwork
         #endregion
 
         #region Virtual methods.
-        public virtual bool ValidateBeforeSaved()
-        {
-            if (Status == StatusEnum.Created || Status == StatusEnum.Removed)
-            {
-                return IsPrimaryKeyNone();
-            }
-            return !IsPrimaryKeyNone();
-        }
+        public virtual bool ValidateBeforeSaved() => DataStatus == DataStatusEnum.UnAudited;
 
-        public virtual bool ValidateBeforeRemoved() => !IsPrimaryKeyNone();
+        protected virtual bool ValidateBeforeRemoved() => !IsPrimaryKeyNone() && DataStatus != DataStatusEnum.Audited;
 
-        public virtual void GeneratePrimaryKey()
-        { }
-
-        public virtual bool IsPrimaryKeyNone() => true;
+        protected virtual bool IsPrimaryKeyNone() => Id == 0;
         #endregion
     }
 }

@@ -13,9 +13,12 @@ namespace Dnc.Seedwork
         public string Phone { get; set; }
         public string Mobile { get; set; }
         public string Avatar { get; set; }
-        public DateTime? LastSignInTime { get; set; }
+        public bool IsLocked { get; set; }
+        public string Salt { get; set; }
+        public DateTime? AllowLoginTime { get; set; }
+        public DateTime? LastLoginTime { get; set; }
         public int LoginErrNums { get; set; }
         public string LastLoginIP { get; set; }
-        public DateTime? LastSignOutTime { get; set; }
+        public DateTime? LastLogoutTime { get; set; }
     }
 }

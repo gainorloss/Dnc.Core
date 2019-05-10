@@ -7,8 +7,8 @@ namespace Dnc.Seedwork
     public class UserLike
         : Entity
     {
-        public int UserId { get; set; }
-        public int LikedId { get; set; }
+        public long UserId { get; set; }
+        public long LikedId { get; set; }
         public LikedStatus LikedStatus { get; set; }
         public LikedType LikedType { get; set; }
     }

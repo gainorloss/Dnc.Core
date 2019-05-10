@@ -7,7 +7,7 @@ namespace Dnc.Seedwork
     public class UserLikeStat
         :Entity
     {
-        public int LikedId { get; set; }
+        public long LikedId { get; set; }
         public int LikedCount { get; set; }
     }
 }

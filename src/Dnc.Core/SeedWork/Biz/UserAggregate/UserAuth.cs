@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Dnc.Seedwork
 {
-    public class UserAuths
+    public class UserAuth
          : Entity
     {
-        public int UserId { get; set; }
+        public long UserId { get; set; }
 
         /// <summary>
         /// 登录类型
