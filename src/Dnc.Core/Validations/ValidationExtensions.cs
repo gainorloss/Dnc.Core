@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.Core.Validations
+namespace Dnc.Validations
 {
     public static class ValidationExtensions
     {
