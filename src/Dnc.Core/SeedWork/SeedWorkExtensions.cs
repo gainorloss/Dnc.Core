@@ -1,4 +1,4 @@
-﻿using Dnc.SeedWork;
+﻿using Dnc.Seedwork;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ namespace Dnc
 {
 
     /// <summary>
-    /// Extension methods for module <see cref="SeedWork"/>
+    /// Extension methods for module <see cref="Seedwork"/>
     /// </summary>
     internal static class SeedWorkExtensions
     {

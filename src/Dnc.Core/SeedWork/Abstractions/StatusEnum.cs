@@ -1,4 +1,4 @@
-﻿namespace Dnc.SeedWork
+﻿namespace Dnc.Seedwork
 {
     /// <summary>
     /// 

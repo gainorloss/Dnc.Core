@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Dnc.Seedwork
 {
-    public interface IEventPublisher
+    class SysUserLoginLog
     {
-        void Publish<TEvent>(TEvent @event) where TEvent : IEvent;
     }
 }

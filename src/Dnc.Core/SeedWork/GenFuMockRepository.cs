@@ -1,10 +1,7 @@
-﻿using Dnc.SeedWork;
-using GenFu;
-using System;
+﻿using GenFu;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Dnc.SeedWork
+namespace Dnc.Seedwork
 {
     public class GenFuMockRepository
         : IMockRepository

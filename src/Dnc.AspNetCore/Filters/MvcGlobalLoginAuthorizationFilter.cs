@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,7 +34,7 @@ namespace Dnc.AspNetCore.Filters
         {
             if (context.ActionDescriptor.FilterDescriptors.Any(f => f.Filter.GetType() == typeof(AllowAnonymousFilter)))
                 return;
-            var rt = await _ctx.AuthenticateAsync("Cookie");
+            var rt = await _ctx.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             if (rt.Succeeded)
                 return;
 

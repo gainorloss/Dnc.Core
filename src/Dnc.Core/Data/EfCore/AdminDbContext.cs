@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Dnc.SeedWork;
+﻿using Dnc.Seedwork;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dnc.Data

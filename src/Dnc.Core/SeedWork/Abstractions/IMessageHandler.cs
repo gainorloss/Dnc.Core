@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dnc.SeedWork
+namespace Dnc.Seedwork
 {
     public interface IMessageHandler
     { }

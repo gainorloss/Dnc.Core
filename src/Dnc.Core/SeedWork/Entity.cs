@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dnc.SeedWork
+namespace Dnc.Seedwork
 {
     public abstract class Entity
         : IEntity<long>
