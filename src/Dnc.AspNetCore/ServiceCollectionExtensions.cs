@@ -16,13 +16,14 @@ namespace Dnc.AspNetCore
     public static class ServiceCollectionExtensions
     {
         /// <summary>
-        /// Api:"apidoc,api versioning,global log exception filter" 
-        /// Mvc:"httpcontext accessor,
+        /// <para>Api:"apidoc,api versioning,global log exception filter" </para>
+        /// <para>Mvc:"httpcontext accessor,
         /// cookie authentication(
         /// login=>【/AccountArea/Account/SignIn】,
         /// logout=>【/AccountArea/Account/SignOutAsync】,
         /// cookie name=>【.Dnc.AspNetCore】,
         /// schema=>Cookies)".
+        /// </para> 
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>

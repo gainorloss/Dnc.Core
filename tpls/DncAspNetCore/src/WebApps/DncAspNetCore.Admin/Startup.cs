@@ -31,7 +31,7 @@ namespace DncAspNetCore.Admin
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddAspNetCore(AspNetCoreType.Mvc);
+            services.AddAspNetCore(typeof(Startup),AspNetCoreType.Mvc);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
