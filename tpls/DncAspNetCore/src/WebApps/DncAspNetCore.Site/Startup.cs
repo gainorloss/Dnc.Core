@@ -49,7 +49,8 @@ namespace DncAspNetCore.Site
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseAspNetCore(AspNetCoreType.Mvc);
+            app.UseMvcWithDefaultRoute();
+            //app.UseAspNetCore(AspNetCoreType.Mvc);
         }
     }
 }

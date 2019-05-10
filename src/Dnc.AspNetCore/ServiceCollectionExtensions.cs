@@ -16,10 +16,12 @@ namespace Dnc.AspNetCore
     public static class ServiceCollectionExtensions
     {
         /// <summary>
-        /// apidoc,api versioning,global log exception filter,log dashboard "/logdashboard".
-        /// mvc cookie authentication:login【/AccountArea/Account/SignIn】
-        /// logout:【/AccountArea/Account/SignOutAsync】
-        /// cookie name:【.Dnc.AspNetCore】
+        /// API:apidoc,api versioning,global log exception filter.
+        /// MVC:httpcontext accessor,
+        /// cookie authentication:
+        /// login=>【/AccountArea/Account/SignIn】,
+        /// logout=>【/AccountArea/Account/SignOutAsync】,
+        /// cookie name=>【.Dnc.AspNetCore】.
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
@@ -27,13 +29,15 @@ namespace Dnc.AspNetCore
         {
             if (aspNetCoreType == AspNetCoreType.Api)
             {
-                services.AddSwaggerAPIDoc();
-                services.AddAPIVersion();
+                services.AddSwaggerAPIDoc();//api doc.
+                services.AddAPIVersion();//api version.
             }
             else
             {
-                services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-              .AddCookie(opt =>
+                //authentication cookie.
+                services
+                    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                    .AddCookie(opt =>
               {
                   opt.LoginPath = "/AccountArea/Account/SignIn";
                   opt.LogoutPath = "/AccountArea/Account/SignOutAsync";
@@ -42,10 +46,12 @@ namespace Dnc.AspNetCore
                   {
                       Name = ".Dnc.AspNetCore"
                   };
-              }); ;
+              });
+                services.AddHttpContextAccessor();//httpcontext accessor.
             }
 
-            services.AddMvc(opt =>
+            services
+                .AddMvc(opt =>
             {
                 if (aspNetCoreType == AspNetCoreType.Api)
                 {
@@ -56,12 +62,13 @@ namespace Dnc.AspNetCore
                     opt.Filters.Add<MvcGlobalLogExceptionFilter>();
                     opt.Filters.Add<MvcGlobalLoginAuthorizationFilter>();
                 }
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-            .AddFluentValidation(cfg =>
+            })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddFluentValidation(cfg =>
             {
                 cfg.RegisterValidatorsFromAssembly(type.Assembly);
                 cfg.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
-            });
+            });//fluent validation.
 
             #region 永远不要相信用户输入
             //关闭默认的ApiBehavior
@@ -76,7 +83,7 @@ namespace Dnc.AspNetCore
             });
             #endregion
 
-            return services.GetAutofacServiceProvider(type);
+            return services.GetAutofacServiceProvider(type);//autofac.
         }
 
         /// <summary>

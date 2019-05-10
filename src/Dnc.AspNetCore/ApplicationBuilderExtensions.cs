@@ -23,16 +23,17 @@ namespace Dnc.AspNetCore
             {
                 app.UseMvc(routes =>
                 {
-                    routes.MapRoute(
-                       name: "static",
-                       template: "{area}/{controller=Home}-{action=Index}.html");
-                    routes.MapRoute(
-                        name: "area",
-                        template: "{area}/{controller=Home}/{action=Index}/{id?}");
-                    routes.MapRoute(
-                        name: "default",
-                        template: "{controller=Home}/{action=Index}/{id?}");
+                    routes.MapRoute(name: "static_areas",template: "{area:exists}/{controller=Home}-{action=Index}.html");
+
+                    routes.MapRoute(name: "static",template: "{controller=Home}-{action=Index}.html");
+
+                    routes.MapRoute(name: "areas",template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+                    routes.MapRoute(name: "default",template: "{controller=Home}/{action=Index}/{id?}");
+
+                    routes.MapRoute(name: "custom",template: "{area:exists}_{controller=Home}_{action=Index}.{id?}");//Custom route template.
                 });
+
             }
             return app;
         }
