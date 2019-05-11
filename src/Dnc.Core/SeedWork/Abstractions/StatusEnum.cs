@@ -1,12 +1,12 @@
-﻿namespace Dnc.SeedWork
+﻿namespace Dnc.Seedwork
 {
     /// <summary>
     /// 
     /// </summary>
-    public enum StatusEnum
+    public enum DataStatusEnum
     {
-        Created=0,
-        Modified=1,
-        Removed=2
+        Deleted=-1,
+        UnAudited=0,
+        Audited=1
     }
 }

@@ -210,7 +210,7 @@ namespace Dnc.ConsoleApp
             var parser = sp.GetRequiredService<IHtmlParser>();
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
 
-            var html = await downloader.DownloadHtmlContentAsync(url, async page => await page.WaitForNavigationAsync(), agent: agent);
+            var html = await downloader.DownloadHtmlContentAsync(url, async page => await page.WaitForSelectorAsync(".tm-price"), agent: agent);
             var h1 = await parser.GetElementAsync(html, ".tb-detail-hd h1");
             var span = await parser.GetElementAsync(html, ".tm-price");
             var price = span.TextContent.Trim();

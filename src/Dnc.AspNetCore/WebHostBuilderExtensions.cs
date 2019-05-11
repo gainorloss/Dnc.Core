@@ -17,7 +17,7 @@ namespace Dnc.AspNetCore
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
-        public static IWebHostBuilder UseDncCore(this IWebHostBuilder builder, Action<FrameworkConstruction> configureConstruction = null)
+        public static IWebHostBuilder UseCore(this IWebHostBuilder builder, Action<FrameworkConstruction> configureConstruction = null)
         {
             var construction = Framework.Construct<DefaultFrameworkConstruction>();
             configureConstruction?.Invoke(construction);

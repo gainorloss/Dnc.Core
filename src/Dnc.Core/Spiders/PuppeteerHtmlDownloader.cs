@@ -9,8 +9,6 @@ namespace Dnc.Spiders
     public class PuppeteerHtmlDownloader
         : IHtmlDownloader
     {
-        private readonly IFrameworkEnvironment _env;
-
         #region Static ctor.
         static PuppeteerHtmlDownloader()
         {
@@ -19,11 +17,6 @@ namespace Dnc.Spiders
                .Wait();
         }
         #endregion
-
-        public PuppeteerHtmlDownloader(IFrameworkEnvironment env)
-        {
-            _env = env;
-        }
 
         #region Methods for getting html content.
         public async Task<string> DownloadHtmlContentAsync(string url, Func<Page, Task> beforeGetContentHandler = null, string agent = null)
@@ -39,7 +32,7 @@ namespace Dnc.Spiders
             var option = new LaunchOptions()
             {
                 Timeout = expireMS,
-                Headless = !_env.IsDevelopment
+                Headless = true
             };
 
             var args = new List<string>()

@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using Dnc.Alarmers;
+﻿using Dnc.Alarmers;
 using Dnc.API.Models;
+using Dnc.AspNetCore.Controllers;
 using Dnc.Data;
 using Dnc.ObjectId;
 using Dnc.SeedWork;
 using Dnc.Serializers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Threading;
 
 namespace Dnc.API.Controllers
 {
     [Route("api/v{v:apiVersion}/[controller]/[action]")]
-    [ApiController]
-    public class ValuesController : ControllerBase
+    public class ValuesController : BaseController
     {
         private readonly IMockRepository _mockRepository;
         private readonly IObjectIdGenerator _objectIdGenerator;
@@ -40,7 +36,7 @@ namespace Dnc.API.Controllers
         }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IActionResult Get()
         {
             _logger.LogDebug("aha");
             var value = _redis.TryGetOrCreate("gainorloss", () => "gainorloss", 20);
@@ -54,7 +50,7 @@ namespace Dnc.API.Controllers
             _logger.LogDebug($"redis:{value}");
             _logger.LogError(id);
             _alarmer.AlarmAdminUsingWechatAsync($"当前生成CombinedGuid:{id}", "警告");
-            return Ok(new { Status = 0, Code = 200, Msg = "请求成功", Data = new { abc, id, abcs } });
+            return Ajax(HttpStatusCodes.Ok, new { abc, id, abcs });
         }
 
         // GET api/values/5

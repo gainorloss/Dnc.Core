@@ -13,7 +13,7 @@ namespace Dnc.API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .UseDncCore(ctor =>
+            .UseCore(ctor =>
             {
                 ctor.UseRedis(opt =>
                 {

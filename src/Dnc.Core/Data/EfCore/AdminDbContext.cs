@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Dnc.SeedWork;
+﻿using Dnc.Seedwork;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dnc.Data
@@ -18,6 +15,7 @@ namespace Dnc.Data
 
         public virtual DbSet<SysUser> SysUser { get; set; }
         public virtual DbSet<SysUserToken> SysUserToken { get; set; }
+        public virtual DbSet<SysUserLoginLog> SysUserLoginLog { get; set; }
         public virtual DbSet<SysRole> SysRole { get; set; }
         public virtual DbSet<SysPermission> SysPermission { get; set; }
         public virtual DbSet<SysResource> SysResource { get; set; }

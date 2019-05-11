@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B5D3FBC-5714-4576-8D80-F5FF7CF07803}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{085A5D01-5694-4215-8252-220BF73FAE8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{8860EFBC-FB7F-4FA0-B42F-5651990D1C2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Apps", "Web Apps", "{6FF742CF-B68C-4DA1-840D-29CB5BCFD5E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile Apps", "Mobile Apps", "{FFAF89FD-DE00-4657-9E17-3E8F0092EDD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DncAspNetCore.Api", "src\Services\DncAspNetCore.Api\DncAspNetCore.Api.csproj", "{BEFF5312-53EE-4CA7-9B4D-13617A404F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DncAspNetCore.Site", "src\WebApps\DncAspNetCore.Site\DncAspNetCore.Site.csproj", "{43507FFA-4EE0-4079-A67F-6E64DA586D6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DncAspNetCore.Admin", "src\WebApps\DncAspNetCore.Admin\DncAspNetCore.Admin.csproj", "{6E533CF8-C034-45E0-B0D5-E208159216C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEFF5312-53EE-4CA7-9B4D-13617A404F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFF5312-53EE-4CA7-9B4D-13617A404F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFF5312-53EE-4CA7-9B4D-13617A404F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFF5312-53EE-4CA7-9B4D-13617A404F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43507FFA-4EE0-4079-A67F-6E64DA586D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43507FFA-4EE0-4079-A67F-6E64DA586D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43507FFA-4EE0-4079-A67F-6E64DA586D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43507FFA-4EE0-4079-A67F-6E64DA586D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E533CF8-C034-45E0-B0D5-E208159216C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E533CF8-C034-45E0-B0D5-E208159216C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E533CF8-C034-45E0-B0D5-E208159216C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E533CF8-C034-45E0-B0D5-E208159216C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8860EFBC-FB7F-4FA0-B42F-5651990D1C2E} = {1B5D3FBC-5714-4576-8D80-F5FF7CF07803}
+		{6FF742CF-B68C-4DA1-840D-29CB5BCFD5E8} = {1B5D3FBC-5714-4576-8D80-F5FF7CF07803}
+		{FFAF89FD-DE00-4657-9E17-3E8F0092EDD2} = {1B5D3FBC-5714-4576-8D80-F5FF7CF07803}
+		{BEFF5312-53EE-4CA7-9B4D-13617A404F8A} = {8860EFBC-FB7F-4FA0-B42F-5651990D1C2E}
+		{43507FFA-4EE0-4079-A67F-6E64DA586D6F} = {6FF742CF-B68C-4DA1-840D-29CB5BCFD5E8}
+		{6E533CF8-C034-45E0-B0D5-E208159216C1} = {6FF742CF-B68C-4DA1-840D-29CB5BCFD5E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2A79D0B-B421-4B7A-AF85-BA56576861A5}
+	EndGlobalSection
+EndGlobal

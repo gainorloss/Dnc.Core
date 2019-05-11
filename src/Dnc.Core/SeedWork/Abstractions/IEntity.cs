@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.SeedWork
+namespace Dnc.Seedwork
 {
     /// <summary>
     /// Interface for entity.
@@ -10,7 +10,7 @@ namespace Dnc.SeedWork
     public interface IEntity
     {
         #region Public props.
-        StatusEnum Status { get; set; }
+        DataStatusEnum DataStatus { get; set; }
 
         bool CanBeRemoved { get; }
 

@@ -1,4 +1,5 @@
-﻿using Dnc.AspNetCore.Models;
+﻿using Dnc.AspNetCore.Controllers;
+using Dnc.AspNetCore.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,12 +14,12 @@ namespace Dnc.AspNetCore.Filters
     /// <summary>
     /// Global exception handlers.
     /// </summary>
-    public class APIGlobalLogExceptionFilter
+    public class ApiGlobalLogExceptionFilter
         : IExceptionFilter
     {
         private readonly IHostingEnvironment _env;
-        private readonly ILogger<APIGlobalLogExceptionFilter> _logger;
-        public APIGlobalLogExceptionFilter(ILogger<APIGlobalLogExceptionFilter> logger, IHostingEnvironment env)
+        private readonly ILogger<ApiGlobalLogExceptionFilter> _logger;
+        public ApiGlobalLogExceptionFilter(ILogger<ApiGlobalLogExceptionFilter> logger, IHostingEnvironment env)
         {
             _logger = logger;
             _env = env;
@@ -44,11 +45,11 @@ namespace Dnc.AspNetCore.Filters
                 if (_env.IsDevelopment())
                 {
                     //In development,output exception message.
-                    filterContext.Result = new JsonResult(new AjaxResult(false, StatusCode.ServerError, $"系统出现异常，请联系管理员,错误详情:{excep.Message}"));
+                    filterContext.Result = new BadRequestObjectResult(new AjaxResult(false, HttpStatusCodes.BadRequest, $"系统出现异常，请联系管理员,错误详情:{excep.Message}"));
                 }
                 else
                 {
-                    filterContext.Result = new JsonResult(new AjaxResult(false, StatusCode.ServerError, "系统出现异常，请联系管理员"));
+                    filterContext.Result = new BadRequestObjectResult(new AjaxResult(false, HttpStatusCodes.BadRequest, "系统出现异常，请联系管理员"));
                 }
                 filterContext.ExceptionHandled = true;//Tag it is handled.
             }
