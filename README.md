@@ -1,16 +1,12 @@
-﻿Dnc.Core
+﻿Dnc.Core&&Dnc.AspNetCore
 ===
 
-Dnc.Core:[![Dnc.Core/1.0.8.6](https://img.shields.io/badge/nuget-1.0.8.6-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.0.8.6)
+Dnc.Core:[![Dnc.Core/1.0.8.7](https://img.shields.io/badge/nuget-1.0.8.7-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.0.8.7)
 
-Dnc.AspNetCore:[![Dnc.AspNetCore/1.0.0.10](https://img.shields.io/badge/nuget-1.0.0.10-blue.svg)](https://www.nuget.org/packages/Dnc.AspNetCore/1.0.0.10)
-
-Dnc.AspNetCore.Ui:[![Dnc.AspNetCore.Ui/0.0.1.1](https://img.shields.io/badge/nuget-0.0.1.1-blue.svg)](https://www.nuget.org/packages/Dnc.AspNetCore.Ui/0.0.1.1)
-
-Dnc.WPF:[![Dnc.WPF/0.0.2.2](https://img.shields.io/badge/nuget-0.0.2.1-blue.svg)](https://www.nuget.org/packages/Dnc.WPF/0.0.2.2)
+Dnc.AspNetCore:[![Dnc.AspNetCore/1.0.0.13](https://img.shields.io/badge/nuget-1.0.0.13-blue.svg)](https://www.nuget.org/packages/Dnc.AspNetCore/1.0.0.13)
 
 > install-package Dnc.Core
-
+> install-package Dnc.AspNetCore
 
 ## Use this in the entry point of your application: 
 
