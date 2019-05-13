@@ -31,7 +31,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.Micro", "src\Dnc.Micro\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.BigData", "src\Dnc.BigData\Dnc.BigData.csproj", "{4FFC62D4-D541-4162-B4EC-3BC30E5717DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnc.Test", "src\Dnc.Test\Dnc.Test.csproj", "{74A436CA-06BE-4973-97EE-A6B9A67494BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.Test", "src\Dnc.Test\Dnc.Test.csproj", "{74A436CA-06BE-4973-97EE-A6B9A67494BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{32B75108-75DD-4C2A-AD1A-553275A7F826}"
+	ProjectSection(SolutionItems) = preProject
+		.build\build.cake = .build\build.cake
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
