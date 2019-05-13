@@ -3,7 +3,7 @@ using Dnc.API.Models;
 using Dnc.AspNetCore.Controllers;
 using Dnc.Data;
 using Dnc.ObjectId;
-using Dnc.SeedWork;
+using Dnc.Seedwork;
 using Dnc.Serializers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

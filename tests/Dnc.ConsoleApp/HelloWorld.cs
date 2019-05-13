@@ -9,6 +9,7 @@ namespace Dnc.ConsoleApp
         public HelloWorld()
         { }
         public string String { get; set; }
+        public DateTime Time { get; set; }
         public HelloWorld(string str)
         {
             String = str;

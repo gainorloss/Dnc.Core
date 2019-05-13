@@ -4,7 +4,7 @@ using System.Dynamic;
 using System.Reflection;
 using System.Text;
 
-namespace Dnc.Core.AppServices
+namespace Dnc
 {
     public static class AppServicesExtensions
     {

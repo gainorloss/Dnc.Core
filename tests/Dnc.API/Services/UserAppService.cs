@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Dnc.API.Models;
-using Dnc.SeedWork;
+﻿using Dnc.API.Models;
+using Dnc.Seedwork;
 
 namespace Dnc.API.Services
 {

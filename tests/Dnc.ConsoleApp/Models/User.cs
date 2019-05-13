@@ -1,7 +1,4 @@
-﻿using Dnc.SeedWork;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Dnc.Seedwork;
 
 namespace Dnc.ConsoleApp.Models
 {

@@ -1,11 +1,8 @@
-﻿using Dnc.ConsoleApp.Models;
-using Dnc.Data;
+﻿using Dnc.Data;
 using Dnc.Dispatcher;
-using Dnc.Extensions;
 using Dnc.FaultToleranceProcessors;
-using Dnc.ObjectId;
 using Dnc.Output;
-using Dnc.SeedWork;
+using Dnc.Seedwork;
 using Dnc.Spiders;
 using Dnc.Structures;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +10,6 @@ using PuppeteerSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Dnc.ConsoleApp
@@ -44,6 +40,9 @@ namespace Dnc.ConsoleApp
             var sp = fx.ServiceProvider;
             var faultToleranceProcessor = sp.GetRequiredService<IFaultToleranceProcessor>();
             //var testService = sp.GetRequiredService<ITestService>();
+
+            var mock = sp.GetRequiredService<IMockRepository>();
+
             #region ConsoleOutputHelper.
             var outputHelper = sp.GetService<IConsoleOutputHelper>() as IConsoleOutputHelper;
             //outputHelper.OutputImage(@"C:\Users\Administrator\Pictures\timg (3).jpg");
@@ -94,8 +93,8 @@ namespace Dnc.ConsoleApp
             //DangdangCategoryGetterAsync(sp)
             //    .ConfigureAwait(false)
             //    .GetAwaiter();
-            TianMaoPriceGetterAsync(sp)
-                .Wait();
+            //TianMaoPriceGetterAsync(sp)
+            //    .Wait();
             #endregion
 
             #region sort.
@@ -114,7 +113,6 @@ namespace Dnc.ConsoleApp
 
             #region redis.
             var redis = sp.GetRequiredService<IRedis>();
-            var mock = sp.GetRequiredService<IMockRepository>();
             //var val = redis.TryGetOrCreate("firstname", () => "gainorloss");
             //val = redis.TryGetOrCreate("firstname", () => "gainorloss"); 
 
@@ -123,9 +121,9 @@ namespace Dnc.ConsoleApp
             #endregion
 
             #region mock.
-            //var mock = sp.GetRequiredService<IMockRepository>();
             //var hello = mock.Create<HelloWorld>();
-            //var hellos = mock.CreateMultiple<HelloWorld>(); 
+            var hellos = mock.CreateMultiple<HelloWorld>();
+            var dataShaped = hellos.ToDynamic("time1");
             #endregion
 
             #region object id generator.
