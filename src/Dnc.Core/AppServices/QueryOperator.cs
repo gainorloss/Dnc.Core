@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.Core.Queries
+namespace Dnc.AppServices
 {
     public enum QueryOperator
     {

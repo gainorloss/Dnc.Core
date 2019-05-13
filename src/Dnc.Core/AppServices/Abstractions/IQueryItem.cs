@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.Queries
+namespace Dnc.AppServices
 {
-    public interface IQuery
-        : IQueryItem
+    public interface IQueryItem
     { }
 }

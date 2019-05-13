@@ -1,4 +1,4 @@
-﻿namespace Dnc.Queries
+﻿namespace Dnc.AppServices
 {
     public enum CriteriaOperator
     {
