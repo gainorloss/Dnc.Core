@@ -2,10 +2,13 @@
 using Autofac.Extensions.DependencyInjection;
 using Dnc.AspNetCore.Controllers;
 using Dnc.AspNetCore.Filters;
+using Dnc.Data;
+using Dnc.Seedwork;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
@@ -86,6 +89,20 @@ namespace Dnc.AspNetCore
             #endregion
 
             return services.GetAutofacServiceProvider(type);//autofac.
+        }
+
+        /// <summary>
+        /// <para>AdminDbContext</para>
+        /// <para><see cref="ISysUserManager"/></para>
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddAdmin<TAdminDbContext>(this IServiceCollection services,Action<DbContextOptionsBuilder> optionsAction=null)
+            where TAdminDbContext:AbstractAdminDbContext
+        {
+            services.AddDbContext<TAdminDbContext>(optionsAction);
+            services.AddScoped<ISysUserManager,SysUserManager>();
+            return services;
         }
 
         /// <summary>

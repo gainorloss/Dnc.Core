@@ -28,6 +28,7 @@
     <PackageReference Include="mailkit" Version="2.1.4" />
     <PackageReference Include="messagepack" Version="1.7.3.4" />
     <PackageReference Include="messagepackanalyzer" Version="1.6.0" />
+    <PackageReference Include="microsoft.aspnetcore.http.abstractions" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.signalr" Version="1.1.0" />
     <PackageReference Include="microsoft.codeanalysis.csharp" Version="3.0.0" />
     <PackageReference Include="microsoft.codeanalysis.csharp.scripting" Version="3.0.0" />
