@@ -1,10 +1,25 @@
 ﻿using Dnc.AspNetCore.Models;
+using Dnc.Seedwork;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Dynamic;
 
 namespace Dnc.AspNetCore.Controllers
 {
     public class BaseController : ControllerBase
     {
+        #region Protected members.
+        protected readonly IUrlHelper _urlHelper;
+        #endregion
+
+        #region Ctor.
+        protected BaseController(IUrlHelper urlHelper)
+        {
+            _urlHelper = urlHelper;
+        }
+        #endregion
+
+        #region Methods for returning value.
         [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult Ajax(HttpStatusCodes statusCode,
             object data = null,
@@ -31,6 +46,53 @@ namespace Dnc.AspNetCore.Controllers
                 default:
                     return Ok(ajaxResult);
             }
+        }
+        #endregion
+
+        protected ExpandoObject ToHATEOAS<TViewModel>(TViewModel source, string name, string fields = null)
+            where TViewModel : Entity
+        {
+            var dynamicObject = source.ToDynamic(fields);
+            ((IDictionary<string, object>)dynamicObject).Add("links", CreateLinks(name, source.Id, fields));
+            return dynamicObject;
+        }
+
+        protected IEnumerable<ExpandoObject> ToHATEOAS<TViewModel>(IEnumerable<TViewModel> sources, string name, string fields = null)
+            where TViewModel : Entity
+        {
+            foreach (var source in sources)
+                yield return ToHATEOAS(source, name, fields);
+        }
+
+        private IEnumerable<LinkViewModel> CreateLinks(string name, long id, string fields = null)
+        {
+            var links = new List<LinkViewModel>();
+            if (string.IsNullOrWhiteSpace(fields))
+            {
+                links.Add(
+                    new LinkViewModel(_urlHelper.Link("Get", new { id }),
+                    "self",
+                    "GET"));
+            }
+            else
+            {
+                links.Add(
+                    new LinkViewModel(_urlHelper.Link("GetCustomer", new { id, fields }),
+                    "self",
+                    "GET"));
+            }
+
+            links.Add(
+                new LinkViewModel(_urlHelper.Link("Delete", new { id }),
+                $"delete_{name.ToLowerInvariant()}",
+                "DELETE"));
+
+            links.Add(
+                new LinkViewModel(_urlHelper.Link("Create", new { id }),
+                $"create_{name.ToLowerInvariant()}",
+                "POST"));
+
+            return links;
         }
     }
 }
