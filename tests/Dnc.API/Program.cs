@@ -15,13 +15,13 @@ namespace Dnc.API
             WebHost.CreateDefaultBuilder(args)
             .UseCore(ctor =>
             {
-                ctor.UseRedis(opt =>
-                {
-                    opt.Host = "140.143.88.100";
-                    opt.Password = "p@ssw0rd";
-                    opt.Port = 6379;
-                    opt.InstanceName = "Dnc.API";
-                });
+                //ctor.UseRedis(opt =>
+                //{
+                //    opt.Host = "140.143.88.100";
+                //    opt.Password = "p@ssw0rd";
+                //    opt.Port = 6379;
+                //    opt.InstanceName = "Dnc.API";
+                //});
             })
                 .UseStartup<Startup>();
     }

@@ -68,29 +68,13 @@ namespace Dnc.AspNetCore.Controllers
         {
             var links = new List<LinkViewModel>();
             if (string.IsNullOrWhiteSpace(fields))
-            {
-                links.Add(
-                    new LinkViewModel(_urlHelper.Link("Get", new { id }),
-                    "self",
-                    "GET"));
-            }
+                links.Add(new LinkViewModel(_urlHelper.Link("Get", new { id }),"self","GET"));
             else
-            {
-                links.Add(
-                    new LinkViewModel(_urlHelper.Link("GetCustomer", new { id, fields }),
-                    "self",
-                    "GET"));
-            }
+                links.Add(new LinkViewModel(_urlHelper.Link("Get", new { id, fields }),"self","GET"));
 
-            links.Add(
-                new LinkViewModel(_urlHelper.Link("Delete", new { id }),
-                $"delete_{name.ToLowerInvariant()}",
-                "DELETE"));
+            links.Add(new LinkViewModel(_urlHelper.Link("Delete", new { id }),$"delete_{name.ToLowerInvariant()}","DELETE"));
 
-            links.Add(
-                new LinkViewModel(_urlHelper.Link("Create", new { id }),
-                $"create_{name.ToLowerInvariant()}",
-                "POST"));
+            links.Add(new LinkViewModel(_urlHelper.Link("Create", new { id }),$"create_{name.ToLowerInvariant()}","POST"));
 
             return links;
         }

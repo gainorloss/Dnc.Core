@@ -8,6 +8,8 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -37,6 +39,14 @@ namespace Dnc.AspNetCore
             {
                 services.AddSwaggerAPIDoc();//api doc.
                 services.AddAPIVersion();//api version.
+
+                services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+                services.AddScoped<IUrlHelper>(factory =>
+                {
+                    var actionContext = factory.GetService<IActionContextAccessor>()
+                                            .ActionContext;
+                    return new UrlHelper(actionContext);
+                });
             }
             else
             {
