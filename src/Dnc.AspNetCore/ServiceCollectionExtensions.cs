@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Loader;
 
 namespace Dnc.AspNetCore
@@ -92,16 +93,16 @@ namespace Dnc.AspNetCore
         }
 
         /// <summary>
-        /// <para>AdminDbContext</para>
-        /// <para><see cref="ISysUserManager"/></para>
+        /// <para>Registers the given admin db context as a service in the <see cref="IServiceCollection"/>.</para>
+        /// <para>Registers a default scoped <see cref="ISysUserManager"/> as a service in the <see cref="IServiceCollection"/>.</para>
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddAdmin<TAdminDbContext>(this IServiceCollection services,Action<DbContextOptionsBuilder> optionsAction=null)
-            where TAdminDbContext:AbstractAdminDbContext
+        public static IServiceCollection AddAdmin<TAdminDbContext>(this IServiceCollection services, Action<DbContextOptionsBuilder> optionsAction = null)
+            where TAdminDbContext : AbstractAdminDbContext
         {
             services.AddDbContext<TAdminDbContext>(optionsAction);
-            services.AddScoped<ISysUserManager,SysUserManager>();
+            services.AddScoped<ISysUserManager, SysUserManager>();
             return services;
         }
 
