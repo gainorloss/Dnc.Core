@@ -1,15 +1,11 @@
-﻿using System.Linq;
-using System.Threading;
-using System.Windows;
-using Dnc.Core.Helpers;
-using Dnc.Extensions;
+﻿using Dnc.Extensions;
 using Dnc.Helpers;
 using Dnc.Serializers;
-using Dnc.Spiders;
-using Dnc.WpfApp.Spiders;
 using Dnc.WpfApp.Tests;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
+using System.Windows;
 
 namespace Dnc.WpfApp
 {

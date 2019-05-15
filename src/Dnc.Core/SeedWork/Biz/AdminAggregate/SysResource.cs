@@ -16,7 +16,8 @@ namespace Dnc.Seedwork
             bool isMenu, 
             string cssClass, 
             string resource, 
-            string parentResource = null)
+            string parentResource = null,
+            int seq=0)
             : this()
         {
             Name = name;
@@ -24,6 +25,7 @@ namespace Dnc.Seedwork
             CssClass = cssClass;
             Resource = resource;
             Parent = parentResource;
+            Seq = seq;
         }
         public string Name { get; set; }
         public bool IsMenu { get; set; }
@@ -33,5 +35,6 @@ namespace Dnc.Seedwork
         public string ParentResourceId { get; set; }
         public string Parent { get; set; }
         public string CssClass { get; set; }
+        public int Seq { get; set; }
     }
 }

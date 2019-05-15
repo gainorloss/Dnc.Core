@@ -46,54 +46,5 @@ namespace Dnc.AspNetCore
             }
             return app;
         }
-
-        /// <summary>
-        /// Configure AspnetCore using Dnc.Core.
-        /// </summary>
-        /// <param name="app"></param>
-        /// <returns></returns>
-        public static IApplicationBuilder UseAdmin<TAdminDbContext>(this IApplicationBuilder app)
-            where TAdminDbContext: AbstractAdminDbContext
-        {
-            var sp = app.ApplicationServices;
-            var ctx = sp.GetRequiredService<AbstractAdminDbContext>();
-
-            var resources = new List<SysResource>();
-
-            var assembly = typeof(TAdminDbContext).Assembly;
-            var ctrlTypes = assembly.GetTypes().Where(t => t.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase));
-            if (ctrlTypes == null || !ctrlTypes.Any())
-                throw new Exception($"There is no any controllers in the current project.");
-            foreach (var ctrlType in ctrlTypes)
-            {
-                var attrs = ctrlType.GetCustomAttributes(typeof(FunctionAttribute), false);
-                if (attrs == null || attrs.Any())
-                    continue;
-                var attr = attrs.FirstOrDefault() as FunctionAttribute;
-                var father = new SysResource(attr.Name, attr.IsMenu, attr.CssClass, $"{ctrlType.Namespace}.{ctrlType.Name}", attr.Father);
-                resources.Add(father);
-
-                var members = ctrlType.GetMembers(BindingFlags.Public | BindingFlags.Instance);
-                if (members == null || !members.Any())
-                    throw new Exception($"There is no any actions in the controll {father.Resource}.");
-                foreach (var member in members)
-                {
-                    var funcAttr = member.GetCustomAttribute(typeof(FunctionAttribute), false);
-                    if (funcAttr == null)
-                        continue;
-                    var func = funcAttr as FunctionAttribute;
-                    var resource = new SysResource(func.Name,
-                        func.IsMenu,
-                        func.CssClass,
-                        $"{father.Resource}.{member.Name}",
-                        func.Father ?? father.Resource);
-                    resources.Add(resource);
-                }
-            }
-
-            ctx.SysResource.AddRange(resources);
-            ctx.SaveChanges();
-            return app;
-        }
     }
 }

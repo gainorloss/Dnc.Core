@@ -49,32 +49,39 @@ namespace Dnc.AspNetCore.Controllers
         }
         #endregion
 
-        protected ExpandoObject ToHATEOAS<TViewModel>(TViewModel source, string name, string fields = null)
+        protected ExpandoObject ToHATEOAS<TViewModel>(TViewModel source, string name, string fields = null, string accept = "application/json")
             where TViewModel : Entity
         {
             var dynamicObject = source.ToDynamic(fields);
-            ((IDictionary<string, object>)dynamicObject).Add("links", CreateLinks(name, source.Id, fields));
+            if (accept.Equals("application/vnd-hateoas+json"))
+                ((IDictionary<string, object>)dynamicObject).Add("links", CreateLinks(name, source.Id, fields));
             return dynamicObject;
         }
 
-        protected IEnumerable<ExpandoObject> ToHATEOAS<TViewModel>(IEnumerable<TViewModel> sources, string name, string fields = null)
+        protected IEnumerable<ExpandoObject> ToHATEOAS<TViewModel>(IEnumerable<TViewModel> sources, string name, string fields = null, string accept = "application/json")
             where TViewModel : Entity
         {
-            foreach (var source in sources)
-                yield return ToHATEOAS(source, name, fields);
+            if (accept.Equals("application/vnd-hateoas+json"))
+            {
+                var dynamicObjects = new List<ExpandoObject>();
+                foreach (var source in sources)
+                    dynamicObjects.Add(ToHATEOAS(source, name, fields));
+                return dynamicObjects;
+            }
+            return sources.ToDynamic(fields);
         }
 
         private IEnumerable<LinkViewModel> CreateLinks(string name, long id, string fields = null)
         {
             var links = new List<LinkViewModel>();
             if (string.IsNullOrWhiteSpace(fields))
-                links.Add(new LinkViewModel(_urlHelper.Link("Get", new { id }),"self","GET"));
+                links.Add(new LinkViewModel(_urlHelper.Link("Get", new { id }), "self", "GET"));
             else
-                links.Add(new LinkViewModel(_urlHelper.Link("Get", new { id, fields }),"self","GET"));
+                links.Add(new LinkViewModel(_urlHelper.Link("Get", new { id, fields }), "self", "GET"));
 
-            links.Add(new LinkViewModel(_urlHelper.Link("Delete", new { id }),$"delete_{name.ToLowerInvariant()}","DELETE"));
+            links.Add(new LinkViewModel(_urlHelper.Link("Delete", new { id }), $"delete_{name.ToLowerInvariant()}", "DELETE"));
 
-            links.Add(new LinkViewModel(_urlHelper.Link("Create", new { id }),$"create_{name.ToLowerInvariant()}","POST"));
+            links.Add(new LinkViewModel(_urlHelper.Link("Create", new { id }), $"create_{name.ToLowerInvariant()}", "POST"));
 
             return links;
         }

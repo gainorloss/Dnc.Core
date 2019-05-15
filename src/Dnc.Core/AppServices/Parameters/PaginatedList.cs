@@ -22,5 +22,7 @@ namespace Dnc.AppServices
         public int PageSize { get; private set; }
         public int Total { get; private set; }
         public int PageCount { get; private set; }
+        public bool HasPrevious => PageIndex >= 2;
+        public bool HasNext => PageIndex <= PageCount - 1;
     }
 }

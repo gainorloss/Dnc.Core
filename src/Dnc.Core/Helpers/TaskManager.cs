@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dnc.Core.Helpers
+namespace Dnc.Helpers
 {
     /// <summary>
     /// Used for parallel computation and starting some threads to process items.
