@@ -23,7 +23,7 @@ namespace Dnc
             var expandoObjectList = new List<ExpandoObject>();
             var propertyInfoList = new List<PropertyInfo>();
 
-            if (string.IsNullOrEmpty(fields))
+            if (string.IsNullOrWhiteSpace(fields))
             {
                 var props = typeof(TSource).GetProperties(BindingFlags.Instance | BindingFlags.PutDispProperty);
                 propertyInfoList.AddRange(props);
@@ -33,7 +33,7 @@ namespace Dnc
                 var fieldsAfterSplit = fields.Split(',');
                 foreach (var field in fieldsAfterSplit)
                 {
-                    if (string.IsNullOrEmpty(field))
+                    if (string.IsNullOrWhiteSpace(field))
                         continue;
                     var prop = typeof(TSource).GetProperty(field, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
                     if (prop == null)
@@ -69,7 +69,7 @@ namespace Dnc
 
             var expandoObject = new ExpandoObject();
 
-            if (string.IsNullOrEmpty(fields))
+            if (string.IsNullOrWhiteSpace(fields))
             {
                 var props = typeof(TSource).GetProperties(BindingFlags.Instance | BindingFlags.Public);
 
@@ -85,7 +85,7 @@ namespace Dnc
                 var fieldsAfterSplit = fields.Split(',');
                 foreach (var field in fieldsAfterSplit)
                 {
-                    if (string.IsNullOrEmpty(field))
+                    if (string.IsNullOrWhiteSpace(field))
                         continue;
                     var prop = typeof(TSource).GetProperty(field, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
                     if (prop == null)

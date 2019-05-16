@@ -29,7 +29,7 @@ namespace Dnc.Spiders
         public async Task<IList<T>> GetProxiesAsync<T>(string url) where T : BaseAgentSpiderItem, new()
         {
             var html = await url.GetStringAsync();
-            if (string.IsNullOrEmpty(html))
+            if (string.IsNullOrWhiteSpace(html))
                 return null;
 
             var trs = await _parser.GetElementsAsync(html, "#ip_list tr");
@@ -74,7 +74,7 @@ namespace Dnc.Spiders
         {
             var url = $"http://ip.taobao.com/service/getIpInfo2.php?ip={ip}";
             var json = await url.GetStringAsync();
-            return !string.IsNullOrEmpty(json);
+            return !string.IsNullOrWhiteSpace(json);
         }
         #endregion
     }

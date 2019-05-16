@@ -8,6 +8,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
@@ -80,6 +81,7 @@ namespace Dnc.AspNetCore
                 }
             })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions(opt => opt.UseCamelCasing(true))
                 .AddFluentValidation(cfg =>
             {
                 cfg.RegisterValidatorsFromAssembly(type.Assembly);
@@ -94,7 +96,7 @@ namespace Dnc.AspNetCore
                 option.InvalidModelStateResponseFactory = (action =>
                 {
                     var errMessages = action.ModelState.Values.SelectMany(v => v.Errors).Select(g => g.ErrorMessage).Aggregate((i, next) => $"{i}【>_<】{next}");
-                    return new BadRequestObjectResult(new AjaxResult(false, HttpStatusCodes.BadRequest, errMessages));
+                    return new UnprocessableEntityObjectResult(new AjaxResult(false, HttpStatusCodes.BadRequest, errMessages));
                 });
             });
             #endregion

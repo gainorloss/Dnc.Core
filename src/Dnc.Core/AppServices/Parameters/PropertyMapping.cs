@@ -5,14 +5,15 @@ using System.Text;
 
 namespace Dnc.AppServices
 {
-    public class PropertyMapping<TSource, TDestination>
+    public abstract class PropertyMapping<TSource, TDestination> 
+        :IPropertyMapping
         where TDestination : Entity
     {
-        public Dictionary<string, List<MappedProperty>> PropertyMappingDic { get; }
+        public Dictionary<string, List<MappedProperty>> MappingDictionary { get; }
         public PropertyMapping(Dictionary<string, List<MappedProperty>> propertyMappingDic)
         {
-            PropertyMappingDic = propertyMappingDic;
-            PropertyMappingDic.Add(nameof(Entity.Id), new List<MappedProperty>()
+            MappingDictionary = propertyMappingDic;
+            MappingDictionary.Add(nameof(Entity.Id), new List<MappedProperty>()
             {
                 new MappedProperty(nameof(Entity.Id))
             });

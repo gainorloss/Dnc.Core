@@ -41,7 +41,7 @@ namespace Dnc.Spiders
                 "--disable-setuid-sandbox"
             };
 
-            if (!string.IsNullOrEmpty(agent))
+            if (!string.IsNullOrWhiteSpace(agent))
                 args.Add($"--proxy-server={agent}");
 
             option.Args = args.ToArray();

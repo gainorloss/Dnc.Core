@@ -44,7 +44,7 @@ namespace Dnc.Files
                   if (!Directory.Exists(folder))
                       Directory.CreateDirectory(folder);
 
-                  if (string.IsNullOrEmpty(fileName))
+                  if (string.IsNullOrWhiteSpace(fileName))
                       fileName = $"{DateTime.Now.ToString("yyyyMMddHHmmssfff")}{Guid.NewGuid().ToString("N")}.png";
 
                   var savePath = Path.Combine(folder, fileName);

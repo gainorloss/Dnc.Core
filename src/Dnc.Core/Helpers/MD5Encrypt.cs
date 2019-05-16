@@ -17,7 +17,7 @@ namespace Dnc.Helpers
         public static string Encrypt(string source, int length)
         {
             HashAlgorithm provider = CryptoConfig.CreateFromName("MD5") as HashAlgorithm;
-            if (string.IsNullOrEmpty(source)) return string.Empty;
+            if (string.IsNullOrWhiteSpace(source)) return string.Empty;
 
             byte[] bytes = Encoding.ASCII.GetBytes(source);
             byte[] hashValue = provider.ComputeHash(bytes);

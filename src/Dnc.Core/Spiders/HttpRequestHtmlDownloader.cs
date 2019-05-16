@@ -31,7 +31,7 @@ namespace Dnc.Spiders
                 httprequst.ServicePoint.Expect100Continue = false;
                 httprequst.Timeout = 5000;
                 httprequst.AllowAutoRedirect = true;//是否允许302
-                if (!string.IsNullOrEmpty(agent)) httprequst.Proxy = new WebProxy(agent);
+                if (!string.IsNullOrWhiteSpace(agent)) httprequst.Proxy = new WebProxy(agent);
                 ServicePointManager.DefaultConnectionLimit = 30;
                 //获取响应
                 HttpWebResponse webRes = (HttpWebResponse)await httprequst.GetResponseAsync();

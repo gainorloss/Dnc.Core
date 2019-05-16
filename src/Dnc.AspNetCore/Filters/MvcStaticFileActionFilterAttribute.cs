@@ -81,12 +81,12 @@ namespace Dnc.AspNetCore.Filters
             var controller = context.RouteData.Values["controller"].ToString().ToLower();
             var action = context.RouteData.Values["action"].ToString().ToLower();
             var id = context.RouteData.Values.ContainsKey(Key) ? context.RouteData.Values[Key].ToString().ToLower() : string.Empty;
-            if (string.IsNullOrEmpty(id) && context.HttpContext.Request.Query.ContainsKey(Key))
+            if (string.IsNullOrWhiteSpace(id) && context.HttpContext.Request.Query.ContainsKey(Key))
             {
                 id = context.HttpContext.Request.Query[Key].ToString().ToLower();
             }
             var dir = Path.Combine(AppContext.BaseDirectory, "wwwroot", area);
-            var fileName = string.IsNullOrEmpty(id) ? $"{controller}-{action}.html" : $"{controller}-{action}-{id}.html";
+            var fileName = string.IsNullOrWhiteSpace(id) ? $"{controller}-{action}.html" : $"{controller}-{action}-{id}.html";
             var file = Path.Combine(dir, fileName);
             return (dir: dir, file: file);
         }

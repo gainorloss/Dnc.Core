@@ -28,7 +28,7 @@ namespace Dnc.Spiders
         {
             foreach (var url in urls)
             {
-                if (!string.IsNullOrEmpty(url) && url.StartsWith("http"))
+                if (!string.IsNullOrWhiteSpace(url) && url.StartsWith("http"))
                 {
                     NewUrls.Enqueue(url);
                 }

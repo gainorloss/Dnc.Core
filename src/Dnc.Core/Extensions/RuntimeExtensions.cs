@@ -27,7 +27,7 @@ namespace Dnc.Extensions
 
         public static Assembly GetAssemblyByName(this string name)
         {
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("message", nameof(name));
 
             return AssemblyLoadContext.Default.LoadFromAssemblyName(new AssemblyName(name));

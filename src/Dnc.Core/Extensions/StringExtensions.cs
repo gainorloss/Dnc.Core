@@ -72,7 +72,7 @@ namespace Dnc.Extensions
         public static bool IsBase64String(this string base64Str, out byte[] bytes)
         {
             bytes = null;
-            if (string.IsNullOrEmpty(base64Str))
+            if (string.IsNullOrWhiteSpace(base64Str))
                 return false;
             else
             {
@@ -177,7 +177,7 @@ namespace Dnc.Extensions
         /// <returns></returns>
         public static string ToMD5Encrypt(this string source, string salt = "Dnc.Core")
         {
-            if (string.IsNullOrEmpty(source))
+            if (string.IsNullOrWhiteSpace(source))
             {
                 throw new ArgumentNullException("Arguments not allowed null or empty.");
             }
@@ -195,7 +195,7 @@ namespace Dnc.Extensions
         /// <returns></returns>
         public static string ToMD5EncryptBy16(this string source, string salt = "Dnc.Core")
         {
-            if (string.IsNullOrEmpty(source))
+            if (string.IsNullOrWhiteSpace(source))
             {
                 throw new ArgumentNullException("Arguments not allowed null or empty.");
             }

@@ -35,7 +35,7 @@ namespace Dnc.AppServices
         public string OrderBy
         {
             get => _orderBy;
-            set => _orderBy = string.IsNullOrEmpty(value) ? nameof(Entity.Id) : value;
+            set => _orderBy = string.IsNullOrWhiteSpace(value) ? nameof(Entity.Id) : value;
         }
 
         public string Fields { get; set; }

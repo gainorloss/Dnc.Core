@@ -57,6 +57,7 @@
     <PackageReference Include="system.data.sqlclient" Version="4.6.0" />
     <PackageReference Include="system.diagnostics.performancecounter" Version="4.5.0" />
     <PackageReference Include="system.drawing.common" Version="4.5.1" />
+    <PackageReference Include="system.linq.dynamic.core" Version="1.0.14" />
     <PackageReference Include="z.entityframework.plus.efcore" Version="1.8.27" />
   </ItemGroup>
 </Project>
