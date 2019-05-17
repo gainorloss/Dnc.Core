@@ -21,7 +21,7 @@ namespace DncAspNetCore.Admin
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseCore()
-                .UseUrls("http://+:8002")
+                .UseUrls("http://+:9002")
                 .UseStartup<Startup>();
     }
 }

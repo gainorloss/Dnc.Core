@@ -13,11 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Apps", "Web Apps", "{6F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile Apps", "Mobile Apps", "{FFAF89FD-DE00-4657-9E17-3E8F0092EDD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DncAspNetCore.Api", "src\Services\DncAspNetCore.Api\DncAspNetCore.Api.csproj", "{BEFF5312-53EE-4CA7-9B4D-13617A404F8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DncAspNetCore.Api", "src\Services\DncAspNetCore.Api\DncAspNetCore.Api.csproj", "{BEFF5312-53EE-4CA7-9B4D-13617A404F8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DncAspNetCore.Site", "src\WebApps\DncAspNetCore.Site\DncAspNetCore.Site.csproj", "{43507FFA-4EE0-4079-A67F-6E64DA586D6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DncAspNetCore.Site", "src\WebApps\DncAspNetCore.Site\DncAspNetCore.Site.csproj", "{43507FFA-4EE0-4079-A67F-6E64DA586D6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DncAspNetCore.Admin", "src\WebApps\DncAspNetCore.Admin\DncAspNetCore.Admin.csproj", "{6E533CF8-C034-45E0-B0D5-E208159216C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DncAspNetCore.Admin", "src\WebApps\DncAspNetCore.Admin\DncAspNetCore.Admin.csproj", "{6E533CF8-C034-45E0-B0D5-E208159216C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DncAspNetCore.Idp", "src\Services\DncAspNetCore.Idp\DncAspNetCore.Idp.csproj", "{9CF6F5C1-CB72-4F91-8C5F-81741A5FE736}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{6E533CF8-C034-45E0-B0D5-E208159216C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E533CF8-C034-45E0-B0D5-E208159216C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E533CF8-C034-45E0-B0D5-E208159216C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF6F5C1-CB72-4F91-8C5F-81741A5FE736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF6F5C1-CB72-4F91-8C5F-81741A5FE736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF6F5C1-CB72-4F91-8C5F-81741A5FE736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF6F5C1-CB72-4F91-8C5F-81741A5FE736}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{BEFF5312-53EE-4CA7-9B4D-13617A404F8A} = {8860EFBC-FB7F-4FA0-B42F-5651990D1C2E}
 		{43507FFA-4EE0-4079-A67F-6E64DA586D6F} = {6FF742CF-B68C-4DA1-840D-29CB5BCFD5E8}
 		{6E533CF8-C034-45E0-B0D5-E208159216C1} = {6FF742CF-B68C-4DA1-840D-29CB5BCFD5E8}
+		{9CF6F5C1-CB72-4F91-8C5F-81741A5FE736} = {8860EFBC-FB7F-4FA0-B42F-5651990D1C2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2A79D0B-B421-4B7A-AF85-BA56576861A5}
