@@ -14,15 +14,15 @@ namespace DncAspNetCore.Admin.Areas.AccountArea.Controllers
 {
     [Area(nameof(AccountArea))]
     [AllowAnonymous]
-    public class AccountController : Controller
+    public class SysUsersController : Controller
     {
-        public IActionResult SignIn(string returnUrl=null)
+        public IActionResult SignIn(string returnUrl = null)
         {
             ViewData["returnUrl"] = returnUrl;
             return View();
         }
 
-        public async Task<IActionResult> DoSignInAsync(string name,string token,string verifycode,bool remember,string returnUrl=null)
+        public async Task<IActionResult> DoSignInAsync(string name, string token, string verifycode, bool remember, string returnUrl = null)
         {
             var claims = new List<Claim>
             {
@@ -48,7 +48,7 @@ namespace DncAspNetCore.Admin.Areas.AccountArea.Controllers
                     ExpiresUtc = DateTimeOffset.UtcNow.AddDays(7)
                 });
 
-            return Ok();
+            return Json(new { Status = true });
         }
     }
 }

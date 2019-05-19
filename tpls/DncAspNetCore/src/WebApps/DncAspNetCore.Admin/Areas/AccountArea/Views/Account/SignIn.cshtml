@@ -1,47 +1,57 @@
-﻿@{
-    Layout = null;
-    var form_id = $"frm_{Guid.NewGuid().ToString("N")}";
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>系统登录</title>
-    <!-- Tell the browser to be responsive to screen width -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>后台管理系统</title>
+    <!-- Tell the browser to be respodnsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="~/css/AdminLTE.css">
-    <link rel="stylesheet" href="~/lib/iCheck/skins/square/blue.css">
+    <!--bootstrap-->
+    <link href="~/Scripts/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--awesome-->
+    <link href="~/Scripts/vendor/adminlte/dist/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Ionicons -->
+    <link href="~/Scripts/vendor/adminlte/dist/css/ionicons.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/Scripts/vendor/adminlte/dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <!-- iCheck -->
+    <link href="~/Scripts/vendor/iCheck/square/blue.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="height:80%">
     <div class="login-box">
         <div class="login-logo">
-            <a href="http://fonour.cnblogs.com" target="_blank"><b>Fonour</b></a>
+            <a href="#"><b>后台登录</b></a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
-            <p class="login-box-msg">权限管理系统</p>
-            <input id="errorInfo" type="hidden" value="@ViewBag.ErrorInfo" />
-            <form  method="post" onsubmit="onSubmit()" id="@form_id">
+            @*<p class="login-box-msg">Sign in to start your session</p>*@
+            <form id="form" role="form">
                 <div class="form-group has-feedback">
-                    <input name="name" type="text" class="form-control" placeholder="用户名">
+                    <input id="name" name="name" type="text" class="form-control" required placeholder="请输入账号">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group has-feedback">
-                    <input name="token" type="password" class="form-control" placeholder="密码">
+                    <input id="token" name="token" type="token" required class="form-control" placeholder="请输入密码">
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    <div class="help-block with-errors"></div>
                 </div>
                 <div class="row">
                     <div class="col-xs-8">
                         <div class="checkbox icheck">
-                            <label>
-                                <input type="checkbox" name="remember"> 记住我
-                            </label>
+                            <input type="checkbox" id="savePwd" name="remember"><label style="padding-left:5px" for="savePwd">记住密码</label>
                         </div>
                     </div>
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        <button id="btnLogin" type="button" class="btn btn-primary btn-block btn-flat">登录</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
                     </div>
                     <!-- /.col -->
                 </div>
@@ -50,52 +60,90 @@
         <!-- /.login-box-body -->
     </div>
     <!-- /.login-box -->
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="~/lib/iCheck/icheck.js"></script>
-    <script src="~/lib/layer/layer.js"></script>
-    <script src="~/lib/jquery.cookie/src/jquery.cookie.js"></script>
-    <script asp-append-version="true">
+    <!-- jQuery 2.2.3 -->
+    <script src="~/Scripts/vendor/jQuery/jquery-2.2.3.min.js"></script>
+
+    <!--jQuery-cookie-->
+    <script src="~/Scripts/vendor/jQuery-cookie/jquery.cookie.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="~/Scripts/vendor/iCheck/icheck.min.js"></script>
+    <!--bootstrap-->
+    <script src="~/Scripts/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/vendor/bootstrap/js/bootstrap-BtnBuilder.js"></script>
+    <script src="~/Scripts/vendor/bootstrap-validator/validator.min.js"></script>
+    <!--layer-->
+    <script src="~/Scripts/vendor/layer/layer.js")"></script>
+    <script src="~/Scripts/vendor/layer/layer-extends.js")"></script>
+    <!--fx-->
+    <script src="~/Scripts/util/util.js")"></script>
+
+    <script>
+        var rootUrl = '@Url.Content("~/")';
+
         $(function () {
+            setPwd();
+
             $('input').iCheck({
                 checkboxClass: 'icheckbox_square-blue',
                 radioClass: 'iradio_square-blue',
                 increaseArea: '20%' // optional
             });
 
-            //判断之前是否有设置cookie，如果有，则设置【记住我】选择框
-            if ($.cookie("fonour_userName") != undefined) {
-                $("#RememberMe").attr("checked", "checked");
-            }
-            else {
-                $("#RememberMe").removeAttr("checked");
-            }
-            //读取cookie
-            if ($("#RememberMe:checked").length > 0) {
-                $("#UserName").val($.cookie("fonour_userName"));
-                $("#Password").val($.cookie("fonour_password"));
-            }
+            //表单校验
+            $('#form').validator().on('submit', function (e) {
+                //校验成功
+                if (!e.isDefaultPrevented()) {
+                    e.preventDefault();
 
-            $('#btnLogin').on('click', function () {
-                var name = $("input[name=name]").val();
-                var token = $("input[name=token]").val();
-                var remember = $("input[name=remember]").is(':checked');
-                $.get('/accountArea/account/dosigninasync', { name, token, remember }, function (res) {
-                    layer.tips($("#errorInfo").val(), "#btnLogin");
-                    location.href = '@ViewData["returnUrl"]';
-                });
-            });
+                    var values = $('#form').getValues();
+                    //保存账号密码
+                    var checked = $('#savePwd')[0].checked;
+                    savePwd(values.name, values.token, checked);
+                    loading();
+                    $.postJSON(rootUrl + 'AccountArea/Account/DoSignInAsync', values, function (resJson) {
+                        loading(false);
+                        
+                        if (resJson.status) {
+                            window.location.href = rootUrl;
+                        }
+                        else {
+                            dialogError(resJson.Msg);
+                        }
+                    });
+                }
+            })
         });
-        //根据是否勾选记住我记录或清除cookie
-        function onSubmit() {
-            if ($("#RememberMe:checked").length > 0) {//设置cookie
-                $.cookie("fonour_userName", $("input[name=name]").val());
-                $.cookie("fonour_password", $("input[name=token]").val());
-            } else {//清除cookie
-                $.removeCookie("fonour_userName");
-                $.removeCookie("fonour_password");
+
+        //设置保存的账号密码
+        function setPwd() {
+            var name = $.cookie('name');
+            var token = $.cookie('token');
+            if (name && token) {
+                $('#name').val(name);
+                $('#token').val(token);
+                $('#savePwd').prop('checked', 'checked');
+            } else {
+                $('#savePwd').removeAttr('checked');
             }
-        };
+        }
+
+        //保存账号密码
+        function savePwd(name, token, isSave) {
+            if (isSave) {
+                $.cookie('name', name, {
+                    expires: new Date('9999/1/1'),
+                    path: '/'
+                });
+                $.cookie('token', token, {
+                    expires: new Date('9999/1/1'),
+                    path: '/'
+                });
+            } else {
+                $.removeCookie('name', { path: '/' });
+                $.removeCookie('token', { path: '/' });
+            }
+        }
     </script>
 </body>
 </html>

@@ -15,15 +15,13 @@ namespace DncAspNetCore.Admin.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Desktop()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Statis()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }
