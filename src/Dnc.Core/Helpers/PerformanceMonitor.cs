@@ -37,7 +37,7 @@ namespace Dnc
                 strs.Add(str);
             }
             var log = string.Join("\r\n", strs);
-            var logger = Framework.Construction.ServiceProvider.GetRequiredService<ILogger>();
+            var logger = Fx.Construction.ServiceProvider.GetRequiredService<ILogger>();
             logger.LogInformation(log);
             return log;
         }
@@ -64,7 +64,7 @@ namespace Dnc
             strs.Add($@"     工作集内存:{pf.NextValue() / (1024 * 1024):N}M");
 
             var log = string.Join("\r\n", strs);
-            var logger = Framework.Construction.ServiceProvider.GetRequiredService<ILogger>();
+            var logger = Fx.Construction.ServiceProvider.GetRequiredService<ILogger>();
             logger.LogInformation(log);
             return log;
         }

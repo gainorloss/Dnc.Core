@@ -14,7 +14,7 @@ namespace Dnc.Dispatcher
     public abstract class AbstractJob
          : IJob
     {
-        protected IServiceProvider mServiceProvider => Framework.Construction.ServiceProvider;
+        protected IServiceProvider mServiceProvider => Fx.Construction.ServiceProvider;
         protected ILogger<AbstractJob> mLogger => mServiceProvider.GetRequiredService<ILogger<AbstractJob>>();
         protected IConsoleOutputHelper mOutput => mServiceProvider.GetRequiredService<IConsoleOutputHelper>();
         public async Task Execute(IJobExecutionContext context)

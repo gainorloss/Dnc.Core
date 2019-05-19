@@ -5,7 +5,7 @@ using System;
 
 namespace Dnc
 {
-    public static class Framework
+    public static class Fx
     {
         public static FrameworkConstruction Construction { get; private set; }
 
