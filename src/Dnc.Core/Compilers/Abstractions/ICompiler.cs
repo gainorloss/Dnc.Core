@@ -10,6 +10,7 @@ namespace Dnc.Compilers
     /// Compiler.
     /// </summary>
     public interface ICompiler
+        :IPlugin
     {
         Task<T> RunAsync<T>(string script,
             object arg = null,

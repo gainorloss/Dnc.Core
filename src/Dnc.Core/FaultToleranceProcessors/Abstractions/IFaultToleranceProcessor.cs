@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 namespace Dnc.FaultToleranceProcessors
 {
     public interface IFaultToleranceProcessor
+         : IPlugin
     {
         Task RetryAsync(Func<Task> action,int retryCount=5);
 

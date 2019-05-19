@@ -9,6 +9,7 @@ namespace Dnc.Alarmers
     /// Constraint for alarmer.
     /// </summary>
     public interface IAlarmer
+         : IPlugin
     {
         /// <summary>
         /// Alarm administrator using wechat.

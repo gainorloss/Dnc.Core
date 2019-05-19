@@ -43,5 +43,7 @@ namespace Dnc
 
             return Construction;
         }
+
+        public static T Resolve<T>() => ServiceProvider.GetRequiredService<T>();
     }
 }

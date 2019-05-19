@@ -1,10 +1,7 @@
-﻿using Dnc.Helpers;
-using Dnc.Models;
-using System;
+﻿using Dnc.Models;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Dnc.Extensions
+namespace Dnc
 {
     /// <summary>
     /// Extension methods for enum.

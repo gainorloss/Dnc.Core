@@ -8,6 +8,7 @@ namespace Dnc.ObjectId
     /// Object id contains distributed unique id and son on.
     /// </summary>
     public interface IObjectIdGenerator
+         : IPlugin
     {
         #region long id.
         /// <summary>

@@ -5,6 +5,7 @@ using System.Text;
 namespace Dnc.Seedwork
 {
     public interface IMockRepository
+        :IPlugin
     {
         T Create<T>()
             where T : class, new();

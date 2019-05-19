@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Dnc.Helpers
+namespace Dnc
 {
     /// <summary>
     /// Used for parallel computation and starting some threads to process items.

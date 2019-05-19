@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Dnc.Files
 {
     public interface IDownloader
+        :IPlugin
     {
         Task<string> DownloadRemoteFileAsync(string requestUrlString,
             Func<Stream,string> streamAction);

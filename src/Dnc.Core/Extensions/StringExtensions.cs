@@ -1,12 +1,11 @@
-﻿using Dnc.Helpers;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Dnc.Extensions
+namespace Dnc
 {
     /// <summary>
     /// Extension methods for string.

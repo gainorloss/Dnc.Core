@@ -38,7 +38,7 @@ namespace Dnc.Seedwork
                 return (false, message);
             }
 
-            if (user.DataStatus == DataStatusEnum.Deleted || user.DataStatus == DataStatusEnum.UnAudited)
+            if (user.DataStatus == DataStatus.Deleted || user.DataStatus == DataStatus.UnAudited)
             {
                 message = "该账号因违规已被管理员冻结或者删除";
                 await AddLoginLog(user.Id, message, clientIP);

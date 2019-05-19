@@ -10,7 +10,7 @@ namespace Dnc.Seedwork
     public interface IEntity
     {
         #region Public props.
-        DataStatusEnum DataStatus { get; set; }
+        DataStatus DataStatus { get; set; }
 
         bool CanBeRemoved { get; }
 

@@ -20,9 +20,13 @@ namespace Dnc
         public FrameworkConstruction()
         {
             Services = new ServiceCollection();
-
             Environment = new FrameworkEnvironment();
-            Services.AddSingleton(Environment);
+            Services.AddSingleton(sp=> Environment);
+
+            Services.AddAssemblyPluginTypes();
+
+            this.Configure()
+                .UseDefaultLogger();
         }
         #endregion
 

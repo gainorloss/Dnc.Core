@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Dnc.Helpers
+namespace Dnc
 {
     public class MD5Encrypt
     {

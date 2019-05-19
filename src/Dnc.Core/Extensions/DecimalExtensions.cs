@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dnc.Extensions
+﻿namespace Dnc
 {
     /// <summary>
     /// Extension methods for Decimal.

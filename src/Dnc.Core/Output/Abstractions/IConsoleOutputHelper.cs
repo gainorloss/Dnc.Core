@@ -14,6 +14,7 @@ namespace Dnc.Output
     /// eg:<see cref="IConsoleOutputHelper"/>.Info(【msg】,【title="Framework"】).
     /// </summary>
     public interface IConsoleOutputHelper
+         : IPlugin
     {
         void OutputImage(string imgPath);
 

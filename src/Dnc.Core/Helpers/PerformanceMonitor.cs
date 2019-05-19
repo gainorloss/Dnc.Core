@@ -3,11 +3,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
 
-namespace Dnc.Helpers
+namespace Dnc
 {
     /// <summary>
     /// Performance test helper.
