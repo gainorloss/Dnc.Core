@@ -21,24 +21,26 @@ namespace Dnc
         {
             Services = new ServiceCollection();
             Environment = new FrameworkEnvironment();
-            Services.AddSingleton(sp=> Environment);
+            Services.AddSingleton(sp => Environment);
 
             this.Configure()
                 .UseDefaultLogger();
+
+            Services.AddAssemblyPluginTypes();
         }
         #endregion
 
         /// <summary>
         /// The entrypoint for the framework.
         /// </summary>
-        public FrameworkConstruction Build(IServiceProvider provider=null)
+        public FrameworkConstruction Build(IServiceProvider provider = null)
         {
-            ServiceProvider = provider??Services.BuildServiceProvider();
+            ServiceProvider = provider ?? Services.BuildServiceProvider();
 
             return this;
         }
 
-        
+
         /// <summary>
         /// Use hosted services.
         /// </summary>

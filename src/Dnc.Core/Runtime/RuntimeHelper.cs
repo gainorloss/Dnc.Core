@@ -10,13 +10,13 @@ namespace Dnc
     {
         public static IEnumerable<Type> GetAssemblyPluginInterfaces()
         {
-            return GetAssemblyInterfaces().Where(t => t.GetTypeInfo().ImplementedInterfaces.Contains(typeof(IPlugin)));
+            return GetAssemblyInterfaces(true).Where(t => t.GetTypeInfo().ImplementedInterfaces.Contains(typeof(IPlugin)));
         }
 
-        public static IEnumerable<Type> GetAssemblyInterfaces()
+        public static IEnumerable<Type> GetAssemblyInterfaces(bool nugetContained = false)
         {
             var interfaces = new List<Type>();
-            foreach (var lib in GetDependencyAssemblies())
+            foreach (var lib in GetDependencyAssemblies(nugetContained))
             {
                 var assemblyName = lib.GetName().Name;
                 var interfacesFromAssembly = assemblyName.GetAssemblyByName().DefinedTypes.Where(t => t.IsInterface);
@@ -25,9 +25,13 @@ namespace Dnc
             return interfaces;
         }
 
-        public static IEnumerable<Assembly> GetDependencyAssemblies()
+        public static IEnumerable<Assembly> GetDependencyAssemblies(bool nugetContained=false)
         {
-            var libs = DependencyContext.Default.CompileLibraries.Where(lib => !lib.Type.Equals("package"));
+            var libs = DependencyContext.Default.CompileLibraries as IEnumerable<CompilationLibrary>;
+
+            if (!nugetContained)
+                libs= libs.Where(lib => !lib.Type.Equals("package"));
+
             var assemblies = libs
                .Select(lib => lib.Name.GetAssemblyByName())
                .ToList();

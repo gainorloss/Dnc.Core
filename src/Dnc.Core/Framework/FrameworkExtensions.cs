@@ -23,17 +23,6 @@ namespace Dnc
             return services;
         }
 
-        /// <summary>
-        /// Uses all plugins implement from <see cref="IPlugin"/>.
-        /// </summary>
-        /// <param name="construction"></param>
-        /// <returns></returns>
-        public static FrameworkConstruction UsePlugins(this FrameworkConstruction construction)
-        {
-            construction.Services.AddAssemblyPluginTypes();
-            return construction;
-        }
-
         #region Configure schedule center.
         public static FrameworkConstruction UseScheduleCenter(this FrameworkConstruction construction)
         {
