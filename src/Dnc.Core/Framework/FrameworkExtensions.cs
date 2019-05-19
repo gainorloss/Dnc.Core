@@ -23,48 +23,16 @@ namespace Dnc
             return services;
         }
 
-        public static FrameworkConstruction Configure(this FrameworkConstruction construction,
-            Action<IConfigurationBuilder> configure = null)
+        /// <summary>
+        /// Uses all plugins implement from <see cref="IPlugin"/>.
+        /// </summary>
+        /// <param name="construction"></param>
+        /// <returns></returns>
+        public static FrameworkConstruction UsePlugins(this FrameworkConstruction construction)
         {
-
-            var configurationBuilder = new ConfigurationBuilder()
-                .AddEnvironmentVariables()
-                .AddJsonFile("appsettings.json", true, true)
-                .AddJsonFile($"appsettings.{construction.Environment.Environment}.json", true, true);
-            configure?.Invoke(configurationBuilder);
-
-            var configuration = configurationBuilder.Build();
-            construction.Services.AddSingleton<IConfiguration>(configuration);
-
-            construction.Configuration = configuration;
+            construction.Services.AddAssemblyPluginTypes();
             return construction;
         }
-
-        #region Configure default logger.
-        public static FrameworkConstruction UseDefaultLogger(this FrameworkConstruction construction)
-        {
-            #region Serilog settings.
-            Log.Logger = new LoggerConfiguration()
-                    .MinimumLevel.Debug()
-                    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-                    .Enrich.FromLogContext()
-                    .WriteTo.Console()
-                    .WriteTo.File(Path.Combine("logs", "log.txt"),
-                     rollingInterval: RollingInterval.Day,
-                     rollOnFileSizeLimit: true)
-                    .CreateLogger();
-            #endregion
-
-            construction.Services.AddLogging(opt =>
-            {
-                opt.AddConfiguration(construction.Configuration?.GetSection("Logging"));
-                opt.AddSerilog(Log.Logger);
-            });
-
-            construction.Services.AddTransient(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("dnc"));
-            return construction;
-        }
-        #endregion
 
         #region Configure schedule center.
         public static FrameworkConstruction UseScheduleCenter(this FrameworkConstruction construction)
@@ -90,23 +58,47 @@ namespace Dnc
         }
         #endregion
 
-        #region Configure compiler.
-        public static FrameworkConstruction UseDefaultCompiler(this FrameworkConstruction construction)
+        #region Internal.
+        internal static FrameworkConstruction Configure(this FrameworkConstruction construction,
+    Action<IConfigurationBuilder> configure = null)
         {
-            construction.Services.AddSingleton<ICompiler, RoslynCompiler>();
 
+            var configurationBuilder = new ConfigurationBuilder()
+                .AddEnvironmentVariables()
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{construction.Environment.Environment}.json", true, true);
+            configure?.Invoke(configurationBuilder);
+
+            var configuration = configurationBuilder.Build();
+            construction.Services.AddSingleton<IConfiguration>(configuration);
+
+            construction.Configuration = configuration;
+            return construction;
+        }
+
+        internal static FrameworkConstruction UseDefaultLogger(this FrameworkConstruction construction)
+        {
+            #region Serilog settings.
+            Log.Logger = new LoggerConfiguration()
+                    .MinimumLevel.Debug()
+                    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+                    .Enrich.FromLogContext()
+                    .WriteTo.Console()
+                    .WriteTo.File(Path.Combine("logs", "log.txt"),
+                     rollingInterval: RollingInterval.Day,
+                     rollOnFileSizeLimit: true)
+                    .CreateLogger();
+            #endregion
+
+            construction.Services.AddLogging(opt =>
+            {
+                opt.AddConfiguration(construction.Configuration?.GetSection("Logging"));
+                opt.AddSerilog(Log.Logger);
+            });
+
+            construction.Services.AddTransient(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("dnc"));
             return construction;
         }
         #endregion
-
-        #region Configure downloader.
-        public static FrameworkConstruction UseDownloader(this FrameworkConstruction construction)
-        {
-            construction.Services.AddScoped<IDownloader, FileDownloader>();
-
-            return construction;
-        }
-        #endregion
-
     }
 }

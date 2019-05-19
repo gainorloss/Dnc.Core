@@ -23,8 +23,6 @@ namespace Dnc
             Environment = new FrameworkEnvironment();
             Services.AddSingleton(sp=> Environment);
 
-            Services.AddAssemblyPluginTypes();
-
             this.Configure()
                 .UseDefaultLogger();
         }
