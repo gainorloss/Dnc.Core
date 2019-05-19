@@ -7,7 +7,8 @@ namespace Dnc.Spider
     /// Interface for html downloader.
     /// </summary>
     public interface IHtmlDownloader
+        :IPlugin
     {
-        Task<string> DownloadHtmlContentAsync(string url,string agent = null);
+        Task<string> DownloadHtmlContentAsync(string url,string proxy = null);
     }
 }

@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Dnc.Core\Dnc.Core.csproj" />
-    <ProjectReference Include="..\..\src\Dnc.Test\Dnc.Test.csproj" />
+    <ProjectReference Include="..\Dnc.Test\Dnc.Test.csproj" />
   </ItemGroup>
 
 </Project>

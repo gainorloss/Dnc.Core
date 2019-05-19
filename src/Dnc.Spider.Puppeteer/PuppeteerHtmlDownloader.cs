@@ -19,9 +19,9 @@ namespace Dnc.Spider
         #endregion
 
         #region Methods for getting html content.
-        public async Task<string> DownloadHtmlContentAsync(string url, Func<Page, Task> beforeGetContentHandler = null, string agent = null)
+        public async Task<string> DownloadHtmlContentAsync(string url, Func<Page, Task> beforeGetContentHandler = null, string proxy = null)
         {
-            return await GetHtmlContentUsingPuppeteerAsync(url, beforeGetContentHandler, agent);
+            return await GetHtmlContentUsingPuppeteerAsync(url, beforeGetContentHandler, proxy);
         }
         #endregion
 

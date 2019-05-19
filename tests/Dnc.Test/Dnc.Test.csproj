@@ -2,8 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-
-    <IsPackable>false</IsPackable>
+    <Version>0.0.1</Version>
+    <Title>Dnc.Test</Title>
+    <Authors>gainorloss</Authors>
+    <Owners>gainorloss</Owners>
+    <Description>
+      基于StandardLibrary的跨平台快速开发框架。
+    </Description>
+    <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
+    <PackageIconUrl>https://avatars0.githubusercontent.com/u/26458238?s=800</PackageIconUrl>
+    <Tags>dotnetcore;aspnetcore,test</Tags>
   </PropertyGroup>
 
   <ItemGroup>

@@ -5,7 +5,7 @@ using System.Runtime.Loader;
 
 namespace Dnc
 {
-    public static class RuntimeExtensions
+    public static class RuntimeExtension
     {
         public static Type GetImplementType(this Type intefaceType)
         {
