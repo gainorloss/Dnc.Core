@@ -11,10 +11,9 @@ Dnc.AspNetCore:[![Dnc.AspNetCore/1.0.0.14](https://img.shields.io/badge/nuget-1.
 ## Use this in the entry point of your application: 
 
 ```c#
-var fx = Framework.Construct<DefaultFrameworkConstruction>()
-                .Build();
-
-var sp = fx.ServiceProvider;
+Fx.Construct<FrameworkConstruction>()
+  .Build();
+Fx.Resolve<TService>();
 ```
 
 
