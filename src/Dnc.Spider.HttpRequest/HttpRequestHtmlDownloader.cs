@@ -10,7 +10,7 @@ namespace Dnc.Spider
     public class HttpRequestHtmlDownloader
         : IHtmlDownloader
     {
-        public async Task<string> DownloadHtmlContentAsync(string url,string proxy = null)
+        public async Task<string> DownloadHtmlContentAsync(string url, string proxy = null)
         {
             if (string.IsNullOrEmpty(url))
                 throw new ArgumentException("message", nameof(url));
@@ -74,10 +74,8 @@ namespace Dnc.Spider
                 }
                 request.Abort();
             }
-            catch (Exception ex)
-            { 
-
-            }
+            catch (Exception)
+            { }
             return pageSource;
         }
     }

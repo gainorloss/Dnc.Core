@@ -16,7 +16,7 @@ namespace Dnc.Dispatcher
     /// <summary>
     /// The center to manage schedule.
     /// </summary>
-    public class ScheduleCenter
+    public class QuartzDispatcher : IDispatcher
     {
         #region Private Members.
         private static IScheduler _scheduler;
@@ -24,7 +24,7 @@ namespace Dnc.Dispatcher
         #endregion 
 
         #region Static ctor.
-        static ScheduleCenter()
+        static QuartzDispatcher()
         {
             if (_scheduler == null)
             {
@@ -37,8 +37,7 @@ namespace Dnc.Dispatcher
         #endregion
 
         #region Public methods.
-        public async Task RunScheduleAsync(string name = "default",
-           string groupName = "default")
+        public async Task RunScheduleAsync(string name = "default", string groupName = "default")
         {
             //get scheduler from scheduler factory.
             await _scheduler.Start();
@@ -77,21 +76,17 @@ namespace Dnc.Dispatcher
             await _scheduler.ScheduleJob(jobDetail, trigger);
         }
 
-        public async Task CreateAndRunScheduleAsync(string name,
-            string typeName,
-            string cronExpression,
-            string assemblyName,
-            string groupName = "default")
+        public async Task CreateAndRunScheduleAsync(string name, string cronExpression, string typeName, string assemblyName, string groupName = "default")
         {
             _schedules.Add(new Schedule(name, typeName, cronExpression, assemblyName, groupName));
 
             await RunScheduleAsync(name, groupName);
         }
 
-        public void Shutdown()
+        public async Task ShutdownAsync()
         {
             if (_scheduler != null)
-                _scheduler.Shutdown();
+                await _scheduler.Shutdown();
         }
         #endregion
     }

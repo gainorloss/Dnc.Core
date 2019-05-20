@@ -11,8 +11,7 @@ namespace Dnc.Dispatcher
     /// <summary>
     /// Extention abstract class  from <see cref="IJob"/>
     /// </summary>
-    public abstract class AbstractJob
-         : IJob
+    public abstract class AbstractJob: IJob
     {
         protected IServiceProvider mServiceProvider => Fx.Construction.ServiceProvider;
         protected ILogger<AbstractJob> mLogger => mServiceProvider.GetRequiredService<ILogger<AbstractJob>>();

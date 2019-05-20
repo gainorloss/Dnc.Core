@@ -1,7 +1,4 @@
-﻿using Dnc.Compilers;
-using Dnc.Dispatcher;
-using Dnc.Files;
-using Dnc.Rpc;
+﻿using Dnc.Rpc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -22,20 +19,6 @@ namespace Dnc
             services.AddTransient(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("dnc"));
             return services;
         }
-
-        #region Configure schedule center.
-        public static FrameworkConstruction UseScheduleCenter(this FrameworkConstruction construction)
-        {
-            var scheduleCenter = new ScheduleCenter();
-
-            construction.ScheduleCenter = scheduleCenter;
-
-            construction.Services.AddSingleton(scheduleCenter);
-
-            return construction;
-        }
-
-        #endregion
 
         #region Configure rpc.
         public static FrameworkConstruction UseDefaultRpc(this FrameworkConstruction construction)

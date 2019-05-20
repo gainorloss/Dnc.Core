@@ -1,5 +1,4 @@
-﻿using Dnc.Dispatcher;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
@@ -12,7 +11,6 @@ namespace Dnc
         public IServiceCollection Services { get; set; }
         public IConfiguration Configuration { get; set; }
         public IFrameworkEnvironment Environment { get; set; }
-        public ScheduleCenter ScheduleCenter { get; set; }
         public IServiceProvider ServiceProvider { get; set; }
         #endregion
 
