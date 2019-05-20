@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DncAspNetCore.Api.Controllers
@@ -9,6 +10,7 @@ namespace DncAspNetCore.Api.Controllers
     [Route("api/[controller]")]
     [ApiVersion("1.0")]
     [ApiController]
+    [Authorize]
     public class ValuesController : ControllerBase
     {
         // GET api/values

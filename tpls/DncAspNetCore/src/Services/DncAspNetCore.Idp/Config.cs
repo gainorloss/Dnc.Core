@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
+using IdentityServer4;
 using IdentityServer4.Models;
 using System.Collections.Generic;
 
@@ -15,6 +16,7 @@ namespace DncAspNetCore.Idp
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Email()
             };
         }
 
@@ -22,7 +24,7 @@ namespace DncAspNetCore.Idp
         {
             return new ApiResource[]
             {
-                new ApiResource("api1", "My API #1")
+                new ApiResource("restapi", "Rest API")
             };
         }
 
@@ -39,7 +41,7 @@ namespace DncAspNetCore.Idp
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = { new Secret("511536EF-F270-4058-80CA-1C89C192F69A".Sha256()) },
 
-                    AllowedScopes = { "api1" }
+                    AllowedScopes = { "restapi" }
                 },
 
                 // MVC client using hybrid flow
@@ -51,12 +53,12 @@ namespace DncAspNetCore.Idp
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
                     ClientSecrets = { new Secret("49C1A7E1-0C79-4A89-A3D6-A37998FB86B0".Sha256()) },
 
-                    RedirectUris = { "http://localhost:9001/signin-oidc" },
-                    FrontChannelLogoutUri = "http://localhost:9001/signout-oidc",
-                    PostLogoutRedirectUris = { "http://localhost:9001/signout-callback-oidc" },
+                    RedirectUris = { "http://localhost:9000/signin-oidc" },
+                    FrontChannelLogoutUri = "http://localhost:9000/signout-oidc",
+                    PostLogoutRedirectUris = { "http://localhost:9000/signout-callback-oidc" },
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "openid", "profile", "api1" }
+                    AllowedScopes = { IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.Email, "restapi" }
                 },
                  // MVC client using hybrid flow
                 new Client
@@ -65,14 +67,14 @@ namespace DncAspNetCore.Idp
                     ClientName = "Admin MVC Client",
 
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
-                    ClientSecrets = { new Secret("49C1A7E1-0C79-4A89-A3D6-A37998FB86B0".Sha256()) },
+                    ClientSecrets = { new Secret("49C1A7E1-0C79-4A89-A3D6-A37998FB86B1".Sha256()) },
 
-                    RedirectUris = { "http://localhost:9003/signin-oidc" },
-                    FrontChannelLogoutUri = "http://localhost:9003/signout-oidc",
-                    PostLogoutRedirectUris = { "http://localhost:9003/signout-callback-oidc" },
+                    RedirectUris = { "http://localhost:9002/signin-oidc" },
+                    FrontChannelLogoutUri = "http://localhost:9002/signout-oidc",
+                    PostLogoutRedirectUris = { "http://localhost:9002/signout-callback-oidc" },
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "openid", "profile", "api1" }
+                    AllowedScopes = { IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.Email, "restapi" }
                 },
                 // SPA client using implicit flow
                 new Client
@@ -95,7 +97,7 @@ namespace DncAspNetCore.Idp
                     PostLogoutRedirectUris = { "http://localhost:5002/index.html" },
                     AllowedCorsOrigins = { "http://localhost:5002" },
 
-                    AllowedScopes = { "openid", "profile", "api1" }
+                    AllowedScopes = { IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.Email, "api1" }
                 }
             };
         }
