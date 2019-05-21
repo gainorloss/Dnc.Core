@@ -17,18 +17,12 @@ namespace DncAspNetCore.Idp
     {
         public static void Main(string[] args)
         {
-            var seed = args.Any(x => x == "/seed");
-            if (seed) args = args.Except(new[] { "/seed" }).ToArray();
-
+            
             var host = CreateWebHostBuilder(args).Build();
 
-            if (seed)
-            {
-                var config = host.Services.GetRequiredService<IConfiguration>();
-                var connectionString = config.GetConnectionString("DefaultConnection");
-                SeedData.EnsureSeedData(connectionString);
-                return;
-            }
+            var config = host.Services.GetRequiredService<IConfiguration>();
+            var connectionString = config.GetConnectionString("DefaultConnection");
+            SeedData.EnsureSeedData(connectionString);
 
             host.Run();
         }

@@ -5,17 +5,18 @@ using Dnc.AspNetCore.Filters;
 using Dnc.Data;
 using Dnc.Seedwork;
 using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using IdentityServer4.AccessTokenValidation;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.Loader;
 
 namespace Dnc.AspNetCore
@@ -34,7 +35,12 @@ namespace Dnc.AspNetCore
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceProvider AddAspNetCore(this IServiceCollection services, Type type, AspNetCoreType aspNetCoreType = AspNetCoreType.Api)
+        public static IServiceProvider AddAspNetCore<TType>(this IServiceCollection services, 
+            string authorityUrl,
+            string appName,
+            string appSecret=null,
+            AspNetCoreType aspNetCoreType = AspNetCoreType.Api)
+            where TType:IStartup
         {
             if (aspNetCoreType == AspNetCoreType.Api)
             {
@@ -48,22 +54,57 @@ namespace Dnc.AspNetCore
                                             .ActionContext;
                     return new UrlHelper(actionContext);
                 });
+
+                services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(opt =>
+                {
+                    opt.Authority = authorityUrl;
+                    opt.SaveToken = true;
+                    opt.RequireHttpsMetadata = false;
+                    opt.ApiName = appName;
+                });
             }
             else
             {
+                #region cookie(obsolete).
                 //authentication cookie.
-                services
-                    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                    .AddCookie(opt =>
-              {
-                  opt.LoginPath = "/AccountArea/Account/SignIn";
-                  opt.LogoutPath = "/AccountArea/Account/SignOutAsync";
-                  opt.Cookie.Path = "/";
-                  opt.Cookie = new CookieBuilder()
-                  {
-                      Name = ".Dnc.AspNetCore"
-                  };
-              });
+                //  services
+                //      .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                //      .AddCookie(opt =>
+                //{
+                //    opt.LoginPath = "/AccountArea/Account/SignIn";
+                //    opt.LogoutPath = "/AccountArea/Account/SignOutAsync";
+                //    opt.Cookie.Path = "/";
+                //    opt.Cookie = new CookieBuilder()
+                //    {
+                //        Name = ".Dnc.AspNetCore"
+                //    };
+                //}); 
+                #endregion
+
+                JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+
+                services.AddAuthentication(opt =>
+                {
+                    opt.DefaultScheme = "Cookies";
+                    opt.DefaultChallengeScheme = "oidc";
+                }).AddCookie("Cookies", opt => opt.AccessDeniedPath = "/Authorization/AccessDenied")
+                .AddOpenIdConnect("oidc", opt =>
+                {
+                    opt.ClientId = appName;
+                    opt.ClientSecret = appSecret;
+                    opt.SignInScheme = "Cookies";
+                    opt.SaveTokens = true;
+                    opt.RequireHttpsMetadata = false;
+                    opt.ResponseType = "code id_token";
+                    opt.Authority = authorityUrl;
+                    opt.Scope.Clear();
+                    opt.Scope.Add("openid");
+                    opt.Scope.Add("profile");
+                    opt.Scope.Add("email");
+                    opt.Scope.Add("restapi");
+                    opt.GetClaimsFromUserInfoEndpoint = true;
+                });
                 services.AddHttpContextAccessor();//httpcontext accessor.
             }
 
@@ -84,7 +125,7 @@ namespace Dnc.AspNetCore
                 .AddJsonOptions(opt => opt.UseCamelCasing(true))
                 .AddFluentValidation(cfg =>
             {
-                cfg.RegisterValidatorsFromAssembly(type.Assembly);
+                cfg.RegisterValidatorsFromAssembly(typeof(TType).Assembly);
                 cfg.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
             });//fluent validation.
 
@@ -101,7 +142,7 @@ namespace Dnc.AspNetCore
             });
             #endregion
 
-            return services.GetAutofacServiceProvider(type);//autofac.
+            return services.GetAutofacServiceProvider(typeof(TType));//autofac.
         }
 
         /// <summary>

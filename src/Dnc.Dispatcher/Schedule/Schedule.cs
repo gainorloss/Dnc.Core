@@ -9,7 +9,6 @@ namespace Dnc.Dispatcher
     /// </summary>
     public class Schedule
     {
-
         #region Default ctor.
         public Schedule()
         { }

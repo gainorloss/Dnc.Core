@@ -1,0 +1,35 @@
+2019-05-21 09:21:09.838 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:21:47.473 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:24:09.660 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:28:06.582 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:34:02.628 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:37:39.006 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:38:23.523 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:39:39.276 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:40:10.115 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:50:04.866 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:50:33.333 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:8000/api/values  
+2019-05-21 09:50:33.669 +08:00 [INF] Successfully validated the token.
+2019-05-21 09:50:33.673 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-05-21 09:50:33.744 +08:00 [INF] Executing endpoint 'DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api)'
+2019-05-21 09:50:33.751 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api)
+2019-05-21 09:50:33.758 +08:00 [INF] Authorization was successful.
+2019-05-21 09:50:33.772 +08:00 [INF] Executing action method DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api) - Validation state: "Valid"
+2019-05-21 09:50:33.780 +08:00 [INF] Executed action method DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.2252ms.
+2019-05-21 09:50:33.787 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2019-05-21 09:50:33.808 +08:00 [INF] Executed action DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api) in 54.6075ms
+2019-05-21 09:50:33.809 +08:00 [INF] Executed endpoint 'DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api)'
+2019-05-21 09:50:33.814 +08:00 [INF] Request finished in 481.6576ms 200 application/json; charset=utf-8
+2019-05-21 09:51:55.607 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:52:00.994 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:8000/api/values  
+2019-05-21 09:52:01.500 +08:00 [INF] Successfully validated the token.
+2019-05-21 09:52:01.505 +08:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-05-21 09:52:01.574 +08:00 [INF] Executing endpoint 'DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api)'
+2019-05-21 09:52:01.581 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api)
+2019-05-21 09:52:01.590 +08:00 [INF] Authorization was successful.
+2019-05-21 09:52:01.603 +08:00 [INF] Executing action method DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api) - Validation state: "Valid"
+2019-05-21 09:52:01.610 +08:00 [INF] Executed action method DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.2218ms.
+2019-05-21 09:52:01.618 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2019-05-21 09:52:01.640 +08:00 [INF] Executed action DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api) in 55.519200000000005ms
+2019-05-21 09:52:01.641 +08:00 [INF] Executed endpoint 'DncAspNetCore.Api.Controllers.ValuesController.Get (DncAspNetCore.Api)'
+2019-05-21 09:52:01.646 +08:00 [INF] Request finished in 652.4529ms 200 application/json; charset=utf-8

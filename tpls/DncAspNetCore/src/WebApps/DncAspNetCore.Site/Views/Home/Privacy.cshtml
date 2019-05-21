@@ -1,6 +1,14 @@
-﻿@{
+﻿@using System.Security.Claims;
+@{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
 
+<dl>
+    @foreach (var claim in Model)
+    {
+        <dt>@claim.Type</dt>
+        <dd>@claim.Value</dd>
+    }
+</dl>
 <p>Use this page to detail your site's privacy policy.</p>

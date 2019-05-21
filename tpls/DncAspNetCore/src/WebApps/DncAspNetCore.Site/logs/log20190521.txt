@@ -1,0 +1,329 @@
+2019-05-21 09:21:09.630 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:21:47.289 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:24:09.470 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:25:10.660 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:25:10.744 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:25:10.757 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:25:10.766 +08:00 [INF] Authorization failed.
+2019-05-21 09:25:10.769 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-05-21 09:25:10.774 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-05-21 09:25:11.238 +08:00 [INF] AuthenticationScheme: oidc was challenged.
+2019-05-21 09:25:11.245 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 485.1807ms
+2019-05-21 09:25:11.252 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:25:11.262 +08:00 [INF] Request finished in 601.646ms 302 
+2019-05-21 09:25:28.461 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9000/signin-oidc application/x-www-form-urlencoded 1474
+2019-05-21 09:25:28.719 +08:00 [INF] AuthenticationScheme: Cookies signed in.
+2019-05-21 09:25:28.720 +08:00 [INF] Request finished in 259.4937ms 302 
+2019-05-21 09:25:28.736 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:25:28.737 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:25:28.738 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:25:28.739 +08:00 [INF] Authorization was successful.
+2019-05-21 09:25:28.746 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:25:28.750 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.3771ms.
+2019-05-21 09:25:28.767 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:25:28.892 +08:00 [INF] Executed ViewResult - view Index executed in 137.8649ms.
+2019-05-21 09:25:28.894 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 155.5132ms
+2019-05-21 09:25:28.895 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:25:28.899 +08:00 [INF] Request finished in 162.5401ms 200 text/html; charset=utf-8
+2019-05-21 09:25:28.901 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/bootstrap/dist/css/bootstrap.css  
+2019-05-21 09:25:28.903 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/css/site.css  
+2019-05-21 09:25:28.904 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-05-21 09:25:28.904 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/jquery/dist/jquery.js  
+2019-05-21 09:25:28.912 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2019-05-21 09:25:28.919 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\js\site.js'
+2019-05-21 09:25:28.922 +08:00 [INF] Request finished in 9.7348ms 200 application/javascript
+2019-05-21 09:25:28.947 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\css\site.css'
+2019-05-21 09:25:28.947 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\jquery\dist\jquery.js'
+2019-05-21 09:25:28.949 +08:00 [INF] Request finished in 46.2938ms 200 text/css
+2019-05-21 09:25:28.950 +08:00 [INF] Request finished in 46.3862ms 200 application/javascript
+2019-05-21 09:25:28.961 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+2019-05-21 09:25:28.962 +08:00 [INF] Request finished in 60.7538ms 200 text/css
+2019-05-21 09:25:28.972 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js'
+2019-05-21 09:25:28.974 +08:00 [INF] Request finished in 69.5036ms 200 application/javascript
+2019-05-21 09:25:29.030 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:25:29.045 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:25:29.046 +08:00 [INF] Request finished in 16.7913ms 200 image/x-icon
+2019-05-21 09:28:06.404 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:28:11.089 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:28:11.164 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:28:11.176 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:28:11.185 +08:00 [INF] Authorization was successful.
+2019-05-21 09:28:11.193 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:28:11.200 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.44ms.
+2019-05-21 09:28:11.225 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:28:11.323 +08:00 [INF] Executed ViewResult - view Index executed in 116.1311ms.
+2019-05-21 09:28:11.325 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 148.05280000000002ms
+2019-05-21 09:28:11.326 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:28:11.333 +08:00 [INF] Request finished in 245.0385ms 200 text/html; charset=utf-8
+2019-05-21 09:28:16.699 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:28:16.700 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:28:16.701 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:28:16.702 +08:00 [INF] Authorization failed.
+2019-05-21 09:28:16.705 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-05-21 09:28:16.708 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-05-21 09:28:17.076 +08:00 [INF] AuthenticationScheme: oidc was challenged.
+2019-05-21 09:28:17.082 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 379.53880000000004ms
+2019-05-21 09:28:17.084 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:28:17.088 +08:00 [INF] Request finished in 389.2645ms 302 
+2019-05-21 09:28:49.576 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9000/signin-oidc application/x-www-form-urlencoded 1496
+2019-05-21 09:28:49.838 +08:00 [INF] AuthenticationScheme: Cookies signed in.
+2019-05-21 09:28:49.839 +08:00 [INF] Request finished in 262.9912ms 302 
+2019-05-21 09:28:49.845 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:28:49.846 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:28:49.846 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:28:49.848 +08:00 [INF] Authorization was successful.
+2019-05-21 09:28:49.848 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:28:49.849 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.025ms.
+2019-05-21 09:28:49.850 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:28:49.859 +08:00 [INF] Executed ViewResult - view Index executed in 8.4340000000000011ms.
+2019-05-21 09:28:49.864 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 16.3959ms
+2019-05-21 09:28:49.865 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:28:49.867 +08:00 [INF] Request finished in 21.8293ms 200 text/html; charset=utf-8
+2019-05-21 09:28:49.869 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/bootstrap/dist/css/bootstrap.css  
+2019-05-21 09:28:49.878 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/jquery/dist/jquery.js  
+2019-05-21 09:28:49.883 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/css/site.css  
+2019-05-21 09:28:49.892 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2019-05-21 09:28:49.892 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-05-21 09:28:49.901 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\css\site.css'
+2019-05-21 09:28:49.904 +08:00 [INF] Request finished in 25.7703ms 200 text/css
+2019-05-21 09:28:49.906 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\js\site.js'
+2019-05-21 09:28:49.908 +08:00 [INF] Request finished in 16.339ms 200 application/javascript
+2019-05-21 09:28:49.911 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+2019-05-21 09:28:49.911 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js'
+2019-05-21 09:28:49.912 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\jquery\dist\jquery.js'
+2019-05-21 09:28:49.913 +08:00 [INF] Request finished in 44.1909ms 200 text/css
+2019-05-21 09:28:49.914 +08:00 [INF] Request finished in 23.4728ms 200 application/javascript
+2019-05-21 09:28:49.916 +08:00 [INF] Request finished in 38.4744ms 200 application/javascript
+2019-05-21 09:28:49.953 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:28:49.954 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:28:49.955 +08:00 [INF] Request finished in 2.1905ms 200 image/x-icon
+2019-05-21 09:34:02.427 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:34:06.569 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:06.645 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:06.657 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:06.665 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:06.672 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:06.680 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.38880000000000003ms.
+2019-05-21 09:34:06.698 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:06.794 +08:00 [INF] Executed ViewResult - view Index executed in 106.7544ms.
+2019-05-21 09:34:06.796 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 137.8247ms
+2019-05-21 09:34:06.797 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:06.805 +08:00 [INF] Request finished in 236.3903ms 200 text/html; charset=utf-8
+2019-05-21 09:34:06.842 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:34:06.855 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:34:06.858 +08:00 [INF] Request finished in 15.7084ms 200 image/x-icon
+2019-05-21 09:34:07.540 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:07.542 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:07.543 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:07.543 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:07.544 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:07.545 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0238ms.
+2019-05-21 09:34:07.547 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:07.548 +08:00 [INF] Executed ViewResult - view Index executed in 1.6409ms.
+2019-05-21 09:34:07.557 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 13.596400000000001ms
+2019-05-21 09:34:07.557 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:07.558 +08:00 [INF] Request finished in 18.3068ms 200 text/html; charset=utf-8
+2019-05-21 09:34:07.575 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:34:07.577 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:34:07.580 +08:00 [INF] Request finished in 4.7809ms 200 image/x-icon
+2019-05-21 09:34:08.306 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:08.307 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:08.307 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:08.308 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:08.309 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:08.309 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0059ms.
+2019-05-21 09:34:08.311 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:08.311 +08:00 [INF] Executed ViewResult - view Index executed in 0.95000000000000007ms.
+2019-05-21 09:34:08.312 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 3.9751000000000003ms
+2019-05-21 09:34:08.313 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:08.314 +08:00 [INF] Request finished in 7.9692ms 200 text/html; charset=utf-8
+2019-05-21 09:34:08.332 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:34:08.334 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:34:08.335 +08:00 [INF] Request finished in 3.0128ms 200 image/x-icon
+2019-05-21 09:34:11.402 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:11.404 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:11.404 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:11.405 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:11.405 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:11.406 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0059ms.
+2019-05-21 09:34:11.408 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:11.409 +08:00 [INF] Executed ViewResult - view Index executed in 0.9406ms.
+2019-05-21 09:34:11.409 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 4.1904ms
+2019-05-21 09:34:11.410 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:11.411 +08:00 [INF] Request finished in 8.5754ms 200 text/html; charset=utf-8
+2019-05-21 09:34:11.428 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:34:11.430 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:34:11.432 +08:00 [INF] Request finished in 4.061ms 200 image/x-icon
+2019-05-21 09:34:11.903 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:11.904 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:11.904 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:11.905 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:11.906 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:11.907 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.011300000000000001ms.
+2019-05-21 09:34:11.908 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:11.909 +08:00 [INF] Executed ViewResult - view Index executed in 0.91270000000000007ms.
+2019-05-21 09:34:11.910 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 4.7493ms
+2019-05-21 09:34:11.911 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:11.911 +08:00 [INF] Request finished in 8.7583ms 200 text/html; charset=utf-8
+2019-05-21 09:34:11.931 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:34:11.933 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:34:11.934 +08:00 [INF] Request finished in 3.6192ms 200 image/x-icon
+2019-05-21 09:34:11.935 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:11.936 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:11.937 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:11.938 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:11.939 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:11.940 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0122ms.
+2019-05-21 09:34:11.944 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:11.945 +08:00 [INF] Executed ViewResult - view Index executed in 1.1244ms.
+2019-05-21 09:34:11.946 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 7.4416ms
+2019-05-21 09:34:11.947 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:11.947 +08:00 [INF] Request finished in 11.9938ms 200 text/html; charset=utf-8
+2019-05-21 09:34:11.971 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:11.973 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:11.974 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:11.975 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:11.976 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:11.976 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0068000000000000005ms.
+2019-05-21 09:34:11.978 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:11.979 +08:00 [INF] Executed ViewResult - view Index executed in 1.1372ms.
+2019-05-21 09:34:11.979 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 4.4814ms
+2019-05-21 09:34:11.982 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:11.982 +08:00 [INF] Request finished in 10.9877ms 200 text/html; charset=utf-8
+2019-05-21 09:34:12.006 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:34:12.007 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:34:12.008 +08:00 [INF] Request finished in 2.4621ms 200 image/x-icon
+2019-05-21 09:34:12.475 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:12.476 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:12.476 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:12.477 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:12.478 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:12.479 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0088ms.
+2019-05-21 09:34:12.480 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:12.481 +08:00 [INF] Executed ViewResult - view Index executed in 0.93090000000000006ms.
+2019-05-21 09:34:12.481 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 4.0556ms
+2019-05-21 09:34:12.482 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:12.483 +08:00 [INF] Request finished in 8.651ms 200 text/html; charset=utf-8
+2019-05-21 09:34:12.499 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:34:12.500 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:34:12.504 +08:00 [INF] Request finished in 5.5341ms 200 image/x-icon
+2019-05-21 09:34:15.127 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:15.131 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:15.133 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:15.134 +08:00 [INF] Authorization failed.
+2019-05-21 09:34:15.137 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-05-21 09:34:15.141 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-05-21 09:34:15.534 +08:00 [INF] AuthenticationScheme: oidc was challenged.
+2019-05-21 09:34:15.538 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 404.13750000000005ms
+2019-05-21 09:34:15.540 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:15.542 +08:00 [INF] Request finished in 415.3815ms 302 
+2019-05-21 09:34:27.160 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9000/signin-oidc application/x-www-form-urlencoded 1496
+2019-05-21 09:34:27.415 +08:00 [INF] AuthenticationScheme: Cookies signed in.
+2019-05-21 09:34:27.416 +08:00 [INF] Request finished in 256.8304ms 302 
+2019-05-21 09:34:27.418 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:34:27.418 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:27.419 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:34:27.420 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:27.420 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:27.421 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0062000000000000006ms.
+2019-05-21 09:34:27.422 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:34:27.423 +08:00 [INF] Executed ViewResult - view Index executed in 0.9221ms.
+2019-05-21 09:34:27.423 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 3.7765ms
+2019-05-21 09:34:27.426 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:34:27.426 +08:00 [INF] Request finished in 8.4411ms 200 text/html; charset=utf-8
+2019-05-21 09:34:27.428 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/bootstrap/dist/css/bootstrap.css  
+2019-05-21 09:34:27.430 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-05-21 09:34:27.430 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/css/site.css  
+2019-05-21 09:34:27.431 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2019-05-21 09:34:27.430 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/lib/jquery/dist/jquery.js  
+2019-05-21 09:34:27.434 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\css\site.css'
+2019-05-21 09:34:27.436 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\js\site.js'
+2019-05-21 09:34:27.448 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js'
+2019-05-21 09:34:27.441 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+2019-05-21 09:34:27.439 +08:00 [INF] Request finished in 9.718ms 200 text/css
+2019-05-21 09:34:27.449 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\lib\jquery\dist\jquery.js'
+2019-05-21 09:34:27.449 +08:00 [INF] Request finished in 18.0937ms 200 application/javascript
+2019-05-21 09:34:27.451 +08:00 [INF] Request finished in 21.1757ms 200 application/javascript
+2019-05-21 09:34:27.453 +08:00 [INF] Request finished in 24.682ms 200 text/css
+2019-05-21 09:34:27.456 +08:00 [INF] Request finished in 26.3605ms 200 application/javascript
+2019-05-21 09:34:27.487 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:34:27.488 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:34:27.489 +08:00 [INF] Request finished in 2.1011ms 200 image/x-icon
+2019-05-21 09:34:29.440 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/Home-Privacy.html  
+2019-05-21 09:34:29.443 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Privacy (DncAspNetCore.Site)'
+2019-05-21 09:34:29.444 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Privacy (DncAspNetCore.Site)
+2019-05-21 09:34:29.445 +08:00 [INF] Authorization was successful.
+2019-05-21 09:34:29.446 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Privacy (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:34:29.447 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Privacy (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.3609ms.
+2019-05-21 09:34:29.449 +08:00 [INF] Executing ViewResult, running view Privacy.
+2019-05-21 09:34:29.512 +08:00 [INF] Executed ViewResult - view Privacy executed in 64.1267ms.
+2019-05-21 09:34:29.514 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Privacy (DncAspNetCore.Site) in 68.908200000000008ms
+2019-05-21 09:34:29.515 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Privacy (DncAspNetCore.Site)'
+2019-05-21 09:34:29.516 +08:00 [INF] Request finished in 76.5945ms 200 text/html; charset=utf-8
+2019-05-21 09:37:38.835 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:38:23.333 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:39:39.097 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:40:10.168 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:50:04.726 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:50:14.383 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:50:14.459 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:50:14.475 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:50:14.484 +08:00 [INF] Authorization failed.
+2019-05-21 09:50:14.488 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-05-21 09:50:14.492 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-05-21 09:50:14.944 +08:00 [INF] AuthenticationScheme: oidc was challenged.
+2019-05-21 09:50:14.950 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 472.35310000000004ms
+2019-05-21 09:50:14.955 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:50:14.963 +08:00 [INF] Request finished in 580.9621ms 302 
+2019-05-21 09:50:27.603 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9000/signin-oidc application/x-www-form-urlencoded 1496
+2019-05-21 09:50:27.860 +08:00 [INF] AuthenticationScheme: Cookies signed in.
+2019-05-21 09:50:27.861 +08:00 [INF] Request finished in 257.7944ms 302 
+2019-05-21 09:50:27.874 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:50:27.875 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:50:27.876 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:50:27.877 +08:00 [INF] Authorization was successful.
+2019-05-21 09:50:27.883 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:50:37.287 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 9399.7101ms.
+2019-05-21 09:50:37.301 +08:00 [INF] Executing ViewResult, running view ["value1","value2"].
+2019-05-21 09:50:37.302 +08:00 [ERR] The view '["value1","value2"]' was not found. Searched locations: ["/Views/Home/[\"value1\",\"value2\"].cshtml","/Views/Shared/[\"value1\",\"value2\"].cshtml","/Pages/Shared/[\"value1\",\"value2\"].cshtml"]
+2019-05-21 09:50:37.313 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 9436.3289ms
+2019-05-21 09:50:37.313 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:50:37.315 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view '["value1","value2"]' was not found. The following locations were searched:
+/Views/Home/["value1","value2"].cshtml
+/Views/Shared/["value1","value2"].cshtml
+/Pages/Shared/["value1","value2"].cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-05-21 09:50:37.373 +08:00 [INF] Request finished in 9498.9725ms 500 text/html; charset=utf-8
+2019-05-21 09:51:55.427 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-21 09:52:00.753 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/  
+2019-05-21 09:52:00.829 +08:00 [INF] Executing endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:52:00.843 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)
+2019-05-21 09:52:00.852 +08:00 [INF] Authorization was successful.
+2019-05-21 09:52:00.859 +08:00 [INF] Executing action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) - Validation state: "Valid"
+2019-05-21 09:52:01.652 +08:00 [INF] Executed action method DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site), returned result Microsoft.AspNetCore.Mvc.ViewResult in 785.0439ms.
+2019-05-21 09:52:01.676 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-21 09:52:01.773 +08:00 [INF] Executed ViewResult - view Index executed in 109.70400000000001ms.
+2019-05-21 09:52:01.776 +08:00 [INF] Executed action DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site) in 930.74520000000007ms
+2019-05-21 09:52:01.777 +08:00 [INF] Executed endpoint 'DncAspNetCore.Site.Controllers.HomeController.Index (DncAspNetCore.Site)'
+2019-05-21 09:52:01.787 +08:00 [INF] Request finished in 1034.4123ms 200 text/html; charset=utf-8
+2019-05-21 09:52:01.836 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9000/favicon.ico  
+2019-05-21 09:52:01.844 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Site\wwwroot\favicon.ico'
+2019-05-21 09:52:01.846 +08:00 [INF] Request finished in 9.8286ms 200 image/x-icon

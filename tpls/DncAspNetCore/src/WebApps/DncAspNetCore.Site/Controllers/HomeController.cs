@@ -1,25 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using DncAspNetCore.Site.Models;
+﻿using DncAspNetCore.Site.Models;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using System.Diagnostics;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace DncAspNetCore.Site.Controllers
 {
     [Authorize]
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var client = new HttpClient()
+            {
+                BaseAddress = new System.Uri("http://localhost:8000"),
+            };
+            var access_token = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);
+            ViewData["access_token"] = access_token;
+
+            client.SetBearerToken(access_token);
+            var str = await client.GetStringAsync("/api/values");
+            ViewData["api"] = str;
             return View();
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            return View(HttpContext.User.Claims);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

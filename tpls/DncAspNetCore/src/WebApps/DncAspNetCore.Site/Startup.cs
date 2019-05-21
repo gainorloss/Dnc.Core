@@ -50,6 +50,9 @@ namespace DncAspNetCore.Site
                 opt.Authority = "http://localhost:8001";
                 opt.Scope.Clear();
                 opt.Scope.Add("openid");
+                opt.Scope.Add("profile");
+                opt.Scope.Add("email");
+                opt.Scope.Add("restapi");
                 opt.GetClaimsFromUserInfoEndpoint = true;
             });
             //services.AddAspNetCore(typeof(Startup), AspNetCoreType.Mvc);
