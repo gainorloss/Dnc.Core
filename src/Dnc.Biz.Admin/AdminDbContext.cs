@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Dnc.Biz.Admin
 {
     public abstract class AbstractAdminDbContext
-        : ApplicationDbContext
+        : EfCoreDbContext
     {
         public AbstractAdminDbContext()
         { }
