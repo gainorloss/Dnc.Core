@@ -14,8 +14,8 @@ namespace Dnc.Windows32
         const uint PROCESS_ALL_ACCESS = 0x001F0FFF;
         const uint KEYEVENTF_EXTENDEDKEY = 0x1;
         const uint KEYEVENTF_KEYUP = 0x2;
-        private readonly int MOUSEEVENTF_LEFTDOWN = 0x2;
-        private readonly int MOUSEEVENTF_LEFTUP = 0x4;
+        //private readonly int MOUSEEVENTF_LEFTDOWN = 0x2;
+        //private readonly int MOUSEEVENTF_LEFTUP = 0x4;
         const uint KBC_KEY_CMD = 0x64;
         const uint KBC_KEY_DATA = 0x60;
         #endregion

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Dnc.Seedwork;
 
-namespace Dnc.Seedwork
+namespace Dnc.Biz.Admin
 {
     public class SysSetting
         : Entity

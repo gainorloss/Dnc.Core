@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Dnc.Seedwork;
+using System;
 
-namespace Dnc.Seedwork
+namespace Dnc.Biz.Admin
 {
     public class SysUserLoginLog
         : Entity

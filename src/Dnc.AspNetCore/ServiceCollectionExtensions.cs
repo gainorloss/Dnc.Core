@@ -2,13 +2,11 @@
 using Autofac.Extensions.DependencyInjection;
 using Dnc.AspNetCore.Controllers;
 using Dnc.AspNetCore.Filters;
-using Dnc.Data;
-using Dnc.Seedwork;
+using Dnc.Biz.Admin;
 using FluentValidation.AspNetCore;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;

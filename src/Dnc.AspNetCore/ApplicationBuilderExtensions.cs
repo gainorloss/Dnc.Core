@@ -1,12 +1,4 @@
-﻿using Dnc.AspNetCore.Filters;
-using Dnc.Data;
-using Dnc.Seedwork;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using Microsoft.AspNetCore.Builder;
 
 namespace Dnc.AspNetCore
 {

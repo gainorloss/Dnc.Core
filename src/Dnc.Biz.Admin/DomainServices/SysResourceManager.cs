@@ -1,12 +1,10 @@
-﻿using Dnc.Seedwork;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
-namespace Dnc.Seedwork
+namespace Dnc.Biz.Admin
 {
     public class SysResourceManager
         : ISysResourceManager

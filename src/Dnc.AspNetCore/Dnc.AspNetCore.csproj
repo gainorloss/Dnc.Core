@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dnc.Core\Dnc.Core.csproj" />
+    <ProjectReference Include="..\Dnc.Biz.Admin\Dnc.Biz.Admin.csproj" />
   </ItemGroup>
 
 </Project>

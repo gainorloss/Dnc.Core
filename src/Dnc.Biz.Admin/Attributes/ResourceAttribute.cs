@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dnc.Seedwork
+namespace Dnc.Biz.Admin
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
     public class ResourceAttribute

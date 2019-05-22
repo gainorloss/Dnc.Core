@@ -1,7 +1,7 @@
-﻿using Dnc.Seedwork;
+﻿using Dnc.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Dnc.Data
+namespace Dnc.Biz.Admin
 {
     public abstract class AbstractAdminDbContext
         : ApplicationDbContext

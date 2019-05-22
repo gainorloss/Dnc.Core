@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.Seedwork
+namespace Dnc.Biz.Admin
 {
     public interface ISysResourceManager
     {

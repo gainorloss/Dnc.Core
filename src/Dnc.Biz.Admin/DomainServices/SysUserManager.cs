@@ -1,10 +1,10 @@
-﻿using Dnc.Data;
+﻿using Dnc.Seedwork;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
-namespace Dnc.Seedwork
+namespace Dnc.Biz.Admin
 {
     public class SysUserManager
         : ISysUserManager
