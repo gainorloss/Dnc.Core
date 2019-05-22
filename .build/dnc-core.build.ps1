@@ -61,3 +61,24 @@ dotnet pack -c release -o bin/release
 $nugetPath=join-path $packPath 'bin/release/'
 cd $nugetPath
 dotnet nuget push Dnc.Spider.HttpRequest.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.Data'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.Data.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.Biz.Users'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.Biz.Users.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.Biz.Admin'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.Biz.Admin.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
