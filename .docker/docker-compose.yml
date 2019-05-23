@@ -1,0 +1,33 @@
+version: '3'
+
+services:   
+  postgres:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: p@ssw0rd
+    volumes:
+      - ${PWD}/src/Services/Crafts.RobotEduPlat.Api/db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+  api:
+    build:
+      context: .
+      dockerfile: src/Services/Crafts.RobotEduPlat.Api/Dockerfile
+    image: gainorloss/crafts.api:prod
+    container_name: crafts.api
+    ports: 
+      - 5000:5000
+    depends_on:
+      - postgres
+  mvc:
+    build:
+      context: .
+      dockerfile: src/Web/Crafts.RobotEduPlat.Mvc/Dockerfile
+    image: gainorloss/crafts.mvc:prod
+    container_name: crafts.mvc
+    ports: 
+      - 5001:5001
+    depends_on:
+      - api

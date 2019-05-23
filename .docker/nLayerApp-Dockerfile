@@ -1,0 +1,19 @@
+﻿FROM microsoft/dotnet:sdk AS build-env
+workdir /code
+
+copy src/Services/Crafts.RobotEduPlat.Api/Crafts.RobotEduPlat.Api.csproj src/Services/Crafts.RobotEduPlat.Api/
+copy src/Services/Crafts.RobotEduPlat.App/Crafts.RobotEduPlat.App.csproj src/Services/Crafts.RobotEduPlat.App/
+copy src/Services/Crafts.RobotEduPlat.Domain/Crafts.RobotEduPlat.Domain.csproj src/Services/Crafts.RobotEduPlat.Domain/
+copy src/Services/Crafts.RobotEduPlat.Repository/Crafts.RobotEduPlat.Repository.csproj src/Services/Crafts.RobotEduPlat.Repository/
+copy src/Services/Infrastructure/Infrastructure.csproj  src/Services/Infrastructure/
+run dotnet restore src/Services/Crafts.RobotEduPlat.Api/Crafts.RobotEduPlat.Api.csproj
+
+copy . /code
+run dotnet publish src/Services/Crafts.RobotEduPlat.Api/Crafts.RobotEduPlat.Api.csproj -c release -o /code/out
+
+from microsoft/dotnet:2.2-aspnetcore-runtime 
+workdir  /app
+copy --from=build-env /code/out /app
+
+expose 5000 
+entrypoint ["dotnet","Crafts.RobotEduPlat.Api.dll"]
