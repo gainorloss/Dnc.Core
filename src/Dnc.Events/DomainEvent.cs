@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Dnc.ObjectId;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Dnc.Events
 {
-    public abstract class AbstractMessage
-        : IMessage
+    public class DomainEvent
+        : IEvent
     {
-        public AbstractMessage()
+        public DomainEvent()
         {
-            UniqueId = Guid.NewGuid().ToString("N");
-            Version = 1;
-            Seq = 1;
+            Id = Fx.Resolve<IObjectIdGenerator>().StringGuid();
             Timestamp = DateTime.UtcNow;
         }
-        public string UniqueId { get; set; }
+        public string Id { get ; set ; }
         public int Version { get; set; }
         public DateTime Timestamp { get; set; }
         public int Seq { get; set; }

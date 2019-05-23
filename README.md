@@ -1,7 +1,7 @@
 ﻿Dnc.Core
 ===
 
-[![Dnc.Core/1.1.0.7](https://img.shields.io/badge/nuget-1.1.0.7-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.7)
+[![Dnc.Core/1.1.0.8](https://img.shields.io/badge/nuget-1.1.0.8-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.8)
 
 ## Infrastructure
 > install-package Dnc.Core
@@ -9,7 +9,7 @@
 ## Data
 > install-package Dnc.Data
 
-## Dnc.Dispatcher
+## Dispatcher
 > install-package Dnc.Dispatcher
 
 ## Domain seedwork
@@ -17,6 +17,7 @@
 
 ## Events
 > install-package Dnc.Events
+> install-package Dnc.Events.InMemory
 
 ## Spider
 > install-package Dnc.Spider 

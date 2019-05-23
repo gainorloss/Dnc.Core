@@ -5,6 +5,6 @@ using System.Text;
 namespace Dnc.Events
 {
     public interface IEventBus
-        : IEventPublisher, IEventSubscriber, IDisposable
+        : IEventPublisher, IEventSubscriber, IDisposable,IPlugin
     { }
 }

@@ -5,12 +5,10 @@ using System.Text;
 namespace Dnc.Events
 {
     public interface IEvent
-        : IMessage
-    { }
-
-    public interface IEvent<TEventId>
-        : IEvent
     {
-        TEventId EventId { get; set; }
+        string Id { get; set; }
+        int Version { get; set; }
+        DateTime Timestamp { get; set; }
+        int Seq { get; set; }
     }
 }

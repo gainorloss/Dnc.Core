@@ -15,4 +15,8 @@
     <Tags>event</Tags>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Dnc.Core\Dnc.Core.csproj" />
+  </ItemGroup>
+
 </Project>
