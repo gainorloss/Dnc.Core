@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Dnc.Seedwork
 {
-    public interface IEventPublisher
+    public interface ISortBehavior
     {
-        void Publish<TEvent>(TEvent @event) where TEvent : IEvent;
+        int Sort { get; set; }
     }
 }

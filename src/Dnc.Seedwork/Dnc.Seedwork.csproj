@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Version>1.1.0.7</Version>
-    <Title>Dnc.Data</Title>
+    <Title>Dnc.Seedwork</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
     <Description>
@@ -12,12 +12,11 @@
     <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
     <PackageIconUrl>https://avatars0.githubusercontent.com/u/26458238?s=800</PackageIconUrl>
-    <Tags>data</Tags>
+    <Tags>seedwork</Tags>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
-    <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="1.8.28" />
+    <PackageReference Include="genfu" Version="1.5.6" />
   </ItemGroup>
 
   <ItemGroup>

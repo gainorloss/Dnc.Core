@@ -1,6 +1,4 @@
-﻿using Dnc.Seedwork;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
 using Z.EntityFramework.Plus;

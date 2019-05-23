@@ -1,7 +1,4 @@
-﻿using Dnc.Seedwork;
-using JetBrains.Annotations;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
@@ -10,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Dnc.Data
 {
-    public class EfCoreDbContext
+    public class EntityFrameworkCoreDbContext
         : DbContext, IApplicationDbContext
     {
         #region Ctor.
-        protected EfCoreDbContext()
+        protected EntityFrameworkCoreDbContext()
         { }
 
-        public EfCoreDbContext(DbContextOptions options)
+        public EntityFrameworkCoreDbContext(DbContextOptions options)
             : base(options)
         { }
         #endregion

@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dnc.Core\Dnc.Core.csproj" />
+    <ProjectReference Include="..\Dnc.Seedwork\Dnc.Seedwork.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,7 +18,6 @@
   <ItemGroup>
     <PackageReference Include="fluentvalidation" Version="8.3.0" />
     <PackageReference Include="flurl.http" Version="2.4.2" />
-    <PackageReference Include="genfu" Version="1.5.6" />
     <PackageReference Include="google.protobuf" Version="3.7.0" />
     <PackageReference Include="grpc" Version="1.19.0" />
     <PackageReference Include="idgen" Version="2.0.3" />
@@ -47,6 +46,5 @@
     <PackageReference Include="system.diagnostics.performancecounter" Version="4.5.0" />
     <PackageReference Include="system.drawing.common" Version="4.5.1" />
     <PackageReference Include="system.linq.dynamic.core" Version="1.0.14" />
-    <PackageReference Include="z.entityframework.plus.efcore" Version="1.8.27" />
   </ItemGroup>
 </Project>

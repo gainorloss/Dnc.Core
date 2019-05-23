@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dnc.Data\Dnc.Data.csproj" />
+    <ProjectReference Include="..\Dnc.Seedwork\Dnc.Seedwork.csproj" />
   </ItemGroup>
 
 </Project>

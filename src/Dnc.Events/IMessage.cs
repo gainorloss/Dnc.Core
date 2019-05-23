@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.Seedwork
+namespace Dnc.Events
 {
     public interface IMessage
     {

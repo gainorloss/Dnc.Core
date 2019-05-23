@@ -4,7 +4,7 @@ using System;
 namespace Dnc.Biz.Admin
 {
     public class SysUser
-        : Entity
+        : Entity, IDataStatusBehavior
     {
         public string UName { get; set; }
         public string Pwd { get; set; }
@@ -19,5 +19,6 @@ namespace Dnc.Biz.Admin
         public int LoginErrNums { get; set; }
         public string LastLoginIP { get; set; }
         public DateTime? LastLogoutTime { get; set; }
+        public DataStatus DataStatus { get; set; }
     }
 }
