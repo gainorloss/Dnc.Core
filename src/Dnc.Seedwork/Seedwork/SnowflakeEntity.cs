@@ -1,10 +1,6 @@
 ﻿using Dnc.ObjectId;
-using Dnc.Seedwork;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Dnc.Core.Seedwork
+namespace Dnc.Seedwork
 {
     public class SnowflakeEntity
         :EntityBase<long>
