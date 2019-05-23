@@ -13,7 +13,10 @@ namespace Dnc.Events
             _eventHandlers = eventHandlers;
         }
 
-        public void Publish<TEvent>(TEvent @event) where TEvent : IEvent => EventPushed.Invoke(this, new EventProcessedArgs(@event));
+        public void Publish<TEvent>(TEvent @event) where TEvent : IEvent
+        {
+            EventPushed?.Invoke(this, new EventProcessedArgs(@event));
+        }
 
         public void Subscribe() => EventPushed += InMemoryEventBus_EventPushed;
 

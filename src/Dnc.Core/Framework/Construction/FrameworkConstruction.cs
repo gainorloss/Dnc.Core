@@ -11,7 +11,6 @@ namespace Dnc
         public IServiceCollection Services { get; set; }
         public IConfiguration Configuration { get; set; }
         public IFrameworkEnvironment Environment { get; set; }
-        public IServiceProvider ServiceProvider { get; set; }
         #endregion
 
         #region Default ctor.
@@ -27,16 +26,6 @@ namespace Dnc
             Services.AddAssemblyPluginTypes();
         }
         #endregion
-
-        /// <summary>
-        /// The entrypoint for the framework.
-        /// </summary>
-        public FrameworkConstruction Build(IServiceProvider provider = null)
-        {
-            ServiceProvider = provider ?? Services.BuildServiceProvider();
-
-            return this;
-        }
 
 
         /// <summary>

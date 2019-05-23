@@ -10,12 +10,19 @@ namespace Dnc
         public static FrameworkConstruction Construction { get; private set; }
 
 
-        private static IServiceProvider ServiceProvider => Construction.ServiceProvider;
+        private static IServiceProvider ServiceProvider { get; set; }
 
+
+        public static event Action<IServiceCollection> SrvRegisteredEvent;
 
         public static void Build(this FrameworkConstruction construction, bool logStarted = true)
         {
-            construction.Build();
+            SrvRegisteredEvent?.Invoke(construction.Services);
+
+            if (construction.Services == null)
+                throw new Exception("ServiceCollection is null.");
+
+            ServiceProvider = construction.Services.BuildServiceProvider();
 
             if (logStarted)
             {

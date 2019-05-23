@@ -7,17 +7,12 @@ namespace Dnc.Events
 {
     public interface IEventHandler
     {
-        void Handle<TEvent>(TEvent @event) where TEvent : IEvent;
-        Task HandleAsync<TEvent>(TEvent @event) where TEvent : IEvent;
         bool CanHandle<TEvent>(TEvent @event) where TEvent:IEvent;
+        Task HandleAsync<TEvent>(TEvent @event) where TEvent : IEvent;
     }
-    public interface IEventHandler<TEvent>
+    public interface IEventHandler<TEvent>: IEventHandler
         where TEvent:IEvent
     {
-        void Handle(TEvent @event);
-
         Task HandleAsync(TEvent @event);
-
-        bool CanHandle(TEvent @event);
     }
 }

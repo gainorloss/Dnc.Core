@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.0.8</Version>
+    <Version>1.1.0.9</Version>
     <Title>Dnc.Core</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -22,7 +22,6 @@
     <PackageReference Include="grpc" Version="1.19.0" />
     <PackageReference Include="idgen" Version="2.0.3" />
     <PackageReference Include="mailkit" Version="2.1.4" />
-    <PackageReference Include="microsoft.aspnetcore.http.abstractions" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.signalr" Version="1.1.0" />
     <PackageReference Include="microsoft.codeanalysis.csharp" Version="3.0.0" />
     <PackageReference Include="microsoft.codeanalysis.csharp.scripting" Version="3.0.0" />
@@ -45,6 +44,5 @@
     <PackageReference Include="system.data.sqlclient" Version="4.6.0" />
     <PackageReference Include="system.diagnostics.performancecounter" Version="4.5.0" />
     <PackageReference Include="system.drawing.common" Version="4.5.1" />
-    <PackageReference Include="system.linq.dynamic.core" Version="1.0.14" />
   </ItemGroup>
 </Project>
