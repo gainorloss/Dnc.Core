@@ -24,7 +24,7 @@ namespace Dnc.Events
 
             _eventHandlers.Where(eh => eh.CanHandle(e.Event))
                 .ToList()
-                .ForEach(async eh => await eh.HandleAsync(e.Event));
+                .ForEach(async eh => await eh.HandleEventAsync(e.Event));
         }
 
         #region IDisposable Support

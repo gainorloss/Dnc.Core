@@ -9,7 +9,11 @@ namespace Dnc.UnitTests
     public class VersionSetEventHandler
         : DomainEventHandler<VersionSetEvent>
     {
-        public override Task HandleAsync(VersionSetEvent @event)
+        public VersionSetEventHandler(IEventStore eventStore)
+            : base(eventStore)
+        { }
+
+        protected override Task HandleAsync(VersionSetEvent @event)
         {
             var version = @event.Version;
             return Task.FromResult(version);

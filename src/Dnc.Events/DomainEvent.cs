@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dnc.Serializers;
+using System;
 
 namespace Dnc.Events
 {
@@ -10,7 +11,8 @@ namespace Dnc.Events
             Id = Guid.NewGuid().ToString("N");
             Timestamp = DateTime.UtcNow;
         }
-        public string Id { get ; set ; }
+        public string Id { get; set; }
+        public string Payload { get; set; }
         public int Version { get; set; }
         public DateTime Timestamp { get; set; }
         public int Seq { get; set; }

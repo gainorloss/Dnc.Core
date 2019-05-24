@@ -54,8 +54,10 @@ namespace Dnc.UnitTests
         {
             var eventbus = Fx.Resolve<IEventBus>();
             var eh = Fx.Resolve<IEventHandler>();
+            var es = Fx.Resolve<IEventStore>();
             eventbus.Subscribe();
             eventbus.PublishAsync(new TimeUpdatedEvent());
+            eventbus.PublishAsync(new VersionSetEvent());
             Assert.NotNull(eventbus);
         }
     }

@@ -6,7 +6,11 @@ namespace Dnc.UnitTests
     public class TimeUpdatedEventHandler
         : DomainEventHandler<TimeUpdatedEvent>
     {
-        public override Task HandleAsync(TimeUpdatedEvent @event)
+        public TimeUpdatedEventHandler(IEventStore eventStore)
+            : base(eventStore)
+        { }
+
+        protected override Task HandleAsync(TimeUpdatedEvent @event)
         {
             var timestamp = @event.Timestamp;
             System.Console.WriteLine(timestamp);
