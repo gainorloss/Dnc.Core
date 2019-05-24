@@ -1,7 +1,7 @@
 ﻿Dnc.Core
 ===
 
-[![Dnc.Core/1.1.0.10](https://img.shields.io/badge/nuget-1.1.0.10-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.10)
+[![Dnc.Core/1.1.0.11](https://img.shields.io/badge/nuget-1.1.0.11-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.11)
 
 ## Infrastructure
 > install-package Dnc.Core
