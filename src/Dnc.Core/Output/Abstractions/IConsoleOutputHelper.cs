@@ -16,6 +16,8 @@ namespace Dnc.Output
     public interface IConsoleOutputHelper
          : IPlugin
     {
+        void Dump<T>(T obj) where T:class;
+
         void OutputImage(string imgPath);
 
         /// <summary>
@@ -23,7 +25,7 @@ namespace Dnc.Output
         /// </summary>
         /// <param name="msg"></param>
         /// <param name="title"></param>
-        void Debug(string msg, string title = "framework");
+        void Debug(string msg);
 
         /// <summary>
         /// Info:green.
@@ -31,7 +33,7 @@ namespace Dnc.Output
         /// <param name="msg"></param>
         /// <param name="title"></param>
 
-        void Info(string msg, string title = "framework");
+        void Info(string msg);
 
         /// <summary>
         /// Warning:yellow.
@@ -39,7 +41,7 @@ namespace Dnc.Output
         /// <param name="msg"></param>
         /// <param name="title"></param>
 
-        void Warning(string msg, string title = "framework");
+        void Warning(string msg);
 
         /// <summary>
         /// Error:red.
@@ -47,6 +49,6 @@ namespace Dnc.Output
         /// <param name="msg"></param>
         /// <param name="title"></param>
 
-        void Error(string msg, string title = "framework");
+        void Error(string msg);
     }
 }

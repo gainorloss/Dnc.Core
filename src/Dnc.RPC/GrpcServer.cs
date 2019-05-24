@@ -6,7 +6,7 @@ using System.Text;
 namespace Dnc.Rpc
 {
     public class GrpcServer
-         : IRpcServer
+         : IRPCServer
     {
         private Server server = null;
         public Server GetServer(string host,

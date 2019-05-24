@@ -5,7 +5,7 @@ namespace Dnc
     /// <summary>
     /// Extension methods for array.
     /// </summary>
-    public static class ArrayExtensions
+    public static class ArraExtensions
     {
         /// <summary>
         /// Append some to the array end.

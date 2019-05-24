@@ -1,5 +1,4 @@
 ﻿using Dnc.Output;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Quartz;
 using System;

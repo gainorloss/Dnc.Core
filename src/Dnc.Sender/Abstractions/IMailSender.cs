@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
+using Dnc;
 
-namespace Dnc.Senders
+namespace Dnc.Sender
 {
     /// <summary>
     /// Constraint for sending email.

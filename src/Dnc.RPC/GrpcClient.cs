@@ -6,7 +6,7 @@ using System.Text;
 namespace Dnc.Rpc
 {
     public class GrpcClient
-         : IRpcClient
+         : IRPCClient
     {
         public TClient GetClient<TClient>(string host,
             int port,

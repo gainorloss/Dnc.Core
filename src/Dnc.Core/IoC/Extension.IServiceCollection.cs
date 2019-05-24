@@ -3,7 +3,7 @@ using System;
 
 namespace Dnc
 {
-    public static class Extension
+    public  static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddAssemblyTypes(this IServiceCollection services)
         {

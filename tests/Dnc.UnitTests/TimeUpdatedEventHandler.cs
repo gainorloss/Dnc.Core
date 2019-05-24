@@ -4,22 +4,12 @@ using Dnc.Events;
 namespace Dnc.UnitTests
 {
     public class TimeUpdatedEventHandler
-        : IEventHandler<TimeUpdatedEvent>
+        : DomainEventHandler<TimeUpdatedEvent>
     {
-        public bool CanHandle<TEvent>(TEvent @event) where TEvent : IEvent
+        public override Task HandleAsync(TimeUpdatedEvent @event)
         {
-            return true;
-        }
-
-        public Task HandleAsync(TimeUpdatedEvent @event)
-        {
-            System.Console.WriteLine(@event.Timestamp);
-            return Task.CompletedTask;
-        }
-
-        public Task HandleAsync<TEvent>(TEvent @event) where TEvent : IEvent
-        {
-            System.Console.WriteLine(@event.Timestamp);
+            var timestamp = @event.Timestamp;
+            System.Console.WriteLine(timestamp);
             return Task.CompletedTask;
         }
     }

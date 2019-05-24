@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.0.9</Version>
+    <Version>1.1.0.10</Version>
     <Title>Dnc.Biz.Admin</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -14,6 +14,10 @@
     <PackageIconUrl>https://avatars0.githubusercontent.com/u/26458238?s=800</PackageIconUrl>
     <Tags>dotnetcore;quartz;serilog;aspnetcore,serializer,rpc</Tags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.0" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Dnc.Data\Dnc.Data.csproj" />

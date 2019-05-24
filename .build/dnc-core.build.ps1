@@ -103,3 +103,38 @@ dotnet pack -c release -o bin/release
 $nugetPath=join-path $packPath 'bin/release/'
 cd $nugetPath
 dotnet nuget push Dnc.Biz.Admin.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.RPC'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.RPC.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.Validation'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.Validation.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.Sender'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.Sender.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.SignalR'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.SignalR.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.PerformanceCounter'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.PerformanceCounter.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json

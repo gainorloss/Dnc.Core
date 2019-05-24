@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 
-namespace Dnc.Alarmers
+namespace Dnc.Sender
 {
     public class Alarmer
         : IAlarmer

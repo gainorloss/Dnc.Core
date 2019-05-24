@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Timers;
 
@@ -12,6 +13,32 @@ namespace Dnc.Output
         : IConsoleOutputHelper
     {
         private static object mLock = new object();
+
+        public void Dump<T>(T obj) where T:class
+        {
+            if (obj == null)
+            {
+                Debug("Object is null.");
+                return;
+            }
+
+            var props = typeof(T).GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+
+            if (props == null || !props.Any())
+            {
+                Debug("There is not any properties in this object.");
+                return;
+            }
+
+            var propMaxLength = props.Max(p => p.Name.Length);
+            var output = string.Empty;
+            foreach (var prop in props)
+            {
+                var propValue = prop.GetValue(obj);
+                output = $"{prop.Name.PadLeft(propMaxLength,' ')}:{propValue}";
+            }
+            Debug(output);
+        }
 
         public void OutputImage(string imgPath)
         {
@@ -74,20 +101,20 @@ namespace Dnc.Output
             #endregion
         }
 
-        public void Debug(string msg, string title = "Framework")
-            => BuildMessageAndOutput(msg, title, "debg", ConsoleColor.White);
+        public void Debug(string msg)
+            => BuildMessageAndOutput(msg, "debg", ConsoleColor.White);
 
-        public void Info(string msg, string title = "Framework")
-            => BuildMessageAndOutput(msg, title, "info", ConsoleColor.DarkGreen);
+        public void Info(string msg)
+            => BuildMessageAndOutput(msg, "info", ConsoleColor.DarkGreen);
 
-        public void Warning(string msg, string title = "Framework")
-            => BuildMessageAndOutput(msg, title, "warn", ConsoleColor.DarkYellow);
+        public void Warning(string msg)
+            => BuildMessageAndOutput(msg, "warn", ConsoleColor.DarkYellow);
 
-        public void Error(string msg, string title = "Framework")
-            => BuildMessageAndOutput(msg, title, "err", ConsoleColor.DarkRed);
+        public void Error(string msg)
+            => BuildMessageAndOutput(msg, "err", ConsoleColor.DarkRed);
 
         #region Helper.
-        private void BuildMessageAndOutput(string msg, string title, string tag, ConsoleColor consoleColor)
+        private void BuildMessageAndOutput(string msg, string tag, ConsoleColor consoleColor)
         {
             lock (mLock)
             {
@@ -99,7 +126,6 @@ namespace Dnc.Output
                 Console.Write($" {tag.PadRight(4, ' ').ToUpper()}");
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Write("]");
-                msg = $" {title}：{msg}";
                 Console.WriteLine(msg);
                 Console.ForegroundColor = oldColor;
             }

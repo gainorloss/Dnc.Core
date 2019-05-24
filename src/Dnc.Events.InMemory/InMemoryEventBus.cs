@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Dnc.Events
 {
@@ -13,10 +14,7 @@ namespace Dnc.Events
             _eventHandlers = eventHandlers;
         }
 
-        public void Publish<TEvent>(TEvent @event) where TEvent : IEvent
-        {
-            EventPushed?.Invoke(this, new EventProcessedArgs(@event));
-        }
+        public async Task PublishAsync<TEvent>(TEvent @event) where TEvent : IEvent => await Task.Run(() => EventPushed?.Invoke(this, new EventProcessedArgs(@event)));
 
         public void Subscribe() => EventPushed += InMemoryEventBus_EventPushed;
 

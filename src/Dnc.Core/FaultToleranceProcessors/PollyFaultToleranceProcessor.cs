@@ -1,5 +1,4 @@
-﻿using Dnc.Alarmers;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Polly;
 using Polly.CircuitBreaker;
 using Polly.Fallback;
@@ -13,15 +12,12 @@ namespace Dnc.FaultToleranceProcessors
     {
         #region Private members.
         private readonly ILogger<PollyFaultToleranceProcessor> _logger;
-        private readonly IAlarmer _alarmer;
         #endregion
 
         #region Default ctor.
-        public PollyFaultToleranceProcessor(ILogger<PollyFaultToleranceProcessor> logger,
-            IAlarmer alarmer)
+        public PollyFaultToleranceProcessor(ILogger<PollyFaultToleranceProcessor> logger)
         {
             _logger = logger;
-            _alarmer = alarmer;
         }
         #endregion
 
@@ -68,8 +64,8 @@ namespace Dnc.FaultToleranceProcessors
             return Policy.Handle<Exception>()
                 .FallbackAsync(async ct =>
                 {
-                   await _alarmer.AlarmAdminUsingWechatAsync("最终执行失败","fallback");
                     _logger.LogError($"最终执行失败");
+                    await Task.CompletedTask;
                 });
         }
 

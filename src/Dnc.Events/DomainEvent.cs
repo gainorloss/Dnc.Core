@@ -1,7 +1,4 @@
-﻿using Dnc.ObjectId;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Dnc.Events
 {
@@ -10,7 +7,7 @@ namespace Dnc.Events
     {
         public DomainEvent()
         {
-            Id = Fx.Resolve<IObjectIdGenerator>().StringGuid();
+            Id = Guid.NewGuid().ToString("N");
             Timestamp = DateTime.UtcNow;
         }
         public string Id { get ; set ; }

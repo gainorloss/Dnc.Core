@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -37,8 +35,6 @@ namespace Dnc
                 strs.Add(str);
             }
             var log = string.Join("\r\n", strs);
-            var logger = Fx.Resolve<ILogger>();
-            logger.LogInformation(log);
             return log;
         }
 
@@ -64,8 +60,6 @@ namespace Dnc
             strs.Add($@"     工作集内存:{pf.NextValue() / (1024 * 1024):N}M");
 
             var log = string.Join("\r\n", strs);
-            var logger = Fx.Resolve<ILogger>();
-            logger.LogInformation(log);
             return log;
         }
     }

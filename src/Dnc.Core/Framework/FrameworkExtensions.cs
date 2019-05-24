@@ -1,5 +1,4 @@
-﻿using Dnc.Rpc;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
@@ -19,16 +18,6 @@ namespace Dnc
             services.AddTransient(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("dnc"));
             return services;
         }
-
-        #region Configure rpc.
-        public static FrameworkConstruction UseDefaultRpc(this FrameworkConstruction construction)
-        {
-            construction.Services.AddSingleton<IRpcServer, GrpcServer>();
-            construction.Services.AddSingleton<IRpcClient, GrpcClient>();
-
-            return construction;
-        }
-        #endregion
 
         #region Internal.
         internal static FrameworkConstruction Configure(this FrameworkConstruction construction,

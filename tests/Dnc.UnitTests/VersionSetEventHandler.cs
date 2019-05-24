@@ -7,17 +7,9 @@ using System.Threading.Tasks;
 namespace Dnc.UnitTests
 {
     public class VersionSetEventHandler
-        : IEventHandler<VersionSetEvent>
+        : DomainEventHandler<VersionSetEvent>
     {
-        public bool CanHandle<TEvent>(TEvent @event) where TEvent : IEvent=>true;
-
-        public Task HandleAsync(VersionSetEvent @event)
-        {
-            var version = @event.Version;
-            return Task.FromResult(version);
-        }
-
-        public Task HandleAsync<TEvent>(TEvent @event) where TEvent : IEvent
+        public override Task HandleAsync(VersionSetEvent @event)
         {
             var version = @event.Version;
             return Task.FromResult(version);

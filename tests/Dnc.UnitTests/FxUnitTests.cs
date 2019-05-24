@@ -1,11 +1,10 @@
-using Dnc.Alarmers;
 using Dnc.Events;
 using Dnc.FaultToleranceProcessors;
 using Dnc.Files;
 using Dnc.ObjectId;
 using Dnc.Output;
 using Dnc.Seedwork;
-using Dnc.Senders;
+using Dnc.Sender;
 using Dnc.Serializers;
 using Dnc.Test;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,12 +24,17 @@ namespace Dnc.UnitTests
                 services.AddScoped<IEventHandler, TimeUpdatedEventHandler>();
                 services.AddScoped<IEventHandler, VersionSetEventHandler>();
             };
-            Fx.Construct<FrameworkConstruction>().Build();
-
+            Fx.CreateDefaultConstruction().Build();
         }
 
         [Fact]
-        public void ConsoleOutputHelper_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IConsoleOutputHelper>());
+        public void ConsoleOutputHelper_ShouldBe_Resolved()
+        {
+            var consoleOutputHelper = Fx.Resolve<IConsoleOutputHelper>();
+            consoleOutputHelper.Dump(new VersionSetEvent());
+            Assert.NotNull(consoleOutputHelper);
+        }
+
         [Fact]
         public void ObjectIdGenerator_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IObjectIdGenerator>());
         [Fact]
@@ -51,7 +55,7 @@ namespace Dnc.UnitTests
             var eventbus = Fx.Resolve<IEventBus>();
             var eh = Fx.Resolve<IEventHandler>();
             eventbus.Subscribe();
-            eventbus.Publish(new TimeUpdatedEvent());
+            eventbus.PublishAsync(new TimeUpdatedEvent());
             Assert.NotNull(eventbus);
         }
     }

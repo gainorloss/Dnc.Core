@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dnc.Rpc
 {
-    public interface IRpcServer
+    public interface IRPCServer
     {
         Server GetServer(string host,
             int port,
