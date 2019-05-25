@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Dnc.Seedwork;
+using System;
 
-namespace Dnc.Seedwork
+namespace Dnc.Biz.Comments
 {
     /// <summary>
     /// Design for comment.

@@ -31,7 +31,7 @@ namespace DncAspNetCore.Admin
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddAspNetCore(typeof(Startup),AspNetCoreType.Mvc);
+            services.AddAspNetCore<IStartup>("http://localhost:8001", "admin", "49C1A7E1-0C79-4A89-A3D6-A37998FB86B1", AspNetCoreType.Mvc);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

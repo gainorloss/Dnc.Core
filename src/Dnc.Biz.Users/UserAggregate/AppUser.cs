@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Dnc.Seedwork;
+using System;
 
-namespace Dnc.Seedwork
+namespace Dnc.Biz.Users
 {
-    public class User
+    public class AppUser
         : Entity
     {
         public string NickName { get; set; }

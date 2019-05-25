@@ -66,9 +66,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.RPC", "src\Dnc.RPC\Dnc.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.PerformanceCounter", "src\Dnc.PerformanceCounter\Dnc.PerformanceCounter.csproj", "{EB720F19-3833-4267-8266-B46C6B54C0FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnc.Events.RabbitMQ", "src\Dnc.Events.RabbitMQ\Dnc.Events.RabbitMQ.csproj", "{3C546969-3D61-4908-B52E-6B9D90345D31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.Events.RabbitMQ", "src\Dnc.Events.RabbitMQ\Dnc.Events.RabbitMQ.csproj", "{3C546969-3D61-4908-B52E-6B9D90345D31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnc.Events.MySql", "src\Dnc.Events.MySql\Dnc.Events.MySql.csproj", "{BD0FBC06-E20B-4DD6-BF6A-C430D9DFF3FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.Events.MySql", "src\Dnc.Events.MySql\Dnc.Events.MySql.csproj", "{BD0FBC06-E20B-4DD6-BF6A-C430D9DFF3FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnc.Biz.Blogs", "src\Dnc.Biz.Blogs\Dnc.Biz.Blogs.csproj", "{15836020-B894-4EC9-971E-0E6741D5B369}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dnc.Biz.Comments", "src\Dnc.Biz.Comments\Dnc.Biz.Comments.csproj", "{A97996A9-F258-46D6-800C-0DAE1437D53F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -192,6 +196,14 @@ Global
 		{BD0FBC06-E20B-4DD6-BF6A-C430D9DFF3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD0FBC06-E20B-4DD6-BF6A-C430D9DFF3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD0FBC06-E20B-4DD6-BF6A-C430D9DFF3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15836020-B894-4EC9-971E-0E6741D5B369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15836020-B894-4EC9-971E-0E6741D5B369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15836020-B894-4EC9-971E-0E6741D5B369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15836020-B894-4EC9-971E-0E6741D5B369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A97996A9-F258-46D6-800C-0DAE1437D53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97996A9-F258-46D6-800C-0DAE1437D53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97996A9-F258-46D6-800C-0DAE1437D53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97996A9-F258-46D6-800C-0DAE1437D53F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,6 +238,8 @@ Global
 		{EB720F19-3833-4267-8266-B46C6B54C0FC} = {9A0E06EA-8E09-441A-B076-896000D5957B}
 		{3C546969-3D61-4908-B52E-6B9D90345D31} = {9A0E06EA-8E09-441A-B076-896000D5957B}
 		{BD0FBC06-E20B-4DD6-BF6A-C430D9DFF3FA} = {9A0E06EA-8E09-441A-B076-896000D5957B}
+		{15836020-B894-4EC9-971E-0E6741D5B369} = {9A0E06EA-8E09-441A-B076-896000D5957B}
+		{A97996A9-F258-46D6-800C-0DAE1437D53F} = {9A0E06EA-8E09-441A-B076-896000D5957B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {441F1488-343D-402A-A07C-55850889C157}

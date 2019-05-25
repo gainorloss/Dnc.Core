@@ -1,4 +1,4 @@
-﻿namespace Dnc.Seedwork
+﻿namespace Dnc.Biz.Users
 {
     public enum LikedStatus
     {

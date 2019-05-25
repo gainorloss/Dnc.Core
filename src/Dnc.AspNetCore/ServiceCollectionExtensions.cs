@@ -35,10 +35,9 @@ namespace Dnc.AspNetCore
         /// <returns></returns>
         public static IServiceProvider AddAspNetCore<TType>(this IServiceCollection services, 
             string authorityUrl,
-            string appName,
+            string appName=null,
             string appSecret=null,
             AspNetCoreType aspNetCoreType = AspNetCoreType.Api)
-            where TType:IStartup
         {
             if (aspNetCoreType == AspNetCoreType.Api)
             {
@@ -150,7 +149,7 @@ namespace Dnc.AspNetCore
         /// <param name="services"></param>
         /// <returns></returns>
         public static IServiceCollection AddAdmin<TAdminDbContext>(this IServiceCollection services, Action<DbContextOptionsBuilder> optionsAction = null)
-            where TAdminDbContext : AbstractAdminDbContext
+            where TAdminDbContext : AdminDbContext
         {
             services.AddDbContext<TAdminDbContext>(optionsAction);
             services.AddScoped<ISysUserManager, SysUserManager>();

@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Dnc.Biz.Admin
 {
-    public abstract class AbstractAdminDbContext
-        : EntityFrameworkCoreDbContext
+    public class AdminDbContext
+        : ApplicationContext
     {
-        public AbstractAdminDbContext()
+        public AdminDbContext()
         { }
 
-        public AbstractAdminDbContext(DbContextOptions options)
+        public AdminDbContext(DbContextOptions options)
             : base(options)
         { }
 

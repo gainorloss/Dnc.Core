@@ -11,9 +11,9 @@ namespace Dnc.Biz.Admin
     {
         private const int ErrorTimes = 5;
         private const int LockMinutes = 1;
-        private readonly AbstractAdminDbContext _ctx;
+        private readonly AdminDbContext _ctx;
         private readonly HttpContext _httpContext;
-        public SysUserManager(AbstractAdminDbContext ctx,
+        public SysUserManager(AdminDbContext ctx,
             IHttpContextAccessor httpContextAccessor)
         {
             _ctx = ctx;
