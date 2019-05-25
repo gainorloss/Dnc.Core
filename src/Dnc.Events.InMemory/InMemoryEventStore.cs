@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Dnc.Events.InMemory
+namespace Dnc.Events
 {
     public class InMemoryEventStore : IEventStore
     {

@@ -14,7 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Dnc.Core\Dnc.Core.csproj" />
-    <ProjectReference Include="..\..\src\Dnc.Events.InMemory\Dnc.Events.InMemory.csproj" />
+    <ProjectReference Include="..\..\src\Dnc.Events.MySql\Dnc.Events.MySql.csproj" />
+    <ProjectReference Include="..\..\src\Dnc.Events.RabbitMQ\Dnc.Events.RabbitMQ.csproj" />
     <ProjectReference Include="..\..\src\Dnc.Events\Dnc.Events.csproj" />
     <ProjectReference Include="..\..\src\Dnc.Seedwork\Dnc.Seedwork.csproj" />
     <ProjectReference Include="..\..\src\Dnc.Sender\Dnc.Sender.csproj" />

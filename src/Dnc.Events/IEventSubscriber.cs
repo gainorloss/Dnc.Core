@@ -1,7 +1,11 @@
-﻿namespace Dnc.Events
+﻿using System;
+
+namespace Dnc.Events
 {
-    public interface IEventSubscriber
+    public interface IEventSubscriber:IDisposable
     {
-        void Subscribe();
+        void Subscribe<TEvent,TEventHandler>()
+            where TEvent:IEvent
+            where TEventHandler:IEventHandler<TEvent>;
     }
 }

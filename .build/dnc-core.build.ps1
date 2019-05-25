@@ -41,6 +41,20 @@ $nugetPath=join-path $packPath 'bin/release/'
 cd $nugetPath
 dotnet nuget push Dnc.Events.InMemory.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
 
+$packPath=join-path $workspace 'src/Dnc.Events.RabbitMQ'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.Events.RabbitMQ.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.Events.MySql'
+cd $packPath
+dotnet pack -c release -o bin/release
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.Events.MySql.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
 $packPath=join-path $workspace 'src/Dnc.AspNetCore'
 cd $packPath
 dotnet pack -c release -o bin/release
