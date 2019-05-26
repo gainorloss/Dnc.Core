@@ -115,7 +115,7 @@ namespace Dnc.AspNetCore
                 else
                 {
                     opt.Filters.Add<MvcGlobalLogExceptionFilter>();
-                    opt.Filters.Add<MvcGlobalLoginAuthorizationFilter>();
+                    //opt.Filters.Add<MvcGlobalLoginAuthorizationFilter>();
                 }
             })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
