@@ -1220,3 +1220,252 @@ Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such tab
 2019-05-21 09:52:01.425 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
 2019-05-21 09:52:01.425 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
 2019-05-21 09:52:01.429 +08:00 [DBG] Start key discovery request
+2019-05-26 11:04:17.296 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:04:17.376 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:04:17.395 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:04:17.396 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:04:17.396 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:04:17.397 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:04:17.397 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:04:17.398 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:17:44.706 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:17:44.800 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:17:44.817 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:17:44.818 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:17:44.819 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:17:44.819 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:17:44.819 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:17:44.820 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:22:41.221 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:22:41.285 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:22:41.306 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:22:41.307 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:22:41.307 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:22:41.308 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:22:41.308 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:22:41.309 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:30:19.387 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:30:19.450 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:30:19.467 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:30:19.467 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:30:19.468 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:30:19.468 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:30:19.469 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:30:19.470 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:31:31.931 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:31:32.001 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:31:32.018 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:31:32.018 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:31:32.019 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:31:32.019 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:31:32.019 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:31:32.021 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:31:36.730 +08:00 [DBG] Login Url: /Account/Login
+2019-05-26 11:31:36.733 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-05-26 11:31:36.735 +08:00 [DBG] Logout Url: /Account/Logout
+2019-05-26 11:31:36.735 +08:00 [DBG] ConsentUrl Url: /consent
+2019-05-26 11:31:36.736 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-05-26 11:31:36.737 +08:00 [DBG] Error Url: /home/error
+2019-05-26 11:31:36.738 +08:00 [DBG] Error Id Parameter: errorId
+2019-05-26 11:31:36.782 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-05-26 11:31:36.820 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-05-26 11:31:36.823 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-05-26 11:31:36.831 +08:00 [DBG] Start discovery request
+2019-05-26 11:31:37.400 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-05-26 11:31:37.420 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-05-26 11:31:37.422 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-05-26 11:31:37.432 +08:00 [DBG] Start key discovery request
+2019-05-26 11:31:37.604 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-05-26 11:31:37.618 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-05-26 11:31:37.620 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-05-26 11:31:37.629 +08:00 [DBG] Start authorize request
+2019-05-26 11:31:37.651 +08:00 [DBG] No user present in authorize request
+2019-05-26 11:31:37.660 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:31:37.689 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:37.698 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:31:37.701 +08:00 [DBG] No PKCE used.
+2019-05-26 11:31:37.751 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:31:37.777 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8Jf6lqju9KZJmIrsMu2mj3Fv_6b1uGvwumixosM8c4odBPBBSS02uz2tT-d9HewB2GGY7bob_dkQXCjS3-mAmBOlbpG-kLFu64z0_Yunq7zitWI1xl7fUUoZmfv_DCEGL9msPFtg2m8_Yd0AjesmQr20SNnnSnr7AV_VAGuUnpMJt0Odx1VXfZzq9ctDphxMdu30Yl7XGRisx5ohK5-tQRKYyllIEV5HVa7vCfhWBoBnsKm_pDLvHQmrUfRgJGJ-djnWqN5DluXRQlPMJGjezthwi-raAVHQW7XkJQPx7jTdJAVHYe4zdhu3pf6fk2Nc4w","UiLocales":null,"Nonce":"636944382975081856.ZDY0ZTY2OWUtZGU4Zi00OWQ3LTllZWUtMzIxMjQwNjMzOWI1NDEyM2NlMmEtYTYzZi00NzI0LWI4NDEtMzZmOGIwZmE1ZTdj","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636944382975081856.ZDY0ZTY2OWUtZGU4Zi00OWQ3LTllZWUtMzIxMjQwNjMzOWI1NDEyM2NlMmEtYTYzZi00NzI0LWI4NDEtMzZmOGIwZmE1ZTdj","state":"CfDJ8Jf6lqju9KZJmIrsMu2mj3Fv_6b1uGvwumixosM8c4odBPBBSS02uz2tT-d9HewB2GGY7bob_dkQXCjS3-mAmBOlbpG-kLFu64z0_Yunq7zitWI1xl7fUUoZmfv_DCEGL9msPFtg2m8_Yd0AjesmQr20SNnnSnr7AV_VAGuUnpMJt0Odx1VXfZzq9ctDphxMdu30Yl7XGRisx5ohK5-tQRKYyllIEV5HVa7vCfhWBoBnsKm_pDLvHQmrUfRgJGJ-djnWqN5DluXRQlPMJGjezthwi-raAVHQW7XkJQPx7jTdJAVHYe4zdhu3pf6fk2Nc4w","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-05-26 11:31:37.831 +08:00 [INF] Showing login: User is not authenticated
+2019-05-26 11:31:38.166 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:31:38.167 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:38.169 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:31:38.170 +08:00 [DBG] No PKCE used.
+2019-05-26 11:31:38.171 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:31:38.176 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:45.801 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:31:45.801 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:45.807 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:31:45.808 +08:00 [DBG] No PKCE used.
+2019-05-26 11:31:45.810 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:31:45.812 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:46.868 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:31:46.869 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:46.871 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:31:46.872 +08:00 [DBG] No PKCE used.
+2019-05-26 11:31:46.873 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:31:46.875 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:47.765 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:31:47.766 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:47.768 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:31:47.769 +08:00 [DBG] No PKCE used.
+2019-05-26 11:31:47.770 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:31:47.771 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:53.749 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:31:53.750 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:31:53.753 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:31:53.754 +08:00 [DBG] No PKCE used.
+2019-05-26 11:31:53.755 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:31:53.760 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:32:33.174 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:32:33.239 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:32:33.256 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:32:33.256 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:32:33.256 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:32:33.257 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:32:33.257 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:32:33.258 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:32:39.633 +08:00 [DBG] Login Url: /Account/Login
+2019-05-26 11:32:39.637 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-05-26 11:32:39.639 +08:00 [DBG] Logout Url: /Account/Logout
+2019-05-26 11:32:39.639 +08:00 [DBG] ConsentUrl Url: /consent
+2019-05-26 11:32:39.640 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-05-26 11:32:39.641 +08:00 [DBG] Error Url: /home/error
+2019-05-26 11:32:39.642 +08:00 [DBG] Error Id Parameter: errorId
+2019-05-26 11:32:40.000 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:32:40.028 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:32:40.038 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:32:40.041 +08:00 [DBG] No PKCE used.
+2019-05-26 11:32:40.106 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:32:40.112 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:32:53.550 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-05-26 11:32:53.574 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-05-26 11:32:53.576 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-05-26 11:32:53.583 +08:00 [DBG] Start discovery request
+2019-05-26 11:32:54.063 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-05-26 11:32:54.067 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-05-26 11:32:54.070 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-05-26 11:32:54.076 +08:00 [DBG] Start key discovery request
+2019-05-26 11:32:54.214 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-05-26 11:32:54.223 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-05-26 11:32:54.224 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-05-26 11:32:54.233 +08:00 [DBG] Start authorize request
+2019-05-26 11:32:54.246 +08:00 [DBG] No user present in authorize request
+2019-05-26 11:32:54.246 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:32:54.248 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:32:54.250 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:32:54.250 +08:00 [DBG] No PKCE used.
+2019-05-26 11:32:54.251 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:32:54.275 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8Jf6lqju9KZJmIrsMu2mj3GOC9x4iWVjKrA_cuIBWWI2GWX5uQv3kV6qx2Y3JjfPDtf5Vm-HOQwnaYyDD4dX_aLrKiMajcPmum1TPxrnr-25j7312mo7ZKEytqKg6vCCPMuoyYhH08arKcZsYVxJI5bw_-N5nqKfqOODyX7jfBgVmQbfhZRIe1v7HcPV6W4IzxNWn-DW9XuBV0Ufub2CeOG02uCTbTjn_gLm49qSR31cG9GTC5kNcr1QzOwqdF1QNFi5fJHzt8iUyJlCHvQwk-K_iS6XKGxgBHRhkns9sNN2T7G5U97O3A4U9WTnEO99-w","UiLocales":null,"Nonce":"636944383741475558.MjIxN2I5MzctMWVjYy00NDJlLWIyZTQtNDg5NjNhYzFiZTQ4MmZkOGFiYTEtYzVmOS00NzhmLTllOTktZTYwNzBiNDk2MjQ0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636944383741475558.MjIxN2I5MzctMWVjYy00NDJlLWIyZTQtNDg5NjNhYzFiZTQ4MmZkOGFiYTEtYzVmOS00NzhmLTllOTktZTYwNzBiNDk2MjQ0","state":"CfDJ8Jf6lqju9KZJmIrsMu2mj3GOC9x4iWVjKrA_cuIBWWI2GWX5uQv3kV6qx2Y3JjfPDtf5Vm-HOQwnaYyDD4dX_aLrKiMajcPmum1TPxrnr-25j7312mo7ZKEytqKg6vCCPMuoyYhH08arKcZsYVxJI5bw_-N5nqKfqOODyX7jfBgVmQbfhZRIe1v7HcPV6W4IzxNWn-DW9XuBV0Ufub2CeOG02uCTbTjn_gLm49qSR31cG9GTC5kNcr1QzOwqdF1QNFi5fJHzt8iUyJlCHvQwk-K_iS6XKGxgBHRhkns9sNN2T7G5U97O3A4U9WTnEO99-w","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-05-26 11:32:54.339 +08:00 [INF] Showing login: User is not authenticated
+2019-05-26 11:32:54.353 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:32:54.354 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:32:54.358 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:32:54.363 +08:00 [DBG] No PKCE used.
+2019-05-26 11:32:54.364 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:32:54.370 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:44:39.655 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:44:39.770 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:44:39.797 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:44:39.798 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:44:39.800 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:44:39.802 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:44:39.807 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:44:39.809 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:44:53.347 +08:00 [DBG] Login Url: /Account/Login
+2019-05-26 11:44:53.351 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-05-26 11:44:53.354 +08:00 [DBG] Logout Url: /Account/Logout
+2019-05-26 11:44:53.356 +08:00 [DBG] ConsentUrl Url: /consent
+2019-05-26 11:44:53.357 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-05-26 11:44:53.359 +08:00 [DBG] Error Url: /home/error
+2019-05-26 11:44:53.360 +08:00 [DBG] Error Id Parameter: errorId
+2019-05-26 11:44:53.800 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:44:53.834 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:44:53.844 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:44:53.846 +08:00 [DBG] No PKCE used.
+2019-05-26 11:44:53.913 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:44:53.920 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:45:18.904 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-05-26 11:45:18.913 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-05-26 11:45:18.916 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-05-26 11:45:18.923 +08:00 [DBG] Start discovery request
+2019-05-26 11:45:19.405 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-05-26 11:45:19.408 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-05-26 11:45:19.409 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-05-26 11:45:19.416 +08:00 [DBG] Start key discovery request
+2019-05-26 11:45:19.555 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-05-26 11:45:19.561 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-05-26 11:45:19.562 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-05-26 11:45:19.569 +08:00 [DBG] Start authorize request
+2019-05-26 11:45:19.579 +08:00 [DBG] No user present in authorize request
+2019-05-26 11:45:19.579 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:45:19.580 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:45:19.582 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:45:19.583 +08:00 [DBG] No PKCE used.
+2019-05-26 11:45:19.585 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:45:19.613 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8Jf6lqju9KZJmIrsMu2mj3E5eKrpEc8gGTuFXtIxQGOcYzKt_wb4fkh9yC6Dh8gT9JPoi9uSoCK4XTDAzL8MC0nG9pHmMpRbl8veNjwzwKKU2l7WyDfYZyhgJEnD1pl6zHNz04KfysiigMeZVKdGB2QKvNopP7BCBbsIenZCAJprjNfW9DqY1R9bwXpitfAU5wJ21DFlWv60GN7Or5lRYJiZo_6yQ9_l6ktBhbxm1bysNYVsF8X-SJ6MeWm3JAQ4_0eSbEKR4P-6yRWAvTyNvU2QTDSGFSTDZB4127B9VgtSA12VmsxgecwYbtNehKOphw","UiLocales":null,"Nonce":"636944391194904216.MzI0YzhhZmQtYjRkZC00NGFkLTllZmYtZjlkN2Y4ODdiNWYzMjJmZDM4MDctNmQ3Zi00NGJjLWJmN2UtMzUwODYzNTkyZDM3","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636944391194904216.MzI0YzhhZmQtYjRkZC00NGFkLTllZmYtZjlkN2Y4ODdiNWYzMjJmZDM4MDctNmQ3Zi00NGJjLWJmN2UtMzUwODYzNTkyZDM3","state":"CfDJ8Jf6lqju9KZJmIrsMu2mj3E5eKrpEc8gGTuFXtIxQGOcYzKt_wb4fkh9yC6Dh8gT9JPoi9uSoCK4XTDAzL8MC0nG9pHmMpRbl8veNjwzwKKU2l7WyDfYZyhgJEnD1pl6zHNz04KfysiigMeZVKdGB2QKvNopP7BCBbsIenZCAJprjNfW9DqY1R9bwXpitfAU5wJ21DFlWv60GN7Or5lRYJiZo_6yQ9_l6ktBhbxm1bysNYVsF8X-SJ6MeWm3JAQ4_0eSbEKR4P-6yRWAvTyNvU2QTDSGFSTDZB4127B9VgtSA12VmsxgecwYbtNehKOphw","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-05-26 11:45:19.668 +08:00 [INF] Showing login: User is not authenticated
+2019-05-26 11:45:19.680 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:45:19.680 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:45:19.683 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:45:19.684 +08:00 [DBG] No PKCE used.
+2019-05-26 11:45:19.685 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:45:19.687 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:46:55.048 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:46:55.114 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:46:55.131 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:46:55.132 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:46:55.132 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:46:55.132 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:46:55.133 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:46:55.135 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:47:01.672 +08:00 [DBG] Login Url: /Account/Login
+2019-05-26 11:47:01.675 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-05-26 11:47:01.679 +08:00 [DBG] Logout Url: /Account/Logout
+2019-05-26 11:47:01.679 +08:00 [DBG] ConsentUrl Url: /consent
+2019-05-26 11:47:01.680 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-05-26 11:47:01.681 +08:00 [DBG] Error Url: /home/error
+2019-05-26 11:47:01.682 +08:00 [DBG] Error Id Parameter: errorId
+2019-05-26 11:47:02.052 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:47:02.081 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:47:02.091 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:47:02.094 +08:00 [DBG] No PKCE used.
+2019-05-26 11:47:02.172 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:47:02.178 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:54:15.755 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-05-26 11:54:15.834 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-05-26 11:54:15.852 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-05-26 11:54:15.853 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-05-26 11:54:15.853 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-05-26 11:54:15.854 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-05-26 11:54:15.856 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-05-26 11:54:15.856 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-05-26 11:56:04.260 +08:00 [DBG] Login Url: /Account/Login
+2019-05-26 11:56:04.264 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-05-26 11:56:04.267 +08:00 [DBG] Logout Url: /Account/Logout
+2019-05-26 11:56:04.268 +08:00 [DBG] ConsentUrl Url: /consent
+2019-05-26 11:56:04.268 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-05-26 11:56:04.269 +08:00 [DBG] Error Url: /home/error
+2019-05-26 11:56:04.270 +08:00 [DBG] Error Id Parameter: errorId
+2019-05-26 11:56:04.736 +08:00 [INF] AuthenticationScheme: Google was challenged.
+2019-05-26 11:56:16.535 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:56:16.565 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:56:16.577 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:56:16.580 +08:00 [DBG] No PKCE used.
+2019-05-26 11:56:16.647 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:56:16.653 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:56:17.423 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:56:17.423 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:56:17.427 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:56:17.427 +08:00 [DBG] No PKCE used.
+2019-05-26 11:56:17.428 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:56:17.433 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:56:18.086 +08:00 [DBG] Start authorize request protocol validation
+2019-05-26 11:56:18.087 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-05-26 11:56:18.094 +08:00 [DBG] Checking for PKCE parameters
+2019-05-26 11:56:18.095 +08:00 [DBG] No PKCE used.
+2019-05-26 11:56:18.096 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-05-26 11:56:18.097 +08:00 [DBG] client configuration validation for client admin succeeded.

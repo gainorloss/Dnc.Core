@@ -1,0 +1,11 @@
+2019-05-26 11:03:15.964 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:04:13.051 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:17:41.633 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:22:37.921 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:29:01.893 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:30:15.650 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:31:28.979 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:32:30.187 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:44:36.880 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:46:51.836 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:54:12.944 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
