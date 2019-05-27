@@ -7,7 +7,7 @@ namespace Dnc.Dispatcher
     /// <summary>
     /// Job.
     /// </summary>
-    public class Schedule
+    public class Dispatch
     {
         #region Default ctor.
         public Schedule()
@@ -82,9 +82,9 @@ namespace Dnc.Dispatcher
         public string TypeName { get; set; }
 
         /// <summary>
-        /// Schedule status <see cref="ScheduleStatus"/>;
+        /// Schedule status <see cref="DispatchStatus"/>;
         /// </summary>
-        public ScheduleStatus Status { get; set; } 
+        public DispatchStatus Status { get; set; } 
         #endregion
     }
 }

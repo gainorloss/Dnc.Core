@@ -37,7 +37,7 @@ namespace Dnc.Dispatcher
         #endregion
 
         #region Public methods.
-        public async Task RunScheduleAsync(string name = "default", string groupName = "default")
+        public async Task StartAsync(string name = "default", string groupName = "default")
         {
             //get scheduler from scheduler factory.
             await _scheduler.Start();
@@ -76,11 +76,11 @@ namespace Dnc.Dispatcher
             await _scheduler.ScheduleJob(jobDetail, trigger);
         }
 
-        public async Task CreateAndRunScheduleAsync(string name, string cronExpression, string typeName, string assemblyName, string groupName = "default")
+        public async Task RegisterAndStartAsync(string name, string cronExpression, string typeName, string assemblyName, string groupName = "default")
         {
             _schedules.Add(new Schedule(name, typeName, cronExpression, assemblyName, groupName));
 
-            await RunScheduleAsync(name, groupName);
+            await StartAsync(name, groupName);
         }
 
         public async Task ShutdownAsync()

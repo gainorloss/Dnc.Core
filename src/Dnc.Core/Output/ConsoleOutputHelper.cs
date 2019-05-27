@@ -35,7 +35,7 @@ namespace Dnc.Output
             foreach (var prop in props)
             {
                 var propValue = prop.GetValue(obj);
-                output = $"{prop.Name.PadLeft(propMaxLength,' ')}:{propValue}";
+                output = $"{output}\r\n{prop.Name.PadLeft(propMaxLength,' ')}:{propValue}";
             }
             Debug(output);
         }
