@@ -1,6 +1,4 @@
-﻿using Dnc.Serializers;
-using Microsoft.Extensions.DependencyInjection;
-using Quartz;
+﻿using Quartz;
 using Quartz.Impl;
 using System;
 using System.Collections.Generic;
@@ -8,7 +6,6 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Dnc.Dispatcher
@@ -20,7 +17,7 @@ namespace Dnc.Dispatcher
     {
         #region Private Members.
         private static IScheduler _scheduler;
-        private static List<Schedule> _schedules = new List<Schedule>();
+        private static List<Dispatch> _schedules = new List<Dispatch>();
         #endregion 
 
         #region Static ctor.
@@ -78,7 +75,7 @@ namespace Dnc.Dispatcher
 
         public async Task RegisterAndStartAsync(string name, string cronExpression, string typeName, string assemblyName, string groupName = "default")
         {
-            _schedules.Add(new Schedule(name, typeName, cronExpression, assemblyName, groupName));
+            _schedules.Add(new Dispatch(name, typeName, cronExpression, assemblyName, groupName));
 
             await StartAsync(name, groupName);
         }

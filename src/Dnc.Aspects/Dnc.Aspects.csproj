@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.0.0.1</Version>
-    <Title>Dnc.ML</Title>
+    <Version>1.1.0.15</Version>
+    <Title>Dnc.Aspects</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
     <Description>
@@ -12,11 +12,16 @@
     <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
     <PackageIconUrl>https://avatars0.githubusercontent.com/u/26458238?s=800</PackageIconUrl>
-    <Tags>machine learning,based on microsoft.ml</Tags>
+    <Tags>aspect,aop</Tags>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.ml" Version="1.0.0" />
+    <PackageReference Include="aspectcore.extensions.dependencyinjection" Version="1.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dnc.Core\Dnc.Core.csproj" />
   </ItemGroup>
 
 </Project>

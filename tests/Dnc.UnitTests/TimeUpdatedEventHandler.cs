@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Dnc.Aspects;
 using Dnc.Events;
 
 namespace Dnc.UnitTests

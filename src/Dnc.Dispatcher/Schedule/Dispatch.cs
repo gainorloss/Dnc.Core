@@ -10,12 +10,12 @@ namespace Dnc.Dispatcher
     public class Dispatch
     {
         #region Default ctor.
-        public Schedule()
+        public Dispatch()
         { }
         #endregion
 
         #region Ctor.
-        public Schedule(string name,
+        public Dispatch(string name,
            string typeName,
            string cronExpression,
            string assemblyName,

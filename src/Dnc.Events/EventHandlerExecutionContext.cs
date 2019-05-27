@@ -48,6 +48,7 @@ namespace Dnc.Events
 
         public void RegisterHandler(Type eventType, Type handlerType)
         {
+            _registry.AddTransient(handlerType);
             if (!_registrations.TryGetValue(eventType, out var handlerTypes))
             {
                 _registrations.TryAdd(eventType, new List<Type> { handlerType });
@@ -61,10 +62,7 @@ namespace Dnc.Events
             }
 
             if (!handlerTypes.Contains(handlerType))
-            {
                 _registrations[eventType].Add(handlerType);
-                _registry.AddTransient(handlerType);
-            }
         }
     }
 }

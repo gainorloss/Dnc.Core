@@ -25,7 +25,10 @@ namespace Dnc.Events
                 _ctx.RegisterHandler<TEvent, TEventHandler>();
         }
 
-        private void InMemoryEventBus_EventPushed(object sender, EventProcessedArgs e) => _ctx.HandleAsync(e.Event);
+        private void InMemoryEventBus_EventPushed(object sender, EventProcessedArgs e)
+        {
+            _ctx.HandleAsync(e.Event);
+        }
 
         #region IDisposable Support
         private bool disposedValue = false; // 要检测冗余调用

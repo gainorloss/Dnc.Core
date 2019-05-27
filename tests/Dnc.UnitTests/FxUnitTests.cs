@@ -7,7 +7,9 @@ using Dnc.Seedwork;
 using Dnc.Sender;
 using Dnc.Serializers;
 using Dnc.Test;
+using Dnc.UnitTests.Services;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -22,8 +24,9 @@ namespace Dnc.UnitTests
             Fx.SrvRegisteredEvent += services =>
             {
                 services.AddTransient<IEventHandlerExecutionContext>(sp => new EventHandlerExecutionContext(services));
+                services.AddTransient<ISysLogService, SysLogService>();
             };
-            Fx.CreateDefaultConstruction().Build();
+            Fx.CreateDefaultConstruction().AspectsBuild();
         }
 
         [Fact]
@@ -53,11 +56,17 @@ namespace Dnc.UnitTests
         {
             var es = Fx.Resolve<IEventStore>();
             var eventbus = Fx.Resolve<IEventBus>();
-            eventbus.Subscribe<TimeUpdatedEvent,TimeUpdatedEventHandler>();
+            eventbus.Subscribe<TimeUpdatedEvent, TimeUpdatedEventHandler>();
             eventbus.Subscribe<VersionSetEvent, VersionSetEventHandler>();
             eventbus.PublishAsync(new TimeUpdatedEvent());
             eventbus.PublishAsync(new VersionSetEvent());
             Assert.NotNull(eventbus);
+        }
+        [Fact]
+        public async Task MiniProfilerIntercepter_ShouldBe_NormalAsync()
+        {
+            var syslogService = Fx.Resolve<ISysLogService>();
+            await syslogService.AddLogAsync("log");
         }
     }
 }
