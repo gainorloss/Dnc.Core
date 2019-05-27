@@ -1,7 +1,7 @@
 ﻿Dnc.Core
 ===
 
-[![Dnc.Core/1.1.0.11](https://img.shields.io/badge/nuget-1.1.0.11-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.11)
+[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.12)
 
 ## Infrastructure
 > install-package Dnc.Core
@@ -16,21 +16,23 @@
 > install-package Dnc.Seedwork
 
 ## Events
-> install-package Dnc.Events
-> install-package Dnc.Events.InMemory
+* install-package Dnc.Events
+* install-package Dnc.Events.InMemory
+* install-package Dnc.Events.RabbitMQ
+* install-package Dnc.Events.MySql
 
 ## Spider
-> install-package Dnc.Spider 
-> install-package Dnc.Spider.HttpRequest
-> install-package Dnc.Spider.Puppeteer
+* install-package Dnc.Spider 
+* install-package Dnc.Spider.HttpRequest
+* install-package Dnc.Spider.Puppeteer
 
 ## AspNetCore
-> install-package Dnc.AspNetCore
-> install-package Dnc.AspNetCore.Ui
+* install-package Dnc.AspNetCore
+* install-package Dnc.AspNetCore.Ui
 
 ## Business
-> install-package Dnc.Biz.Users
-> install-package Dnc.Biz.Admin
+* install-package Dnc.Biz.Users
+* install-package Dnc.Biz.Admin
 
 ## WPF
 > install-package Dnc.WPF

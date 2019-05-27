@@ -1,0 +1,875 @@
+2019-05-26 11:02:29.441 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:02:55.577 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:02:55.821 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:02:55.855 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:02:55.870 +08:00 [INF] Authorization failed for the request at filter 'Dnc.AspNetCore.Filters.MvcGlobalLoginAuthorizationFilter'.
+2019-05-26 11:02:55.878 +08:00 [INF] Executing RedirectResult, redirecting to /AccountArea/Account/SignIn?returnUrl=%2F.
+2019-05-26 11:02:55.883 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 21.561500000000002ms
+2019-05-26 11:02:55.896 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:02:55.925 +08:00 [INF] Request finished in 350.5215ms 302 
+2019-05-26 11:02:55.928 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AccountArea/Account/SignIn?returnUrl=%2F  
+2019-05-26 11:02:55.935 +08:00 [INF] Request finished in 7.636ms 404 
+2019-05-26 11:03:15.960 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:04:14.526 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:04:23.366 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AccountArea/Account/SignIn?returnUrl=%2F  
+2019-05-26 11:04:23.563 +08:00 [INF] Request finished in 199.9297ms 404 
+2019-05-26 11:04:26.312 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AccountArea/Account/SignIn?returnUrl=%2F  
+2019-05-26 11:04:26.318 +08:00 [INF] Request finished in 6.1084ms 404 
+2019-05-26 11:04:34.741 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:04:34.746 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:04:34.775 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:04:34.788 +08:00 [INF] Authorization failed for the request at filter 'Dnc.AspNetCore.Filters.MvcGlobalLoginAuthorizationFilter'.
+2019-05-26 11:04:34.796 +08:00 [INF] Executing RedirectResult, redirecting to /AccountArea/Account/SignIn?returnUrl=%2F.
+2019-05-26 11:04:34.801 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 20.232ms
+2019-05-26 11:04:34.811 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:04:34.813 +08:00 [INF] Request finished in 72.6073ms 302 
+2019-05-26 11:04:34.816 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AccountArea/Account/SignIn?returnUrl=%2F  
+2019-05-26 11:04:34.817 +08:00 [INF] Request finished in 1.3179ms 404 
+2019-05-26 11:17:42.540 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:18:03.796 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AccountArea/Account/SignIn?returnUrl=%2F  
+2019-05-26 11:18:04.049 +08:00 [INF] Request finished in 253.8409ms 404 
+2019-05-26 11:18:06.543 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AccountArea/Account/SignIn?returnUrl=%2F  
+2019-05-26 11:18:06.565 +08:00 [INF] Request finished in 21.9297ms 404 
+2019-05-26 11:18:14.494 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:18:14.498 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:14.527 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:18:14.689 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:18:14.706 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9071ms.
+2019-05-26 11:18:14.773 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:18:14.927 +08:00 [INF] Executed ViewResult - view Index executed in 204.3099ms.
+2019-05-26 11:18:14.929 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 400.41020000000003ms
+2019-05-26 11:18:14.932 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:14.940 +08:00 [INF] Request finished in 445.6864ms 200 text/html; charset=utf-8
+2019-05-26 11:18:14.952 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/css/bootstrap.min.css  
+2019-05-26 11:18:14.953 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/css/font-awesome.min.css  
+2019-05-26 11:18:14.959 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/jQuery/jquery-2.2.3.min.js  
+2019-05-26 11:18:14.956 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/css/AdminLTE.min.css  
+2019-05-26 11:18:14.958 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/css/skins/all-skins.min.css  
+2019-05-26 11:18:14.956 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/css/ionicons.min.css  
+2019-05-26 11:18:14.966 +08:00 [INF] The file /Scripts/vendor/adminlte/dist/css/ionicons.min.css was not modified
+2019-05-26 11:18:14.966 +08:00 [INF] The file /Scripts/vendor/adminlte/dist/css/AdminLTE.min.css was not modified
+2019-05-26 11:18:14.966 +08:00 [INF] The file /Scripts/vendor/adminlte/dist/css/font-awesome.min.css was not modified
+2019-05-26 11:18:14.975 +08:00 [INF] Request finished in 18.3159ms 304 text/css
+2019-05-26 11:18:14.975 +08:00 [INF] Request finished in 18.9491ms 304 text/css
+2019-05-26 11:18:14.980 +08:00 [INF] The file /Scripts/vendor/bootstrap/css/bootstrap.min.css was not modified
+2019-05-26 11:18:14.980 +08:00 [INF] Request finished in 26.9622ms 304 text/css
+2019-05-26 11:18:14.993 +08:00 [INF] Request finished in 41.7006ms 304 text/css
+2019-05-26 11:18:14.994 +08:00 [INF] The file /Scripts/vendor/adminlte/dist/css/skins/all-skins.min.css was not modified
+2019-05-26 11:18:15.000 +08:00 [INF] Request finished in 42.5153ms 304 text/css
+2019-05-26 11:18:15.061 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/js/bootstrap.min.js  
+2019-05-26 11:18:15.061 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/fastclick/fastclick.js  
+2019-05-26 11:18:15.061 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/slimScroll/jquery.slimscroll.min.js  
+2019-05-26 11:18:15.062 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/js/app.js  
+2019-05-26 11:18:15.062 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/js/demo.js  
+2019-05-26 11:18:15.106 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/jQuery/jquery-2.2.3.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\jQuery\jquery-2.2.3.min.js'
+2019-05-26 11:18:15.106 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/fastclick/fastclick.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\fastclick\fastclick.js'
+2019-05-26 11:18:15.110 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/adminlte/dist/js/app.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\adminlte\dist\js\app.js'
+2019-05-26 11:18:15.111 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/slimScroll/jquery.slimscroll.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\slimScroll\jquery.slimscroll.min.js'
+2019-05-26 11:18:15.115 +08:00 [INF] Request finished in 53.2875ms 200 application/javascript
+2019-05-26 11:18:15.113 +08:00 [INF] Request finished in 154.7374ms 200 application/javascript
+2019-05-26 11:18:15.121 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/adminlte/dist/js/demo.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\adminlte\dist\js\demo.js'
+2019-05-26 11:18:15.121 +08:00 [INF] Request finished in 59.4754ms 200 application/javascript
+2019-05-26 11:18:15.124 +08:00 [INF] Request finished in 62.8913ms 200 application/javascript
+2019-05-26 11:18:15.129 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2019-05-26 11:18:15.136 +08:00 [INF] Request finished in 74.0521ms 200 application/javascript
+2019-05-26 11:18:15.165 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap/js/bootstrap.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap\js\bootstrap.min.js'
+2019-05-26 11:18:15.174 +08:00 [INF] Request finished in 112.8877ms 200 application/javascript
+2019-05-26 11:18:15.191 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/adminlte/dist/fonts/fontawesome-webfont.woff2'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\adminlte\dist\fonts\fontawesome-webfont.woff2'
+2019-05-26 11:18:15.198 +08:00 [INF] Request finished in 69.2779ms 200 font/woff2
+2019-05-26 11:18:15.251 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/js/app_iframe.js  
+2019-05-26 11:18:15.347 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/layer/layer.js  
+2019-05-26 11:18:15.347 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/layer/layer-extends.js  
+2019-05-26 11:18:15.347 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/util/util.js  
+2019-05-26 11:18:15.348 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/img/user2-160x160.jpg  
+2019-05-26 11:18:15.365 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/img/user3-128x128.jpg  
+2019-05-26 11:18:15.389 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/adminlte/dist/img/user3-128x128.jpg'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\adminlte\dist\img\user3-128x128.jpg'
+2019-05-26 11:18:15.394 +08:00 [INF] Request finished in 28.8358ms 200 image/jpeg
+2019-05-26 11:18:15.401 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/adminlte/dist/img/user2-160x160.jpg'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\adminlte\dist\img\user2-160x160.jpg'
+2019-05-26 11:18:15.402 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/layer/layer-extends.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\layer\layer-extends.js'
+2019-05-26 11:18:15.403 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/adminlte/dist/js/app_iframe.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\adminlte\dist\js\app_iframe.js'
+2019-05-26 11:18:15.419 +08:00 [INF] Request finished in 167.9567ms 200 application/javascript
+2019-05-26 11:18:15.407 +08:00 [INF] Request finished in 59.6464ms 200 image/jpeg
+2019-05-26 11:18:15.413 +08:00 [INF] Request finished in 65.5416ms 200 application/javascript
+2019-05-26 11:18:15.403 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/img/user4-128x128.jpg  
+2019-05-26 11:18:15.468 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/adminlte/dist/img/user4-128x128.jpg'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\adminlte\dist\img\user4-128x128.jpg'
+2019-05-26 11:18:15.470 +08:00 [INF] Sending file. Request path: '/Scripts/util/util.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\util\util.js'
+2019-05-26 11:18:15.473 +08:00 [INF] Request finished in 70.1291ms 200 image/jpeg
+2019-05-26 11:18:15.479 +08:00 [INF] Request finished in 131.5563ms 200 application/javascript
+2019-05-26 11:18:15.514 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/layer/layer.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\layer\layer.js'
+2019-05-26 11:18:15.517 +08:00 [INF] Request finished in 170.2051ms 200 application/javascript
+2019-05-26 11:18:15.589 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/layer/theme/default/layer.css?v=3.1.1  
+2019-05-26 11:18:15.593 +08:00 [INF] The file /Scripts/vendor/layer/theme/default/layer.css was not modified
+2019-05-26 11:18:15.596 +08:00 [INF] Request finished in 6.9239ms 304 text/css
+2019-05-26 11:18:15.612 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Desktop  
+2019-05-26 11:18:15.614 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:18:15.623 +08:00 [INF] Route matched with {action = "Desktop", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)
+2019-05-26 11:18:15.665 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Statis  
+2019-05-26 11:18:15.665 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysUsers  
+2019-05-26 11:18:15.665 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysRoles  
+2019-05-26 11:18:15.665 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:18:15.669 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:18:15.669 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:15.673 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysResources  
+2019-05-26 11:18:15.674 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:15.680 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4378ms.
+2019-05-26 11:18:15.684 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysLogs  
+2019-05-26 11:18:15.698 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysRoles"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:18:15.685 +08:00 [INF] Route matched with {action = "Statis", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)
+2019-05-26 11:18:15.724 +08:00 [INF] Executing ViewResult, running view Desktop.
+2019-05-26 11:18:15.761 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:18:15.690 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:15.690 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysUsers"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)
+2019-05-26 11:18:15.721 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:15.809 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.40850000000000003ms.
+2019-05-26 11:18:15.800 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:18:15.854 +08:00 [INF] Executed ViewResult - view Desktop executed in 153.1892ms.
+2019-05-26 11:18:15.816 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysResources"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:18:15.852 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:18:15.868 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) in 241.7691ms
+2019-05-26 11:18:15.862 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:18:15.863 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2796ms.
+2019-05-26 11:18:15.856 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysLogs"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)
+2019-05-26 11:18:15.908 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:18:15.920 +08:00 [INF] Executing ViewResult, running view Statis.
+2019-05-26 11:18:15.901 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:18:15.965 +08:00 [INF] Request finished in 352.8796ms 200 text/html; charset=utf-8
+2019-05-26 11:18:15.972 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.302ms.
+2019-05-26 11:18:15.906 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.38370000000000004ms.
+2019-05-26 11:18:15.975 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/layui/css/layui.css  
+2019-05-26 11:18:15.987 +08:00 [INF] Executed ViewResult - view Statis executed in 71.0078ms.
+2019-05-26 11:18:15.983 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:18:15.962 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:18:15.990 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:18:15.992 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) in 229.0671ms
+2019-05-26 11:18:16.002 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4041ms.
+2019-05-26 11:18:16.010 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:18:16.021 +08:00 [INF] Request finished in 356.3ms 200 text/html; charset=utf-8
+2019-05-26 11:18:16.023 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/layui/css/layui.css'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\layui\css\layui.css'
+2019-05-26 11:18:16.024 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/css/fx/desktop.css  
+2019-05-26 11:18:16.030 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:18:16.039 +08:00 [INF] Request finished in 63.25ms 200 text/css
+2019-05-26 11:18:16.051 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/bootstrap.min.css  
+2019-05-26 11:18:16.055 +08:00 [INF] Sending file. Request path: '/css/fx/desktop.css'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\css\fx\desktop.css'
+2019-05-26 11:18:16.055 +08:00 [INF] Request finished in 4.5424ms 404 
+2019-05-26 11:18:16.060 +08:00 [INF] Executed ViewResult - view Index executed in 201.55360000000002ms.
+2019-05-26 11:18:16.060 +08:00 [INF] Executed ViewResult - view Index executed in 74.862000000000009ms.
+2019-05-26 11:18:16.060 +08:00 [INF] Executed ViewResult - view Index executed in 81.1853ms.
+2019-05-26 11:18:16.062 +08:00 [INF] Request finished in 38.5234ms 200 text/css
+2019-05-26 11:18:16.063 +08:00 [INF] Executed ViewResult - view Index executed in 45.6691ms.
+2019-05-26 11:18:16.065 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Skin/home/style.min.css  
+2019-05-26 11:18:16.070 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) in 343.5484ms
+2019-05-26 11:18:16.075 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) in 256.3711ms
+2019-05-26 11:18:16.079 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) in 208.8095ms
+2019-05-26 11:18:16.081 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/adminlte/dist/img/loading/loading-spinner-grey.gif  
+2019-05-26 11:18:16.084 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) in 163.14870000000002ms
+2019-05-26 11:18:16.089 +08:00 [INF] Request finished in 24.3897ms 404 
+2019-05-26 11:18:16.093 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:16.103 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:16.096 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:16.110 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:18:16.113 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/adminlte/dist/img/loading/loading-spinner-grey.gif'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\adminlte\dist\img\loading\loading-spinner-grey.gif'
+2019-05-26 11:18:16.119 +08:00 [INF] Request finished in 454.451ms 200 text/html; charset=utf-8
+2019-05-26 11:18:16.123 +08:00 [INF] Request finished in 449.829ms 200 text/html; charset=utf-8
+2019-05-26 11:18:16.126 +08:00 [INF] Request finished in 461.8823ms 200 text/html; charset=utf-8
+2019-05-26 11:18:16.130 +08:00 [INF] Request finished in 446.2088ms 200 text/html; charset=utf-8
+2019-05-26 11:18:16.136 +08:00 [INF] Request finished in 55.1468ms 200 image/gif
+2019-05-26 11:18:16.221 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/js/bootstrap-BtnBuilder.js  
+2019-05-26 11:18:16.221 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-table/bootstrap-table.min.css  
+2019-05-26 11:18:16.221 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-table/bootstrap-table.min.js  
+2019-05-26 11:18:16.221 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-table/bootstrap-table-zh-CN.min.js  
+2019-05-26 11:18:16.223 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.min.css  
+2019-05-26 11:18:16.223 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.min.js  
+2019-05-26 11:18:16.252 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap/js/bootstrap-BtnBuilder.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap\js\bootstrap-BtnBuilder.js'
+2019-05-26 11:18:16.256 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-table/bootstrap-table-zh-CN.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-table\bootstrap-table-zh-CN.min.js'
+2019-05-26 11:18:16.267 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-table/bootstrap-table.min.css'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-table\bootstrap-table.min.css'
+2019-05-26 11:18:16.256 +08:00 [INF] Request finished in 35.4696ms 200 application/javascript
+2019-05-26 11:18:16.270 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-select/bootstrap-select.min.css'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-select\bootstrap-select.min.css'
+2019-05-26 11:18:16.271 +08:00 [INF] Request finished in 49.5089ms 200 application/javascript
+2019-05-26 11:18:16.279 +08:00 [INF] Request finished in 58.3069ms 200 text/css
+2019-05-26 11:18:16.282 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css  
+2019-05-26 11:18:16.289 +08:00 [INF] Request finished in 66.5853ms 200 text/css
+2019-05-26 11:18:16.291 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/css/fx/fx-list.css  
+2019-05-26 11:18:16.294 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select-extends.js  
+2019-05-26 11:18:16.307 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/defaults-zh_CN.min.js  
+2019-05-26 11:18:16.323 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-datetimepicker\css\bootstrap-datetimepicker.min.css'
+2019-05-26 11:18:16.323 +08:00 [INF] Sending file. Request path: '/css/fx/fx-list.css'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\css\fx\fx-list.css'
+2019-05-26 11:18:16.325 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-select/bootstrap-select.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-select\bootstrap-select.min.js'
+2019-05-26 11:18:16.335 +08:00 [INF] Request finished in 43.4043ms 200 text/css
+2019-05-26 11:18:16.331 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-select/defaults-zh_CN.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-select\defaults-zh_CN.min.js'
+2019-05-26 11:18:16.352 +08:00 [INF] Request finished in 45.6151ms 200 application/javascript
+2019-05-26 11:18:16.330 +08:00 [INF] Request finished in 48.6246ms 200 text/css
+2019-05-26 11:18:16.339 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-select/bootstrap-select-extends.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-select\bootstrap-select-extends.js'
+2019-05-26 11:18:16.341 +08:00 [INF] Request finished in 118.6734ms 200 application/javascript
+2019-05-26 11:18:16.345 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-validator/validator.min.js  
+2019-05-26 11:18:16.324 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-table/bootstrap-table.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-table\bootstrap-table.min.js'
+2019-05-26 11:18:16.364 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js  
+2019-05-26 11:18:16.374 +08:00 [INF] Request finished in 80.0561ms 200 application/javascript
+2019-05-26 11:18:16.383 +08:00 [INF] Request finished in 161.8332ms 200 application/javascript
+2019-05-26 11:18:16.394 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js  
+2019-05-26 11:18:16.403 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-validator/validator.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-validator\validator.min.js'
+2019-05-26 11:18:16.406 +08:00 [INF] Request finished in 60.9886ms 200 application/javascript
+2019-05-26 11:18:16.415 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.zh-CN.js'
+2019-05-26 11:18:16.421 +08:00 [INF] Request finished in 27.2656ms 200 application/javascript
+2019-05-26 11:18:16.439 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap-datetimepicker\js\bootstrap-datetimepicker.min.js'
+2019-05-26 11:18:16.443 +08:00 [INF] Request finished in 79.3972ms 200 application/javascript
+2019-05-26 11:18:16.576 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2  
+2019-05-26 11:18:16.593 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2'
+2019-05-26 11:18:16.597 +08:00 [INF] Request finished in 21.4096ms 200 font/woff2
+2019-05-26 11:18:16.629 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:18:16.632 +08:00 [INF] Request finished in 3.4191ms 404 
+2019-05-26 11:18:16.657 +08:00 [INF] Connection id "0HLN1H31SLRAL", Request id "0HLN1H31SLRAL:0000000A": the application completed without reading the entire request body.
+2019-05-26 11:18:16.696 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogList application/x-www-form-urlencoded 108
+2019-05-26 11:18:16.698 +08:00 [INF] Request finished in 2.3816ms 404 
+2019-05-26 11:18:16.704 +08:00 [INF] Connection id "0HLN1H31SLRAL", Request id "0HLN1H31SLRAL:0000000B": the application completed without reading the entire request body.
+2019-05-26 11:18:16.714 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogTypeList application/x-www-form-urlencoded; charset=UTF-8 16
+2019-05-26 11:18:16.718 +08:00 [INF] Request finished in 3.8836ms 404 
+2019-05-26 11:18:16.720 +08:00 [INF] Connection id "0HLN1H31SLRAL", Request id "0HLN1H31SLRAL:0000000C": the application completed without reading the entire request body.
+2019-05-26 11:18:16.853 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysRole/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:18:16.857 +08:00 [INF] Request finished in 4.277ms 404 
+2019-05-26 11:18:16.859 +08:00 [INF] Connection id "0HLN1H31SLRAL", Request id "0HLN1H31SLRAL:0000000D": the application completed without reading the entire request body.
+2019-05-26 11:18:16.914 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:18:16.918 +08:00 [INF] Request finished in 3.6832ms 404 
+2019-05-26 11:18:16.920 +08:00 [INF] Connection id "0HLN1H31SLRAL", Request id "0HLN1H31SLRAL:0000000E": the application completed without reading the entire request body.
+2019-05-26 11:18:17.068 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/favicon.ico  
+2019-05-26 11:18:17.094 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\favicon.ico'
+2019-05-26 11:18:17.105 +08:00 [INF] Request finished in 37.0145ms 200 image/x-icon
+2019-05-26 11:22:39.554 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:22:44.862 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:22:45.009 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:45.024 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:22:45.157 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:22:45.172 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.69790000000000008ms.
+2019-05-26 11:22:45.211 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:22:45.388 +08:00 [INF] Executed ViewResult - view Index executed in 201.61690000000002ms.
+2019-05-26 11:22:45.391 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 364.8616ms
+2019-05-26 11:22:45.393 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:45.408 +08:00 [INF] Request finished in 549.0343ms 200 text/html; charset=utf-8
+2019-05-26 11:22:45.645 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Statis  
+2019-05-26 11:22:45.646 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Desktop  
+2019-05-26 11:22:45.646 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysUsers  
+2019-05-26 11:22:45.691 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysResources  
+2019-05-26 11:22:45.691 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysRoles  
+2019-05-26 11:22:45.692 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysLogs  
+2019-05-26 11:22:45.697 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:22:45.697 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:22:45.697 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:45.697 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:45.697 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:45.697 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:45.703 +08:00 [INF] Route matched with {action = "Desktop", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)
+2019-05-26 11:22:45.705 +08:00 [INF] Route matched with {action = "Statis", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)
+2019-05-26 11:22:45.706 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysUsers"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)
+2019-05-26 11:22:45.757 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:22:45.795 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:22:45.711 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysRoles"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:22:45.717 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysResources"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:22:45.831 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:22:45.834 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4032ms.
+2019-05-26 11:22:45.839 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2934ms.
+2019-05-26 11:22:45.909 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.3069ms.
+2019-05-26 11:22:45.932 +08:00 [INF] Executing ViewResult, running view Desktop.
+2019-05-26 11:22:45.940 +08:00 [INF] Executing ViewResult, running view Statis.
+2019-05-26 11:22:45.873 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:22:45.906 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:22:45.723 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysLogs"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)
+2019-05-26 11:22:45.962 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:22:45.981 +08:00 [INF] Executed ViewResult - view Desktop executed in 68.5915ms.
+2019-05-26 11:22:45.981 +08:00 [INF] Executed ViewResult - view Statis executed in 45.1925ms.
+2019-05-26 11:22:45.972 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.49200000000000005ms.
+2019-05-26 11:22:45.979 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.39540000000000003ms.
+2019-05-26 11:22:46.027 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) in 300.35990000000004ms
+2019-05-26 11:22:46.030 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) in 268.7932ms
+2019-05-26 11:22:46.040 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:22:46.022 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:22:46.047 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:22:46.048 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:22:46.052 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:22:46.060 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.44270000000000004ms.
+2019-05-26 11:22:46.067 +08:00 [INF] Request finished in 421.9702ms 200 text/html; charset=utf-8
+2019-05-26 11:22:46.074 +08:00 [INF] Request finished in 428.9544ms 200 text/html; charset=utf-8
+2019-05-26 11:22:46.083 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:22:46.084 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/bootstrap.min.css  
+2019-05-26 11:22:46.086 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Skin/home/style.min.css  
+2019-05-26 11:22:46.102 +08:00 [INF] Executed ViewResult - view Index executed in 66.9798ms.
+2019-05-26 11:22:46.102 +08:00 [INF] Executed ViewResult - view Index executed in 58.7522ms.
+2019-05-26 11:22:46.102 +08:00 [INF] Executed ViewResult - view Index executed in 161.14010000000002ms.
+2019-05-26 11:22:46.103 +08:00 [INF] Request finished in 17.2559ms 404 
+2019-05-26 11:22:46.103 +08:00 [INF] Request finished in 19.3247ms 404 
+2019-05-26 11:22:46.106 +08:00 [INF] Executed ViewResult - view Index executed in 26.953300000000002ms.
+2019-05-26 11:22:46.106 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) in 264.3474ms
+2019-05-26 11:22:46.111 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) in 235.991ms
+2019-05-26 11:22:46.117 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) in 319.119ms
+2019-05-26 11:22:46.129 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) in 143.2237ms
+2019-05-26 11:22:46.136 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:46.142 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:46.151 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:46.159 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:22:46.166 +08:00 [INF] Request finished in 474.8094ms 200 text/html; charset=utf-8
+2019-05-26 11:22:46.171 +08:00 [INF] Request finished in 499.0962ms 200 text/html; charset=utf-8
+2019-05-26 11:22:46.180 +08:00 [INF] Request finished in 533.3862ms 200 text/html; charset=utf-8
+2019-05-26 11:22:46.187 +08:00 [INF] Request finished in 495.4998ms 200 text/html; charset=utf-8
+2019-05-26 11:22:46.406 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysRole/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:22:46.409 +08:00 [INF] Request finished in 3.0966ms 404 
+2019-05-26 11:22:46.426 +08:00 [INF] Connection id "0HLN1H5LL96KC", Request id "0HLN1H5LL96KC:00000002": the application completed without reading the entire request body.
+2019-05-26 11:22:46.567 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:22:46.571 +08:00 [INF] Request finished in 3.9918ms 404 
+2019-05-26 11:22:46.574 +08:00 [INF] Connection id "0HLN1H5LL96KC", Request id "0HLN1H5LL96KC:00000003": the application completed without reading the entire request body.
+2019-05-26 11:22:46.655 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogList application/x-www-form-urlencoded 108
+2019-05-26 11:22:46.657 +08:00 [INF] Request finished in 2.5114ms 404 
+2019-05-26 11:22:46.659 +08:00 [INF] Connection id "0HLN1H5LL96KC", Request id "0HLN1H5LL96KC:00000004": the application completed without reading the entire request body.
+2019-05-26 11:22:46.667 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogTypeList application/x-www-form-urlencoded; charset=UTF-8 16
+2019-05-26 11:22:46.671 +08:00 [INF] Request finished in 3.9801ms 404 
+2019-05-26 11:22:46.673 +08:00 [INF] Connection id "0HLN1H5LL96KC", Request id "0HLN1H5LL96KC:00000005": the application completed without reading the entire request body.
+2019-05-26 11:22:46.828 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:22:46.831 +08:00 [INF] Request finished in 2.7225ms 404 
+2019-05-26 11:22:46.833 +08:00 [INF] Connection id "0HLN1H5LL96KC", Request id "0HLN1H5LL96KC:00000006": the application completed without reading the entire request body.
+2019-05-26 11:23:37.135 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:23:37.137 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.139 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:23:37.173 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:23:37.176 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0198ms.
+2019-05-26 11:23:37.183 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:23:37.187 +08:00 [INF] Executed ViewResult - view Index executed in 4.8082ms.
+2019-05-26 11:23:37.189 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 47.643ms
+2019-05-26 11:23:37.192 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.198 +08:00 [INF] Request finished in 62.6314ms 200 text/html; charset=utf-8
+2019-05-26 11:23:37.360 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Desktop  
+2019-05-26 11:23:37.365 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.367 +08:00 [INF] Route matched with {action = "Desktop", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)
+2019-05-26 11:23:37.414 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:23:37.428 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysRoles  
+2019-05-26 11:23:37.415 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Statis  
+2019-05-26 11:23:37.470 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysResources  
+2019-05-26 11:23:37.483 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysUsers  
+2019-05-26 11:23:37.483 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysLogs  
+2019-05-26 11:23:37.499 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0267ms.
+2019-05-26 11:23:37.504 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.505 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.507 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.509 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.512 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.515 +08:00 [INF] Executing ViewResult, running view Desktop.
+2019-05-26 11:23:37.517 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysRoles"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:23:37.520 +08:00 [INF] Route matched with {action = "Statis", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)
+2019-05-26 11:23:37.534 +08:00 [INF] Executed ViewResult - view Desktop executed in 18.6334ms.
+2019-05-26 11:23:37.570 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:23:37.525 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysResources"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:23:37.528 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysUsers"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)
+2019-05-26 11:23:37.613 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) in 240.3161ms
+2019-05-26 11:23:37.619 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.026600000000000002ms.
+2019-05-26 11:23:37.611 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:23:37.655 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:23:37.530 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysLogs"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)
+2019-05-26 11:23:37.686 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:23:37.689 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.692 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:23:37.695 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.016900000000000002ms.
+2019-05-26 11:23:37.699 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0132ms.
+2019-05-26 11:23:37.730 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:23:37.732 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0317ms.
+2019-05-26 11:23:37.734 +08:00 [INF] Request finished in 373.8174ms 200 text/html; charset=utf-8
+2019-05-26 11:23:37.737 +08:00 [INF] Executed ViewResult - view Index executed in 45.412400000000005ms.
+2019-05-26 11:23:37.742 +08:00 [INF] Executing ViewResult, running view Statis.
+2019-05-26 11:23:37.746 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:23:37.749 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0227ms.
+2019-05-26 11:23:37.756 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:23:37.764 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) in 227.2783ms
+2019-05-26 11:23:37.767 +08:00 [INF] Executed ViewResult - view Statis executed in 24.129900000000003ms.
+2019-05-26 11:23:37.769 +08:00 [INF] Executed ViewResult - view Index executed in 23.628800000000002ms.
+2019-05-26 11:23:37.777 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:23:37.782 +08:00 [INF] Executed ViewResult - view Index executed in 25.3106ms.
+2019-05-26 11:23:37.784 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.787 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) in 213.5714ms
+2019-05-26 11:23:37.794 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) in 170.25740000000002ms
+2019-05-26 11:23:37.799 +08:00 [INF] Executed ViewResult - view Index executed in 21.9557ms.
+2019-05-26 11:23:37.803 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) in 145.74190000000002ms
+2019-05-26 11:23:37.808 +08:00 [INF] Request finished in 380.0308ms 200 text/html; charset=utf-8
+2019-05-26 11:23:37.812 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.816 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.819 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) in 117.22510000000001ms
+2019-05-26 11:23:37.828 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.832 +08:00 [INF] Request finished in 417.5877ms 200 text/html; charset=utf-8
+2019-05-26 11:23:37.837 +08:00 [INF] Request finished in 366.8451ms 200 text/html; charset=utf-8
+2019-05-26 11:23:37.843 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:23:37.848 +08:00 [INF] Request finished in 364.8229ms 200 text/html; charset=utf-8
+2019-05-26 11:23:37.858 +08:00 [INF] Request finished in 374.8207ms 200 text/html; charset=utf-8
+2019-05-26 11:23:37.881 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Skin/home/style.min.css  
+2019-05-26 11:23:37.882 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/bootstrap.min.css  
+2019-05-26 11:23:37.883 +08:00 [INF] Request finished in 14.3963ms 404 
+2019-05-26 11:23:37.886 +08:00 [INF] Request finished in 3.9666ms 404 
+2019-05-26 11:23:37.996 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysRole/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:23:37.999 +08:00 [INF] Request finished in 3.2086ms 404 
+2019-05-26 11:23:38.001 +08:00 [INF] Connection id "0HLN1H5LL96K8", Request id "0HLN1H5LL96K8:00000005": the application completed without reading the entire request body.
+2019-05-26 11:23:38.061 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:23:38.063 +08:00 [INF] Request finished in 2.4412ms 404 
+2019-05-26 11:23:38.065 +08:00 [INF] Connection id "0HLN1H5LL96K8", Request id "0HLN1H5LL96K8:00000006": the application completed without reading the entire request body.
+2019-05-26 11:23:38.093 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:23:38.096 +08:00 [INF] Request finished in 2.3993ms 404 
+2019-05-26 11:23:38.098 +08:00 [INF] Connection id "0HLN1H5LL96K8", Request id "0HLN1H5LL96K8:00000007": the application completed without reading the entire request body.
+2019-05-26 11:23:38.137 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogTypeList application/x-www-form-urlencoded; charset=UTF-8 16
+2019-05-26 11:23:38.137 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogList application/x-www-form-urlencoded 108
+2019-05-26 11:23:38.140 +08:00 [INF] Request finished in 2.4268ms 404 
+2019-05-26 11:23:38.142 +08:00 [INF] Request finished in 4.6983ms 404 
+2019-05-26 11:23:38.144 +08:00 [INF] Connection id "0HLN1H5LL96KB", Request id "0HLN1H5LL96KB:00000004": the application completed without reading the entire request body.
+2019-05-26 11:23:38.145 +08:00 [INF] Connection id "0HLN1H5LL96K8", Request id "0HLN1H5LL96K8:00000008": the application completed without reading the entire request body.
+2019-05-26 11:23:38.266 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/favicon.ico  
+2019-05-26 11:23:38.278 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\favicon.ico'
+2019-05-26 11:23:38.282 +08:00 [INF] Request finished in 15.9404ms 200 image/x-icon
+2019-05-26 11:29:03.626 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:29:04.530 +08:00 [FTL] Application startup exception
+System.InvalidOperationException: Scheme already exists: Cookies
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__0(AuthenticationOptions o)
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsManager`1.<>c__DisplayClass5_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsManager`1.Get(String name)
+   at Microsoft.Extensions.Options.OptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitSingleton(SingletonCallSite singletonCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.Internal.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+2019-05-26 11:30:16.963 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:30:24.034 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:30:24.201 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:24.225 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:24.368 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:24.388 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.3141ms.
+2019-05-26 11:30:24.445 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:24.606 +08:00 [INF] Executed ViewResult - view Index executed in 202.4934ms.
+2019-05-26 11:30:24.609 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 381.95140000000004ms
+2019-05-26 11:30:24.611 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:24.624 +08:00 [INF] Request finished in 593.5796ms 200 text/html; charset=utf-8
+2019-05-26 11:30:24.751 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/css/bootstrap.min.css.map  
+2019-05-26 11:30:24.845 +08:00 [INF] Sending file. Request path: '/Scripts/vendor/bootstrap/css/bootstrap.min.css.map'. Physical path: 'G:\Projects\Dnc.Core\tpls\DncAspNetCore\src\WebApps\DncAspNetCore.Admin\wwwroot\Scripts\vendor\bootstrap\css\bootstrap.min.css.map'
+2019-05-26 11:30:24.849 +08:00 [INF] Request finished in 98.1605ms 200 text/plain
+2019-05-26 11:30:24.925 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Desktop  
+2019-05-26 11:30:24.936 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:30:24.955 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Statis  
+2019-05-26 11:30:24.955 +08:00 [INF] Route matched with {action = "Desktop", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)
+2019-05-26 11:30:24.957 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysUsers  
+2019-05-26 11:30:24.958 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.004 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.005 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysRoles  
+2019-05-26 11:30:25.002 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:25.029 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysResources  
+2019-05-26 11:30:25.050 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysLogs  
+2019-05-26 11:30:25.059 +08:00 [INF] Route matched with {action = "Statis", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)
+2019-05-26 11:30:25.060 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysUsers"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:25.065 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.115 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:25.072 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4076ms.
+2019-05-26 11:30:25.074 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.149 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:25.152 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysRoles"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:25.154 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2031ms.
+2019-05-26 11:30:25.165 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2107ms.
+2019-05-26 11:30:25.196 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:25.217 +08:00 [INF] Executing ViewResult, running view Statis.
+2019-05-26 11:30:25.162 +08:00 [INF] Executing ViewResult, running view Desktop.
+2019-05-26 11:30:25.163 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysResources"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:25.077 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.221 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:25.221 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2595ms.
+2019-05-26 11:30:25.262 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:25.267 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysLogs"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:25.271 +08:00 [INF] Executed ViewResult - view Statis executed in 72.2924ms.
+2019-05-26 11:30:25.284 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:25.275 +08:00 [INF] Executed ViewResult - view Desktop executed in 117.08510000000001ms.
+2019-05-26 11:30:25.321 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) in 238.3025ms
+2019-05-26 11:30:25.327 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) in 367.19960000000003ms
+2019-05-26 11:30:25.281 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4565ms.
+2019-05-26 11:30:25.319 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:25.332 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.336 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.347 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:25.348 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.2685ms.
+2019-05-26 11:30:25.349 +08:00 [INF] Request finished in 394.9486ms 200 text/html; charset=utf-8
+2019-05-26 11:30:25.353 +08:00 [INF] Request finished in 427.3928ms 200 text/html; charset=utf-8
+2019-05-26 11:30:25.368 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/bootstrap.min.css  
+2019-05-26 11:30:25.369 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:25.372 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Skin/home/style.min.css  
+2019-05-26 11:30:25.380 +08:00 [INF] Request finished in 11.7131ms 404 
+2019-05-26 11:30:25.380 +08:00 [INF] Request finished in 8.216ms 404 
+2019-05-26 11:30:25.397 +08:00 [INF] Executed ViewResult - view Index executed in 122.4556ms.
+2019-05-26 11:30:25.397 +08:00 [INF] Executed ViewResult - view Index executed in 32.921800000000005ms.
+2019-05-26 11:30:25.397 +08:00 [INF] Executed ViewResult - view Index executed in 54.185500000000005ms.
+2019-05-26 11:30:25.397 +08:00 [INF] Executed ViewResult - view Index executed in 179.55270000000002ms.
+2019-05-26 11:30:25.401 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) in 233.2144ms
+2019-05-26 11:30:25.406 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) in 120.94470000000001ms
+2019-05-26 11:30:25.410 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) in 177.88150000000002ms
+2019-05-26 11:30:25.414 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) in 297.0937ms
+2019-05-26 11:30:25.417 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.425 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.431 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.437 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:25.441 +08:00 [INF] Request finished in 437.2251ms 200 text/html; charset=utf-8
+2019-05-26 11:30:25.450 +08:00 [INF] Request finished in 399.9738ms 200 text/html; charset=utf-8
+2019-05-26 11:30:25.458 +08:00 [INF] Request finished in 429.755ms 200 text/html; charset=utf-8
+2019-05-26 11:30:25.468 +08:00 [INF] Request finished in 510.8463ms 200 text/html; charset=utf-8
+2019-05-26 11:30:25.809 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogList application/x-www-form-urlencoded 108
+2019-05-26 11:30:25.812 +08:00 [INF] Request finished in 2.5536ms 404 
+2019-05-26 11:30:25.827 +08:00 [INF] Connection id "0HLN1H9UGE61A", Request id "0HLN1H9UGE61A:00000002": the application completed without reading the entire request body.
+2019-05-26 11:30:25.830 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogTypeList application/x-www-form-urlencoded; charset=UTF-8 16
+2019-05-26 11:30:25.833 +08:00 [INF] Request finished in 2.0844ms 404 
+2019-05-26 11:30:25.835 +08:00 [INF] Connection id "0HLN1H9UGE61A", Request id "0HLN1H9UGE61A:00000003": the application completed without reading the entire request body.
+2019-05-26 11:30:25.944 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:25.949 +08:00 [INF] Request finished in 4.9742ms 404 
+2019-05-26 11:30:26.048 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysRole/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:26.051 +08:00 [INF] Request finished in 2.3911ms 404 
+2019-05-26 11:30:26.053 +08:00 [INF] Connection id "0HLN1H9UGE61A", Request id "0HLN1H9UGE61A:00000005": the application completed without reading the entire request body.
+2019-05-26 11:30:26.072 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:26.075 +08:00 [INF] Request finished in 2.6506ms 404 
+2019-05-26 11:30:26.126 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:26.130 +08:00 [INF] Request finished in 3.2712ms 404 
+2019-05-26 11:30:26.208 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:26.211 +08:00 [INF] Request finished in 2.9263ms 404 
+2019-05-26 11:30:26.304 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:26.307 +08:00 [INF] Request finished in 2.6661ms 404 
+2019-05-26 11:30:26.309 +08:00 [INF] Connection id "0HLN1H9UGE61A", Request id "0HLN1H9UGE61A:00000009": the application completed without reading the entire request body.
+2019-05-26 11:30:26.399 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:26.402 +08:00 [INF] Request finished in 3.6923ms 404 
+2019-05-26 11:30:26.404 +08:00 [INF] Connection id "0HLN1H9UGE61A", Request id "0HLN1H9UGE61A:0000000A": the application completed without reading the entire request body.
+2019-05-26 11:30:29.286 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:30:29.288 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.293 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:29.328 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:29.331 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.020200000000000003ms.
+2019-05-26 11:30:29.337 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:29.342 +08:00 [INF] Executed ViewResult - view Index executed in 4.5403ms.
+2019-05-26 11:30:29.344 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 46.74ms
+2019-05-26 11:30:29.347 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.352 +08:00 [INF] Request finished in 66.0622ms 200 text/html; charset=utf-8
+2019-05-26 11:30:29.661 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Desktop  
+2019-05-26 11:30:29.667 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.669 +08:00 [INF] Route matched with {action = "Desktop", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)
+2019-05-26 11:30:29.714 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:29.714 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Statis  
+2019-05-26 11:30:29.715 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysUsers  
+2019-05-26 11:30:29.715 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysRoles  
+2019-05-26 11:30:29.717 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0193ms.
+2019-05-26 11:30:29.719 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.723 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.723 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.740 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysLogs  
+2019-05-26 11:30:29.740 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysResources  
+2019-05-26 11:30:29.745 +08:00 [INF] Executing ViewResult, running view Desktop.
+2019-05-26 11:30:29.748 +08:00 [INF] Route matched with {action = "Statis", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)
+2019-05-26 11:30:29.751 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysRoles"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:29.766 +08:00 [INF] Executed ViewResult - view Desktop executed in 21.599500000000003ms.
+2019-05-26 11:30:29.813 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:29.759 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.756 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysUsers"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:29.762 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.858 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) in 182.35940000000002ms
+2019-05-26 11:30:29.861 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0201ms.
+2019-05-26 11:30:29.855 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:29.867 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysLogs"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:29.901 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:29.905 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:30:29.909 +08:00 [INF] Executing ViewResult, running view Statis.
+2019-05-26 11:30:29.913 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.020800000000000003ms.
+2019-05-26 11:30:29.902 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysResources"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:29.945 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:29.952 +08:00 [INF] Request finished in 291.2758ms 200 text/html; charset=utf-8
+2019-05-26 11:30:29.956 +08:00 [INF] Executed ViewResult - view Statis executed in 47.6311ms.
+2019-05-26 11:30:29.961 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:29.950 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.033100000000000004ms.
+2019-05-26 11:30:29.996 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:29.998 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.019700000000000002ms.
+2019-05-26 11:30:30.000 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/bootstrap.min.css  
+2019-05-26 11:30:30.002 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) in 231.78240000000002ms
+2019-05-26 11:30:30.004 +08:00 [INF] Executed ViewResult - view Index executed in 43.1672ms.
+2019-05-26 11:30:30.010 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:30.013 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.020200000000000003ms.
+2019-05-26 11:30:30.019 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:30.022 +08:00 [INF] Request finished in 21.8314ms 404 
+2019-05-26 11:30:30.028 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:30:30.031 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) in 215.32430000000002ms
+2019-05-26 11:30:30.035 +08:00 [INF] Executed ViewResult - view Index executed in 25.406100000000002ms.
+2019-05-26 11:30:30.041 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:30.045 +08:00 [INF] Executed ViewResult - view Index executed in 25.7327ms.
+2019-05-26 11:30:30.048 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Skin/home/style.min.css  
+2019-05-26 11:30:30.050 +08:00 [INF] Request finished in 336.053ms 200 text/html; charset=utf-8
+2019-05-26 11:30:30.060 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:30.063 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) in 192.9062ms
+2019-05-26 11:30:30.067 +08:00 [INF] Executed ViewResult - view Index executed in 25.4878ms.
+2019-05-26 11:30:30.071 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) in 154.96540000000002ms
+2019-05-26 11:30:30.074 +08:00 [INF] Request finished in 25.7268ms 404 
+2019-05-26 11:30:30.080 +08:00 [INF] Request finished in 365.4276ms 200 text/html; charset=utf-8
+2019-05-26 11:30:30.083 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:30.090 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) in 123.9497ms
+2019-05-26 11:30:30.093 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:30.102 +08:00 [INF] Request finished in 387.9432ms 200 text/html; charset=utf-8
+2019-05-26 11:30:30.107 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:30.113 +08:00 [INF] Request finished in 372.8211ms 200 text/html; charset=utf-8
+2019-05-26 11:30:30.121 +08:00 [INF] Request finished in 380.7759ms 200 text/html; charset=utf-8
+2019-05-26 11:30:30.174 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:30.178 +08:00 [INF] Request finished in 4.0866ms 404 
+2019-05-26 11:30:30.334 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:30.339 +08:00 [INF] Request finished in 5.1593ms 404 
+2019-05-26 11:30:30.435 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:30.438 +08:00 [INF] Request finished in 2.5039ms 404 
+2019-05-26 11:30:30.532 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:30.535 +08:00 [INF] Request finished in 2.5574ms 404 
+2019-05-26 11:30:30.622 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:30.625 +08:00 [INF] Request finished in 3.2698ms 404 
+2019-05-26 11:30:30.627 +08:00 [INF] Connection id "0HLN1H9UGE61I", Request id "0HLN1H9UGE61I:00000006": the application completed without reading the entire request body.
+2019-05-26 11:30:30.669 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysRole/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:30.672 +08:00 [INF] Request finished in 3.55ms 404 
+2019-05-26 11:30:30.676 +08:00 [INF] Connection id "0HLN1H9UGE61I", Request id "0HLN1H9UGE61I:00000007": the application completed without reading the entire request body.
+2019-05-26 11:30:30.741 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:30.744 +08:00 [INF] Request finished in 3.0353ms 404 
+2019-05-26 11:30:30.746 +08:00 [INF] Connection id "0HLN1H9UGE61I", Request id "0HLN1H9UGE61I:00000008": the application completed without reading the entire request body.
+2019-05-26 11:30:30.838 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogList application/x-www-form-urlencoded 108
+2019-05-26 11:30:30.840 +08:00 [INF] Request finished in 2.7464ms 404 
+2019-05-26 11:30:30.842 +08:00 [INF] Connection id "0HLN1H9UGE61I", Request id "0HLN1H9UGE61I:00000009": the application completed without reading the entire request body.
+2019-05-26 11:30:30.852 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogTypeList application/x-www-form-urlencoded; charset=UTF-8 16
+2019-05-26 11:30:30.853 +08:00 [INF] Request finished in 1.6673ms 404 
+2019-05-26 11:30:30.855 +08:00 [INF] Connection id "0HLN1H9UGE61I", Request id "0HLN1H9UGE61I:0000000A": the application completed without reading the entire request body.
+2019-05-26 11:30:33.109 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:30:33.111 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.114 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:33.150 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:33.155 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0204ms.
+2019-05-26 11:30:33.159 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:33.165 +08:00 [INF] Executed ViewResult - view Index executed in 5.6342ms.
+2019-05-26 11:30:33.167 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 46.599000000000004ms
+2019-05-26 11:30:33.174 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.176 +08:00 [INF] Request finished in 66.9291ms 200 text/html; charset=utf-8
+2019-05-26 11:30:33.463 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Desktop  
+2019-05-26 11:30:33.465 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.467 +08:00 [INF] Route matched with {action = "Desktop", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)
+2019-05-26 11:30:33.503 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Statis  
+2019-05-26 11:30:33.503 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysUsers  
+2019-05-26 11:30:33.503 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:33.506 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.506 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysRoles  
+2019-05-26 11:30:33.509 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.513 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.019700000000000002ms.
+2019-05-26 11:30:33.516 +08:00 [INF] Route matched with {action = "Statis", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)
+2019-05-26 11:30:33.518 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.519 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysResources  
+2019-05-26 11:30:33.527 +08:00 [INF] Executing ViewResult, running view Desktop.
+2019-05-26 11:30:33.521 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysUsers"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:33.570 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysLogs  
+2019-05-26 11:30:33.577 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.573 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysRoles"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:33.580 +08:00 [INF] Executed ViewResult - view Desktop executed in 53.7781ms.
+2019-05-26 11:30:33.630 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysResources"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:33.625 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:33.664 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:33.666 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) in 196.58710000000002ms
+2019-05-26 11:30:33.570 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:33.627 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.702 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:33.704 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0198ms.
+2019-05-26 11:30:33.707 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.020200000000000003ms.
+2019-05-26 11:30:33.710 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.716 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0212ms.
+2019-05-26 11:30:33.718 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysLogs"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:33.721 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0117ms.
+2019-05-26 11:30:33.730 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:33.733 +08:00 [INF] Request finished in 269.9324ms 200 text/html; charset=utf-8
+2019-05-26 11:30:33.726 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:33.737 +08:00 [INF] Executing ViewResult, running view Statis.
+2019-05-26 11:30:33.770 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:33.773 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:33.776 +08:00 [INF] Executed ViewResult - view Index executed in 45.751200000000004ms.
+2019-05-26 11:30:33.784 +08:00 [INF] Executed ViewResult - view Index executed in 58.4099ms.
+2019-05-26 11:30:33.787 +08:00 [INF] Executed ViewResult - view Statis executed in 49.5514ms.
+2019-05-26 11:30:33.793 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0296ms.
+2019-05-26 11:30:33.797 +08:00 [INF] Executed ViewResult - view Index executed in 24.0117ms.
+2019-05-26 11:30:33.800 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) in 166.69150000000002ms
+2019-05-26 11:30:33.806 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) in 221.1928ms
+2019-05-26 11:30:33.810 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) in 278.9466ms
+2019-05-26 11:30:33.818 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:33.821 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) in 152.3278ms
+2019-05-26 11:30:33.829 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.835 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.840 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.844 +08:00 [INF] Executed ViewResult - view Index executed in 26.2603ms.
+2019-05-26 11:30:33.849 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.853 +08:00 [INF] Request finished in 346.7953ms 200 text/html; charset=utf-8
+2019-05-26 11:30:33.858 +08:00 [INF] Request finished in 354.4535ms 200 text/html; charset=utf-8
+2019-05-26 11:30:33.860 +08:00 [INF] Request finished in 356.466ms 200 text/html; charset=utf-8
+2019-05-26 11:30:33.862 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) in 121.7155ms
+2019-05-26 11:30:33.868 +08:00 [INF] Request finished in 348.5669ms 200 text/html; charset=utf-8
+2019-05-26 11:30:33.877 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:33.882 +08:00 [INF] Request finished in 312.4156ms 200 text/html; charset=utf-8
+2019-05-26 11:30:33.956 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:33.959 +08:00 [INF] Request finished in 3.3375ms 404 
+2019-05-26 11:30:34.054 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:34.057 +08:00 [INF] Request finished in 3.0113ms 404 
+2019-05-26 11:30:34.088 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/bootstrap.min.css  
+2019-05-26 11:30:34.088 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Skin/home/style.min.css  
+2019-05-26 11:30:34.092 +08:00 [INF] Request finished in 3.5361ms 404 
+2019-05-26 11:30:34.095 +08:00 [INF] Request finished in 7.0455ms 404 
+2019-05-26 11:30:34.219 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:34.221 +08:00 [INF] Request finished in 2.5073ms 404 
+2019-05-26 11:30:34.320 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:34.326 +08:00 [INF] Request finished in 5.656ms 404 
+2019-05-26 11:30:34.344 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysRole/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:34.347 +08:00 [INF] Request finished in 2.368ms 404 
+2019-05-26 11:30:34.349 +08:00 [INF] Connection id "0HLN1H9UGE61E", Request id "0HLN1H9UGE61E:00000009": the application completed without reading the entire request body.
+2019-05-26 11:30:34.405 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:34.408 +08:00 [INF] Request finished in 2.8796ms 404 
+2019-05-26 11:30:34.410 +08:00 [INF] Connection id "0HLN1H9UGE61E", Request id "0HLN1H9UGE61E:0000000A": the application completed without reading the entire request body.
+2019-05-26 11:30:34.523 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:34.526 +08:00 [INF] Request finished in 2.8637ms 404 
+2019-05-26 11:30:34.528 +08:00 [INF] Connection id "0HLN1H9UGE61E", Request id "0HLN1H9UGE61E:0000000B": the application completed without reading the entire request body.
+2019-05-26 11:30:34.585 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogList application/x-www-form-urlencoded 108
+2019-05-26 11:30:34.588 +08:00 [INF] Request finished in 2.5888ms 404 
+2019-05-26 11:30:34.590 +08:00 [INF] Connection id "0HLN1H9UGE61E", Request id "0HLN1H9UGE61E:0000000C": the application completed without reading the entire request body.
+2019-05-26 11:30:34.600 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogTypeList application/x-www-form-urlencoded; charset=UTF-8 16
+2019-05-26 11:30:34.603 +08:00 [INF] Request finished in 2.287ms 404 
+2019-05-26 11:30:34.605 +08:00 [INF] Connection id "0HLN1H9UGE61E", Request id "0HLN1H9UGE61E:0000000D": the application completed without reading the entire request body.
+2019-05-26 11:30:41.498 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:30:41.499 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:41.503 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:41.539 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:41.544 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.022600000000000002ms.
+2019-05-26 11:30:41.548 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:41.561 +08:00 [INF] Executed ViewResult - view Index executed in 12.661800000000001ms.
+2019-05-26 11:30:41.563 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 51.4529ms
+2019-05-26 11:30:41.566 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:41.573 +08:00 [INF] Request finished in 75.2262ms 200 text/html; charset=utf-8
+2019-05-26 11:30:41.842 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Desktop  
+2019-05-26 11:30:41.843 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:30:41.846 +08:00 [INF] Route matched with {action = "Desktop", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)
+2019-05-26 11:30:41.881 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysRoles  
+2019-05-26 11:30:41.881 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysUsers  
+2019-05-26 11:30:41.881 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Home/Statis  
+2019-05-26 11:30:41.881 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:41.882 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:41.884 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:41.886 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:30:41.890 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysResources  
+2019-05-26 11:30:41.891 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.022000000000000002ms.
+2019-05-26 11:30:41.894 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysRoles"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:41.897 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysUsers"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:41.909 +08:00 [INF] Executing ViewResult, running view Desktop.
+2019-05-26 11:30:41.901 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AdminArea/SysLogs  
+2019-05-26 11:30:41.956 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:41.904 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:41.902 +08:00 [INF] Route matched with {action = "Statis", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)
+2019-05-26 11:30:42.000 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:42.002 +08:00 [INF] Executed ViewResult - view Desktop executed in 92.9597ms.
+2019-05-26 11:30:42.003 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:42.007 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.021500000000000002ms.
+2019-05-26 11:30:42.013 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysResources"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:42.058 +08:00 [INF] Executing action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:42.064 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin) in 215.93890000000002ms
+2019-05-26 11:30:42.069 +08:00 [INF] Route matched with {area = "AdminArea", action = "Index", controller = "SysLogs"}. Executing action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)
+2019-05-26 11:30:42.072 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:42.111 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Desktop (DncAspNetCore.Admin)'
+2019-05-26 11:30:42.105 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:42.061 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.030000000000000002ms.
+2019-05-26 11:30:42.107 +08:00 [INF] Executed action method DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0207ms.
+2019-05-26 11:30:42.141 +08:00 [INF] Executing action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) - Validation state: "Valid"
+2019-05-26 11:30:42.143 +08:00 [INF] Executed ViewResult - view Index executed in 71.2192ms.
+2019-05-26 11:30:42.145 +08:00 [INF] Request finished in 303.0526ms 200 text/html; charset=utf-8
+2019-05-26 11:30:42.152 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0302ms.
+2019-05-26 11:30:42.156 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:42.163 +08:00 [INF] Executing ViewResult, running view Statis.
+2019-05-26 11:30:42.166 +08:00 [INF] Executed action method DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0229ms.
+2019-05-26 11:30:42.168 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin) in 254.8391ms
+2019-05-26 11:30:42.175 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:42.180 +08:00 [INF] Executed ViewResult - view Index executed in 23.701800000000002ms.
+2019-05-26 11:30:42.184 +08:00 [INF] Executed ViewResult - view Statis executed in 21.3204ms.
+2019-05-26 11:30:42.188 +08:00 [INF] Executing ViewResult, running view Index.
+2019-05-26 11:30:42.193 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysRolesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:42.198 +08:00 [INF] Executed ViewResult - view Index executed in 22.465600000000002ms.
+2019-05-26 11:30:42.203 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin) in 239.9615ms
+2019-05-26 11:30:42.206 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin) in 188.2687ms
+2019-05-26 11:30:42.209 +08:00 [INF] Executed ViewResult - view Index executed in 20.9725ms.
+2019-05-26 11:30:42.215 +08:00 [INF] Request finished in 333.7467ms 200 text/html; charset=utf-8
+2019-05-26 11:30:42.217 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin) in 141.6605ms
+2019-05-26 11:30:42.222 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysUsersController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:42.225 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Statis (DncAspNetCore.Admin)'
+2019-05-26 11:30:42.227 +08:00 [INF] Executed action DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin) in 113.486ms
+2019-05-26 11:30:42.234 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysResourcesController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:42.236 +08:00 [INF] Request finished in 355.1864ms 200 text/html; charset=utf-8
+2019-05-26 11:30:42.238 +08:00 [INF] Request finished in 357.2103ms 200 text/html; charset=utf-8
+2019-05-26 11:30:42.245 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Areas.AdminArea.Controllers.SysLogsController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:30:42.247 +08:00 [INF] Request finished in 357.9086ms 200 text/html; charset=utf-8
+2019-05-26 11:30:42.256 +08:00 [INF] Request finished in 355.0551ms 200 text/html; charset=utf-8
+2019-05-26 11:30:42.296 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:42.300 +08:00 [INF] Request finished in 3.2534ms 404 
+2019-05-26 11:30:42.432 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap/bootstrap.min.css  
+2019-05-26 11:30:42.433 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Skin/home/style.min.css  
+2019-05-26 11:30:42.435 +08:00 [INF] Request finished in 2.8188ms 404 
+2019-05-26 11:30:42.438 +08:00 [INF] Request finished in 5.1478ms 404 
+2019-05-26 11:30:42.461 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:42.464 +08:00 [INF] Request finished in 2.62ms 404 
+2019-05-26 11:30:42.553 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:42.556 +08:00 [INF] Request finished in 2.9756ms 404 
+2019-05-26 11:30:42.661 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/Scripts/vendor/bootstrap-select/bootstrap-select.js.map  
+2019-05-26 11:30:42.664 +08:00 [INF] Request finished in 2.7495ms 404 
+2019-05-26 11:30:42.679 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysRole/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:42.682 +08:00 [INF] Request finished in 2.4713ms 404 
+2019-05-26 11:30:42.684 +08:00 [INF] Connection id "0HLN1H9UGE61O", Request id "0HLN1H9UGE61O:00000006": the application completed without reading the entire request body.
+2019-05-26 11:30:42.814 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:42.818 +08:00 [INF] Request finished in 3.0209ms 404 
+2019-05-26 11:30:42.819 +08:00 [INF] Connection id "0HLN1H9UGE61O", Request id "0HLN1H9UGE61O:00000007": the application completed without reading the entire request body.
+2019-05-26 11:30:42.881 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_User/GetDataList application/x-www-form-urlencoded 58
+2019-05-26 11:30:42.884 +08:00 [INF] Request finished in 3.2881ms 404 
+2019-05-26 11:30:42.887 +08:00 [INF] Connection id "0HLN1H9UGE61O", Request id "0HLN1H9UGE61O:00000008": the application completed without reading the entire request body.
+2019-05-26 11:30:42.945 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogList application/x-www-form-urlencoded 108
+2019-05-26 11:30:42.947 +08:00 [INF] Request finished in 2.3555ms 404 
+2019-05-26 11:30:42.949 +08:00 [INF] Connection id "0HLN1H9UGE61O", Request id "0HLN1H9UGE61O:00000009": the application completed without reading the entire request body.
+2019-05-26 11:30:42.962 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:9002/Base_SysManage/Base_SysLog/GetLogTypeList application/x-www-form-urlencoded; charset=UTF-8 16
+2019-05-26 11:30:42.966 +08:00 [INF] Request finished in 4.7741ms 404 
+2019-05-26 11:30:42.969 +08:00 [INF] Connection id "0HLN1H9UGE61O", Request id "0HLN1H9UGE61O:0000000A": the application completed without reading the entire request body.
+2019-05-26 11:31:30.095 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:31:36.010 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:31:36.169 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:31:36.193 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:31:36.212 +08:00 [INF] Authorization failed.
+2019-05-26 11:31:36.218 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-05-26 11:31:36.227 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-05-26 11:31:37.527 +08:00 [INF] AuthenticationScheme: oidc was challenged.
+2019-05-26 11:31:37.542 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 1342.7058ms
+2019-05-26 11:31:37.552 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:31:37.573 +08:00 [INF] Request finished in 1565.4521ms 302 
+2019-05-26 11:32:31.647 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:32:53.039 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:32:53.232 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:32:53.248 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:32:53.264 +08:00 [INF] Authorization failed.
+2019-05-26 11:32:53.270 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-05-26 11:32:53.279 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-05-26 11:32:54.168 +08:00 [INF] AuthenticationScheme: oidc was challenged.
+2019-05-26 11:32:54.185 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 931.09030000000007ms
+2019-05-26 11:32:54.195 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:32:54.213 +08:00 [INF] Request finished in 1178.8695ms 302 
+2019-05-26 11:44:38.251 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:45:18.398 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-05-26 11:45:18.561 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:45:18.577 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-05-26 11:45:18.593 +08:00 [INF] Authorization failed.
+2019-05-26 11:45:18.599 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-05-26 11:45:18.608 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-05-26 11:45:19.508 +08:00 [INF] AuthenticationScheme: oidc was challenged.
+2019-05-26 11:45:19.522 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 939.5759ms
+2019-05-26 11:45:19.531 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-05-26 11:45:19.549 +08:00 [INF] Request finished in 1153.6602ms 302 
+2019-05-26 11:46:53.291 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:54:14.465 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

@@ -8,24 +8,24 @@ namespace Dnc.Events
     public class InMemoryEventBus : IEventBus
     {
         private event EventHandler<EventProcessedArgs> EventPushed;
-        private readonly IEnumerable<IEventHandler> _eventHandlers;
-        public InMemoryEventBus(IEnumerable<IEventHandler> eventHandlers)
+        private readonly IEventHandlerExecutionContext _ctx;
+        public InMemoryEventBus(IEventHandlerExecutionContext ctx)
         {
-            _eventHandlers = eventHandlers;
+            _ctx = ctx;
+            EventPushed += InMemoryEventBus_EventPushed;
         }
 
         public async Task PublishAsync<TEvent>(TEvent @event) where TEvent : IEvent => await Task.Run(() => EventPushed?.Invoke(this, new EventProcessedArgs(@event)));
 
-        public void Subscribe() => EventPushed += InMemoryEventBus_EventPushed;
-
-        private void InMemoryEventBus_EventPushed(object sender, EventProcessedArgs e)
+        public void Subscribe<TEvent, TEventHandler>()
+            where TEvent : IEvent
+            where TEventHandler : IEventHandler<TEvent>
         {
-            if (_eventHandlers == null || !_eventHandlers.Any()) return;
-
-            _eventHandlers.Where(eh => eh.CanHandle(e.Event))
-                .ToList()
-                .ForEach(async eh => await eh.HandleEventAsync(e.Event));
+            if (!_ctx.HandlerRegistered<TEvent, TEventHandler>())
+                _ctx.RegisterHandler<TEvent, TEventHandler>();
         }
+
+        private void InMemoryEventBus_EventPushed(object sender, EventProcessedArgs e) => _ctx.HandleAsync(e.Event);
 
         #region IDisposable Support
         private bool disposedValue = false; // 要检测冗余调用

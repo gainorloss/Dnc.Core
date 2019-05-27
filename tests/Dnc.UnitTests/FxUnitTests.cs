@@ -21,8 +21,7 @@ namespace Dnc.UnitTests
         {
             Fx.SrvRegisteredEvent += services =>
             {
-                services.AddScoped<IEventHandler, TimeUpdatedEventHandler>();
-                services.AddScoped<IEventHandler, VersionSetEventHandler>();
+                services.AddTransient<IEventHandlerExecutionContext>(sp => new EventHandlerExecutionContext(services));
             };
             Fx.CreateDefaultConstruction().Build();
         }
@@ -52,10 +51,10 @@ namespace Dnc.UnitTests
         [Fact]
         public void EventBus_ShouldBe_Resolved()
         {
-            var eventbus = Fx.Resolve<IEventBus>();
-            var eh = Fx.Resolve<IEventHandler>();
             var es = Fx.Resolve<IEventStore>();
-            eventbus.Subscribe();
+            var eventbus = Fx.Resolve<IEventBus>();
+            eventbus.Subscribe<TimeUpdatedEvent,TimeUpdatedEventHandler>();
+            eventbus.Subscribe<VersionSetEvent, VersionSetEventHandler>();
             eventbus.PublishAsync(new TimeUpdatedEvent());
             eventbus.PublishAsync(new VersionSetEvent());
             Assert.NotNull(eventbus);

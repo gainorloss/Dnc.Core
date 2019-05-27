@@ -1,0 +1,10 @@
+2019-05-26 11:04:13.443 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:17:41.009 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:22:38.340 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:29:02.532 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:30:16.576 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:31:28.944 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:32:30.323 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:44:36.126 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:46:51.869 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-26 11:54:13.320 +08:00 [INF] User profile is available. Using 'C:\Users\gainorloss\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

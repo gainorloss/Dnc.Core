@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Dnc.AspNetCore;
+﻿using Dnc.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -30,8 +25,7 @@ namespace DncAspNetCore.Admin
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-            services.AddAspNetCore(typeof(Startup),AspNetCoreType.Mvc);
+            services.AddAspNetCore<Startup>("http://localhost:8001", "admin", "49C1A7E1-0C79-4A89-A3D6-A37998FB86B1", AspNetCoreType.Mvc);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

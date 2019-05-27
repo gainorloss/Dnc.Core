@@ -19,15 +19,7 @@ namespace DncAspNetCore.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
-                .AddIdentityServerAuthentication(opt =>
-                {
-                    opt.Authority = "http://localhost:8001";
-                    opt.SaveToken = true;
-                    opt.RequireHttpsMetadata = false;
-                    opt.ApiName = "restapi";
-                });
-            services.AddAspNetCore(typeof(Startup));
+            services.AddAspNetCore<Startup>("http://localhost:8001");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

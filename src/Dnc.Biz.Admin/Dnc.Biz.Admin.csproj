@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.0.11</Version>
+    <Version>1.1.0.13</Version>
     <Title>Dnc.Biz.Admin</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -12,7 +12,7 @@
     <PackageProjectUrl>https://github.com/gainorloss/Dnc.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gainorloss/Dnc.Core</RepositoryUrl>
     <PackageIconUrl>https://avatars0.githubusercontent.com/u/26458238?s=800</PackageIconUrl>
-    <Tags>dotnetcore;quartz;serilog;aspnetcore,serializer,rpc</Tags>
+    <Tags>admin</Tags>
   </PropertyGroup>
 
   <ItemGroup>
