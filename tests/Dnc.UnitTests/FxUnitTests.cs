@@ -1,3 +1,4 @@
+using Dnc.CQRS;
 using Dnc.Events;
 using Dnc.FaultToleranceProcessors;
 using Dnc.Files;
@@ -25,6 +26,7 @@ namespace Dnc.UnitTests
             {
                 services.AddTransient<IEventHandlerExecutionContext>(sp => new EventHandlerExecutionContext(services));
                 services.AddTransient<ISysLogService, SysLogService>();
+                services.AddTransient<ICommandHandler<SetVersionCmd>, SetVersionCmdHandler>();
             };
             Fx.CreateDefaultConstruction().AspectsBuild();
         }
@@ -67,6 +69,12 @@ namespace Dnc.UnitTests
         {
             var syslogService = Fx.Resolve<ISysLogService>();
             await syslogService.AddLogAsync("log");
+        }
+        [Fact]
+        public async Task CQRS_ShouldBe_NormalAsync()
+        {
+            var commandbus = Fx.Resolve<ICommandBus>();
+            await commandbus.SendAsync(new SetVersionCmd(1));
         }
     }
 }
