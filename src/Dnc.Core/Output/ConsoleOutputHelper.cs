@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Timers;
 
@@ -12,9 +13,9 @@ namespace Dnc.Output
     public class ConsoleOutputHelper
         : IConsoleOutputHelper
     {
-        private static object mLock = new object();
+        private static readonly object mLock = new object();
 
-        public void Dump<T>(T obj) where T:class
+        public void Dump<T>(T obj) where T : class
         {
             if (obj == null)
             {
@@ -35,7 +36,7 @@ namespace Dnc.Output
             foreach (var prop in props)
             {
                 var propValue = prop.GetValue(obj);
-                output = $"{output}\r\n{prop.Name.PadLeft(propMaxLength,' ')}:{propValue}";
+                output = $"{output}\r\n{prop.Name.PadLeft(propMaxLength, ' ')}:{propValue}";
             }
             Debug(output);
         }
@@ -91,7 +92,6 @@ namespace Dnc.Output
 
             #region Clear console & Set console size and title.
             Console.Clear();
-            Console.Title = "Bad Apple (cmd ver.) Powered by DotnetCore.";
             #endregion
 
             #region Read & output text to console.
@@ -112,6 +112,11 @@ namespace Dnc.Output
 
         public void Error(string msg)
             => BuildMessageAndOutput(msg, "err", ConsoleColor.DarkRed);
+
+        public void SetTitle(string title="dotnetapp")
+        {
+            Console.Title = $"{title} (cmd ver.) Powered by DotnetCore.";
+        }
 
         #region Helper.
         private void BuildMessageAndOutput(string msg, string tag, ConsoleColor consoleColor)

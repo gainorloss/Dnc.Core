@@ -35,6 +35,7 @@ namespace Dnc.UnitTests
         public void ConsoleOutputHelper_ShouldBe_Resolved()
         {
             var consoleOutputHelper = Fx.Resolve<IConsoleOutputHelper>();
+            consoleOutputHelper.SetTitle("Black Apple");
             consoleOutputHelper.Dump(new VersionSetEvent());
             Assert.NotNull(consoleOutputHelper);
         }

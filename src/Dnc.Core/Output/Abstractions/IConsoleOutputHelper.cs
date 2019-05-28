@@ -48,7 +48,12 @@ namespace Dnc.Output
         /// </summary>
         /// <param name="msg"></param>
         /// <param name="title"></param>
-
         void Error(string msg);
+
+        /// <summary>
+        /// Set console title.
+        /// </summary>
+        /// <param name="title"></param>
+        void SetTitle(string title = "dotnetapp");
     }
 }
