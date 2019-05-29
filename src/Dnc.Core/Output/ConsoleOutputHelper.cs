@@ -131,6 +131,7 @@ namespace Dnc.Output
                 Console.Write($" {tag.PadRight(4, ' ').ToUpper()}");
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Write("]");
+                Console.ForegroundColor = consoleColor;
                 Console.WriteLine(msg);
                 Console.ForegroundColor = oldColor;
             }

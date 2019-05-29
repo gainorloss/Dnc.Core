@@ -12,9 +12,9 @@ namespace Dnc.Events
     {
         private readonly ConcurrentDictionary<Type, List<Type>> _registrations = new ConcurrentDictionary<Type, List<Type>>();
         private readonly IServiceCollection _registry;
-        public EventHandlerExecutionContext(IServiceCollection registry)
+        public EventHandlerExecutionContext()
         {
-            _registry = registry;
+            _registry = Fx.Construction.Services;
         }
         public async Task HandleAsync<TEvent>(TEvent @event) where TEvent : IEvent
         {
