@@ -16,7 +16,7 @@ namespace Dnc.Aspects
             var sw = Stopwatch.StartNew();
             await context.Invoke(next);
             sw.Stop();
-            Logger.LogDebug($"【{context.Implementation}.{context.ServiceMethod.Name}】【{string.Join(",", context.Parameters)}】:{sw.ElapsedMilliseconds}ms");
+            Logger.LogWarning($"【{context.Implementation}.{context.ServiceMethod.Name}】【params:{string.Join(",", context.Parameters)}】:{sw.ElapsedMilliseconds}ms");
         }
     }
 }

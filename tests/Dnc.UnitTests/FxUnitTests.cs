@@ -25,7 +25,7 @@ namespace Dnc.UnitTests
             Fx.SrvRegisteredEvent += services =>
             {
                 services.AddTransient<ISysLogService, SysLogService>();
-                //services.AddTransient<ICommandHandler<SetVersionCmd>, SetVersionCmdHandler>();
+                services.AddTransient<ICommandHandler<SetVersionCmd>, SetVersionCmdHandler>();
             };
             Fx.CreateDefaultConstruction().AspectsBuild();
         }
