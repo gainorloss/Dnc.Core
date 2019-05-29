@@ -9,9 +9,9 @@ namespace Dnc.Events
     public class MySqlEventStore : IEventStore
     {
         private readonly string _connectionString;
-        private readonly IMessageSerializer _messageSerializer;
+        private readonly IObjectSerializer _messageSerializer;
         public MySqlEventStore(IConfiguration configuration,
-            IMessageSerializer messageSerializer)
+            IObjectSerializer messageSerializer)
         {
             _connectionString = configuration.GetConnectionString("event_store");
             _messageSerializer = messageSerializer;

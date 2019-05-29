@@ -6,10 +6,10 @@ using System.Text;
 namespace Dnc.Serializers
 {
     /// <summary>
-    /// Implement for <see cref="IMessageSerializer"/> using json.net;
+    /// Implement for <see cref="IObjectSerializer"/> using json.net;
     /// </summary>
     public class NewtonsoftJsonSerializer
-        : IMessageSerializer
+        : IObjectSerializer
     {
         public T DeserializeObject<T>(string value)
            where T:class,new()

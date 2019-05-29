@@ -8,9 +8,9 @@ namespace Dnc.Events
     public class InMemoryEventStore : IEventStore
     {
         private readonly string _connectionString;
-        private readonly IMessageSerializer _messageSerializer;
+        private readonly IObjectSerializer _messageSerializer;
         public InMemoryEventStore(IConfiguration configuration,
-            IMessageSerializer messageSerializer)
+            IObjectSerializer messageSerializer)
         {
             _connectionString = configuration.GetConnectionString("event_store");
             _messageSerializer = messageSerializer;

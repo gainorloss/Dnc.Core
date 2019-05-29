@@ -7,7 +7,7 @@ namespace Dnc.Serializers
     /// <summary>
     /// The interface for message serializer.
     /// </summary>
-    public interface IMessageSerializer
+    public interface IObjectSerializer
         :IPlugin
     {
         string SerializeObject(object value);

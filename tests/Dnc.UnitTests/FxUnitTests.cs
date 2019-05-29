@@ -49,7 +49,7 @@ namespace Dnc.UnitTests
         [Fact]
         public void MailSender_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IMailSender>());
         [Fact]
-        public void MessageSerializer_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IMessageSerializer>());
+        public void MessageSerializer_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IObjectSerializer>());
         [Fact]
         public void MockRepository_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IMockRepository>());
         [Fact]
