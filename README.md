@@ -1,48 +1,50 @@
-﻿Dnc.Core
+﻿DNC Framework with .NETStandard 2.0
 ===
 
-[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.12)
+# Dnc简介
+基于StandardLibrary的快速开发框架，提供了稳定强大、方便易用的事件处理机制和高性能高吞吐的CQRS组件。
 
-## Infrastructure
-> install-package Dnc.Core
+# Dnc特性
 
-## Data
-> install-package Dnc.Data
+* 稳定强大、方便易用的事件处理机制
+* 高性能高吞吐的CQRS组件
+* 稳定强大、方便易用的数据库仓储
+* 按需安装加载的插件模式
+* 按需安装加载的业务模块取用机制
+* 为快速方便构建实践DDD提供开箱即用的基础设置
+* 强大易用的任务调度插件
+* 快捷的wpf开发组件包含完整的MVVM基础设施
+* 开箱即用的数据采集组件
 
-## Dispatcher
-> install-package Dnc.Dispatcher
+# Packages
 
-## Domain seedwork
-> install-package Dnc.Seedwork
+|Package Name|Package Icon|Version|
+|:-------|:-------:|------:|
+|Dnc.Core|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.12)|1.1.0.12|
+|Dnc.Dispatcher|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Dispatcher/1.1.0.12)|1.1.0.12|
+|Dnc.Data|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Data/1.1.0.12)|1.1.0.12|
+|Dnc.SeedWork|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.SeedWork/1.1.0.12)|1.1.0.12|
+|Dnc.WPF|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.WPF/1.1.0.12)|1.1.0.12|
+|Dnc.WPF.UI|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.WPF.UI/1.1.0.12)|1.1.0.12|
+|Dnc.Spider|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Spider/1.1.0.12)|1.1.0.12|
+|Dnc.Spider.HttpRequest|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Spider.HttpRequest/1.1.0.12)|1.1.0.12|
+|Dnc.Spider.Puppeteer|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Spider.Puppeteer/1.1.0.12)|1.1.0.12|
+|Dnc.Events|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Events/1.1.0.12)|1.1.0.12|
+|Dnc.Events.InMemory|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Events.InMemory/1.1.0.12)|1.1.0.12|
+|Dnc.Events.RabbitMQ|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Events.RabbitMQ/1.1.0.12)|1.1.0.12|
+|Dnc.Events.MySql|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Events.MySql/1.1.0.12)|1.1.0.12|
+|Dnc.CQRS|[![Dnc.Core/1.1.0.12](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.CQRS/1.1.0.12)|1.1.0.12|
 
-## Events
-* install-package Dnc.Events
-* install-package Dnc.Events.InMemory
-* install-package Dnc.Events.RabbitMQ
-* install-package Dnc.Events.MySql
-
-## Spider
-* install-package Dnc.Spider 
-* install-package Dnc.Spider.HttpRequest
-* install-package Dnc.Spider.Puppeteer
-
-## AspNetCore
-* install-package Dnc.AspNetCore
-* install-package Dnc.AspNetCore.Ui
-
-## Business
-* install-package Dnc.Biz.Users
-* install-package Dnc.Biz.Admin
-
-## WPF
-> install-package Dnc.WPF
-
-## Use this in the entry point of your application: 
-
+# Getting Started
 ```c#
 Fx.Construct<FrameworkConstruction>()
   .Build();
 Fx.Resolve<TService>();
 ```
+
+# Development Logs
+
+* 2019-05-30 修复了一个bug,该bug曾导致FrameworkEnvironment获取失败
+* 2019-05-29 调整IEventHandlerExecutionContext默认注入，使用者无须关注注入
 
 
