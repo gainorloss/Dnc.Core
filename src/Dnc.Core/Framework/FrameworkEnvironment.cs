@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
 using System.Text;
 
 namespace Dnc
@@ -16,12 +18,7 @@ namespace Dnc
         #endregion
 
         #region Ctor.
-        public FrameworkEnvironment()
-        {
-#if DEBUG
-            IsDevelopment=true;
-#endif
-        }
+        public FrameworkEnvironment() => IsDevelopment = Assembly.GetEntryAssembly()?.GetCustomAttribute<DebuggableAttribute>()?.IsJITTrackingEnabled == true;
         #endregion
     }
 }
