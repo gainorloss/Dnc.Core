@@ -51,4 +51,8 @@ Fx.Resolve<TService>();
 * 2019-05-30 修复了一个bug,该bug曾导致FrameworkEnvironment获取失败
 * 2019-05-29 调整IEventHandlerExecutionContext默认注入，使用者无须关注注入
 
+# More...
+
+* 持续更新中，开发、文档和使用手册尚未完全，敬请期待，如有兴趣请给我Star，您的支持是我继续下去的最大动力...
+
 
