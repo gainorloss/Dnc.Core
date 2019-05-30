@@ -16,7 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dnc.Aspects\Dnc.Aspects.csproj" />
     <ProjectReference Include="..\Dnc.Core\Dnc.Core.csproj" />
   </ItemGroup>
 
