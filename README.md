@@ -34,8 +34,12 @@
 |Dnc.Events.RabbitMQ|[![Dnc.Events.RabbitMQ/1.1.0.16](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Events.RabbitMQ/1.1.0.16)|1.1.0.16|
 |Dnc.Events.MySql|[![Dnc.Events.MySql/1.1.0.16](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Events.MySql/1.1.0.16)|1.1.0.16|
 |Dnc.CQRS|[![Dnc.CQRS/1.1.0.16](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.CQRS/1.1.0.16)|1.1.0.16|
+|Dnc.Aspects|[![Dnc.Aspects/1.1.0.16](https://img.shields.io/badge/nuget-1.1.0.12-blue.svg)](https://www.nuget.org/packages/Dnc.Aspects/1.1.0.16)|1.1.0.16|
 
 # Getting Started
+Fx,代表框架本身兼具框架构建、初始化和解析服务的职责，并提供了一个服务注册事件用于使用者可能需要的自定义服务注册。
+Fx.Build()正常服务生成;
+Fx.AspectsBuild() 服务注册构建并启用AOP。
 ```c#
 Fx.Construct<FrameworkConstruction>()
   .Build();
