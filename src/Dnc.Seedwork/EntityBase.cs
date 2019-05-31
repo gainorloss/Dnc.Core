@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Dnc.Seedwork
 {
@@ -10,10 +8,10 @@ namespace Dnc.Seedwork
 
         public EntityBase()
         {
-            CreateTime = DateTime.Now;
+            CreatedAt = DateTime.Now;
         }
         public TKey Id { get; set; }
-        public DateTime CreateTime { get; set; }
-        public string CreateRemark { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public string Creator { get; set; }
     }
 }

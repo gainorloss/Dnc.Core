@@ -7,6 +7,8 @@ namespace Dnc.Seedwork
     public interface ISoftDeleteBehavior
     {
         bool Deleted { get; set; }
-        string DeleteRemark { get; set; }
+        DateTime DeletedAt { get; set; }
+        long DeletorId { get; set; }
+        string Deletor { get; set; }
     }
 }

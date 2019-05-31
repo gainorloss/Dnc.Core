@@ -7,7 +7,7 @@ namespace Dnc.Seedwork
     /// </summary>
     public interface IEntity
     {
-        DateTime CreateTime { get; set; }
-        string CreateRemark { get; set; }
+        DateTime CreatedAt { get; set; }
+        string Creator { get; set; }
     }
 }

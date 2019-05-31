@@ -6,7 +6,8 @@ namespace Dnc.Seedwork
 {
     public interface IModifyBehavior
     {
-        DateTime? LastModifyTime { get; set; }
-        string LastModifyRemark { get; set; }
+        DateTime? ModifiedAt { get; set; }
+        long ModifierId { get; set; }
+        string Modifier { get; set; }
     }
 }
