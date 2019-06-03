@@ -24,14 +24,10 @@ namespace Dnc.UnitTests
                new HouseData() { Size = 3.4F, Price = 3.7F } };
 
             var engine = new PredictionEngineBuilder<HouseData, Prediction>()
-                .Build(houseData);
-            Enumerable.Range(0, 1000).ToList()
-                .ForEach(i =>
-                {
-                    Thread.Sleep(500);
-                    var prediction = engine.Predict(new HouseData() { Size = 2.5F });
-                    _output.WriteLine($"{i + 1}:{prediction.Price}");
-                });
+                .Build(catalog => catalog.LoadFromEnumerable(houseData));
+
+            var prediction = engine.Predict(new HouseData() { Size = 2.5F });
+            _output.WriteLine($"{prediction.Price}");
         }
     }
 }

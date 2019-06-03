@@ -1,6 +1,6 @@
 ﻿using Microsoft.ML;
 using Microsoft.ML.Data;
-using System.Collections.Generic;
+using System;
 using System.Linq;
 using System.Reflection;
 
@@ -10,8 +10,11 @@ namespace Dnc.ML
             where TSrc : class
             where TDst : class, new()
     {
-        public PredictionEngine<TSrc, TDst> Build(params TSrc[] inputs)
+        public PredictionEngine<TSrc, TDst> Build(Func<DataOperationsCatalog, IDataView> buildDataViewFactory)
         {
+            if (buildDataViewFactory == null)
+                throw new ArgumentNullException(nameof(buildDataViewFactory));
+
             var propsDst = typeof(TDst).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => p.GetCustomAttribute(typeof(ColumnNameAttribute), false) != null);
             if (propsDst == null || propsDst.Count() != 1)
@@ -22,10 +25,10 @@ namespace Dnc.ML
             propsSrc = propsSrc.Except(propsDst, new PropertyInfoEqualityComparer());
 
             if (propsSrc == null || !propsSrc.Any())
-                throw new System.Exception("the properties input are not allowed to be zero.");
+                throw new Exception("the properties input are not allowed to be zero.");
 
             var ctx = new MLContext();
-            var trainingData = ctx.Data.LoadFromEnumerable(inputs);
+            var trainingData = buildDataViewFactory(ctx.Data);
 
             var propArr = propsSrc.Select(p => p.Name).ToArray();
             var pipeline = ctx.Transforms.Concatenate("Features", propArr)
