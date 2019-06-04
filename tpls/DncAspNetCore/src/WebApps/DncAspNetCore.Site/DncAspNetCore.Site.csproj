@@ -7,7 +7,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="dnc.aspnetcore" Version="1.1.0.13" />
+    <PackageReference Include="dnc.aspnetcore" Version="1.1.0.14" />
     <PackageReference Include="identitymodel" Version="3.10.10" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />

@@ -1,0 +1,16 @@
+2019-06-04 10:44:34.167 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-06-04 10:45:49.384 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AccountArea/Account/SignIn?returnUrl=%2F  
+2019-06-04 10:45:49.476 +08:00 [INF] Request finished in 92.7063ms 404 
+2019-06-04 10:46:49.473 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-06-04 10:46:53.065 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/AccountArea/Account/SignIn?returnUrl=%2F  
+2019-06-04 10:46:53.152 +08:00 [INF] Request finished in 88.4507ms 404 
+2019-06-04 10:46:56.210 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:9002/  
+2019-06-04 10:46:56.212 +08:00 [INF] Executing endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-06-04 10:46:56.220 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)
+2019-06-04 10:46:56.229 +08:00 [INF] Authorization failed.
+2019-06-04 10:46:56.232 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-06-04 10:46:56.236 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-06-04 10:46:56.782 +08:00 [INF] AuthenticationScheme: oidc was challenged.
+2019-06-04 10:46:56.788 +08:00 [INF] Executed action DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin) in 564.34390000000008ms
+2019-06-04 10:46:56.793 +08:00 [INF] Executed endpoint 'DncAspNetCore.Admin.Controllers.HomeController.Index (DncAspNetCore.Admin)'
+2019-06-04 10:46:56.796 +08:00 [INF] Request finished in 585.4645ms 302 
