@@ -22,6 +22,7 @@ namespace Dnc
 
             this.Configure()
                 .UseDefaultLogger();
+            Services.AddMemoryCache();
 
             Services.AddAssemblyPluginTypes();
         }

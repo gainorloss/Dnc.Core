@@ -18,7 +18,7 @@ namespace Dnc
         #endregion
 
         #region Ctor.
-        public FrameworkEnvironment() => IsDevelopment = Assembly.GetEntryAssembly()?.GetCustomAttribute<DebuggableAttribute>()?.IsJITTrackingEnabled == true;
+        public FrameworkEnvironment() =>  IsDevelopment = Assembly.GetEntryAssembly()?.GetCustomAttribute<DebuggableAttribute>()?.IsJITTrackingEnabled == true;
         #endregion
     }
 }

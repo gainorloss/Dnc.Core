@@ -20,6 +20,7 @@
     <PackageReference Include="microsoft.codeanalysis.csharp" Version="3.0.0" />
     <PackageReference Include="microsoft.codeanalysis.csharp.scripting" Version="3.0.0" />
     <PackageReference Include="microsoft.codeanalysis.scripting" Version="3.0.0" />
+    <PackageReference Include="microsoft.extensions.caching.memory" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.configuration" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.configuration.environmentvariables" Version="2.2.0" />
     <PackageReference Include="microsoft.extensions.configuration.json" Version="2.2.0" />
