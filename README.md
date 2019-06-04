@@ -47,6 +47,7 @@ Fx.Resolve<TService>();
 ```
 
 # Development Logs
+* 2019-06-04 16:38 缓存AOP MemoryCachingInterceptor 开发及测试完成
 * 2019-05-31 13:25 release all 1.1.0.17,更新README.md
 * 2019-05-30 修复了一个bug,该bug曾导致FrameworkEnvironment获取失败
 * 2019-05-29 调整IEventHandlerExecutionContext默认注入，使用者无须关注注入
