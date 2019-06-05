@@ -28,5 +28,12 @@ namespace Dnc.UnitTests
             var logQueries = Fx.Resolve<ILogQueries>();
             logQueries.GetAllLogs();
         }
+
+        [Fact]
+        public void HystrixCommandInterceptor_ShouldBe_Normal()
+        {
+            var logQueries = Fx.Resolve<ILogQueries>();
+            logQueries.GetAllLogs();
+        }
     }
 }

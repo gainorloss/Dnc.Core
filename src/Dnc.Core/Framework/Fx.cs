@@ -14,6 +14,7 @@ namespace Dnc
 
 
         public static event Action<IServiceCollection> SrvRegisteredEvent;
+        public static event Action<Exception> ExceptionThrownEvent;
 
         public static void Build(this FrameworkConstruction construction, bool logStarted = true)
         {
@@ -24,12 +25,19 @@ namespace Dnc
         public static FrameworkConstruction Construct<T>()
             where T : FrameworkConstruction, new()
         {
-            Construction = new T();
+            try
+            {
+                Construction = new T();
 
-            Construction.Configure()
-                        .UseDefaultLogger();
-            Construction.Services.AddMemoryCache();
-            Construction.Services.AddAssemblyPluginTypes();
+                Construction.Configure()
+                            .UseDefaultLogger();
+                Construction.Services.AddMemoryCache();
+                Construction.Services.AddAssemblyPluginTypes();
+            }
+            catch (Exception ex)
+            {
+                ExceptionThrownEvent?.Invoke(ex);
+            }
 
             return Construction;
         }
@@ -45,19 +53,26 @@ namespace Dnc
             Func<FrameworkConstruction, IServiceProvider> serviceProviderFactory = null,
             bool logStarted = true)
         {
-            SrvRegisteredEvent?.Invoke(construction.Services);
-
-            if (construction.Services == null)
-                throw new Exception("ServiceCollection is null.");
-
-            ServiceProvider = serviceProviderFactory.Invoke(construction);
-
-            if (logStarted)
+            try
             {
-                var logger = ServiceProvider.GetService<ILogger>();
-                var env = ServiceProvider.GetService<IFrameworkEnvironment>();
+                SrvRegisteredEvent?.Invoke(construction.Services);
 
-                logger.LogCritical($"Dnc core  started in {env.Environment}...");
+                if (construction.Services == null)
+                    throw new Exception("ServiceCollection is null.");
+
+                ServiceProvider = serviceProviderFactory.Invoke(construction);
+
+                if (logStarted)
+                {
+                    var logger = ServiceProvider.GetService<ILogger>();
+                    var env = ServiceProvider.GetService<IFrameworkEnvironment>();
+
+                    logger.LogCritical($"Dnc core  started in {env.Environment}...");
+                }
+            }
+            catch (Exception ex)
+            {
+                ExceptionThrownEvent?.Invoke(ex);
             }
         }
 

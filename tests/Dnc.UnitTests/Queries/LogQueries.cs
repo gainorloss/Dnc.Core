@@ -8,7 +8,7 @@ namespace Dnc.UnitTests.Queries
         public string GetAllLogs()
         {
             Thread.Sleep(3000);
-            return "gainorloss";
+            throw new System.Exception();
         }
     }
 }

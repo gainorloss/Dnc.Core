@@ -6,6 +6,7 @@ namespace Dnc.UnitTests.Queries
     {
         [MiniProfilerInterceptor]
         [MemoryCachingInterceptor]
+        [HystrixCommandInterceptor]
         string GetAllLogs();
     }
 }

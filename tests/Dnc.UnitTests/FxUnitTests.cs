@@ -27,6 +27,10 @@ namespace Dnc.UnitTests
                 services.AddTransient<ISysLogService, SysLogService>();
                 services.AddTransient<ICommandHandler<SetVersionCmd>, SetVersionCmdHandler>();
             };
+            Fx.ExceptionThrownEvent += ex =>
+            {
+                _output.WriteLine(ex.Message);
+            };
             Fx.CreateDefaultConstruction().AspectsBuild();
         }
 
@@ -78,7 +82,7 @@ namespace Dnc.UnitTests
         public async Task MailSender_ShouldBe_NormalAsync()
         {
             var sender = Fx.Resolve<IMailSender>();
-            await sender.SendMailAsync("519564415@qq.com","aja","aja");
+            await sender.SendMailAsync("519564415@qq.com", "aja", "aja");
         }
     }
 }
