@@ -10,7 +10,7 @@ namespace Dnc
     {
         public static IEnumerable<Type> GetAssemblyPluginInterfaces()
         {
-            return GetAssemblyInterfaces().Where(t => t.GetTypeInfo().ImplementedInterfaces.Any(i=>i.Name.Equals("IPlugin")));
+            return GetAssemblyInterfaces().Where(t =>typeof(IPlugin).IsAssignableFrom(t));
         }
 
         public static IEnumerable<Type> GetAssemblyInterfaces()

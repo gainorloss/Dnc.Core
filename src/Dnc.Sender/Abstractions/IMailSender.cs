@@ -8,7 +8,7 @@ namespace Dnc.Sender
     /// Constraint for sending email.
     /// </summary>
     public interface IMailSender
-        :IDisposable,IPlugin
+        :IDisposable
     {
         Task SendMailAsync(string to,string subject,string desc);
     }

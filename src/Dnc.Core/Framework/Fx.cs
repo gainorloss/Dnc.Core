@@ -17,7 +17,7 @@ namespace Dnc
 
         public static void Build(this FrameworkConstruction construction, bool logStarted = true)
         {
-            construction.ConfigureBuild(fxConstruction=> fxConstruction.Services.BuildServiceProvider());
+            construction.ConfigureBuild(fxConstruction => fxConstruction.Services.BuildServiceProvider());
         }
 
 
@@ -26,17 +26,14 @@ namespace Dnc
         {
             Construction = new T();
 
-            return Construction;
-        }
-
-
-        public static FrameworkConstruction Construct<T>(T constructionInstance)
-           where T : FrameworkConstruction
-        {
-            Construction = constructionInstance;
+            Construction.Configure()
+                        .UseDefaultLogger();
+            Construction.Services.AddMemoryCache();
+            Construction.Services.AddAssemblyPluginTypes();
 
             return Construction;
         }
+
 
         public static FrameworkConstruction CreateDefaultConstruction()
         {
@@ -44,7 +41,7 @@ namespace Dnc
             return Construction;
         }
 
-        public static void ConfigureBuild(this FrameworkConstruction construction, 
+        public static void ConfigureBuild(this FrameworkConstruction construction,
             Func<FrameworkConstruction, IServiceProvider> serviceProviderFactory = null,
             bool logStarted = true)
         {

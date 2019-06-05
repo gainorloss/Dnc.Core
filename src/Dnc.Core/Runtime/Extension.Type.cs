@@ -11,8 +11,8 @@ namespace Dnc
         {
             foreach (var lib in RuntimeHelper.GetDependencyAssemblies())
             {
-                if (lib.GetTypes().Any(t => t.GetInterface(intefaceType.Name) != null))
-                    return lib.GetTypes().FirstOrDefault(t => t.GetInterface(intefaceType.Name) != null);
+                if (lib.GetTypes().Any(t => !t.IsInterface && !t.IsAbstract && intefaceType.IsAssignableFrom(t)))
+                    return lib.GetTypes().FirstOrDefault(t => !t.IsInterface && !t.IsAbstract && intefaceType.IsAssignableFrom(t));
             }
             return null;
         }

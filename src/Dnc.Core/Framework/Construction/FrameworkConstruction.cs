@@ -19,12 +19,6 @@ namespace Dnc
             Services = new ServiceCollection();
             Environment = new FrameworkEnvironment();
             Services.AddSingleton(sp => Environment);
-
-            this.Configure()
-                .UseDefaultLogger();
-            Services.AddMemoryCache();
-
-            Services.AddAssemblyPluginTypes();
         }
         #endregion
 

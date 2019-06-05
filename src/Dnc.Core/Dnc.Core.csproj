@@ -39,4 +39,10 @@
     <PackageReference Include="system.drawing.common" Version="4.5.1" />
     <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Framework\Fx.cs">
+      <Generator> </Generator>
+    </Compile>
+  </ItemGroup>
 </Project>

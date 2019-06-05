@@ -11,12 +11,14 @@ namespace Dnc.Sender
     {
         #region Private member.
         private SmtpClient _smtpClient;
+        private readonly MailSenderOptions _options;
         private readonly ILogger<IMailSender> _logger;
         #endregion
 
         #region Ctor.
-        public MailKitMailSender(ILogger<IMailSender> logger)
+        public MailKitMailSender(MailSenderOptions options, ILogger<IMailSender> logger)
         {
+            _options = options;
             _logger = logger;
         }
         #endregion
@@ -28,7 +30,7 @@ namespace Dnc.Sender
                 _smtpClient = new SmtpClient();
 
             var msg = new MimeMessage();
-            msg.From.Add(new MailboxAddress("gainorloss", "519564415@qq.com"));
+            msg.From.Add(new MailboxAddress(_options.Name ?? "gainorloss", _options.Address ?? "519564415@qq.com"));
             msg.To.Add(new MailboxAddress("", to));
             msg.Subject = subject;
 

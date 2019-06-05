@@ -46,8 +46,6 @@ namespace Dnc.UnitTests
         [Fact]
         public void Downloader_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IDownloader>());
         [Fact]
-        public void MailSender_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IMailSender>());
-        [Fact]
         public void MessageSerializer_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IObjectSerializer>());
         [Fact]
         public void MockRepository_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IMockRepository>());
@@ -75,6 +73,12 @@ namespace Dnc.UnitTests
         {
             var commandbus = Fx.Resolve<ICommandBus>();
             await commandbus.SendAsync(new SetVersionCmd(1));
+        }
+        [Fact]
+        public async Task MailSender_ShouldBe_NormalAsync()
+        {
+            var sender = Fx.Resolve<IMailSender>();
+            await sender.SendMailAsync("519564415@qq.com","aja","aja");
         }
     }
 }
