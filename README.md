@@ -47,6 +47,7 @@ Fx.Resolve<TService>();
 ```
 
 # Development Logs
+* 2019-06-05 12:04 Core Construct调整,Configuration 注入放入Construct,而不是构造函数中,使用IPluginInitializer注入Plugin服务
 * 2019-06-04 16:38 缓存AOP MemoryCachingInterceptor 开发及测试完成
 * 2019-05-31 13:25 release all 1.1.0.17,更新README.md
 * 2019-05-30 修复了一个bug,该bug曾导致FrameworkEnvironment获取失败
