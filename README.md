@@ -17,9 +17,10 @@
 * 开箱即用的数据采集组件
 
 # Packages
+* [ ] Dnc.AspNetCore
 
 |Package Name|Description|
-|------|:-------|:-------|
+|:-------|:-------|
 |Dnc.Core|核心类库|
 |Dnc.Dispatcher|调度插件,基于Quartz.net实现|
 |Dnc.Data|EntityFrameworkCore扩展|
