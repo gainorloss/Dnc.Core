@@ -47,6 +47,7 @@ Fx.Resolve<TService>();
 ```
 
 # Development Logs
+* 2019-06-06 11:08 UnitTests结构调整优化,Dnc.Redis单元测试构建及测试通过，Dnc.Core-samples.sln,准备构建功能测试界面
 * 2019-06-05 13:56 HystrixCommandInterceptorAttribute(Aspects)
 * 2019-06-05 12:04 Core Construct调整,Configuration 注入放入Construct,而不是构造函数中,使用IPluginInitializer注入Plugin服务
 * 2019-06-04 16:38 缓存AOP MemoryCachingInterceptor 开发及测试完成
