@@ -17,11 +17,13 @@
 * 开箱即用的数据采集组件
 
 # Packages
+* [x] Dnc.Core
 * [ ] Dnc.AspNetCore
+* [ ] Dnc.AspNetCore.Ui
 
 |Package Name|Description|
 |:-------|:-------|
-|* [ ] Dnc.Core|核心类库|
+|Dnc.Core|核心类库|
 |Dnc.Dispatcher|调度插件,基于Quartz.net实现|
 |Dnc.Data|EntityFrameworkCore扩展|
 |Dnc.Redis|redis插件，基于csredis实现|
