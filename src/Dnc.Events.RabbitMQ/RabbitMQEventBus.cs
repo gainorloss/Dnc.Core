@@ -21,13 +21,15 @@ namespace Dnc.Events
         public RabbitMQEventBus(IEventHandlerExecutionContext ctx, IConfiguration configuration)
         {
             _ctx = ctx;
+            var options = new RabbitMQOptions();
+            configuration.GetSection(nameof(RabbitMQOptions)).Bind(options);
             _connectionFactory = new ConnectionFactory()
             {
-                HostName = configuration["rabbitMQOption:HostName"]??"localhost",
-                Port= configuration["rabbitMQOption:Port"]!=null?Convert.ToInt32(configuration["rabbitMQOption:Port"]) : 5672,
-                UserName = configuration["rabbitMQOption:UserName"] ?? "guest",
-                Password = configuration["rabbitMQOption:Password"] ?? "guest",
-                VirtualHost = configuration["rabbitMQOption:VirtualHost" ?? "/"],
+                HostName = options.HostName,
+                Port = options.Port,
+                UserName = options.UserName,
+                Password = options.Password,
+                VirtualHost = options.VirtualHost,
             };
             _connection = _connectionFactory.CreateConnection();
             _channel = _connection.CreateModel();

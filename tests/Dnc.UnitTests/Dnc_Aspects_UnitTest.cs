@@ -1,15 +1,17 @@
 ﻿using Dnc.Test;
 using Dnc.UnitTests.Queries;
+using Dnc.UnitTests.Services;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace Dnc.UnitTests
 {
-    public class AspectsUnitTest
+    public class Dnc_Aspects_UnitTest
         :UnitTestBase
     {
-        public AspectsUnitTest(ITestOutputHelper output) 
+        public Dnc_Aspects_UnitTest(ITestOutputHelper output) 
             : base(output)
         {
             Fx.SrvRegisteredEvent += Fx_SrvRegisteredEvent;
@@ -23,7 +25,7 @@ namespace Dnc.UnitTests
         }
 
         [Fact]
-        public void MemeoryCache_ShouldBe_Normal()
+        public void MemeoryCacheInterceptor_ShouldBe_Normal()
         {
             var logQueries = Fx.Resolve<ILogQueries>();
             logQueries.GetAllLogs();
@@ -34,6 +36,13 @@ namespace Dnc.UnitTests
         {
             var logQueries = Fx.Resolve<ILogQueries>();
             logQueries.GetAllLogs();
+        }
+
+        [Fact]
+        public async Task MiniProfilerIntercepter_ShouldBe_NormalAsync()
+        {
+            var syslogService = Fx.Resolve<ISysLogService>();
+            await syslogService.AddLogAsync("log");
         }
     }
 }

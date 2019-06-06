@@ -7,10 +7,10 @@ using Xunit.Abstractions;
 
 namespace Dnc.UnitTests
 {
-    public class MLUnitTests
+    public class Dnc_ML_UnitTests
         : UnitTestBase
     {
-        public MLUnitTests(ITestOutputHelper output)
+        public Dnc_ML_UnitTests(ITestOutputHelper output)
             : base(output)
         { }
 

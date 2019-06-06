@@ -10,16 +10,17 @@ using Dnc.Serializers;
 using Dnc.Test;
 using Dnc.UnitTests.Services;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace Dnc.UnitTests
 {
-    public class FxUnitTests
+    public class Dnc_Core_UnitTests
         : UnitTestBase
     {
-        public FxUnitTests(ITestOutputHelper output)
+        public Dnc_Core_UnitTests(ITestOutputHelper output)
             : base(output)
         {
             Fx.SrvRegisteredEvent += services =>
@@ -31,7 +32,7 @@ namespace Dnc.UnitTests
             {
                 _output.WriteLine(ex.Message);
             };
-            Fx.CreateDefaultConstruction().AspectsBuild();
+            Fx.CreateDefaultConstruction().Build();
         }
 
         [Fact]
@@ -46,11 +47,16 @@ namespace Dnc.UnitTests
         [Fact]
         public void ObjectIdGenerator_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IObjectIdGenerator>());
         [Fact]
-        public void Alarmer_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IAlarmer>());
+        public async Task Alarmer_ShouldBe_ResolvedAsync()
+        {
+            var alarmer = Fx.Resolve<IAlarmer>();
+            await alarmer.AlarmAdminUsingWechatAsync("内存爆炸", "告警" );
+        }
+
         [Fact]
         public void Downloader_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IDownloader>());
         [Fact]
-        public void MessageSerializer_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IObjectSerializer>());
+        public void ObjectSerializer_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IObjectSerializer>());
         [Fact]
         public void MockRepository_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IMockRepository>());
         [Fact]
@@ -67,12 +73,6 @@ namespace Dnc.UnitTests
             Assert.NotNull(eventbus);
         }
         [Fact]
-        public async Task MiniProfilerIntercepter_ShouldBe_NormalAsync()
-        {
-            var syslogService = Fx.Resolve<ISysLogService>();
-            await syslogService.AddLogAsync("log");
-        }
-        [Fact]
         public async Task CQRS_ShouldBe_NormalAsync()
         {
             var commandbus = Fx.Resolve<ICommandBus>();
@@ -82,7 +82,7 @@ namespace Dnc.UnitTests
         public async Task MailSender_ShouldBe_NormalAsync()
         {
             var sender = Fx.Resolve<IMailSender>();
-            await sender.SendMailAsync("519564415@qq.com", "aja", "aja");
+            await sender.SendMailAsync("519564415@qq.com", "时间推送", $"<h1 style='text-align:center;color:red'>现在是{DateTime.Now.ToLongTimeString()}</h1><img src='https://p1.ssl.qhimgs1.com/t01dbec9123dc40203d.jpg' alt='一起走过七十年代,1977年中国高清大图' title='一起走过七十年代,1977年中国高清大图' class='thumb'>");
         }
     }
 }
