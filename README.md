@@ -18,23 +18,19 @@
 
 # Packages
 
-|Package Name|Package Icon|Version|
-|:-------|:-------:|------:|
-|Dnc.Core|[![Dnc.Core/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.17)|1.1.0.17|
-|Dnc.Dispatcher|[![Dnc.Dispatcher/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Dispatcher/1.1.0.17)|1.1.0.17|
-|Dnc.Data|[![Dnc.Data/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Data/1.1.0.16)|1.1.0.17|
-|Dnc.SeedWork|[![Dnc.SeedWork/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.SeedWork/1.1.0.16)|1.1.0.17|
-|Dnc.WPF|[![Dnc.WPF/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.WPF/1.1.0.17)|1.1.0.17|
-|Dnc.WPF.UI|[![Dnc.WPF.UI/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.WPF.UI/1.1.0.17)|1.1.0.17|
-|Dnc.Spider|[![Dnc.Spider/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Spider/1.1.0.17)|1.1.0.17|
-|Dnc.Spider.HttpRequest|[![Dnc.Spider.HttpRequest/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Spider.HttpRequest/1.1.0.17)|1.1.0.17|
-|Dnc.Spider.Puppeteer|[![Dnc.Spider.Puppeteer/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Spider.Puppeteer/1.1.0.17)|1.1.0.17|
-|Dnc.Events|[![Dnc.Events/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Events/1.1.0.17)|1.1.0.17|
-|Dnc.Events.InMemory|[![Dnc.Events.InMemory/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Events.InMemory/1.1.0.17)|1.1.0.17|
-|Dnc.Events.RabbitMQ|[![Dnc.Events.RabbitMQ/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Events.RabbitMQ/1.1.0.17)|1.1.0.17|
-|Dnc.Events.MySql|[![Dnc.Events.MySql/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Events.MySql/1.1.0.17)|1.1.0.17|
-|Dnc.CQRS|[![Dnc.CQRS/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.CQRS/1.1.0.17)|1.1.0.17|
-|Dnc.Aspects|[![Dnc.Aspects/1.1.0.17](https://img.shields.io/badge/nuget-1.1.0.17-blue.svg)](https://www.nuget.org/packages/Dnc.Aspects/1.1.0.17)|1.1.0.17|
+|Package Name|Description|
+|:-------|:-------|
+|Dnc.Core|核心类库|
+|Dnc.Dispatcher|调度插件,基于Quartz.net实现|
+|Dnc.Data|EntityFrameworkCore扩展|
+|Dnc.Redis|redis插件，基于csredis实现|
+|Dnc.SeedWork|DDD基础设施库|
+|Dnc.Events|事件驱动实现接口定义|
+|Dnc.Events.InMemory|事件驱动内存级别实现包含事件总线和事件存储（文本存储json格式）|
+|Dnc.Events.RabbitMQ|事件驱动,事件总线rabbitmq实现|
+|Dnc.Events.MySql|事件驱动，事件存储mysql实现|
+|Dnc.CQRS|CQRS简单实现基于注入容器|
+|Dnc.Aspects|AOP插件|
 
 # Getting Started
 Fx,代表框架本身兼具框架构建、初始化和解析服务的职责，并提供了一个服务注册事件用于使用者可能需要的自定义服务注册。
@@ -45,6 +41,8 @@ Fx.Construct<FrameworkConstruction>()
   .Build();
 Fx.Resolve<TService>();
 ```
+# Release Logs
+* 2019-06-06 13:43 发布 [![Dnc.Core/1.1.0.18](https://img.shields.io/badge/nuget-1.1.0.18-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.18)
 
 # Development Logs
 * 2019-06-06 13:36 修复了一个bug，该bug曾导致IPluginInitializer不能正常获取实现类的集合
