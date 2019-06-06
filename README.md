@@ -18,19 +18,19 @@
 
 # Packages
 
-|Package Name|Description|
-|:-------|:-------|
-|Dnc.Core|核心类库|
-|Dnc.Dispatcher|调度插件,基于Quartz.net实现|
-|Dnc.Data|EntityFrameworkCore扩展|
-|Dnc.Redis|redis插件，基于csredis实现|
-|Dnc.SeedWork|DDD基础设施库|
-|Dnc.Events|事件驱动实现接口定义|
-|Dnc.Events.InMemory|事件驱动内存级别实现包含事件总线和事件存储（文本存储json格式）|
-|Dnc.Events.RabbitMQ|事件驱动,事件总线rabbitmq实现|
-|Dnc.Events.MySql|事件驱动，事件存储mysql实现|
-|Dnc.CQRS|CQRS简单实现基于注入容器|
-|Dnc.Aspects|AOP插件|
+||Package Name|Description|
+|------|:-------|:-------|
+|1. [x]|Dnc.Core|核心类库|
+|1. [x]|Dnc.Dispatcher|调度插件,基于Quartz.net实现|
+|1. [x]|Dnc.Data|EntityFrameworkCore扩展|
+|1. [x]|Dnc.Redis|redis插件，基于csredis实现|
+|1. [x]|Dnc.SeedWork|DDD基础设施库|
+|1. [x]|Dnc.Events|事件驱动实现接口定义|
+|1. [x]|Dnc.Events.InMemory|事件驱动内存级别实现包含事件总线和事件存储（文本存储json格式）|
+|1. [x]|Dnc.Events.RabbitMQ|事件驱动,事件总线rabbitmq实现|
+|1. [x]|Dnc.Events.MySql|事件驱动，事件存储mysql实现|
+|1. [x]|Dnc.CQRS|CQRS简单实现基于注入容器|
+|1. [x]|Dnc.Aspects|AOP插件|
 
 # Getting Started
 Fx,代表框架本身兼具框架构建、初始化和解析服务的职责，并提供了一个服务注册事件用于使用者可能需要的自定义服务注册。
