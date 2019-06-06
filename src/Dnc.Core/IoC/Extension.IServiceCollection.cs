@@ -12,7 +12,7 @@ namespace Dnc
 
             foreach (var @interface in interfaces)
             {
-                var implementType = @interface.GetImplementType();
+                var implementType = @interface.GetImplementType().FirstOrDefault();
                 if (implementType == null)
                     continue;
                 services.AddScoped(@interface, implementType);
@@ -26,17 +26,25 @@ namespace Dnc
 
             foreach (var @interface in interfaces)
             {
-                var implementType = @interface.GetImplementType();
-                if (implementType == null)
+                if (@interface == typeof(IPlugin))
                     continue;
 
-                if (typeof(IPluginInitializer).IsAssignableFrom(implementType))
+                var implementTypes = @interface.GetImplementType();
+
+                if (@interface == typeof(IPluginInitializer))
                 {
-                    var pluginInitializer = (IPluginInitializer)Activator.CreateInstance(implementType);
-                    if (pluginInitializer != null)
+                    foreach (var item in implementTypes)
+                    {
+                        var pluginInitializer = (IPluginInitializer)Activator.CreateInstance(item);
+                        if (pluginInitializer == null)
+                            continue;
                         pluginInitializer.ConfigureServices(services);
+                    }
                     continue;
                 }
+                var implementType = implementTypes.FirstOrDefault();
+                if (implementType == null)
+                    continue;
                 services.AddScoped(@interface, implementType);
             }
             return services;
