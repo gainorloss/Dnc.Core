@@ -21,7 +21,7 @@
 
 |Package Name|Description|
 |:-------|:-------|
-|Dnc.Core|核心类库|
+|* [ ] Dnc.Core|核心类库|
 |Dnc.Dispatcher|调度插件,基于Quartz.net实现|
 |Dnc.Data|EntityFrameworkCore扩展|
 |Dnc.Redis|redis插件，基于csredis实现|
