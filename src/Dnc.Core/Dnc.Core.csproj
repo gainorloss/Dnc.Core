@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="humanizer.core.zh-cn" Version="2.6.2" />
     <PackageReference Include="idgen" Version="2.0.3" />
     <PackageReference Include="microsoft.codeanalysis.csharp" Version="3.0.0" />
     <PackageReference Include="microsoft.codeanalysis.csharp.scripting" Version="3.0.0" />

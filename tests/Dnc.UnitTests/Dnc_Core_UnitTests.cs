@@ -1,88 +1,89 @@
-using Dnc.CQRS;
-using Dnc.Events;
-using Dnc.FaultToleranceProcessors;
-using Dnc.Files;
 using Dnc.ObjectId;
-using Dnc.Output;
 using Dnc.Seedwork;
-using Dnc.Sender;
-using Dnc.Serializers;
 using Dnc.Test;
-using Dnc.UnitTests.Services;
-using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace Dnc.UnitTests
 {
-    public class Dnc_Core_UnitTests
+    public class Dnc_Extensions_UnitTests
         : UnitTestBase
     {
-        public Dnc_Core_UnitTests(ITestOutputHelper output)
+        public Dnc_Extensions_UnitTests(ITestOutputHelper output)
             : base(output)
         {
-            Fx.SrvRegisteredEvent += services =>
-            {
-                services.AddTransient<ISysLogService, SysLogService>();
-                services.AddTransient<ICommandHandler<SetVersionCmd>, SetVersionCmdHandler>();
-            };
-            Fx.ExceptionThrownEvent += ex =>
-            {
-                _output.WriteLine(ex.Message);
-            };
-            Fx.CreateDefaultConstruction().Build();
+            Fx.CreateDefaultConstruction()
+                .Build();
         }
 
         [Fact]
-        public void ConsoleOutputHelper_ShouldBe_Resolved()
+        public void DateTime_Humanization()
         {
-            var consoleOutputHelper = Fx.Resolve<IConsoleOutputHelper>();
-            consoleOutputHelper.SetTitle("Black Apple");
-            consoleOutputHelper.Dump(new VersionSetEvent());
-            Assert.NotNull(consoleOutputHelper);
+            _output.WriteLine(DateTime.UtcNow.AddYears(-1).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddYears(-2).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddYears(-3).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddYears(-4).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddYears(-5).ToHumanization());
+
+            _output.WriteLine(DateTime.UtcNow.AddMonths(-1).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddMonths(-2).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddMonths(-3).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddMonths(-4).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddMonths(-5).ToHumanization());
+
+            _output.WriteLine(DateTime.UtcNow.AddDays(-1).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddDays(-2).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddDays(-3).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddDays(-4).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddDays(-5).ToHumanization());
+
+            _output.WriteLine(DateTime.UtcNow.AddHours(-1).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddHours(-2).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddHours(-3).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddHours(-4).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddHours(-5).ToHumanization());
+
+            _output.WriteLine(DateTime.UtcNow.AddMinutes(-1).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddMinutes(-2).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddMinutes(-3).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddMinutes(-4).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddMinutes(-5).ToHumanization());
+
+            _output.WriteLine(DateTime.UtcNow.AddSeconds(-1).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddSeconds(-2).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddSeconds(-3).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddSeconds(-4).ToHumanization());
+            _output.WriteLine(DateTime.UtcNow.AddSeconds(-5).ToHumanization());
+
+            _output.WriteLine(DateTime.UtcNow.ToHumanization());
+            _output.WriteLine(new DateTime(2019, 6, 10).ToHumanization());
         }
 
         [Fact]
-        public void ObjectIdGenerator_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IObjectIdGenerator>());
-        [Fact]
-        public async Task Alarmer_ShouldBe_ResolvedAsync()
+        public void TimeSpan_Humanization()
         {
-            var alarmer = Fx.Resolve<IAlarmer>();
-            await alarmer.AlarmAdminUsingWechatAsync("内存爆炸", "告警" );
+            _output.WriteLine(TimeSpan.FromDays(-1).ToHumanization());
+            _output.WriteLine(TimeSpan.FromDays(-2).ToHumanization());
+            _output.WriteLine(TimeSpan.FromDays(-3).ToHumanization());
+            _output.WriteLine(TimeSpan.FromDays(-4).ToHumanization());
+            _output.WriteLine(TimeSpan.FromDays(-5).ToHumanization());
         }
 
         [Fact]
-        public void Downloader_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IDownloader>());
-        [Fact]
-        public void ObjectSerializer_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IObjectSerializer>());
-        [Fact]
-        public void MockRepository_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IMockRepository>());
-        [Fact]
-        public void FaultToleranceProcessor_ShouldBe_Resolved() => Assert.NotNull(Fx.Resolve<IFaultToleranceProcessor>());
-        [Fact]
-        public void EventBus_ShouldBe_Resolved()
+        public void Enumerable_Humanization()
         {
-            var es = Fx.Resolve<IEventStore>();
-            var eventbus = Fx.Resolve<IEventBus>();
-            eventbus.Subscribe<TimeUpdatedEvent, TimeUpdatedEventHandler>();
-            eventbus.Subscribe<VersionSetEvent, VersionSetEventHandler>();
-            eventbus.PublishAsync(new TimeUpdatedEvent());
-            eventbus.PublishAsync(new VersionSetEvent());
-            Assert.NotNull(eventbus);
+            var mockRepository = Fx.Resolve<IMockRepository>();
+            var events = mockRepository.CreateMultiple<VersionSetEvent>();
+            _output.WriteLine(events.ToHumanization());
         }
+
         [Fact]
-        public async Task CQRS_ShouldBe_NormalAsync()
+        public void Object_Humanization()
         {
-            var commandbus = Fx.Resolve<ICommandBus>();
-            await commandbus.SendAsync(new SetVersionCmd(1));
-        }
-        [Fact]
-        public async Task MailSender_ShouldBe_NormalAsync()
-        {
-            var sender = Fx.Resolve<IMailSender>();
-            await sender.SendMailAsync("1354874997@qq.com", "时间推送", $"<h1 style='text-align:center;color:red'>现在是{DateTime.Now.ToLongTimeString()}</h1><img src='https://p1.ssl.qhimgs1.com/t01dbec9123dc40203d.jpg' alt='一起走过七十年代,1977年中国高清大图' title='一起走过七十年代,1977年中国高清大图' class='thumb'>");
+            var mockRepository = Fx.Resolve<IMockRepository>();
+            var @event = mockRepository.Create<VersionSetEvent>();
+            _output.WriteLine(@event.ToHumanization());
         }
     }
 }
