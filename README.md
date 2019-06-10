@@ -48,6 +48,7 @@ Fx.Resolve<TService>();
 * 2019-06-06 13:43 发布 [![Dnc.Core/1.1.0.18](https://img.shields.io/badge/nuget-1.1.0.18-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.18)
 
 # Development Logs
+* 2019-06-10 16:44 DateTime.UtcNow&TimeSpan&IEnumrable<T>&T .ToHumanization() 开发及测试完成
 * 2019-06-06 13:36 修复了一个bug，该bug曾导致IPluginInitializer不能正常获取实现类的集合
 * 2019-06-06 11:08 UnitTests结构调整优化,Dnc.Redis单元测试构建及测试通过，Dnc.Core-samples.sln,准备构建功能测试界面
 * 2019-06-05 13:56 HystrixCommandInterceptorAttribute(Aspects)
