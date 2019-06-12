@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using MimeKit;
 using MimeKit.Text;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Dnc.Sender
@@ -29,22 +30,49 @@ namespace Dnc.Sender
             if (_smtpClient == null)
                 _smtpClient = new SmtpClient();
 
+            var name = _options.Name;
+            var address = _options.Address;
+            var password = _options.Password;
+
             var msg = new MimeMessage();
-            msg.From.Add(new MailboxAddress(_options.Name ?? "gainorloss", _options.Address ?? "519564415@qq.com"));
+            msg.From.Add(new MailboxAddress(name, address));
             msg.To.Add(new MailboxAddress("", to));
             msg.Subject = subject;
+
+            #region content template.
+            var sb = new StringBuilder();
+            sb.AppendFormat(@"<table dir='ltr'>");
+            sb.AppendFormat(@"      <tbody><tr><td id='i1' style='padding:0; font-family:'Microsoft Yahei', Verdana, Simsun, sans-serif; font-size:17px; color:#707070;'>{0} 帐户</td></tr>",name);
+            sb.AppendFormat(@"      <tr><td id='i2' style='padding:0; font-family:'Microsoft Yahei', Verdana, Simsun, sans-serif; font-size:41px; color:#2672ec;'>{0}</td></tr>",subject);
+            sb.AppendFormat(@"      <tr><td id='i3' style='padding:0; padding-top:25px; font-family:'Microsoft Yahei', Verdana, Simsun, sans-serif; font-size:14px; color:#2a2a2a;'>");
+            sb.AppendFormat(@"                请为 {0} 帐户 <a dir='ltr' id='iAccount' class='link' style='color:#2672ec; text-decoration:none' href='mailto:{2}' rel='noopener' target='_blank'>{2}</a> 使用以下{1}。",name,subject,to);
+            sb.AppendFormat(@"             </td></tr>");
+            sb.AppendFormat(@"      <tr><td id='i4' style='padding:0; padding-top:25px; font-family:'Microsoft Yahei', Verdana, Simsun, sans-serif; font-size:14px; color:#2a2a2a;'>");
+            sb.AppendFormat(@"                {0}：<span style='font-family:'Microsoft Yahei', Verdana, Simsun, sans-serif; font-size:14px; font-weight:bold; color:#2a2a2a;'>{1}</span>",subject,desc);
+            sb.AppendFormat(@"            </td></tr>");
+            sb.AppendFormat(@"      <tr><td id='i5' style='padding:0; padding-top:25px; font-family:'Microsoft Yahei', Verdana, Simsun, sans-serif; font-size:14px; color:#2a2a2a;'>");
+            sb.AppendFormat(@"                如果你无法识别 {0} 帐户 <a dir='ltr' id='iAccount' class='link' style='color:#2672ec; text-decoration:none' href='mailto:{1}' rel='noopener' target='_blank'>{1}</a>，可以<a id='iLink2' class='link' style='color:#2672ec; text-decoration:none' href='mailto:{2}' rel='noopener' target='_blank'>单击此处</a>从该帐户删除你的电子邮件地址。", subject,to,address);
+            sb.AppendFormat(@"            </td></tr>");
+            sb.AppendFormat(@"      <tr><td id='i6' style='padding:0; padding-top:25px; font-family:'Microsoft Yahei', Verdana, Simsun, sans-serif; font-size:14px; color:#2a2a2a;'>谢谢!</td></tr>");
+            sb.AppendFormat(@"      <tr><td id='i7' style='padding:0; font-family:'Microsoft Yahei', Verdana, Simsun, sans-serif; font-size:14px; color:#2a2a2a;'>{0} 帐户团队</td></tr>",name);
+            sb.AppendFormat(@"</tbody></table>");
+            #endregion
 
             var multipart = new Multipart("mixed")
             {
                 new TextPart(TextFormat.Html)
                 {
-                    Text = $"<p>hi,{to}:<p/><p>{subject}</p><p>{desc}</p><p>Good luck.</p>"
+                    Text = sb.ToString()
                 }
             };
             msg.Body = multipart;
 
-            _smtpClient.Connect("smtp.qq.com", 587, false);
-            await _smtpClient.AuthenticateAsync("519564415@qq.com", "xollwmwczuxwbhcb");
+            if (!_smtpClient.IsConnected)
+                _smtpClient.Connect("smtp.qq.com", 587, false);
+
+            if (!_smtpClient.IsAuthenticated)
+                await _smtpClient.AuthenticateAsync(address, password);
+
             await _smtpClient.SendAsync(msg);
             _logger.LogInformation("Mail is sent successfully.");
         }

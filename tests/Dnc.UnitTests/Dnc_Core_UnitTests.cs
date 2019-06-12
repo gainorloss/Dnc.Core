@@ -97,7 +97,8 @@ namespace Dnc.UnitTests
         public async Task MailSender_ShouldBe_NormalAsync()
         {
             var sender = Fx.Resolve<IMailSender>();
-            await sender.SendMailAsync("1354874997@qq.com", "时间推送", $"<h1 style='text-align:center;color:red'>现在是{DateTime.Now.ToLongTimeString()}</h1><img src='https://p1.ssl.qhimgs1.com/t01dbec9123dc40203d.jpg' alt='一起走过七十年代,1977年中国高清大图' title='一起走过七十年代,1977年中国高清大图' class='thumb'>");
+            await sender.SendMailAsync("1354874997@qq.com", "安全代码", "251146");
+            await sender.SendMailAsync("519564415@qq.com", "安全代码", "251146");
         }
     }
 }
