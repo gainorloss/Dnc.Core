@@ -1,4 +1,4 @@
-# Docker的使用
+﻿# Docker的使用
 
 ### Command模式启动中间件实例
 
@@ -15,9 +15,9 @@ docker run -d --name mysql -p 3306:3306 -v /usr/local/docker/mysql/config/mysqld
 docker run -d --name mongo -v /usr/local/docker/mongo/configdb:/data/configdb -v /usr/local/docker/mongo/data:/data/db -p 27017:27017 mongo:4 --auth
 ```
 
-* [ ] 第二种方式：
+* [x] 第二种方式：
 ```
-docker run -d -p 27017:27017 --name aspnet-mongo -v /docker/mongo/db:/data/db -v /docker/mongo/conf:/data/configdb
+docker run -d -p 27017:27017 --name aspnet-mongo -v /docker/mongo/db:/data/db -v /docker/mongo/conf:/data/configdb  mongo
 ```
 
 3. redis volume挂载启动
