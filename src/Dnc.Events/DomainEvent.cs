@@ -3,6 +3,7 @@ using System;
 
 namespace Dnc.Events
 {
+    [Serializable]
     public class DomainEvent
         : IEvent
     {
