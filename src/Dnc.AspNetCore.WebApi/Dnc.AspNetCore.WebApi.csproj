@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.1</Version>
+    <Version>1.1.1.2</Version>
     <Title>Dnc.AspNetCore.WebApi</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -19,9 +19,9 @@
     <PackageReference Include="autofac.extensions.dependencyinjection" Version="4.4.0" />
     <PackageReference Include="fluentvalidation.aspnetcore" Version="8.4.0" />
     <PackageReference Include="identityserver4.accesstokenvalidation" Version="2.7.0" />
+    <PackageReference Include="microsoft.aspnetcore.mvc" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.mvc.versioning" Version="3.1.2" />
     <PackageReference Include="microsoft.extensions.platformabstractions" Version="1.1.0" />
-    <PackageReference Include="Panda.DynamicWebApi" Version="0.0.5" />
     <PackageReference Include="swashbuckle.aspnetcore" Version="4.0.1" />
   </ItemGroup>
 
