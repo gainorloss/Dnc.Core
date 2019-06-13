@@ -18,8 +18,10 @@
 
 # Packages
 * [x] Dnc.Core
-* [ ] Dnc.AspNetCore
-* [ ] Dnc.AspNetCore.Ui
+* [x] Dnc.AspNetCore
+* [x] Dnc.AspNetCore.Ui
+* [x] Dnc.AspNetCore.Web
+* [x] Dnc.AspNetCore.WebApi
 
 |Package Name|Description|
 |:-------|:-------|
@@ -45,6 +47,7 @@ Fx.Construct<FrameworkConstruction>()
 Fx.Resolve<TService>();
 ```
 # Release Logs
+* 2019-06-13 15:23 发布 [![Dnc.Core/1.1.1](https://img.shields.io/badge/nuget-1.1.1-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.1)
 * 2019-06-06 13:43 发布 [![Dnc.Core/1.1.0.18](https://img.shields.io/badge/nuget-1.1.0.18-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.18)
 
 # Development Logs
