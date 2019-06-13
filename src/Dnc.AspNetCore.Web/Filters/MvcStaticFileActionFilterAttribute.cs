@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Dnc.AspNetCore.Filters
+namespace Dnc.AspNetCore.Web
 {
     /// <summary>
     /// Staticizes u's pages.

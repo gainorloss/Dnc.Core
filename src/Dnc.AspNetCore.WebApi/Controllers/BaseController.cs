@@ -1,10 +1,9 @@
-﻿using Dnc.AspNetCore.Models;
-using Dnc.Seedwork;
+﻿using Dnc.Seedwork;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Dynamic;
 
-namespace Dnc.AspNetCore.Controllers
+namespace Dnc.AspNetCore.WebApi
 {
     public class BaseController : ControllerBase
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Dnc.AspNetCore.Controllers
+namespace Dnc.AspNetCore
 {
     public enum HttpStatusCodes
     {

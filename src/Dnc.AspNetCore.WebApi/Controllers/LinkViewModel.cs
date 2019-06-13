@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.AspNetCore.Controllers
+namespace Dnc.AspNetCore.WebApi
 {
     public class LinkViewModel
     {

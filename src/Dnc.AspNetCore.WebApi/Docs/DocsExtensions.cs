@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.PlatformAbstractions;
 using System.IO;
 
-namespace Dnc.AspNetCore
+namespace Dnc.AspNetCore.WebApi
 {
     public static class DocsExtensions
     {

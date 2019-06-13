@@ -83,6 +83,20 @@ $nugetPath=join-path $packPath 'bin/release/'
 cd $nugetPath
 dotnet nuget push Dnc.AspNetCore.Ui.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
 
+$packPath=join-path $workspace 'src/Dnc.AspNetCore.Web'
+cd $packPath
+dotnet pack -c release 
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.AspNetCore.Web.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
+$packPath=join-path $workspace 'src/Dnc.AspNetCore.WebApi'
+cd $packPath
+dotnet pack -c release 
+$nugetPath=join-path $packPath 'bin/release/'
+cd $nugetPath
+dotnet nuget push Dnc.AspNetCore.WebApi.$version.nupkg -k oy2jhggtncepirf5it4qtbuyrppwfhke7mi4tswqf4mbf4 -s https://api.nuget.org/v3/index.json
+
 $packPath=join-path $workspace 'src/Dnc.Dispatcher'
 cd $packPath
 dotnet pack -c release -o bin/release

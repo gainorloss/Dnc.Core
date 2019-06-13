@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.AspNetCore.Controllers
+namespace Dnc.AspNetCore
 {
     public class AjaxResult
     {

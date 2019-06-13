@@ -1,15 +1,10 @@
-﻿using Dnc.AspNetCore.Controllers;
-using Dnc.AspNetCore.Models;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Dnc.AspNetCore.Filters
+namespace Dnc.AspNetCore.WebApi
 {
     /// <summary>
     /// Global exception handlers.

@@ -1,15 +1,9 @@
-﻿using Dnc.AspNetCore.Controllers;
-using Dnc.AspNetCore.Extensions;
-using Dnc.AspNetCore.Models;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Dnc.AspNetCore.Filters
+namespace Dnc.AspNetCore.Web
 {
     public class MvcGlobalLogExceptionFilter
        : IExceptionFilter

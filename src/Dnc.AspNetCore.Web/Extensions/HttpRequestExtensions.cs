@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Dnc.AspNetCore.Extensions
+namespace Dnc.AspNetCore.Web
 {
     /// <summary>
     /// Http request extension.

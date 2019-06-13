@@ -1,4 +1,4 @@
-﻿namespace Dnc.AspNetCore.Models
+﻿namespace Dnc.AspNetCore.WebApi
 {
     public class PageParameter
     {

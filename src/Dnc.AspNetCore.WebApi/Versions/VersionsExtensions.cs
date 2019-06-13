@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dnc.AspNetCore
+namespace Dnc.AspNetCore.WebApi
 {
     public static class VersionsExtensions
     {

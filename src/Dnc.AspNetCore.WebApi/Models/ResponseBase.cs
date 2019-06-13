@@ -1,9 +1,4 @@
-﻿using Dnc.AspNetCore.Controllers;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dnc.AspNetCore.Models
+﻿namespace Dnc.AspNetCore.WebApi
 {
     public class ResponseBase
     {
