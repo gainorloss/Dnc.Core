@@ -5,14 +5,34 @@
 1. mysql volume挂载启动
 * [ ] [mysql.cnf](./configs/mysql.cnf)
 ```
-docker run -d --name mysql -p 3306:3306 -v /usr/local/docker/mysql/config/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf -v /usr/local/docker/mysql/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+docker run -d --name aspnet-mysql -p 3306:3306 -v /docker/mysql/conf/my.cnf:/etc/mysql/my.cnf -v /docker/mysql/db/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=p@ssw0rd mysql/mysql-server:5.7
+```
+* 进入mysql容器
+
+```
+docker exec -it aspnet-mysql bash
+```
+* 认证
+
+```
+mysql -uroot -p
+
+```
+* 进入系统库mysql
+```
+use mysql;
+show variables like 'character%';
+select user,host from user;
+update user set host='%' where user='root' and host='localhost';
+grant all privileges on *.* to 'root'@'%' identified by 'p@ssw0rd' with grant option;
+flush privileges;
 ```
 
 2. mongo volume挂载启动
 
 * [ ] 第一种方式：
 ```
-docker run -d --name mongo -v /usr/local/docker/mongo/configdb:/data/configdb -v /usr/local/docker/mongo/data:/data/db -p 27017:27017 mongo:4 --auth
+docker run -d --name mongo -v /docker/mongo/conf:/data/configdb -v /docker/mongo/db:/data/db -p 27017:27017 mongo:4 --auth
 ```
 
 * [x] 第二种方式：
@@ -23,13 +43,13 @@ docker run -d -p 27017:27017 --name aspnet-mongo -v /docker/mongo/db:/data/db -v
 3. redis volume挂载启动
 * [ ] 经过测试
 ```
-docker run -d -p 6379:6379 --name redis -v /usr/local/docker/redis/redis.conf:/etc/redis/redis.conf -v /usr/local/docker/redis/data:/data -d redis:alpine redis-server /etc/redis/redis.conf --appendonly yes
+docker run -d -p 6379:6379 --name redis -v /docker/redis/redis.conf:/etc/redis/redis.conf -v /docker/redis/data:/data -d redis:alpine redis-server /etc/redis/redis.conf --appendonly yes
 ```
 
 4. elasticsearch volume挂载启动
 * [ ] 经过测试
 ```
-docker run -d --name es -p 9200:9200 -p 9300:9300 -v /usr/local/docker/es/config:/usr/share/elasticsearch/config -v /usr/local/docker/es/data:/usr/share/elasticsearch/data -v /usr/local/docker/es/plugins:/usr/share/elasticsearch/plugins elasticsearch:6.5.0 
+docker run -d --name es -p 9200:9200 -p 9300:9300 -v /docker/es/config:/usr/share/elasticsearch/config -v /usr/local/docker/es/data:/usr/share/elasticsearch/data -v /usr/local/docker/es/plugins:/usr/share/elasticsearch/plugins elasticsearch:6.5.0 
 ```
 
 ### 单层应用的Dockerfile文件怎么写？
