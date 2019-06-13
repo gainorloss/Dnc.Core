@@ -3,7 +3,7 @@
 ### Command模式启动中间件实例
 
 1. mysql volume挂载启动
-* [ ] [mysql.cnf](./configs/my.cnf)
+* [ ] [my.cnf](./configs/my.cnf)
 ```
 docker run -d --name aspnet-mysql -p 3306:3306 -v /docker/mysql/conf/my.cnf:/etc/mysql/my.cnf -v /docker/mysql/db/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=p@ssw0rd mysql/mysql-server:5.7
 ```
