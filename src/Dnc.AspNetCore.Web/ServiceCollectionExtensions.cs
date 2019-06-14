@@ -62,6 +62,7 @@ namespace Dnc.AspNetCore.Web
             //routint url+querystring lowercase.
             services.AddRouting(opt =>
             {
+                options.ConstraintMap["slugify"] = typeof(SlugifyParameterTransformer);
                 opt.LowercaseUrls = true;
                 opt.LowercaseQueryStrings = true;
             });
