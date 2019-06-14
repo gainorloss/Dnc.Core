@@ -11,29 +11,34 @@ namespace Dnc.AspNetCore.WebApi
         /// project property xml generator 【apidoc{version}.xml】.
         /// </summary>
         /// <param name="services"></param>
-        /// <param name="title"></param>
-        /// <param name="version"></param>
+        /// <param name="n"></param>
+        /// <param name="v"></param>
         /// <returns></returns>
-        internal static IServiceCollection AddSwaggerAPIDoc(this IServiceCollection services, string title = "API文档", string version = "v1")
+        internal static IServiceCollection AddSwaggerAPIDoc(this IServiceCollection services, string n = null, double v = 1)
         {
-            services.AddSwaggerGen(c =>
+            var title = string.IsNullOrWhiteSpace(n)? "开放平台API文档":$"{n} 开放平台API文档";
+            var version = $"v{v}";
+
+            services.AddSwaggerGen(options =>
             {
-                c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
-                {
-                    Title = title,
-                    Version = "v1",
-                });
+                options.SwaggerDoc(version, new Swashbuckle.AspNetCore.Swagger.Info() { Title = title, Version = version });
+                options.DocInclusionPredicate((docName, description) => true);
 
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-                var xmlPath = Path.Combine(basePath, $"apidoc{version}.xml");
-                c.IncludeXmlComments(xmlPath);
 
+                var apiXmlPath = Path.Combine(basePath, $"apidoc{version}.xml");
+                options.IncludeXmlComments(apiXmlPath);
+
+                var appXmlPath = Path.Combine(basePath, $"appdoc{version}.xml");
+                options.IncludeXmlComments(appXmlPath);
             });
             return services;
         }
 
-        internal static IApplicationBuilder UseSwaggerAPIDoc(this IApplicationBuilder app, string version = "v1")
+        internal static IApplicationBuilder UseSwaggerAPIDoc(this IApplicationBuilder app, double v = 1)
         {
+            var version = $"v{v}";
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {

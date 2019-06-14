@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using Panda.DynamicWebApi;
 using System;
 using System.Linq;
 using System.Runtime.Loader;
@@ -18,7 +19,8 @@ namespace Dnc.AspNetCore.WebApi
         public static IServiceProvider AddAspNetCore<TType>(this IServiceCollection services,
             string authorityUrl,
             string appName = null,
-            string appSecret = null)
+            string appSecret = null,
+            double versionNo=1)
         {
 
             services.AddAPIVersion();//api version.
@@ -65,7 +67,8 @@ namespace Dnc.AspNetCore.WebApi
                 });
             });
             #endregion
-            services.AddSwaggerAPIDoc();//api doc.
+            services.AddDynamicWebApi();
+            services.AddSwaggerAPIDoc(appName, versionNo);//api doc+ app doc.
 
             return services.GetAutofacServiceProvider(typeof(TType));//autofac.
         }

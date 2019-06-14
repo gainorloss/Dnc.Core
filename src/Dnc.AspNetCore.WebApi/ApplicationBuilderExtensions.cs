@@ -12,10 +12,10 @@ namespace Dnc.AspNetCore.WebApi
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
-        public static IApplicationBuilder UseAspNetCore(this IApplicationBuilder app)
+        public static IApplicationBuilder UseAspNetCore(this IApplicationBuilder app,double versionNo=1)
         {
             app.UseAuthentication();
-            app.UseSwaggerAPIDoc();
+            app.UseSwaggerAPIDoc(versionNo);
             app.UseMvc();
             return app;
         }
