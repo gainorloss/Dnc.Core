@@ -1,18 +1,14 @@
-﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using FluentValidation.AspNetCore;
+﻿using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Runtime.Loader;
 
 namespace Dnc.AspNetCore.Web
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceProvider AddAspNetCore<TType>(this IServiceCollection services,
+        public static IServiceCollection AddAspNetCore<TType>(this IServiceCollection services,
             string authorityUrl,
             string appName = null,
             string appSecret = null)
@@ -92,36 +88,8 @@ namespace Dnc.AspNetCore.Web
                 });
             });
             #endregion
-            return services.GetAutofacServiceProvider(typeof(TType));//autofac.
-        }
 
-        /// <summary>
-        /// Use autofac to replace default container.
-        /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
-        private static IServiceProvider GetAutofacServiceProvider(this IServiceCollection services, Type type)
-        {
-            var builder = new ContainerBuilder();
-            builder.Populate(services);
-
-            var context = AssemblyLoadContext.Default;
-            var assemblies = type.Assembly.GetReferencedAssemblies()
-                .Select(name => context.LoadFromAssemblyName(name)).ToList();
-            assemblies.Add(type.Assembly);
-
-            builder.RegisterAssemblyTypes(assemblies.ToArray())//get assembly ends with some keywords.
-               .Where(t => t.Name.EndsWith("UnitWork")
-                       || t.Name.EndsWith("Repository")
-                       || t.Name.EndsWith("CmdHandler")
-                       || t.Name.EndsWith("Service")
-                       || t.Name.EndsWith("DomainEventHandler")
-                       || t.Name.EndsWith("IntegrationEventHandler")
-                       || t.Name.EndsWith("Queries", StringComparison.OrdinalIgnoreCase))
-               .AsImplementedInterfaces();//as interface
-
-            var container = builder.Build();
-            return new AutofacServiceProvider(container);
+            return services;
         }
     }
 }

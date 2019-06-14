@@ -16,7 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="autofac.extensions.dependencyinjection" Version="4.4.0" />
     <PackageReference Include="fluentvalidation.aspnetcore" Version="8.4.0" />
     <PackageReference Include="microsoft.aspnetcore.authentication.cookies" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.authentication.openidconnect" Version="2.2.0" />

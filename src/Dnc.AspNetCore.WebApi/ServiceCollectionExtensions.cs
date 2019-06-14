@@ -20,9 +20,9 @@ namespace Dnc.AspNetCore.WebApi
             string authorityUrl,
             string appName = null,
             string appSecret = null,
-            double versionNo=1)
+            double versionNo = 1)
         {
-
+            services.AddOptions();
             services.AddAPIVersion();//api version.
 
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
@@ -67,6 +67,7 @@ namespace Dnc.AspNetCore.WebApi
                 });
             });
             #endregion
+
             services.AddDynamicWebApi();
             services.AddSwaggerAPIDoc(appName, versionNo);//api doc+ app doc.
 
