@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.1.3</Version>
+    <Version>1.1.1.2</Version>
     <Title>Dnc.AspNetCore.WebApi</Title>
     <Authors>gainorloss</Authors>
     <Owners>gainorloss</Owners>
@@ -22,6 +22,7 @@
     <PackageReference Include="microsoft.aspnetcore.mvc" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.mvc.versioning" Version="3.1.2" />
     <PackageReference Include="microsoft.extensions.platformabstractions" Version="1.1.0" />
+    <PackageReference Include="panda.dynamicwebapi" Version="0.0.5" />
     <PackageReference Include="swashbuckle.aspnetcore" Version="4.0.1" />
   </ItemGroup>
 

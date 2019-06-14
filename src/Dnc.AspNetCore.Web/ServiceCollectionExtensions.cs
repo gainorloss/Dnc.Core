@@ -59,6 +59,12 @@ namespace Dnc.AspNetCore.Web
             });
             services.AddHttpContextAccessor();//httpcontext accessor.
 
+            //routint url+querystring lowercase.
+            services.AddRouting(opt =>
+            {
+                opt.LowercaseUrls = true;
+                opt.LowercaseQueryStrings = true;
+            });
             services
                 .AddMvc(opt =>
             {

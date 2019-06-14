@@ -17,15 +17,15 @@ namespace Dnc.AspNetCore.Web
             app.UseAuthentication();
             app.UseMvc(routes =>
             {
-                routes.MapRoute(name: "static_areas", template: "{area:exists}/{controller=Home}-{action=Index}.html");
+                routes.MapRoute(name: "static_areas", template: "{area:exists:slugify}/{controller:slugify=Home}-{action=Index}.html");
 
-                routes.MapRoute(name: "static", template: "{controller=Home}-{action=Index}.html");
+                routes.MapRoute(name: "static", template: "{controller:slugify=Home}-{action:slugify=Index}.html");
 
-                routes.MapRoute(name: "areas", template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(name: "areas", template: "{area:exists:slugify}/{controller:slugify=Home}/{action:slugify=Index}/{id?}");
 
-                routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(name: "default", template: "{controller:slugify=Home}/{action:slugify=Index}/{id?}");
 
-                routes.MapRoute(name: "custom", template: "{area:exists}_{controller=Home}_{action=Index}.{id?}");//Custom route template.
+                routes.MapRoute(name: "custom", template: "{area:exists:slugify}_{controller:slugify=Home}_{action:slugify=Index}.{id?}");//Custom route template.
                 });
             return app;
         }
