@@ -1,8 +1,7 @@
-﻿using Dnc.Seedwork;
-
-namespace Dnc.Core.Seedwork
+﻿namespace Dnc.Seedwork
 {
-    public interface IRepository<TEntity>
-        where TEntity : Entity, IAggregateRoot
-    { }
+    public interface IRepository
+    {
+        long NextIdentity();  
+    }
 }
