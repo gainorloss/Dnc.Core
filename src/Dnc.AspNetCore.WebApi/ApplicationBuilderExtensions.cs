@@ -14,6 +14,7 @@ namespace Dnc.AspNetCore.WebApi
         /// <returns></returns>
         public static IApplicationBuilder UseAspNetCore(this IApplicationBuilder app,double versionNo=1)
         {
+            app.UseCors("AppDomain");
             app.UseAuthentication();
             app.UseSwaggerAPIDoc(versionNo);
             app.UseMvc();

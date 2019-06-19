@@ -71,6 +71,13 @@ namespace Dnc.AspNetCore.WebApi
             services.AddDynamicWebApi();
             services.AddSwaggerAPIDoc(appName, versionNo);//api doc+ app doc.
 
+            services.AddCors(opt => opt.AddPolicy("AppDomain",
+                builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials()));
+
             return services.GetAutofacServiceProvider(typeof(TType));//autofac.
         }
 

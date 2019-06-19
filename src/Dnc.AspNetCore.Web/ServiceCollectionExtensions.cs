@@ -89,6 +89,11 @@ namespace Dnc.AspNetCore.Web
             });
             #endregion
 
+            services.AddMiniProfiler(opt =>
+            {
+                opt.PopupRenderPosition = StackExchange.Profiling.RenderPosition.BottomLeft;
+                opt.PopupShowTimeWithChildren = true;
+            }).AddEntityFramework();
             return services;
         }
     }

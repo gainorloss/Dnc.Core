@@ -15,6 +15,7 @@ namespace Dnc.AspNetCore.Web
         public static IApplicationBuilder UseAspNetCore(this IApplicationBuilder app)
         {
             app.UseAuthentication();
+            app.UseMiniProfiler();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(name: "static_areas", template: "{area:exists:slugify}/{controller:slugify=Home}-{action=Index}.html");

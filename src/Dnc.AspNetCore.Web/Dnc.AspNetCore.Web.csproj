@@ -21,6 +21,8 @@
     <PackageReference Include="microsoft.aspnetcore.authentication.openidconnect" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.mvc" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.routing" Version="2.2.2" />
+    <PackageReference Include="miniprofiler.aspnetcore.mvc" Version="4.0.165" />
+    <PackageReference Include="miniprofiler.entityframeworkcore" Version="4.0.165" />
   </ItemGroup>
 
   <ItemGroup>

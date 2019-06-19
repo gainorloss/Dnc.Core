@@ -19,6 +19,7 @@
     <PackageReference Include="autofac.extensions.dependencyinjection" Version="4.4.0" />
     <PackageReference Include="fluentvalidation.aspnetcore" Version="8.4.0" />
     <PackageReference Include="identityserver4.accesstokenvalidation" Version="2.7.0" />
+    <PackageReference Include="microsoft.aspnet.webapi.cors" Version="5.2.7" />
     <PackageReference Include="microsoft.aspnetcore.mvc" Version="2.2.0" />
     <PackageReference Include="microsoft.aspnetcore.mvc.versioning" Version="3.1.2" />
     <PackageReference Include="microsoft.extensions.platformabstractions" Version="1.1.0" />
