@@ -2,7 +2,7 @@
 
 namespace Dnc.Seedwork
 {
-    public class EntityBase<TKey>
+    public class EntityBase<TIdentity>
         : IEntity
     {
 
@@ -10,7 +10,7 @@ namespace Dnc.Seedwork
         {
             CreatedAt = DateTime.Now;
         }
-        public TKey Id { get; set; }
+        public TIdentity Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public string Creator { get; set; }
     }

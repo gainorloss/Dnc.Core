@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dnc.Seedwork
+﻿namespace Dnc.Seedwork
 {
     public abstract class ObjectId<TId>
     {
