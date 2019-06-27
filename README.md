@@ -58,18 +58,30 @@ Fx.Resolve<TService>();
 * 2019-06-06 13:43 发布 [![Dnc.Core/1.1.0.18](https://img.shields.io/badge/nuget-1.1.0.18-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.18)
 
 # Development Logs
-* 2019-06-27 10:53 Dnc.Seedwork:IUnitOfWork,DomainObject,IdentifiedDomainObject,IdentifiedValueObject;IConcurrencySafe,ConcurrencySafeEntity
-* 2019-06-19 16:37 Dnc.AspNetCore.Web添加MiniProfiler.AspNetCore.Mvc和MiniProfiler.EntityFrameworkCore支持,Dnc.AspNetCore.WebApi添加跨域支持，默认接受任何请求
-* 2019-06-12 10:53 IObjectSerializer BytesToObject&ObjectToBytes 开发及测试完成
-* 2019-06-10 16:44 DateTime.UtcNow&TimeSpan&IEnumrable<T>&T .ToHumanization() 开发及测试完成
-* 2019-06-06 13:36 修复了一个bug，该bug曾导致IPluginInitializer不能正常获取实现类的集合
+
+* 2019-06-27 10:53 *Dnc.Seedwork:IUnitOfWork,DomainObject,IdentifiedDomainObject,IdentifiedValueObject;IConcurrencySafe,ConcurrencySafeEntity*
+
+* 2019-06-19 16:37 Dnc.AspNetCore.Web添加**MiniProfiler.AspNetCore.Mvc**和**MiniProfiler.EntityFrameworkCore**支持,*Dnc.AspNetCore.WebApi*添加跨域支持，默认接受任何请求
+
+* 2019-06-12 10:53 *IObjectSerializer BytesToObject&ObjectToBytes* 开发及测试完成
+
+* 2019-06-10 16:44 *DateTime.UtcNow&TimeSpan&IEnumrable<T>&T .ToHumanization()* 开发及测试完成
+  
+* 2019-06-06 13:36 修复了一个bug，该bug曾导致*IPluginInitializer*不能正常获取实现类的集合
+  
 * 2019-06-06 11:08 UnitTests结构调整优化,Dnc.Redis单元测试构建及测试通过，Dnc.Core-samples.sln,准备构建功能测试界面
-* 2019-06-05 13:56 HystrixCommandInterceptorAttribute(Aspects)
+  
+* 2019-06-05 13:56 *HystrixCommandInterceptorAttribute(Aspects)*
+  
 * 2019-06-05 12:04 Core Construct调整,Configuration 注入放入Construct,而不是构造函数中,使用IPluginInitializer注入Plugin服务
-* 2019-06-04 16:38 缓存AOP MemoryCachingInterceptor 开发及测试完成
+  
+* 2019-06-04 16:38 缓存AOP *MemoryCachingInterceptor* 开发及测试完成
+
 * 2019-05-31 13:25 release all 1.1.0.17,更新README.md
-* 2019-05-30 修复了一个bug,该bug曾导致FrameworkEnvironment获取失败
-* 2019-05-29 调整IEventHandlerExecutionContext默认注入，使用者无须关注注入
+
+* 2019-05-30 修复了一个bug,该bug曾导致*FrameworkEnvironment*获取失败
+
+* 2019-05-29 调整*IEventHandlerExecutionContext*,默认注入，使用者无须关注注入
 
 # More...
 
