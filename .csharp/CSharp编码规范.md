@@ -1,12 +1,12 @@
-# CSharp±àÂë¹æ·¶
+# CSharpç¼–ç è§„èŒƒ
 
-1. ÎÄ¼şÍ·Ê¾Àı
+1. æ–‡ä»¶å¤´ç¤ºä¾‹
 
 ``` csharp
 /********************************************
-  DomainObject:ÁìÓò¶ÔÏó»ùÀà
+  DomainObject:é¢†åŸŸå¯¹è±¡åŸºç±»
 
-  Creator:gainorloss ´´½¨Ê±¼ä:2019-06-27
+  Creator:gainorloss CreateTime:2019-06-27
   Copyright (c) gainorloss Std.
 *********************************************/
 ```
