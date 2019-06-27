@@ -9,9 +9,9 @@ using Dnc.Seedwork.Abstractions;
 
 namespace Dnc.Seedwork.Entities
 {
-    public class CocurrencySafeEntity : SnowflakeEntity, ICocurrencySafe
+    public class ConcurrencySafeEntity : SnowflakeEntity, IConcurrencySafe
     {
-        public CocurrencySafeEntity()
+        public ConcurrencySafeEntity()
         {
             SetVersion();
         }

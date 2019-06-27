@@ -58,6 +58,7 @@ Fx.Resolve<TService>();
 * 2019-06-06 13:43 发布 [![Dnc.Core/1.1.0.18](https://img.shields.io/badge/nuget-1.1.0.18-blue.svg)](https://www.nuget.org/packages/Dnc.Core/1.1.0.18)
 
 # Development Logs
+* 2019-06-27 10:53 Dnc.Seedwork:IUnitOfWork,DomainObject,IdentifiedDomainObject,IdentifiedValueObject;IConcurrencySafe,ConcurrencySafeEntity
 * 2019-06-19 16:37 Dnc.AspNetCore.Web添加MiniProfiler.AspNetCore.Mvc和MiniProfiler.EntityFrameworkCore支持,Dnc.AspNetCore.WebApi添加跨域支持，默认接受任何请求
 * 2019-06-12 10:53 IObjectSerializer BytesToObject&ObjectToBytes 开发及测试完成
 * 2019-06-10 16:44 DateTime.UtcNow&TimeSpan&IEnumrable<T>&T .ToHumanization() 开发及测试完成

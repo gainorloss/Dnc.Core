@@ -7,7 +7,7 @@
 
 namespace Dnc.Seedwork.Abstractions
 {
-    public interface ICocurrencySafe
+    public interface IConcurrencySafe
     {
         int Version { get; }
     }
