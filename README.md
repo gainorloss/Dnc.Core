@@ -1,8 +1,8 @@
-﻿DNC Framework with .NETStandard 2.0
+﻿*DNC Framework with .NETStandard 2.0*
 ===
 
 # Dnc简介
-基于StandardLibrary的快速开发框架，提供了稳定强大、方便易用的事件处理机制和高性能高吞吐的CQRS组件。
+基于**StandardLibrary**的快速开发框架，提供了稳定强大、方便易用的事件处理机制和高性能高吞吐的CQRS组件。
 
 # Dnc特性
 
