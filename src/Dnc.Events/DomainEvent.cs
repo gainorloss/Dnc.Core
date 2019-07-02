@@ -1,5 +1,4 @@
-﻿using Dnc.Serializers;
-using System;
+﻿using System;
 
 namespace Dnc.Events
 {
@@ -7,15 +6,16 @@ namespace Dnc.Events
     public class DomainEvent
         : IEvent
     {
-        public DomainEvent()
+        private DomainEvent()
         {
             Id = Guid.NewGuid().ToString("N");
-            Timestamp = DateTime.UtcNow;
+            OccurredOn = DateTime.UtcNow;
         }
-        public string Id { get; set; }
-        public string Payload { get; set; }
-        public int Version { get; set; }
-        public DateTime Timestamp { get; set; }
-        public int Seq { get; set; }
+
+        public string Id { get; private set; }
+        public string Payload { get; private set; }
+        public int Version { get; private set; }
+        public DateTime OccurredOn { get; private set; }
+        public int Seq { get; private set; }
     }
 }

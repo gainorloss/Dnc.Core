@@ -23,7 +23,7 @@ namespace Dnc.Events
                 new MySqlParameter("@Version", @event.Version),
                 new MySqlParameter("@Id", @event.Id),
                 new MySqlParameter("@Seq", @event.Seq),
-                new MySqlParameter("@Timestamp", @event.Timestamp),
+                new MySqlParameter("@Timestamp", @event.OccurredOn),
             };
 
             using (var myConn = new MySqlConnection(_connectionString))

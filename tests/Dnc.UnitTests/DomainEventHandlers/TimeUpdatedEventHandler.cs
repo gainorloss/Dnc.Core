@@ -13,7 +13,7 @@ namespace Dnc.UnitTests
 
         protected override Task HandleAsync(TimeUpdatedEvent @event)
         {
-            var timestamp = @event.Timestamp;
+            var timestamp = @event.OccurredOn;
             System.Console.WriteLine(timestamp);
             return Task.CompletedTask;
         }
