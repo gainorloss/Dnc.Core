@@ -1,12 +1,4 @@
-﻿@*@using Coldairarrow.Web;
-    @using Coldairarrow.Util;
-    @using Coldairarrow.Business.Common;
-
-    @{
-        var menus = SystemMenuManage.GetOperatorMenu();
-        var menusJson = Html.Raw(menus.ToJson());
-    }*@
-@{
+﻿@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -336,7 +328,7 @@
                     </div>
                     <div class="pull-left info">
                         <p>gainorloss</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
                     </div>
                 </div>
                 <!-- search form -->
@@ -594,7 +586,102 @@
     <script type="text/javascript">
         var rootUrl = '@Url.Content("~/")';
 
+        //菜单
         @*var menus =@menusJson;*@
+        var menus = [
+            {
+                id: "9000",
+                text: "主导航",
+                icon: "",
+                isHeader: true
+            },
+            {
+                id: "9001",
+                text: "系统设置",
+                icon: "fa fa-laptop",
+                children: [
+                    {
+                        id: "90011",
+                        text: "框架介绍",
+                        icon: "fa fa-circle-o",
+                        url: "/Home/Desktop",
+                        targetType: "iframe-tab"
+                    },
+                    {
+                        id: "90012",
+                        text: "系统统计",
+                        url: "/Home/Statis",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o"
+                    },
+                    {
+                        id: "90013",
+                        text: "系统用户管理",
+                        url: "/AdminArea/SysUsers",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o"
+                    },
+                    {
+                        id: "90014",
+                        text: "系统角色管理",
+                        url: "/AdminArea/SysRoles",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o"
+                    },
+                    {
+                        id: "90015",
+                        text: "系统资源管理",
+                        url: "/AdminArea/SysResources",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o"
+                    },
+                    {
+                        id: "90016",
+                        text: "系统日志管理",
+                        url: "/AdminArea/SysLogs",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o"
+                    }
+                ]
+            },
+            {
+                id: "9002",
+                text: "Forms",
+                icon: "fa fa-edit",
+                children: [
+                    {
+                        id: "90021",
+                        text: "advanced",
+                        url: "forms/advanced_iframe.html",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o"
+                    },
+                    {
+                        id: "90022",
+                        text: "general",
+                        url: "forms/general_iframe.html",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o"
+                    },
+                    {
+                        id: "90023",
+                        text: "editors",
+                        url: "forms/editors_iframe.html",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o"
+                    },
+                    {
+                        id: "90024",
+                        text: "百度",
+                        url: "https://www.baidu.com",
+                        targetType: "iframe-tab",
+                        icon: "fa fa-circle-o",
+                        urlType: 'abosulte'
+                    }
+                ]
+            }
+        ];
+
         /**
          * 本地搜索菜单
          */
@@ -620,6 +707,32 @@
                     $a.click().css("border", "1px solid");
                 }
             });
+        }
+
+        /**
+         * 加载标签
+         */
+        function loadTabs(menus) {
+            if (!menus) return;
+            for (var k in menus) {
+                var menu = menus[k];
+
+                if (!menu.targetType) return;
+
+                var item = {
+                    id: menu.id,
+                    title: menu.text,
+                    close: false
+                };
+
+                if (menu.url)
+                    item.url = menu.url;
+
+                addTabs(item);
+                if (item.children) {
+                    loadTabs(item.children);
+                }
+            }
         }
 
         $(function () {
@@ -651,44 +764,10 @@
             App.setbasePath("/Scripts/vendor/adminlte/");
             App.setGlobalImgPath("dist/img/");
 
-            addTabs({
-                id: '324708b9-5027-4fd0-a9eb-a001d214ca72',
-                title: '框架介绍',
-                close: true,
-                url: '/Home/Desktop',
-            });
-            addTabs({
-                id: '324708b9-5027-4fd0-a9eb-a001d214ca73',
-                title: '系统统计',
-                close: true,
-                url: '/Home/Statis',
-            });
-            addTabs({
-                id: '324708b9-5027-4fd0-a9eb-a001d214ca74',
-                title: '系统用户管理',
-                close: true,
-                url: '/AdminArea/SysUsers',
-            });
-            addTabs({
-                id: '324708b9-5027-4fd0-a9eb-a001d214ca75',
-                title: '系统角色管理',
-                close: true,
-                url: '/AdminArea/SysRoles',
-            });
-            addTabs({
-                id: '324708b9-5027-4fd0-a9eb-a001d214ca76',
-                title: '系统资源管理',
-                close: true,
-                url: '/AdminArea/SysResources',
-            });
-            addTabs({
-                id: '324708b9-5027-4fd0-a9eb-a001d214ca77',
-                title: '系统日志管理',
-                close: true,
-                url: '/AdminArea/SysLogs',
-            });
+            loadTabs(menus);
+
             App.fixIframeCotent();
-            //$('.sidebar-menu').sidebarMenu({ data: menus });
+            $('.sidebar-menu').sidebarMenu({ data: menus });
         });
     </script>
 </body>
