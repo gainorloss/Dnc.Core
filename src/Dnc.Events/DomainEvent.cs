@@ -6,16 +6,16 @@ namespace Dnc.Events
     public class DomainEvent
         : IEvent
     {
-        private DomainEvent()
+        protected DomainEvent()
         {
             Id = Guid.NewGuid().ToString("N");
             OccurredOn = DateTime.UtcNow;
         }
 
-        public string Id { get; private set; }
-        public string Payload { get; private set; }
-        public int Version { get; private set; }
-        public DateTime OccurredOn { get; private set; }
-        public int Seq { get; private set; }
+        public string Id { get; protected set; }
+        public string Payload { get; protected set; }
+        public int Version { get; protected set; }
+        public DateTime OccurredOn { get; protected set; }
+        public int Seq { get; protected set; }
     }
 }
