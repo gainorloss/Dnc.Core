@@ -1,4 +1,4 @@
-1. Centos 7.6+nginx
+1. Centos 7.6+nginx **先决条件Web服务已经托管并nginx监听80端口**
 ```
 yum -y install yum-utils
 yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
