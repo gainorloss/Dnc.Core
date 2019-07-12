@@ -26,6 +26,10 @@
   * [x] [docker-compose.yml怎么写[拷贝即用]](./.docker/docker-compose.yml怎么写.md)
 * *csharp*
   * [x] [CSharp编码规范](./.csharp/CSharp编码规范.md)
+* *server*
+  * [x] [Nginx配置部署WebApp详解](./.server/Nginx配置部署WebApp详解.md)
+  * [x] [CertbotSSL](./.server/CertbotSSL.md)
+
 
 # Packages
 * [x] *Dnc.Core*
