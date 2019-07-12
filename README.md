@@ -67,6 +67,8 @@ Fx.Resolve<TService>();
 
 # Development Logs
 
+* 2019-07-12 10:53 *IOSSClient,AliyunOSSClient(未测试)*
+
 * 2019-06-27 10:53 *Dnc.Seedwork:IUnitOfWork,DomainObject,IdentifiedDomainObject,IdentifiedValueObject;IConcurrencySafe,ConcurrencySafeEntity*
 
 * 2019-06-19 16:37 Dnc.AspNetCore.Web添加**MiniProfiler.AspNetCore.Mvc**和**MiniProfiler.EntityFrameworkCore**支持,*Dnc.AspNetCore.WebApi*添加跨域支持，默认接受任何请求

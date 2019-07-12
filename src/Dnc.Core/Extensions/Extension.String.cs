@@ -202,7 +202,7 @@ namespace Dnc
             source = source + salt;
             var str = MD5Encrypt.Encrypt(source, 16);
             return str;
-        } 
+        }
         #endregion
 
 
@@ -302,8 +302,29 @@ namespace Dnc
             }
             string str = mobile.Substring(0, 3) + "****" + mobile.Substring(mobile.Length - 4, 4);
             return str;
-        } 
+        }
         #endregion
 
+
+        #region FileName
+        /// <summary>
+        /// 构建新的文件名称从旧的文件名称
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public static string ToObjectName(this string fileName)
+        {
+            if (string.IsNullOrWhiteSpace(fileName))
+                throw new ArgumentException("message", nameof(fileName));
+
+            var extName = Path.GetExtension(fileName);
+
+            if (string.IsNullOrWhiteSpace(extName))
+                throw new ArgumentException("message", nameof(extName));
+
+            var objectName = $"{DateTime.Now.ToString("yyyyMMddHHmmss")}{new Random().Next(100000, 999999)}{extName}";
+            return objectName;
+        }
+        #endregion
     }
 }
