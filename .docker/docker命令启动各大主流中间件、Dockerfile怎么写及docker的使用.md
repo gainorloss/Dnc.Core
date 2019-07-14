@@ -111,11 +111,11 @@ ENTRYPOINT ["dotnet","console.dll"]
     from microsoft/dotnet:2.2-sdk as build-env
     workdir /code 
 
-    copy Crafts.RobotEduPlat.Mvc.csproj /
-    run dotnet restore /Crafts.RobotEduPlat.Mvc.csproj
+    copy Crafts.RobotEduPlat.Mvc.csproj /code
+    run dotnet restore Crafts.RobotEduPlat.Mvc.csproj
 
     copy . /code
-    run dotnet publish /Crafts.RobotEduPlat.Mvc.csproj -c release -o /code/out
+    run dotnet publish Crafts.RobotEduPlat.Mvc.csproj -c release -o /code/out
 
     from microsoft/dotnet:2.2-aspnetcore-runtime 
     workdir /app
