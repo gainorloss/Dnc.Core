@@ -98,9 +98,9 @@ services:
       - web-mvc
     networks:
       - aspnet-network  
-  networks:
-    aspnet-network: 
-      driver: bridge
+networks:
+  aspnet-network: 
+    driver: bridge
       
 
 ```
