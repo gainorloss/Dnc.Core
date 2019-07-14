@@ -9,7 +9,7 @@ services:
     environment:
       POSTGRES_PASSWORD: p@ssw0rd
     volumes:
-      - /docker/postgres/data:/var/lib/postgresql/data
+      - /docker/postgres/db:/var/lib/postgresql/data
     ports:
       - 5432:5432
     networks:
@@ -23,8 +23,8 @@ services:
       MYSQL_PASSWORD: p@ssw0rd
       MYSQL_ROOT_PASSWORD: p@ssw0rd
     volumes:
-      - /docker/mysql/config/my.cnf:/etc/my.cnf
-      - /docker/mysql/data:/var/lib/mysql
+      - /docker/mysql/conf/my.cnf:/etc/my.cnf
+      - /docker/mysql/db:/var/lib/mysql
     ports:
       - 3306:3306 
     networks:
@@ -36,7 +36,7 @@ services:
     environment:
       POSTGRES_PASSWORD: p@ssw0rd
     volumes:
-      - /docker/mongo/config:/data/configdb
+      - /docker/mongo/conf:/db/configdb
       - /docker/mongo/data:/data/db
     ports:
       - 27017:27017
@@ -49,7 +49,7 @@ services:
     environment:
       POSTGRES_PASSWORD: p@ssw0rd
     volumes:
-      - /docker/redis/data:/var/lib/postgresql/data
+      - /docker/redis/db:/var/lib/postgresql/data
     ports:
       - 6379:6379
     networks:
@@ -74,7 +74,7 @@ services:
     environment:
       POSTGRES_PASSWORD: p@ssw0rd
     volumes:
-      - docker/postgres/data:/var/lib/postgresql/data
+      - docker/postgres/db:/var/lib/postgresql/data
     ports:
       - 5432:5432
     depends_on:
