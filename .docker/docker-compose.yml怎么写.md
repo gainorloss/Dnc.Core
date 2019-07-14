@@ -57,5 +57,13 @@ services:
       - 15671:15671 
       - 15672:15672 
       - 25672:25672   
+  nginx:
+    container_name: aspnet-nginx
+    image: nginx
+    restart: always
+    ports:
+      - 80:80  
+    volumes:
+      - /docker/nginx/conf/nginx.conf:/etc/nginx/conf.d/default.conf  
 
 ```
