@@ -111,19 +111,18 @@ ENTRYPOINT ["dotnet","console.dll"]
     from microsoft/dotnet:2.2-sdk as build-env
     workdir /code 
 
-    copy src/Web/Crafts.RobotEduPlat.Mvc/Crafts.RobotEduPlat.Mvc.csproj src/Web/Crafts.RobotEduPlat.Mvc/
-    copy src/Services/Infrastructure/Infrastructure.csproj src/Services/Infrastructure/
-    run dotnet restore src/Web/Crafts.RobotEduPlat.Mvc/Crafts.RobotEduPlat.Mvc.csproj
+    copy Crafts.RobotEduPlat.Mvc.csproj /code
+    run dotnet restore Crafts.RobotEduPlat.Mvc.csproj
 
     copy . /code
-    run dotnet publish src/Web/Crafts.RobotEduPlat.Mvc/Crafts.RobotEduPlat.Mvc.csproj -c release -o /code/out
+    run dotnet publish Crafts.RobotEduPlat.Mvc.csproj -c release -o /code/out
 
     from microsoft/dotnet:2.2-aspnetcore-runtime 
     workdir /app
 
 
     copy --from=build-env /code/out /app
-    expose 5001
+    expose 80
     entrypoint ["dotnet","Crafts.RobotEduPlat.Mvc.dll"]
 
     ```
