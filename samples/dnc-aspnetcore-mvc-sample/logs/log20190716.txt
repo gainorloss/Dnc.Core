@@ -1,0 +1,285 @@
+2019-07-16 14:20:43.326 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-16 14:20:56.600 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:20:56.611 +08:00 [WRN] Failed to determine the https port for redirect.
+2019-07-16 14:20:56.661 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:20:56.677 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:20:56.734 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:20:56.741 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.3911ms.
+2019-07-16 14:20:56.762 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:20:56.891 +08:00 [INF] Executed ViewResult - view Index executed in 142.8005ms.
+2019-07-16 14:20:56.892 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 213.25660000000002ms
+2019-07-16 14:20:56.894 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:20:56.902 +08:00 [INF] Request finished in 303.1434ms 200 text/html; charset=utf-8
+2019-07-16 14:20:56.909 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css  
+2019-07-16 14:20:56.910 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-07-16 14:20:56.910 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2019-07-16 14:20:56.909 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2019-07-16 14:20:56.911 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2019-07-16 14:20:56.920 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\samples\dnc-aspnetcore-mvc-sample\wwwroot\js\site.js'
+2019-07-16 14:20:56.922 +08:00 [INF] Request finished in 10.8211ms 200 application/javascript
+2019-07-16 14:20:56.952 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\samples\dnc-aspnetcore-mvc-sample\wwwroot\css\site.css'
+2019-07-16 14:20:56.955 +08:00 [INF] Request finished in 45.7611ms 200 text/css
+2019-07-16 14:20:56.968 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\samples\dnc-aspnetcore-mvc-sample\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js'
+2019-07-16 14:20:56.968 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\samples\dnc-aspnetcore-mvc-sample\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+2019-07-16 14:20:56.968 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\samples\dnc-aspnetcore-mvc-sample\wwwroot\lib\jquery\dist\jquery.js'
+2019-07-16 14:20:56.969 +08:00 [INF] Request finished in 58.8871ms 200 application/javascript
+2019-07-16 14:20:56.971 +08:00 [INF] Request finished in 61.9614ms 200 text/css
+2019-07-16 14:20:56.972 +08:00 [INF] Request finished in 62.7874ms 200 application/javascript
+2019-07-16 14:20:57.071 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2019-07-16 14:20:57.078 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\Projects\Learning\src\Dnc.Core\samples\dnc-aspnetcore-mvc-sample\wwwroot\favicon.ico'
+2019-07-16 14:20:57.080 +08:00 [INF] Request finished in 8.7057ms 200 image/x-icon
+2019-07-16 14:21:00.232 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:00.233 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:00.234 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:00.247 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:00.250 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.1709ms.
+2019-07-16 14:21:00.251 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:00.253 +08:00 [INF] Executed ViewResult - view Index executed in 1.6657000000000002ms.
+2019-07-16 14:21:00.254 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 18.579ms
+2019-07-16 14:21:00.255 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:00.256 +08:00 [INF] Request finished in 24.2227ms 200 text/html; charset=utf-8
+2019-07-16 14:21:01.647 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:01.647 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:01.648 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:01.661 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:01.663 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0128ms.
+2019-07-16 14:21:01.664 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:01.665 +08:00 [INF] Executed ViewResult - view Index executed in 1.5027000000000001ms.
+2019-07-16 14:21:01.667 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 18.131600000000002ms
+2019-07-16 14:21:01.669 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:01.669 +08:00 [INF] Request finished in 22.9071ms 200 text/html; charset=utf-8
+2019-07-16 14:21:02.383 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/Home/Privacy  
+2019-07-16 14:21:02.388 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:02.390 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:02.403 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:02.405 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.17ms.
+2019-07-16 14:21:02.409 +08:00 [INF] Executing ViewResult, running view Privacy.
+2019-07-16 14:21:02.412 +08:00 [INF] Executed ViewResult - view Privacy executed in 4.9789ms.
+2019-07-16 14:21:02.414 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) in 22.7498ms
+2019-07-16 14:21:02.417 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:02.420 +08:00 [INF] Request finished in 36.6202ms 200 text/html; charset=utf-8
+2019-07-16 14:21:03.816 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:03.816 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:03.817 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:03.830 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:03.832 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0446ms.
+2019-07-16 14:21:03.834 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:03.836 +08:00 [INF] Executed ViewResult - view Index executed in 1.1357000000000002ms.
+2019-07-16 14:21:03.836 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 17.756700000000002ms
+2019-07-16 14:21:03.837 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:03.838 +08:00 [INF] Request finished in 22.6178ms 200 text/html; charset=utf-8
+2019-07-16 14:21:04.446 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:04.446 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:04.447 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:04.460 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:04.462 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0125ms.
+2019-07-16 14:21:04.463 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:04.466 +08:00 [INF] Executed ViewResult - view Index executed in 2.8919ms.
+2019-07-16 14:21:04.467 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 18.192700000000002ms
+2019-07-16 14:21:04.468 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:04.470 +08:00 [INF] Request finished in 23.9963ms 200 text/html; charset=utf-8
+2019-07-16 14:21:05.367 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:05.367 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:05.369 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:05.383 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:05.386 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0145ms.
+2019-07-16 14:21:05.388 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:05.389 +08:00 [INF] Executed ViewResult - view Index executed in 1.2717ms.
+2019-07-16 14:21:05.390 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 18.9738ms
+2019-07-16 14:21:05.391 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:05.392 +08:00 [INF] Request finished in 25.1699ms 200 text/html; charset=utf-8
+2019-07-16 14:21:05.974 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/Home/Privacy  
+2019-07-16 14:21:05.976 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:05.977 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:05.991 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:05.993 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0122ms.
+2019-07-16 14:21:05.995 +08:00 [INF] Executing ViewResult, running view Privacy.
+2019-07-16 14:21:05.996 +08:00 [INF] Executed ViewResult - view Privacy executed in 1.1522000000000001ms.
+2019-07-16 14:21:05.998 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) in 19.9481ms
+2019-07-16 14:21:06.000 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:06.001 +08:00 [INF] Request finished in 26.4453ms 200 text/html; charset=utf-8
+2019-07-16 14:21:07.535 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:07.536 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:07.537 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:07.550 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:07.552 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0204ms.
+2019-07-16 14:21:07.555 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:07.556 +08:00 [INF] Executed ViewResult - view Index executed in 1.6768ms.
+2019-07-16 14:21:07.558 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 19.8747ms
+2019-07-16 14:21:07.560 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:07.561 +08:00 [INF] Request finished in 26.4709ms 200 text/html; charset=utf-8
+2019-07-16 14:21:08.102 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:08.103 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:08.104 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:08.117 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:08.118 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0167ms.
+2019-07-16 14:21:08.120 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:08.121 +08:00 [INF] Executed ViewResult - view Index executed in 1.6227ms.
+2019-07-16 14:21:08.122 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 17.515800000000002ms
+2019-07-16 14:21:08.123 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:08.125 +08:00 [INF] Request finished in 22.5029ms 200 text/html; charset=utf-8
+2019-07-16 14:21:08.848 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:08.848 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:08.850 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:08.864 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:08.866 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0142ms.
+2019-07-16 14:21:08.867 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:08.868 +08:00 [INF] Executed ViewResult - view Index executed in 1.0359ms.
+2019-07-16 14:21:08.870 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 18.9949ms
+2019-07-16 14:21:08.872 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:08.874 +08:00 [INF] Request finished in 25.79ms 200 text/html; charset=utf-8
+2019-07-16 14:21:09.462 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/Home/Privacy  
+2019-07-16 14:21:09.462 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:09.463 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:09.476 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:09.479 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0122ms.
+2019-07-16 14:21:09.483 +08:00 [INF] Executing ViewResult, running view Privacy.
+2019-07-16 14:21:09.483 +08:00 [INF] Executed ViewResult - view Privacy executed in 1.0205ms.
+2019-07-16 14:21:09.484 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) in 19.7498ms
+2019-07-16 14:21:09.486 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:09.487 +08:00 [INF] Request finished in 25.0791ms 200 text/html; charset=utf-8
+2019-07-16 14:21:11.391 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:11.392 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:11.394 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:11.409 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:11.411 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0125ms.
+2019-07-16 14:21:11.412 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:11.415 +08:00 [INF] Executed ViewResult - view Index executed in 3.3103000000000002ms.
+2019-07-16 14:21:11.416 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 19.9247ms
+2019-07-16 14:21:11.418 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:11.420 +08:00 [INF] Request finished in 28.9755ms 200 text/html; charset=utf-8
+2019-07-16 14:21:13.727 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/Home/Privacy  
+2019-07-16 14:21:13.727 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:13.729 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:13.742 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:13.743 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0125ms.
+2019-07-16 14:21:13.745 +08:00 [INF] Executing ViewResult, running view Privacy.
+2019-07-16 14:21:13.748 +08:00 [INF] Executed ViewResult - view Privacy executed in 2.9858000000000002ms.
+2019-07-16 14:21:13.749 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) in 18.8982ms
+2019-07-16 14:21:13.750 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:13.751 +08:00 [INF] Request finished in 24.1519ms 200 text/html; charset=utf-8
+2019-07-16 14:21:15.191 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/Home/Privacy  
+2019-07-16 14:21:15.192 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:15.193 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:15.206 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:15.207 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0119ms.
+2019-07-16 14:21:15.209 +08:00 [INF] Executing ViewResult, running view Privacy.
+2019-07-16 14:21:15.210 +08:00 [INF] Executed ViewResult - view Privacy executed in 1.0538ms.
+2019-07-16 14:21:15.211 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample) in 17.6873ms
+2019-07-16 14:21:15.215 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Privacy (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:15.216 +08:00 [INF] Request finished in 24.4636ms 200 text/html; charset=utf-8
+2019-07-16 14:21:17.862 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:17.863 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:17.864 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:17.877 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:17.880 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.040600000000000004ms.
+2019-07-16 14:21:17.881 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:17.882 +08:00 [INF] Executed ViewResult - view Index executed in 0.9534ms.
+2019-07-16 14:21:17.883 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 17.8491ms
+2019-07-16 14:21:17.884 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:17.885 +08:00 [INF] Request finished in 23.234ms 200 text/html; charset=utf-8
+2019-07-16 14:21:20.336 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:20.336 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:20.337 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:20.351 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:20.352 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0386ms.
+2019-07-16 14:21:20.353 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:20.355 +08:00 [INF] Executed ViewResult - view Index executed in 1.8355000000000001ms.
+2019-07-16 14:21:20.356 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 17.8713ms
+2019-07-16 14:21:20.357 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:20.358 +08:00 [INF] Request finished in 22.5189ms 200 text/html; charset=utf-8
+2019-07-16 14:21:21.415 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:21.416 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:21.417 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:21.430 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:21.432 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0145ms.
+2019-07-16 14:21:21.434 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:21.435 +08:00 [INF] Executed ViewResult - view Index executed in 1.3331000000000002ms.
+2019-07-16 14:21:21.436 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 18.6112ms
+2019-07-16 14:21:21.437 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:21.439 +08:00 [INF] Request finished in 24.5194ms 200 text/html; charset=utf-8
+2019-07-16 14:21:22.543 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:22.544 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:22.545 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:22.557 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:22.561 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0199ms.
+2019-07-16 14:21:22.563 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:22.564 +08:00 [INF] Executed ViewResult - view Index executed in 0.93290000000000006ms.
+2019-07-16 14:21:22.565 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 18.999100000000002ms
+2019-07-16 14:21:22.566 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:22.567 +08:00 [INF] Request finished in 23.6325ms 200 text/html; charset=utf-8
+2019-07-16 14:21:23.335 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:23.337 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:23.338 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:23.350 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:23.352 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0125ms.
+2019-07-16 14:21:23.353 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:23.354 +08:00 [INF] Executed ViewResult - view Index executed in 1.6093000000000002ms.
+2019-07-16 14:21:23.355 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 16.852700000000002ms
+2019-07-16 14:21:23.356 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:23.357 +08:00 [INF] Request finished in 22.0222ms 200 text/html; charset=utf-8
+2019-07-16 14:21:23.912 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:23.913 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:23.914 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:23.934 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:23.935 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.013300000000000001ms.
+2019-07-16 14:21:23.936 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:23.938 +08:00 [INF] Executed ViewResult - view Index executed in 1.3004ms.
+2019-07-16 14:21:23.938 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 21.749200000000002ms
+2019-07-16 14:21:23.940 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:23.942 +08:00 [INF] Request finished in 30.7828ms 200 text/html; charset=utf-8
+2019-07-16 14:21:28.322 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:21:28.323 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:28.325 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:21:28.342 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:21:28.346 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0199ms.
+2019-07-16 14:21:28.347 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:21:28.350 +08:00 [INF] Executed ViewResult - view Index executed in 2.2815000000000003ms.
+2019-07-16 14:21:28.351 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 23.678800000000003ms
+2019-07-16 14:21:28.353 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:21:28.356 +08:00 [INF] Request finished in 33.7692ms 200 text/html; charset=utf-8
+2019-07-16 14:22:35.714 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-16 14:22:40.844 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2019-07-16 14:22:40.854 +08:00 [WRN] Failed to determine the https port for redirect.
+2019-07-16 14:22:40.906 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:22:40.923 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:22:40.984 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:22:40.991 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.42550000000000004ms.
+2019-07-16 14:22:41.009 +08:00 [INF] Executing ViewResult, running view Index.
+2019-07-16 14:22:41.133 +08:00 [INF] Executed ViewResult - view Index executed in 135.7975ms.
+2019-07-16 14:22:41.135 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample) in 210.36180000000002ms
+2019-07-16 14:22:41.137 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Index (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:22:41.145 +08:00 [INF] Request finished in 302.2127ms 200 text/html; charset=utf-8
+2019-07-16 14:22:43.744 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/Home/Error  
+2019-07-16 14:22:43.750 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:22:43.751 +08:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:22:43.764 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:22:43.766 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.5481ms.
+2019-07-16 14:22:43.769 +08:00 [INF] Executing ViewResult, running view Error.
+2019-07-16 14:22:43.772 +08:00 [INF] Executed ViewResult - view Error executed in 5.2465ms.
+2019-07-16 14:22:43.774 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample) in 22.4887ms
+2019-07-16 14:22:43.778 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:22:43.779 +08:00 [INF] Request finished in 35.2344ms 200 text/html; charset=utf-8
+2019-07-16 14:23:12.299 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-16 14:23:15.401 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/Home/Error  
+2019-07-16 14:23:15.411 +08:00 [WRN] Failed to determine the https port for redirect.
+2019-07-16 14:23:15.465 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:23:15.483 +08:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:23:15.541 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:23:15.550 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7953ms.
+2019-07-16 14:23:15.581 +08:00 [INF] Executing ViewResult, running view Error.
+2019-07-16 14:23:15.719 +08:00 [INF] Executed ViewResult - view Error executed in 160.607ms.
+2019-07-16 14:23:15.721 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample) in 235.95440000000002ms
+2019-07-16 14:23:15.723 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:23:15.732 +08:00 [INF] Request finished in 332.0185ms 200 text/html; charset=utf-8
+2019-07-16 14:23:16.994 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/Home/Error  
+2019-07-16 14:23:16.995 +08:00 [INF] Executing endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:23:16.996 +08:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)
+2019-07-16 14:23:17.010 +08:00 [INF] Executing action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample) - Validation state: "Valid"
+2019-07-16 14:23:17.013 +08:00 [INF] Executed action method dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0597ms.
+2019-07-16 14:23:17.014 +08:00 [INF] Executing ViewResult, running view Error.
+2019-07-16 14:23:17.021 +08:00 [INF] Executed ViewResult - view Error executed in 2.3682000000000003ms.
+2019-07-16 14:23:17.023 +08:00 [INF] Executed action dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample) in 26.2667ms
+2019-07-16 14:23:17.025 +08:00 [INF] Executed endpoint 'dnc_aspnetcore_mvc_sample.Controllers.HomeController.Error (dnc-aspnetcore-mvc-sample)'
+2019-07-16 14:23:17.026 +08:00 [INF] Request finished in 31.9974ms 200 text/html; charset=utf-8
+2019-07-16 14:26:45.797 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

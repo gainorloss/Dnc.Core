@@ -1,180 +1,54 @@
-﻿@*using Coldairarrow.Business.Base_SysManage;*@
-
+﻿
 @{
-    Layout = "~/Views/Shared/_LayoutList.cshtml";
-    @*var manageSysPermission = PermissionManage.OperatorHasPermissionValue("sysuser.manageSysPermission");*@
+    ViewData["Title"] = "商品列表";
 }
+@model List<LayUIDataGridItem>
 
-<div class="fx-content">
-    <div id="toobar">
-        <div class="btn-group btn-group-sm">
-            <button onclick="openForm('', '添加数据');" type="button" class="btn btn-default" aria-label="Left Align">
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                添加
-            </button>
-            <button onclick="deleteData();" type="button" class="btn btn-default" aria-label="Right Align">
-                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                删除
-            </button>
-            <button type="button" class="btn btn-default" aria-label="Right Align" onclick="javascript: location.reload();">
-                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-                刷新
-            </button>
-        </div>
-    </div>
-    <div class="fx-wrapper">
-        <form class="form-inline" id="searchForm">
-            <div class="form-group">
-                <label>查询类别</label>
-                <select class="selectpicker" name="condition" data-style="btn-default btn-sm" data-width="100px">
-                    <option value="">请选择</option>
-                    <option value="UserName">用户名</option>
-                    <option value="RealName">真实姓名</option>
-                </select>
-                <input type="text" class="form-control input-sm" name="keyword" placeholder="请输入关键字">
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-default btn-sm" onclick="javascript: $('#dataTable').bootstrapTable('refresh', { silent: true });">
-                    <i class="glyphicon glyphicon-search"></i>
-                    查询
-                </button>
-            </div>
-        </form>
-    </div>
-    <div class="fx-wrapper">
-        <table id="dataTable" class="table-bordered"></table>
-    </div>
-</div>
+<layui-data-grid items="@Model"></layui-data-grid>
+@section scripts{
+    <script>
+    var items =@Html.Raw(Json.Serialize(Model));
 
-<script>
-    var $table = $('#dataTable');
-    @*var manageSysPermission=@manageSysPermission.ToString().ToLower();*@
-
-    $(function () {
-        initTable();
-        bindEvent();
-    });
-
-    //初始化表格
-    function initTable() {
-        $table.bootstrapTable({
-            url: '/Base_SysManage/Base_User/GetDataList',
-            idField: 'id',
-            pagination: true,
-            method: 'post',
-            clickToSelect: false,
-            sidePagination: "server",
-            contentType: 'application/x-www-form-urlencoded',
-            queryParamsType: '',
-            pageNumber: 1,
-            pageSize: 30,
-            pageList: [10, 30, 60, 100],
-            columns: [
-                { title: 'ck', field: 'ck', checkbox: true },
-                { title: '用户名', field: 'UserName', width: 200 },
-                { title: '真实姓名', field: 'RealName', width: 200 },
-                {
-                    title: '性别', field: 'Sex', width: 200, formatter: function (value, row) {
-                        var mapping = {
-                            '1': '男',
-                            '0': '女'
-                        };
-
-                        return mapping[value];
-                    }
-                },
-                {
-                    title: '出生日期', field: 'Birthday', width: 200, formatter: function (value) {
-                        return toDateString(value, 'yyyy-MM-dd');
-                    }
-                },
-                { title: '所属角色', field: 'RoleNameList', width: 600 },
-                {
-                    title: '操作', field: '_', width: '20%', formatter: function (value, row) {
-                        var builder = new BtnBuilder();
-                        builder.AddBtn({ icon: 'glyphicon-edit', function: 'openForm', param: [row['Id']] });
-                        builder.AddBtn({ icon: 'glyphicon-trash', function: 'deleteData', param: [row['Id']] });
-                        //if (manageSysPermission) {
-                        //    builder.AddBtn({ name: '权限分配', icon: 'glyphicon-edit', function: 'setPermission', param: [row['UserId'], row['RealName']] });
-                        //}
-
-                        return builder.build();
-                    }
-                }
-            ],
-            queryParams: function (params) {
-                var searchParams = $('#searchForm').getValues();
-                $.extend(params, searchParams);
-
-                return params;
-            }
-        });
-    }
-
-    //绑定事件
-    function bindEvent() {
-
-    }
-
-    //打开表单
-    function openForm(id, title) {
-        dialogOpen({
-            id: 'form',
-            title: title,
-            btn: ['确定', '取消'],
-            url: '/Base_SysManage/Base_User/Form?id={0}'.format(id || ''),
-            yes: function (window, body) {
-                window.submitForm();
-            }
-        });
-    }
-
-    //删除数据
-    function deleteData(id) {
-        dialogComfirm('确认删除吗？', function () {
-            var ids = [];
-
-            if (typeof (id) == 'string') {//单条数据
-                ids.push(id);
-            } else {//多条数据
-                var rows = $table.bootstrapTable('getSelections');
-                if (rows.length == 0) {
-                    dialogError('请选择需要删除的数据！');
-                    return;
-                } else {
-                    $.each(rows, function (index, value) {
-                        ids.push(value['Id']);
-                    })
+    var para = {
+        opts: [
+            {
+                name: '编辑', cb: function ($,form, container, data) {
+                    $("input[name='kind']", container).val(data.kind);
+                    $("#selInstructorId", container).val(data.instructorId);
+                    $("input[name='isOpen']", container).val(data.isOpen);
+                    $("input[name='isRecommended']", container).val(data.isRecommended);
+                    $("input[name='courseGoals']", container).val(data.courseGoals);
+                    $("input[name='title']", container).val(data.title);
+                    $("input[name='name']", container).val(data.name);
+                    $("input[name='price']", container).val(data.price);
+                    $("input[name='introduction']", container).val(data.introducation);
+                    $("input[name='imgUrl']", container).val(data.imgUrl);
+                    $("input[name='targetCustomers']", container).val(data.targetCustomers);
+                }},
+        ],
+        cols: [
+             { field: 'uname', title: '用户名', width: 120}
+            , { field: 'pwd', title: '密码', width: 120 }
+            , { field: 'email', title: '邮箱', width: 120 }
+            , { field: 'phone', title: '电话', width: 120 }
+            , { field: 'mobile', title: '手机', width: 120 }
+            , {
+                field: 'avatar', title: '头像', width: 160, templet: function (d) {
+                    return '<div class="layer-photos-avatar" style="cursor:pointer;">'
+                        + '<img layer-pid="' + d.imgUrl + '"  layer-src="' + d.imgUrl + '" src="' + d.imgUrl + '" alt="图片名">'
+                        + '</div>';
                 }
             }
-
-            loading();
-            $.postJSON('/Base_SysManage/Base_User/DeleteData', { ids: JSON.stringify(ids) }, function (resJson) {
-                loading(false);
-
-                if (resJson.Success) {
-                    $table.bootstrapTable('refresh');
-                    dialogSuccess('删除成功!');
-                }
-                else {
-                    dialogError(resJson.Msg);
-                }
-            });
-        });
-    }
-
-    //设置权限
-    function setPermission(userId, realName) {
-        dialogOpen({
-            id: 'permissionForm',
-            title: '设置用户【{0}】权限'.format(realName),
-            width: '80.5%',
-            height: '80.5%',
-            btn: ['确定', '取消'],
-            url: '/Base_SysManage/Base_User/PermissionForm?userId={0}'.format(userId),
-            yes: function (iframeWin) {
-                iframeWin.savePermission();
-            }
-        });
-    }
-</script>
+            , { field: 'islocked', title: '是否锁定', width: 100, templet: function (d) { return d.isOpen == 1 ? '<span class="layui-badge layui-bg-green">免费</span>' : '<span class="layui-badge layui-bg-orange">收费</span>'; } }
+            , { field: 'salt', title: '盐', width: 80 }
+            , { field: 'allowLoginTime', title: '允许登录时间', width: 80 }
+            , { field: 'lastLoginTime', title: '最后登录时间', width: 80 }
+            , { field: 'loginErrNums', title: '登录错误次数', width: 100, templet: function (d) { return d.isOpen == 1 ? '<span class="layui-badge layui-bg-green">免费</span>' : '<span class="layui-badge layui-bg-orange">收费</span>'; }  }
+            , { field: 'lastLoginIP', title: '最后登录ip地址', width: 120, templet: function (d) { return d.isRecommended == 1 ? '<span class="layui-badge layui-bg-green">是</span>' : '<span class="layui-badge layui-bg-orange">还不是</span>'; }  }
+            , { field: 'lastLogoutTime', title: '最后登出时间', width: 80, templet: function (d) { return d.isDel == 1 ? '<span class="layui-badge layui-bg-orange">下架</span>' : '<span class="layui-badge layui-bg-green">上架</span>'; }  }
+            , { field: 'dataStatus', width: 300, title: '数据状态' }
+        ]
+    };
+    dataGrid.init(para);
+    </script>
+}

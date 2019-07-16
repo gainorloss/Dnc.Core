@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Welcome";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/layuiadmin/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/lib/layuiadmin/layui/layui.js"></script>
+    <script src="~/lib/layuiadmin/layui/layui.all.js"></script>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-size: 100% 100%;
+            position: center;
+        }
+
+        #welcometext {
+            width: 400px;
+            height: 100px;
+            font-family: 微软雅黑;
+            font-size: 100px;
+            color: orange;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            left: 50%;
+            margin-left: -200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcometext" class="layui-anim-rotate">欢迎使用</div>
+</body>
+</html>

@@ -19,5 +19,14 @@ namespace DncAspNetCore.Admin.Controllers
         {
             return View();
         }
+        public IActionResult Welcome()
+        {
+            return View();
+        }
+
+        public IActionResult Sample()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_blank">
+
+    <link href="~/Scripts/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Skin/home/style.min.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <ul>
+        <li><a asp-controller="Home" asp-action="Desktop">desktop</a></li>
+        <li><a asp-controller="Home" asp-action="welcome">welcome</a></li>
+        <li><a asp-controller="Home" asp-action="statis">statis</a></li>
+        <li><a asp-area="adminArea" asp-controller="sysusers" asp-action="index">sysusers</a></li>
+    </ul>
+</body>
+</html>

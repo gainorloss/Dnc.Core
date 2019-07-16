@@ -1715,3 +1715,898 @@ Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such tab
 2019-07-04 14:51:28.498 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
 2019-07-04 14:51:28.498 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
 2019-07-04 14:51:28.499 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 13:23:14.630 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 13:23:14.691 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 13:23:14.702 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 13:23:14.702 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 13:23:14.702 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 13:23:14.702 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 13:23:14.702 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 13:23:14.702 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 13:23:54.451 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 13:23:54.486 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 13:23:54.496 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 13:23:54.498 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 13:23:54.498 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 13:23:54.498 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 13:23:54.499 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 13:23:54.499 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 13:24:01.842 +08:00 [DBG] Login Url: /Account/Login
+2019-07-16 13:24:01.844 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-16 13:24:01.845 +08:00 [DBG] Logout Url: /Account/Logout
+2019-07-16 13:24:01.846 +08:00 [DBG] ConsentUrl Url: /consent
+2019-07-16 13:24:01.846 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-16 13:24:01.846 +08:00 [DBG] Error Url: /home/error
+2019-07-16 13:24:01.847 +08:00 [DBG] Error Id Parameter: errorId
+2019-07-16 13:24:01.868 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-16 13:24:01.879 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-16 13:24:01.880 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-16 13:24:01.883 +08:00 [DBG] Start discovery request
+2019-07-16 13:24:02.162 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-16 13:24:02.164 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-16 13:24:02.164 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-16 13:24:02.167 +08:00 [DBG] Start key discovery request
+2019-07-16 13:24:02.241 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-16 13:24:02.245 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-16 13:24:02.246 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-16 13:24:02.251 +08:00 [DBG] Start authorize request
+2019-07-16 13:24:02.258 +08:00 [DBG] No user present in authorize request
+2019-07-16 13:24:02.263 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:02.278 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:02.283 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:02.284 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:02.312 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:02.327 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C-2IhAMbcBMs5iqxxT6eg09ip5R6GEOO7Xzi2dxahuV2RYQcNupKnBwz-akZQv70QucD6Zne4G9JMPYE2D98nq3AOwqVa33zaCI4k-avksgGZg6LIC4OHHzWmBxQi4Yj9OsSSyor3cYAgshwSxgWugOhNQZRKezOxJ8I3ApwACFKTsvNWe_XarcaK4zShRVKgtoS0a_Me0T4-PLxj6jYkN3kXA7J25u6mwXrrZCCvo26Wjk59wRm4MlkEQp40BLEZ6pvlHh5bvWs_PKUMbA8PG9_OgLMTfIkUP1_XgvjpX-qg","UiLocales":null,"Nonce":"636988514421985952.NDk4OTNiMzMtN2U5MS00ZDM5LWIzNDUtNTIyYzY2ZjRkMDllMDE3NWM0MjEtZGNiOS00N2UxLTllZDAtOGIwZDE5YTI4MzZh","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988514421985952.NDk4OTNiMzMtN2U5MS00ZDM5LWIzNDUtNTIyYzY2ZjRkMDllMDE3NWM0MjEtZGNiOS00N2UxLTllZDAtOGIwZDE5YTI4MzZh","state":"CfDJ8LoK4IR6GONBlM3HASCG_C-2IhAMbcBMs5iqxxT6eg09ip5R6GEOO7Xzi2dxahuV2RYQcNupKnBwz-akZQv70QucD6Zne4G9JMPYE2D98nq3AOwqVa33zaCI4k-avksgGZg6LIC4OHHzWmBxQi4Yj9OsSSyor3cYAgshwSxgWugOhNQZRKezOxJ8I3ApwACFKTsvNWe_XarcaK4zShRVKgtoS0a_Me0T4-PLxj6jYkN3kXA7J25u6mwXrrZCCvo26Wjk59wRm4MlkEQp40BLEZ6pvlHh5bvWs_PKUMbA8PG9_OgLMTfIkUP1_XgvjpX-qg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 13:24:02.356 +08:00 [INF] Showing login: User is not authenticated
+2019-07-16 13:24:02.521 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:02.522 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:02.523 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:02.524 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:02.525 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:02.528 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:15.565 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:15.601 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:15.601 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:15.602 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:15.603 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:15.604 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:15.644 +08:00 [INF] {"Username":" alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:00000004","TimeStamp":"2019-07-16T05:24:15.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:15.648 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:15.648 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:15.649 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:15.649 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:15.650 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:15.651 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:27.867 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:27.869 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:27.870 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:27.871 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:27.873 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:27.874 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:27.911 +08:00 [WRN] Invalid password for user c08455c0-be3f-4e63-b0c3-4f1bf79b28f6.
+2019-07-16 13:24:27.914 +08:00 [WRN] User c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 failed to provide the correct password.
+2019-07-16 13:24:28.169 +08:00 [INF] {"Username":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:00000005","TimeStamp":"2019-07-16T05:24:28.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:28.172 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:28.173 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:28.174 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:28.174 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:28.175 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:28.175 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:31.179 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:31.182 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:31.183 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:31.186 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:31.186 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:31.187 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:31.189 +08:00 [INF] {"Username":"YG001","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:00000006","TimeStamp":"2019-07-16T05:24:31.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:31.192 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:31.192 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:31.193 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:31.193 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:31.194 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:31.194 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:32.269 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:32.272 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:32.272 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:32.273 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:32.273 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:32.274 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:32.275 +08:00 [INF] {"Username":"YG001","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:00000007","TimeStamp":"2019-07-16T05:24:32.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:32.278 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:32.278 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:32.279 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:32.280 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:32.282 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:32.282 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:32.797 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:32.799 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:32.799 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:32.800 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:32.801 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:32.802 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:32.805 +08:00 [INF] {"Username":"YG001","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:00000008","TimeStamp":"2019-07-16T05:24:32.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:32.811 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:32.811 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:32.812 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:32.812 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:32.813 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:32.814 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.028 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:33.031 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:33.031 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.032 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:33.032 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:33.033 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:33.034 +08:00 [INF] {"Username":"YG001","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:00000009","TimeStamp":"2019-07-16T05:24:33.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:33.035 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:33.036 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.037 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:33.037 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:33.038 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:33.040 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.238 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:33.242 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:33.242 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.243 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:33.244 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:33.244 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:33.246 +08:00 [INF] {"Username":"YG001","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:0000000A","TimeStamp":"2019-07-16T05:24:33.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:33.251 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:33.251 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.252 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:33.252 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:33.252 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:33.253 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.459 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:33.461 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:33.461 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.462 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:33.462 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:33.463 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:33.464 +08:00 [INF] {"Username":"YG001","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:0000000B","TimeStamp":"2019-07-16T05:24:33.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:33.466 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:33.466 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.467 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:33.467 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:33.467 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:33.468 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.667 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:33.671 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:33.671 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.672 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:33.672 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:33.673 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:33.676 +08:00 [INF] {"Username":"YG001","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3K:0000000C","TimeStamp":"2019-07-16T05:24:33.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:24:33.681 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:33.681 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:33.682 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:33.683 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:33.684 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:33.684 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:44.029 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:44.034 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:44.034 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:44.035 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:44.036 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:44.036 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:44.295 +08:00 [DBG] Augmenting SignInContext
+2019-07-16 13:24:44.297 +08:00 [DBG] Adding idp claim with value: local
+2019-07-16 13:24:44.297 +08:00 [DBG] Adding amr claim with value: pwd
+2019-07-16 13:24:44.298 +08:00 [DBG] Adding auth_time claim with value: 1563254684
+2019-07-16 13:24:44.305 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-16 13:24:44.308 +08:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","DisplayName":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLO9LN7TGU3K:0000000D","TimeStamp":"2019-07-16T05:24:44.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-07-16 13:24:44.325 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:44.338 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-16 13:24:44.340 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-16 13:24:44.340 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-16 13:24:44.345 +08:00 [DBG] Start authorize callback request
+2019-07-16 13:24:44.348 +08:00 [DBG] User in authorize request: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:24:44.348 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:44.349 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:44.350 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:44.350 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:44.350 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:44.351 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C-2IhAMbcBMs5iqxxT6eg09ip5R6GEOO7Xzi2dxahuV2RYQcNupKnBwz-akZQv70QucD6Zne4G9JMPYE2D98nq3AOwqVa33zaCI4k-avksgGZg6LIC4OHHzWmBxQi4Yj9OsSSyor3cYAgshwSxgWugOhNQZRKezOxJ8I3ApwACFKTsvNWe_XarcaK4zShRVKgtoS0a_Me0T4-PLxj6jYkN3kXA7J25u6mwXrrZCCvo26Wjk59wRm4MlkEQp40BLEZ6pvlHh5bvWs_PKUMbA8PG9_OgLMTfIkUP1_XgvjpX-qg","UiLocales":null,"Nonce":"636988514421985952.NDk4OTNiMzMtN2U5MS00ZDM5LWIzNDUtNTIyYzY2ZjRkMDllMDE3NWM0MjEtZGNiOS00N2UxLTllZDAtOGIwZDE5YTI4MzZh","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"2eff20efb792f5bd2c6633f679ea7b89","Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988514421985952.NDk4OTNiMzMtN2U5MS00ZDM5LWIzNDUtNTIyYzY2ZjRkMDllMDE3NWM0MjEtZGNiOS00N2UxLTllZDAtOGIwZDE5YTI4MzZh","state":"CfDJ8LoK4IR6GONBlM3HASCG_C-2IhAMbcBMs5iqxxT6eg09ip5R6GEOO7Xzi2dxahuV2RYQcNupKnBwz-akZQv70QucD6Zne4G9JMPYE2D98nq3AOwqVa33zaCI4k-avksgGZg6LIC4OHHzWmBxQi4Yj9OsSSyor3cYAgshwSxgWugOhNQZRKezOxJ8I3ApwACFKTsvNWe_XarcaK4zShRVKgtoS0a_Me0T4-PLxj6jYkN3kXA7J25u6mwXrrZCCvo26Wjk59wRm4MlkEQp40BLEZ6pvlHh5bvWs_PKUMbA8PG9_OgLMTfIkUP1_XgvjpX-qg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 13:24:44.393 +08:00 [DBG] user_consent grant with value: admin|c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 not found in store.
+2019-07-16 13:24:44.394 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2019-07-16 13:24:44.394 +08:00 [INF] Showing consent: User has not yet consented
+2019-07-16 13:24:44.416 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:44.418 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:44.421 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:44.421 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:44.422 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:44.422 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:50.520 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:24:50.534 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:50.534 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:50.535 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:50.536 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:50.536 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:50.537 +08:00 [INF] {"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ClientId":"admin","RequestedScopes":["openid","profile","email","restapi"],"GrantedScopes":["openid","profile","email","restapi"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLO9LN7TGU3K:00000011","TimeStamp":"2019-07-16T05:24:50.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-07-16 13:24:50.552 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:50.560 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-16 13:24:50.560 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-16 13:24:50.561 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-16 13:24:50.561 +08:00 [DBG] Start authorize callback request
+2019-07-16 13:24:50.564 +08:00 [DBG] User in authorize request: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:24:50.565 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:24:50.565 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:50.566 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:24:50.566 +08:00 [DBG] No PKCE used.
+2019-07-16 13:24:50.567 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:24:50.567 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C-2IhAMbcBMs5iqxxT6eg09ip5R6GEOO7Xzi2dxahuV2RYQcNupKnBwz-akZQv70QucD6Zne4G9JMPYE2D98nq3AOwqVa33zaCI4k-avksgGZg6LIC4OHHzWmBxQi4Yj9OsSSyor3cYAgshwSxgWugOhNQZRKezOxJ8I3ApwACFKTsvNWe_XarcaK4zShRVKgtoS0a_Me0T4-PLxj6jYkN3kXA7J25u6mwXrrZCCvo26Wjk59wRm4MlkEQp40BLEZ6pvlHh5bvWs_PKUMbA8PG9_OgLMTfIkUP1_XgvjpX-qg","UiLocales":null,"Nonce":"636988514421985952.NDk4OTNiMzMtN2U5MS00ZDM5LWIzNDUtNTIyYzY2ZjRkMDllMDE3NWM0MjEtZGNiOS00N2UxLTllZDAtOGIwZDE5YTI4MzZh","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"2eff20efb792f5bd2c6633f679ea7b89","Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988514421985952.NDk4OTNiMzMtN2U5MS00ZDM5LWIzNDUtNTIyYzY2ZjRkMDllMDE3NWM0MjEtZGNiOS00N2UxLTllZDAtOGIwZDE5YTI4MzZh","state":"CfDJ8LoK4IR6GONBlM3HASCG_C-2IhAMbcBMs5iqxxT6eg09ip5R6GEOO7Xzi2dxahuV2RYQcNupKnBwz-akZQv70QucD6Zne4G9JMPYE2D98nq3AOwqVa33zaCI4k-avksgGZg6LIC4OHHzWmBxQi4Yj9OsSSyor3cYAgshwSxgWugOhNQZRKezOxJ8I3ApwACFKTsvNWe_XarcaK4zShRVKgtoS0a_Me0T4-PLxj6jYkN3kXA7J25u6mwXrrZCCvo26Wjk59wRm4MlkEQp40BLEZ6pvlHh5bvWs_PKUMbA8PG9_OgLMTfIkUP1_XgvjpX-qg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 13:24:50.577 +08:00 [DBG] user_consent grant with value: admin|c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 not found in store.
+2019-07-16 13:24:50.578 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2019-07-16 13:24:50.583 +08:00 [INF] User consented to scopes: ["openid","profile","email","restapi"]
+2019-07-16 13:24:50.586 +08:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","email","restapi"]
+2019-07-16 13:24:50.589 +08:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:24:50.599 +08:00 [DBG] Creating Hybrid Flow response.
+2019-07-16 13:24:50.613 +08:00 [DBG] Creating Implicit Flow response.
+2019-07-16 13:24:50.621 +08:00 [DBG] Getting claims for identity token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 and client: admin
+2019-07-16 13:24:50.623 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-16 13:24:50.681 +08:00 [INF] {"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","Endpoint":"Authorize","SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","Scopes":"openid profile email restapi","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****ONjg","$type":"Token"},{"TokenType":"code","TokenValue":"****4592","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO9LN7TGU3K:00000012","TimeStamp":"2019-07-16T05:24:50.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-16 13:24:50.688 +08:00 [INF] Authorize endpoint response
+{"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ClientId":"admin","RedirectUri":"http://localhost:9002/signin-oidc","State":"CfDJ8LoK4IR6GONBlM3HASCG_C-2IhAMbcBMs5iqxxT6eg09ip5R6GEOO7Xzi2dxahuV2RYQcNupKnBwz-akZQv70QucD6Zne4G9JMPYE2D98nq3AOwqVa33zaCI4k-avksgGZg6LIC4OHHzWmBxQi4Yj9OsSSyor3cYAgshwSxgWugOhNQZRKezOxJ8I3ApwACFKTsvNWe_XarcaK4zShRVKgtoS0a_Me0T4-PLxj6jYkN3kXA7J25u6mwXrrZCCvo26Wjk59wRm4MlkEQp40BLEZ6pvlHh5bvWs_PKUMbA8PG9_OgLMTfIkUP1_XgvjpX-qg","Scope":"openid profile email restapi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-07-16 13:24:50.701 +08:00 [DBG] Augmenting SignInContext
+2019-07-16 13:24:50.702 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-16 13:24:50.840 +08:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-07-16 13:24:50.845 +08:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-07-16 13:24:50.846 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-07-16 13:24:50.852 +08:00 [DBG] Start token request.
+2019-07-16 13:24:50.857 +08:00 [DBG] Start client validation
+2019-07-16 13:24:50.861 +08:00 [DBG] Start parsing Basic Authentication secret
+2019-07-16 13:24:50.863 +08:00 [DBG] Start parsing for secret in post body
+2019-07-16 13:24:50.864 +08:00 [DBG] Parser found secret: PostBodySecretParser
+2019-07-16 13:24:50.864 +08:00 [DBG] Secret id found: admin
+2019-07-16 13:24:50.864 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:50.872 +08:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-07-16 13:24:50.873 +08:00 [DBG] Client validation success
+2019-07-16 13:24:50.874 +08:00 [INF] {"ClientId":"admin","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLO9LN7TGU3H:00000003","TimeStamp":"2019-07-16T05:24:50.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-07-16 13:24:50.880 +08:00 [DBG] Start token request validation
+2019-07-16 13:24:50.888 +08:00 [DBG] Start validation of authorization code token request
+2019-07-16 13:24:50.896 +08:00 [DBG] Validation of authorization code token request success
+2019-07-16 13:24:50.897 +08:00 [INF] Token request validation success
+{"ClientId":"admin","ClientName":"Admin MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"4761a55ba2e8dc8ab17161f158b40ea0e10c115578219aa528d6630843254592","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"admin","client_secret":"***REDACTED***","code":"4761a55ba2e8dc8ab17161f158b40ea0e10c115578219aa528d6630843254592","grant_type":"authorization_code","redirect_uri":"http://localhost:9002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-07-16 13:24:50.911 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:50.921 +08:00 [DBG] Getting claims for access token for client: admin
+2019-07-16 13:24:50.921 +08:00 [DBG] Getting claims for access token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:24:50.931 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:50.932 +08:00 [DBG] Getting claims for identity token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 and client: admin
+2019-07-16 13:24:50.933 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-16 13:24:50.937 +08:00 [INF] {"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile email restapi","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****0Sgg","$type":"Token"},{"TokenType":"access_token","TokenValue":"****khog","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO9LN7TGU3H:00000003","TimeStamp":"2019-07-16T05:24:50.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-16 13:24:50.942 +08:00 [DBG] Token request success.
+2019-07-16 13:24:50.975 +08:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-07-16 13:24:50.978 +08:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-07-16 13:24:50.980 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-07-16 13:24:50.985 +08:00 [DBG] Start userinfo request
+2019-07-16 13:24:50.987 +08:00 [DBG] Bearer token found in header
+2019-07-16 13:24:51.004 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:51.006 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:24:51.009 +08:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-07-16 13:24:51.010 +08:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1563254690,"exp":1563258290,"iss":"http://localhost:8001","aud":["http://localhost:8001/resources","restapi"],"client_id":"admin","sub":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","auth_time":1563254684,"idp":"local","scope":["openid","profile","email","restapi"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-07-16 13:24:51.018 +08:00 [DBG] Creating userinfo response
+2019-07-16 13:24:51.021 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:24:51.023 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:24:51.026 +08:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified
+2019-07-16 13:24:51.027 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:24:51.031 +08:00 [INF] Profile service returned the following claim types: sub name given_name family_name email email_verified website preferred_username
+2019-07-16 13:24:51.032 +08:00 [DBG] End userinfo request
+2019-07-16 13:28:54.905 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-16 13:28:54.906 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-16 13:28:54.908 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-16 13:28:54.910 +08:00 [DBG] Start authorize request
+2019-07-16 13:28:54.911 +08:00 [DBG] No user present in authorize request
+2019-07-16 13:28:54.912 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:28:54.913 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:28:54.914 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:28:54.914 +08:00 [DBG] No PKCE used.
+2019-07-16 13:28:54.915 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:28:54.916 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C__wA3CGJydLoSTerW8OemUHoEVYenYMNOnEgjFR1lq9GGeoL5jV67fWGs_YSaxPPQsHAnhFBOm9LxBCNUlPgzLT4C9FLmbI4BLgdunkRm6MehD6lEyssS8Jr54F78fBVNTmpcfItl6pNd1nC2eEoteIYfboQK74SKs-uSrUvh0V2L1_YuMn--YauTt_qoeRnR495pPmXF6Fg8e_GTrDZv4dtPs4BRLoS7OJ3xuW3T2DDkY64xtMxZ1zFrHuvTCALkPQ6FGtK9KD7dR27RaU7puTZMedlfVApFpMdwU4MKVxQ","UiLocales":null,"Nonce":"636988517348891724.YWM3ZjdkM2EtMjhjNC00NTAxLThhN2EtZDRhMTE1ZWJhZDFjMGI1NjU2YTUtNjY1Mi00NTQwLTlmYzAtMmZmZDdiNDk5ZTlj","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988517348891724.YWM3ZjdkM2EtMjhjNC00NTAxLThhN2EtZDRhMTE1ZWJhZDFjMGI1NjU2YTUtNjY1Mi00NTQwLTlmYzAtMmZmZDdiNDk5ZTlj","state":"CfDJ8LoK4IR6GONBlM3HASCG_C__wA3CGJydLoSTerW8OemUHoEVYenYMNOnEgjFR1lq9GGeoL5jV67fWGs_YSaxPPQsHAnhFBOm9LxBCNUlPgzLT4C9FLmbI4BLgdunkRm6MehD6lEyssS8Jr54F78fBVNTmpcfItl6pNd1nC2eEoteIYfboQK74SKs-uSrUvh0V2L1_YuMn--YauTt_qoeRnR495pPmXF6Fg8e_GTrDZv4dtPs4BRLoS7OJ3xuW3T2DDkY64xtMxZ1zFrHuvTCALkPQ6FGtK9KD7dR27RaU7puTZMedlfVApFpMdwU4MKVxQ","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 13:28:54.926 +08:00 [INF] Showing login: User is not authenticated
+2019-07-16 13:28:54.944 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:28:54.945 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:28:54.946 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:28:54.947 +08:00 [DBG] No PKCE used.
+2019-07-16 13:28:54.947 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:28:54.948 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:06.976 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:29:06.979 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:29:06.979 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:06.980 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:29:06.981 +08:00 [DBG] No PKCE used.
+2019-07-16 13:29:06.981 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:29:06.992 +08:00 [WRN] Invalid password for user c08455c0-be3f-4e63-b0c3-4f1bf79b28f6.
+2019-07-16 13:29:06.992 +08:00 [WRN] User c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 failed to provide the correct password.
+2019-07-16 13:29:07.143 +08:00 [INF] {"Username":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLO9LN7TGU3O:00000003","TimeStamp":"2019-07-16T05:29:07.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-07-16 13:29:07.146 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:29:07.146 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:07.147 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:29:07.147 +08:00 [DBG] No PKCE used.
+2019-07-16 13:29:07.148 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:29:07.149 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.513 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:29:13.515 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:29:13.516 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.517 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:29:13.517 +08:00 [DBG] No PKCE used.
+2019-07-16 13:29:13.518 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:29:13.636 +08:00 [DBG] Augmenting SignInContext
+2019-07-16 13:29:13.636 +08:00 [DBG] Adding idp claim with value: local
+2019-07-16 13:29:13.637 +08:00 [DBG] Adding amr claim with value: pwd
+2019-07-16 13:29:13.637 +08:00 [DBG] Adding auth_time claim with value: 1563254953
+2019-07-16 13:29:13.638 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-16 13:29:13.639 +08:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","DisplayName":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLO9LN7TGU3O:00000004","TimeStamp":"2019-07-16T05:29:13.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-07-16 13:29:13.641 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.644 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-16 13:29:13.644 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-16 13:29:13.645 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-16 13:29:13.649 +08:00 [DBG] Start authorize callback request
+2019-07-16 13:29:13.649 +08:00 [DBG] User in authorize request: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:29:13.650 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:29:13.650 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.652 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:29:13.652 +08:00 [DBG] No PKCE used.
+2019-07-16 13:29:13.653 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:29:13.654 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C__wA3CGJydLoSTerW8OemUHoEVYenYMNOnEgjFR1lq9GGeoL5jV67fWGs_YSaxPPQsHAnhFBOm9LxBCNUlPgzLT4C9FLmbI4BLgdunkRm6MehD6lEyssS8Jr54F78fBVNTmpcfItl6pNd1nC2eEoteIYfboQK74SKs-uSrUvh0V2L1_YuMn--YauTt_qoeRnR495pPmXF6Fg8e_GTrDZv4dtPs4BRLoS7OJ3xuW3T2DDkY64xtMxZ1zFrHuvTCALkPQ6FGtK9KD7dR27RaU7puTZMedlfVApFpMdwU4MKVxQ","UiLocales":null,"Nonce":"636988517348891724.YWM3ZjdkM2EtMjhjNC00NTAxLThhN2EtZDRhMTE1ZWJhZDFjMGI1NjU2YTUtNjY1Mi00NTQwLTlmYzAtMmZmZDdiNDk5ZTlj","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"e0462bed8d12e292e6b909af15aa3345","Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988517348891724.YWM3ZjdkM2EtMjhjNC00NTAxLThhN2EtZDRhMTE1ZWJhZDFjMGI1NjU2YTUtNjY1Mi00NTQwLTlmYzAtMmZmZDdiNDk5ZTlj","state":"CfDJ8LoK4IR6GONBlM3HASCG_C__wA3CGJydLoSTerW8OemUHoEVYenYMNOnEgjFR1lq9GGeoL5jV67fWGs_YSaxPPQsHAnhFBOm9LxBCNUlPgzLT4C9FLmbI4BLgdunkRm6MehD6lEyssS8Jr54F78fBVNTmpcfItl6pNd1nC2eEoteIYfboQK74SKs-uSrUvh0V2L1_YuMn--YauTt_qoeRnR495pPmXF6Fg8e_GTrDZv4dtPs4BRLoS7OJ3xuW3T2DDkY64xtMxZ1zFrHuvTCALkPQ6FGtK9KD7dR27RaU7puTZMedlfVApFpMdwU4MKVxQ","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 13:29:13.666 +08:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2019-07-16 13:29:13.668 +08:00 [DBG] Creating Hybrid Flow response.
+2019-07-16 13:29:13.669 +08:00 [DBG] Creating Implicit Flow response.
+2019-07-16 13:29:13.673 +08:00 [DBG] Getting claims for identity token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 and client: admin
+2019-07-16 13:29:13.675 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-16 13:29:13.677 +08:00 [INF] {"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","Endpoint":"Authorize","SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","Scopes":"openid profile email restapi","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****HhRQ","$type":"Token"},{"TokenType":"code","TokenValue":"****8e8b","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO9LN7TGU3O:00000005","TimeStamp":"2019-07-16T05:29:13.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-16 13:29:13.681 +08:00 [INF] Authorize endpoint response
+{"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ClientId":"admin","RedirectUri":"http://localhost:9002/signin-oidc","State":"CfDJ8LoK4IR6GONBlM3HASCG_C__wA3CGJydLoSTerW8OemUHoEVYenYMNOnEgjFR1lq9GGeoL5jV67fWGs_YSaxPPQsHAnhFBOm9LxBCNUlPgzLT4C9FLmbI4BLgdunkRm6MehD6lEyssS8Jr54F78fBVNTmpcfItl6pNd1nC2eEoteIYfboQK74SKs-uSrUvh0V2L1_YuMn--YauTt_qoeRnR495pPmXF6Fg8e_GTrDZv4dtPs4BRLoS7OJ3xuW3T2DDkY64xtMxZ1zFrHuvTCALkPQ6FGtK9KD7dR27RaU7puTZMedlfVApFpMdwU4MKVxQ","Scope":"openid profile email restapi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-07-16 13:29:13.683 +08:00 [DBG] Augmenting SignInContext
+2019-07-16 13:29:13.683 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-16 13:29:13.738 +08:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-07-16 13:29:13.742 +08:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-07-16 13:29:13.743 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-07-16 13:29:13.744 +08:00 [DBG] Start token request.
+2019-07-16 13:29:13.744 +08:00 [DBG] Start client validation
+2019-07-16 13:29:13.745 +08:00 [DBG] Start parsing Basic Authentication secret
+2019-07-16 13:29:13.745 +08:00 [DBG] Start parsing for secret in post body
+2019-07-16 13:29:13.746 +08:00 [DBG] Parser found secret: PostBodySecretParser
+2019-07-16 13:29:13.746 +08:00 [DBG] Secret id found: admin
+2019-07-16 13:29:13.746 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.747 +08:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-07-16 13:29:13.747 +08:00 [DBG] Client validation success
+2019-07-16 13:29:13.748 +08:00 [INF] {"ClientId":"admin","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLO9LN7TGU3Q:00000001","TimeStamp":"2019-07-16T05:29:13.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-07-16 13:29:13.753 +08:00 [DBG] Start token request validation
+2019-07-16 13:29:13.753 +08:00 [DBG] Start validation of authorization code token request
+2019-07-16 13:29:13.756 +08:00 [DBG] Validation of authorization code token request success
+2019-07-16 13:29:13.756 +08:00 [INF] Token request validation success
+{"ClientId":"admin","ClientName":"Admin MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"ac4f8922fd1be0d06e287c1973bc266c694746c4622c55312fd0bf66f5118e8b","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"admin","client_secret":"***REDACTED***","code":"ac4f8922fd1be0d06e287c1973bc266c694746c4622c55312fd0bf66f5118e8b","grant_type":"authorization_code","redirect_uri":"http://localhost:9002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-07-16 13:29:13.759 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.759 +08:00 [DBG] Getting claims for access token for client: admin
+2019-07-16 13:29:13.760 +08:00 [DBG] Getting claims for access token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:29:13.766 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.766 +08:00 [DBG] Getting claims for identity token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 and client: admin
+2019-07-16 13:29:13.767 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-16 13:29:13.769 +08:00 [INF] {"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile email restapi","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****AKlQ","$type":"Token"},{"TokenType":"access_token","TokenValue":"****9xew","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO9LN7TGU3Q:00000001","TimeStamp":"2019-07-16T05:29:13.0000000Z","ProcessId":23880,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-16 13:29:13.774 +08:00 [DBG] Token request success.
+2019-07-16 13:29:13.802 +08:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-07-16 13:29:13.804 +08:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-07-16 13:29:13.805 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-07-16 13:29:13.806 +08:00 [DBG] Start userinfo request
+2019-07-16 13:29:13.807 +08:00 [DBG] Bearer token found in header
+2019-07-16 13:29:13.808 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.808 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:29:13.812 +08:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-07-16 13:29:13.813 +08:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1563254953,"exp":1563258553,"iss":"http://localhost:8001","aud":["http://localhost:8001/resources","restapi"],"client_id":"admin","sub":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","auth_time":1563254953,"idp":"local","scope":["openid","profile","email","restapi"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-07-16 13:29:13.817 +08:00 [DBG] Creating userinfo response
+2019-07-16 13:29:13.817 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:29:13.818 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:29:13.818 +08:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified
+2019-07-16 13:29:13.819 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:29:13.823 +08:00 [INF] Profile service returned the following claim types: sub name given_name family_name email email_verified website preferred_username
+2019-07-16 13:29:13.825 +08:00 [DBG] End userinfo request
+2019-07-16 13:53:26.276 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 13:53:26.308 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 13:53:26.317 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 13:53:26.318 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 13:53:26.318 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 13:53:26.318 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 13:53:26.319 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 13:53:26.319 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 13:55:40.114 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 13:55:40.149 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 13:55:40.157 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 13:55:40.157 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 13:55:40.157 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 13:55:40.158 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 13:55:40.158 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 13:55:40.158 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 13:56:20.184 +08:00 [DBG] Login Url: /Account/Login
+2019-07-16 13:56:20.185 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-16 13:56:20.188 +08:00 [DBG] Logout Url: /Account/Logout
+2019-07-16 13:56:20.189 +08:00 [DBG] ConsentUrl Url: /consent
+2019-07-16 13:56:20.189 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-16 13:56:20.190 +08:00 [DBG] Error Url: /home/error
+2019-07-16 13:56:20.190 +08:00 [DBG] Error Id Parameter: errorId
+2019-07-16 13:56:20.213 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-16 13:56:20.224 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-16 13:56:20.225 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-16 13:56:20.228 +08:00 [DBG] Start discovery request
+2019-07-16 13:56:20.505 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-16 13:56:20.523 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-16 13:56:20.523 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-16 13:56:20.526 +08:00 [DBG] Start key discovery request
+2019-07-16 13:56:20.578 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-16 13:56:20.583 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-16 13:56:20.584 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-16 13:56:20.587 +08:00 [DBG] Start authorize request
+2019-07-16 13:56:20.597 +08:00 [DBG] No user present in authorize request
+2019-07-16 13:56:20.601 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:56:20.615 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:20.619 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:56:20.622 +08:00 [DBG] No PKCE used.
+2019-07-16 13:56:20.649 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:56:20.660 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C9C9hkNdegj5IsVePxmC68wNqyq-UOUPejDQ51lfKHwcFra-DuYvMaY78OpdZVrgMFPIVTgh7ByDBBhHyrk5MAqAG7ihmXZU464O6DUuMFuDmPHbJNIEnVfZ3NwvZ6HEFTNHOPyU1kDdfG75qU5KwTgfWcKNy3CTV4P56juQnOLcQ-y3IT-I711WSWQJi5O9kVh3nmFfQBrdMYtgd9yEzeA9zxCOAbgBeGZ3oUXBml03wM9gO-26rWwttPGwjukSQt6OMTasPk_OuGSvmC3Flurt8Nj-QnxbVP-oPlPaRPv2g","UiLocales":null,"Nonce":"636988533805590913.ZjlhMzE2MTgtYzI3Zi00NjBhLWFkMTgtM2JjZTM0NTYwYWNjODhmNDIyOTAtNWZmMi00YTdmLTk3ZGMtMzcxYzQzN2RlY2E4","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988533805590913.ZjlhMzE2MTgtYzI3Zi00NjBhLWFkMTgtM2JjZTM0NTYwYWNjODhmNDIyOTAtNWZmMi00YTdmLTk3ZGMtMzcxYzQzN2RlY2E4","state":"CfDJ8LoK4IR6GONBlM3HASCG_C9C9hkNdegj5IsVePxmC68wNqyq-UOUPejDQ51lfKHwcFra-DuYvMaY78OpdZVrgMFPIVTgh7ByDBBhHyrk5MAqAG7ihmXZU464O6DUuMFuDmPHbJNIEnVfZ3NwvZ6HEFTNHOPyU1kDdfG75qU5KwTgfWcKNy3CTV4P56juQnOLcQ-y3IT-I711WSWQJi5O9kVh3nmFfQBrdMYtgd9yEzeA9zxCOAbgBeGZ3oUXBml03wM9gO-26rWwttPGwjukSQt6OMTasPk_OuGSvmC3Flurt8Nj-QnxbVP-oPlPaRPv2g","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 13:56:20.685 +08:00 [INF] Showing login: User is not authenticated
+2019-07-16 13:56:20.823 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:56:20.824 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:20.825 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:56:20.825 +08:00 [DBG] No PKCE used.
+2019-07-16 13:56:20.826 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:56:20.828 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:30.880 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:56:30.914 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:56:30.915 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:30.919 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:56:30.919 +08:00 [DBG] No PKCE used.
+2019-07-16 13:56:30.920 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:56:31.142 +08:00 [DBG] Augmenting SignInContext
+2019-07-16 13:56:31.144 +08:00 [DBG] Adding idp claim with value: local
+2019-07-16 13:56:31.144 +08:00 [DBG] Adding amr claim with value: pwd
+2019-07-16 13:56:31.145 +08:00 [DBG] Adding auth_time claim with value: 1563256591
+2019-07-16 13:56:31.157 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-16 13:56:31.173 +08:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","DisplayName":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLO9M99J0BML:00000003","TimeStamp":"2019-07-16T05:56:31.0000000Z","ProcessId":24968,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-07-16 13:56:31.177 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:31.187 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-16 13:56:31.189 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-16 13:56:31.189 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-16 13:56:31.194 +08:00 [DBG] Start authorize callback request
+2019-07-16 13:56:31.197 +08:00 [DBG] User in authorize request: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:56:31.197 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:56:31.198 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:31.198 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:56:31.199 +08:00 [DBG] No PKCE used.
+2019-07-16 13:56:31.200 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:56:31.201 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C9C9hkNdegj5IsVePxmC68wNqyq-UOUPejDQ51lfKHwcFra-DuYvMaY78OpdZVrgMFPIVTgh7ByDBBhHyrk5MAqAG7ihmXZU464O6DUuMFuDmPHbJNIEnVfZ3NwvZ6HEFTNHOPyU1kDdfG75qU5KwTgfWcKNy3CTV4P56juQnOLcQ-y3IT-I711WSWQJi5O9kVh3nmFfQBrdMYtgd9yEzeA9zxCOAbgBeGZ3oUXBml03wM9gO-26rWwttPGwjukSQt6OMTasPk_OuGSvmC3Flurt8Nj-QnxbVP-oPlPaRPv2g","UiLocales":null,"Nonce":"636988533805590913.ZjlhMzE2MTgtYzI3Zi00NjBhLWFkMTgtM2JjZTM0NTYwYWNjODhmNDIyOTAtNWZmMi00YTdmLTk3ZGMtMzcxYzQzN2RlY2E4","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"c454e24540073a6789d1d43710cce39e","Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988533805590913.ZjlhMzE2MTgtYzI3Zi00NjBhLWFkMTgtM2JjZTM0NTYwYWNjODhmNDIyOTAtNWZmMi00YTdmLTk3ZGMtMzcxYzQzN2RlY2E4","state":"CfDJ8LoK4IR6GONBlM3HASCG_C9C9hkNdegj5IsVePxmC68wNqyq-UOUPejDQ51lfKHwcFra-DuYvMaY78OpdZVrgMFPIVTgh7ByDBBhHyrk5MAqAG7ihmXZU464O6DUuMFuDmPHbJNIEnVfZ3NwvZ6HEFTNHOPyU1kDdfG75qU5KwTgfWcKNy3CTV4P56juQnOLcQ-y3IT-I711WSWQJi5O9kVh3nmFfQBrdMYtgd9yEzeA9zxCOAbgBeGZ3oUXBml03wM9gO-26rWwttPGwjukSQt6OMTasPk_OuGSvmC3Flurt8Nj-QnxbVP-oPlPaRPv2g","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 13:56:31.245 +08:00 [DBG] user_consent grant with value: admin|c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 not found in store.
+2019-07-16 13:56:31.246 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2019-07-16 13:56:31.247 +08:00 [INF] Showing consent: User has not yet consented
+2019-07-16 13:56:31.264 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:56:31.264 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:31.265 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:56:31.266 +08:00 [DBG] No PKCE used.
+2019-07-16 13:56:31.266 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:56:31.267 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:32.642 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 13:56:32.657 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:56:32.657 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:32.659 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:56:32.659 +08:00 [DBG] No PKCE used.
+2019-07-16 13:56:32.660 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:56:32.662 +08:00 [INF] {"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ClientId":"admin","RequestedScopes":["openid","profile","email","restapi"],"GrantedScopes":["openid","profile","email","restapi"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLO9M99J0BML:00000007","TimeStamp":"2019-07-16T05:56:32.0000000Z","ProcessId":24968,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-07-16 13:56:32.676 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:32.679 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-16 13:56:32.679 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-16 13:56:32.680 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-16 13:56:32.681 +08:00 [DBG] Start authorize callback request
+2019-07-16 13:56:32.684 +08:00 [DBG] User in authorize request: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:56:32.685 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 13:56:32.685 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:32.685 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 13:56:32.686 +08:00 [DBG] No PKCE used.
+2019-07-16 13:56:32.687 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 13:56:32.689 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C9C9hkNdegj5IsVePxmC68wNqyq-UOUPejDQ51lfKHwcFra-DuYvMaY78OpdZVrgMFPIVTgh7ByDBBhHyrk5MAqAG7ihmXZU464O6DUuMFuDmPHbJNIEnVfZ3NwvZ6HEFTNHOPyU1kDdfG75qU5KwTgfWcKNy3CTV4P56juQnOLcQ-y3IT-I711WSWQJi5O9kVh3nmFfQBrdMYtgd9yEzeA9zxCOAbgBeGZ3oUXBml03wM9gO-26rWwttPGwjukSQt6OMTasPk_OuGSvmC3Flurt8Nj-QnxbVP-oPlPaRPv2g","UiLocales":null,"Nonce":"636988533805590913.ZjlhMzE2MTgtYzI3Zi00NjBhLWFkMTgtM2JjZTM0NTYwYWNjODhmNDIyOTAtNWZmMi00YTdmLTk3ZGMtMzcxYzQzN2RlY2E4","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"c454e24540073a6789d1d43710cce39e","Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988533805590913.ZjlhMzE2MTgtYzI3Zi00NjBhLWFkMTgtM2JjZTM0NTYwYWNjODhmNDIyOTAtNWZmMi00YTdmLTk3ZGMtMzcxYzQzN2RlY2E4","state":"CfDJ8LoK4IR6GONBlM3HASCG_C9C9hkNdegj5IsVePxmC68wNqyq-UOUPejDQ51lfKHwcFra-DuYvMaY78OpdZVrgMFPIVTgh7ByDBBhHyrk5MAqAG7ihmXZU464O6DUuMFuDmPHbJNIEnVfZ3NwvZ6HEFTNHOPyU1kDdfG75qU5KwTgfWcKNy3CTV4P56juQnOLcQ-y3IT-I711WSWQJi5O9kVh3nmFfQBrdMYtgd9yEzeA9zxCOAbgBeGZ3oUXBml03wM9gO-26rWwttPGwjukSQt6OMTasPk_OuGSvmC3Flurt8Nj-QnxbVP-oPlPaRPv2g","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 13:56:32.698 +08:00 [DBG] user_consent grant with value: admin|c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 not found in store.
+2019-07-16 13:56:32.699 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2019-07-16 13:56:32.706 +08:00 [INF] User consented to scopes: ["openid","profile","email","restapi"]
+2019-07-16 13:56:32.708 +08:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","email","restapi"]
+2019-07-16 13:56:32.711 +08:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:56:32.723 +08:00 [DBG] Creating Hybrid Flow response.
+2019-07-16 13:56:32.737 +08:00 [DBG] Creating Implicit Flow response.
+2019-07-16 13:56:32.744 +08:00 [DBG] Getting claims for identity token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 and client: admin
+2019-07-16 13:56:32.747 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-16 13:56:32.801 +08:00 [INF] {"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","Endpoint":"Authorize","SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","Scopes":"openid profile email restapi","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****8n7w","$type":"Token"},{"TokenType":"code","TokenValue":"****4deb","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO9M99J0BML:00000008","TimeStamp":"2019-07-16T05:56:32.0000000Z","ProcessId":24968,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-16 13:56:32.813 +08:00 [INF] Authorize endpoint response
+{"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ClientId":"admin","RedirectUri":"http://localhost:9002/signin-oidc","State":"CfDJ8LoK4IR6GONBlM3HASCG_C9C9hkNdegj5IsVePxmC68wNqyq-UOUPejDQ51lfKHwcFra-DuYvMaY78OpdZVrgMFPIVTgh7ByDBBhHyrk5MAqAG7ihmXZU464O6DUuMFuDmPHbJNIEnVfZ3NwvZ6HEFTNHOPyU1kDdfG75qU5KwTgfWcKNy3CTV4P56juQnOLcQ-y3IT-I711WSWQJi5O9kVh3nmFfQBrdMYtgd9yEzeA9zxCOAbgBeGZ3oUXBml03wM9gO-26rWwttPGwjukSQt6OMTasPk_OuGSvmC3Flurt8Nj-QnxbVP-oPlPaRPv2g","Scope":"openid profile email restapi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-07-16 13:56:32.834 +08:00 [DBG] Augmenting SignInContext
+2019-07-16 13:56:32.835 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-16 13:56:32.979 +08:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-07-16 13:56:32.985 +08:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-07-16 13:56:32.985 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-07-16 13:56:32.992 +08:00 [DBG] Start token request.
+2019-07-16 13:56:32.996 +08:00 [DBG] Start client validation
+2019-07-16 13:56:33.002 +08:00 [DBG] Start parsing Basic Authentication secret
+2019-07-16 13:56:33.006 +08:00 [DBG] Start parsing for secret in post body
+2019-07-16 13:56:33.006 +08:00 [DBG] Parser found secret: PostBodySecretParser
+2019-07-16 13:56:33.007 +08:00 [DBG] Secret id found: admin
+2019-07-16 13:56:33.007 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:33.016 +08:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-07-16 13:56:33.016 +08:00 [DBG] Client validation success
+2019-07-16 13:56:33.017 +08:00 [INF] {"ClientId":"admin","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLO9M99J0BMK:00000003","TimeStamp":"2019-07-16T05:56:33.0000000Z","ProcessId":24968,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-07-16 13:56:33.027 +08:00 [DBG] Start token request validation
+2019-07-16 13:56:33.038 +08:00 [DBG] Start validation of authorization code token request
+2019-07-16 13:56:33.047 +08:00 [DBG] Validation of authorization code token request success
+2019-07-16 13:56:33.049 +08:00 [INF] Token request validation success
+{"ClientId":"admin","ClientName":"Admin MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"1d3c0d40f2d2c1a77cef28c4afcc92c696883a0c6f6f0e97c60d8b7932144deb","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"admin","client_secret":"***REDACTED***","code":"1d3c0d40f2d2c1a77cef28c4afcc92c696883a0c6f6f0e97c60d8b7932144deb","grant_type":"authorization_code","redirect_uri":"http://localhost:9002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-07-16 13:56:33.064 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:33.073 +08:00 [DBG] Getting claims for access token for client: admin
+2019-07-16 13:56:33.075 +08:00 [DBG] Getting claims for access token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 13:56:33.087 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:33.088 +08:00 [DBG] Getting claims for identity token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 and client: admin
+2019-07-16 13:56:33.091 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-16 13:56:33.094 +08:00 [INF] {"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile email restapi","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****CY1g","$type":"Token"},{"TokenType":"access_token","TokenValue":"****WJfg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO9M99J0BMK:00000003","TimeStamp":"2019-07-16T05:56:33.0000000Z","ProcessId":24968,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-16 13:56:33.099 +08:00 [DBG] Token request success.
+2019-07-16 13:56:33.141 +08:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-07-16 13:56:33.144 +08:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-07-16 13:56:33.144 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-07-16 13:56:33.150 +08:00 [DBG] Start userinfo request
+2019-07-16 13:56:33.157 +08:00 [DBG] Bearer token found in header
+2019-07-16 13:56:33.177 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:33.180 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 13:56:33.182 +08:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-07-16 13:56:33.184 +08:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1563256593,"exp":1563260193,"iss":"http://localhost:8001","aud":["http://localhost:8001/resources","restapi"],"client_id":"admin","sub":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","auth_time":1563256591,"idp":"local","scope":["openid","profile","email","restapi"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-07-16 13:56:33.194 +08:00 [DBG] Creating userinfo response
+2019-07-16 13:56:33.197 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:56:33.201 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:56:33.206 +08:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified
+2019-07-16 13:56:33.207 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 13:56:33.211 +08:00 [INF] Profile service returned the following claim types: sub name given_name family_name email email_verified website preferred_username
+2019-07-16 13:56:33.212 +08:00 [DBG] End userinfo request
+2019-07-16 13:59:43.329 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 13:59:43.364 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 13:59:43.373 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 13:59:43.374 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 13:59:43.374 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 13:59:43.374 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 13:59:43.374 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 13:59:43.374 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:04:49.997 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:04:50.034 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:04:50.044 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:04:50.044 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:04:50.045 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:04:50.045 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:04:50.045 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:04:50.046 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:10:42.204 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:10:42.238 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:10:42.245 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:10:42.246 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:10:42.246 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:10:42.247 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:10:42.248 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:10:42.248 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:17:44.245 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:17:44.277 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:17:44.285 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:17:44.285 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:17:44.285 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:17:44.286 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:17:44.286 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:17:44.286 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:18:51.431 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:18:51.458 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:18:51.467 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:18:51.467 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:18:51.468 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:18:51.468 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:18:51.468 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:18:51.468 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:29:28.800 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:29:28.832 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:29:28.840 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:29:28.841 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:29:28.841 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:29:28.841 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:29:28.842 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:29:28.842 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:32:55.498 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:32:55.531 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:32:55.538 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:32:55.539 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:32:55.539 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:32:55.540 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:32:55.541 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:32:55.541 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:33:07.552 +08:00 [DBG] Login Url: /Account/Login
+2019-07-16 14:33:07.554 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-16 14:33:07.556 +08:00 [DBG] Logout Url: /Account/Logout
+2019-07-16 14:33:07.557 +08:00 [DBG] ConsentUrl Url: /consent
+2019-07-16 14:33:07.557 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-16 14:33:07.557 +08:00 [DBG] Error Url: /home/error
+2019-07-16 14:33:07.558 +08:00 [DBG] Error Id Parameter: errorId
+2019-07-16 14:33:07.579 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-16 14:33:07.592 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-16 14:33:07.593 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-16 14:33:07.597 +08:00 [DBG] Start discovery request
+2019-07-16 14:33:07.841 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-16 14:33:07.853 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-16 14:33:07.855 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-16 14:33:07.858 +08:00 [DBG] Start key discovery request
+2019-07-16 14:33:07.929 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-16 14:33:07.934 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-16 14:33:07.936 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-16 14:33:07.940 +08:00 [DBG] Start authorize request
+2019-07-16 14:33:07.948 +08:00 [DBG] No user present in authorize request
+2019-07-16 14:33:07.952 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:07.965 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:07.969 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:07.973 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:07.997 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:08.008 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C--tADw7EX4crxZspnvPjP0DPm0fub7SEkxSiXmVVE5nPiUyAOiTESU9sZhQ0GivswFnvHf8FPRI-ObgPMfDE9XdES4QcfRQUA2Ra3SnFF42tKEIwGVUof1ewiXYfzQm4aCDef8SXR8pOU_b9dGIcHYDM4WrGupFCM1PBdPL898QFOzaGlRX0xzTPWhO_6tvohC6uVd06ylTEHHObjEoC7-hDrZGBm9nMYBTkgMzooua-wI13-1LzJ37DaAHv5-uZUhpyiFJ5GwsY9ZKc7m_CmliCyEo7B4Z4ZsMiAZO6Qieg","UiLocales":null,"Nonce":"636988555878894666.YmIxY2U5Y2EtYjU0My00MWUxLWE4Y2QtMzRlODNlNWJhOGUyYjBmZWVhZjctZGIyOS00MDI1LWJmYWEtNjljNzQ3NmRkZDc1","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988555878894666.YmIxY2U5Y2EtYjU0My00MWUxLWE4Y2QtMzRlODNlNWJhOGUyYjBmZWVhZjctZGIyOS00MDI1LWJmYWEtNjljNzQ3NmRkZDc1","state":"CfDJ8LoK4IR6GONBlM3HASCG_C--tADw7EX4crxZspnvPjP0DPm0fub7SEkxSiXmVVE5nPiUyAOiTESU9sZhQ0GivswFnvHf8FPRI-ObgPMfDE9XdES4QcfRQUA2Ra3SnFF42tKEIwGVUof1ewiXYfzQm4aCDef8SXR8pOU_b9dGIcHYDM4WrGupFCM1PBdPL898QFOzaGlRX0xzTPWhO_6tvohC6uVd06ylTEHHObjEoC7-hDrZGBm9nMYBTkgMzooua-wI13-1LzJ37DaAHv5-uZUhpyiFJ5GwsY9ZKc7m_CmliCyEo7B4Z4ZsMiAZO6Qieg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 14:33:08.033 +08:00 [INF] Showing login: User is not authenticated
+2019-07-16 14:33:08.171 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:08.171 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:08.173 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:08.174 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:08.174 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:08.176 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:28.114 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-16 14:33:28.116 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-16 14:33:28.117 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-16 14:33:28.117 +08:00 [DBG] Start authorize request
+2019-07-16 14:33:28.118 +08:00 [DBG] No user present in authorize request
+2019-07-16 14:33:28.119 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:28.120 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:28.121 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:28.121 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:28.122 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:28.123 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C_dOYEP0VYy8PZDUZ_EJ07Z7Frs1eIlpwVzm3Ossl9D8obLtSQgNJo2wnLh12o6JSusg5RvIqnOhI49a4v4SjCYiEJWp8l_eX5YQIsKrEtGSOXqBR7tghwdKvn4UMvXC9-NLPoBV89M_0QZ8FROLQLwgd5sbP4hiU4fVoGzUURwyua_b5FREXnn5ZXv41_gqQ9qCefhreaAgfj3vWgbx5GoVpcWXV81dG0Tl6ir428TYH5SWRRJQIBoFG1ltubWyf05nZ8dBADb4KSraP92ENNJRHRsxdC6h6_m8P-EixrdPhtzXwfmyqH-DcxBDSOFw44","UiLocales":null,"Nonce":"636988556081089206.YWY4MDQ4MDgtYTE0NS00OTk4LTliYzYtMGI3Mjk3NjA4OTQzMGNjN2UwYzItNWY2My00NjFkLTg1OWItMjFjOWM0YTQ0ZGZm","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988556081089206.YWY4MDQ4MDgtYTE0NS00OTk4LTliYzYtMGI3Mjk3NjA4OTQzMGNjN2UwYzItNWY2My00NjFkLTg1OWItMjFjOWM0YTQ0ZGZm","state":"CfDJ8LoK4IR6GONBlM3HASCG_C_dOYEP0VYy8PZDUZ_EJ07Z7Frs1eIlpwVzm3Ossl9D8obLtSQgNJo2wnLh12o6JSusg5RvIqnOhI49a4v4SjCYiEJWp8l_eX5YQIsKrEtGSOXqBR7tghwdKvn4UMvXC9-NLPoBV89M_0QZ8FROLQLwgd5sbP4hiU4fVoGzUURwyua_b5FREXnn5ZXv41_gqQ9qCefhreaAgfj3vWgbx5GoVpcWXV81dG0Tl6ir428TYH5SWRRJQIBoFG1ltubWyf05nZ8dBADb4KSraP92ENNJRHRsxdC6h6_m8P-EixrdPhtzXwfmyqH-DcxBDSOFw44","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 14:33:28.132 +08:00 [INF] Showing login: User is not authenticated
+2019-07-16 14:33:28.143 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:28.143 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:28.144 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:28.145 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:28.145 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:28.146 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:38.776 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 14:33:38.805 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:38.805 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:38.807 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:38.807 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:38.807 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:38.988 +08:00 [DBG] Augmenting SignInContext
+2019-07-16 14:33:38.990 +08:00 [DBG] Adding idp claim with value: local
+2019-07-16 14:33:38.990 +08:00 [DBG] Adding amr claim with value: pwd
+2019-07-16 14:33:38.991 +08:00 [DBG] Adding auth_time claim with value: 1563258818
+2019-07-16 14:33:38.998 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-16 14:33:39.015 +08:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","DisplayName":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLO9MTRE0N78:00000005","TimeStamp":"2019-07-16T06:33:39.0000000Z","ProcessId":3780,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-07-16 14:33:39.020 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:39.028 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-16 14:33:39.029 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-16 14:33:39.030 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-16 14:33:39.035 +08:00 [DBG] Start authorize callback request
+2019-07-16 14:33:39.038 +08:00 [DBG] User in authorize request: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 14:33:39.039 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:39.039 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:39.040 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:39.040 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:39.040 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:39.041 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C_dOYEP0VYy8PZDUZ_EJ07Z7Frs1eIlpwVzm3Ossl9D8obLtSQgNJo2wnLh12o6JSusg5RvIqnOhI49a4v4SjCYiEJWp8l_eX5YQIsKrEtGSOXqBR7tghwdKvn4UMvXC9-NLPoBV89M_0QZ8FROLQLwgd5sbP4hiU4fVoGzUURwyua_b5FREXnn5ZXv41_gqQ9qCefhreaAgfj3vWgbx5GoVpcWXV81dG0Tl6ir428TYH5SWRRJQIBoFG1ltubWyf05nZ8dBADb4KSraP92ENNJRHRsxdC6h6_m8P-EixrdPhtzXwfmyqH-DcxBDSOFw44","UiLocales":null,"Nonce":"636988556081089206.YWY4MDQ4MDgtYTE0NS00OTk4LTliYzYtMGI3Mjk3NjA4OTQzMGNjN2UwYzItNWY2My00NjFkLTg1OWItMjFjOWM0YTQ0ZGZm","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"519a3cab3807bf74cb374d4dec6f55da","Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988556081089206.YWY4MDQ4MDgtYTE0NS00OTk4LTliYzYtMGI3Mjk3NjA4OTQzMGNjN2UwYzItNWY2My00NjFkLTg1OWItMjFjOWM0YTQ0ZGZm","state":"CfDJ8LoK4IR6GONBlM3HASCG_C_dOYEP0VYy8PZDUZ_EJ07Z7Frs1eIlpwVzm3Ossl9D8obLtSQgNJo2wnLh12o6JSusg5RvIqnOhI49a4v4SjCYiEJWp8l_eX5YQIsKrEtGSOXqBR7tghwdKvn4UMvXC9-NLPoBV89M_0QZ8FROLQLwgd5sbP4hiU4fVoGzUURwyua_b5FREXnn5ZXv41_gqQ9qCefhreaAgfj3vWgbx5GoVpcWXV81dG0Tl6ir428TYH5SWRRJQIBoFG1ltubWyf05nZ8dBADb4KSraP92ENNJRHRsxdC6h6_m8P-EixrdPhtzXwfmyqH-DcxBDSOFw44","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 14:33:39.083 +08:00 [DBG] user_consent grant with value: admin|c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 not found in store.
+2019-07-16 14:33:39.084 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2019-07-16 14:33:39.085 +08:00 [INF] Showing consent: User has not yet consented
+2019-07-16 14:33:39.103 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:39.103 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:39.105 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:39.106 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:39.106 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:39.107 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:40.587 +08:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-16 14:33:40.598 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:40.599 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:40.600 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:40.601 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:40.602 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:40.603 +08:00 [INF] {"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ClientId":"admin","RequestedScopes":["openid","profile","email","restapi"],"GrantedScopes":["openid","profile","email","restapi"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLO9MTRE0N78:00000009","TimeStamp":"2019-07-16T06:33:40.0000000Z","ProcessId":3780,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-07-16 14:33:40.614 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:40.619 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-16 14:33:40.620 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-16 14:33:40.621 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-16 14:33:40.622 +08:00 [DBG] Start authorize callback request
+2019-07-16 14:33:40.624 +08:00 [DBG] User in authorize request: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 14:33:40.625 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:33:40.625 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:40.626 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:33:40.628 +08:00 [DBG] No PKCE used.
+2019-07-16 14:33:40.628 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:33:40.629 +08:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","AllowedRedirectUris":["http://localhost:9002/signin-oidc"],"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile email restapi","State":"CfDJ8LoK4IR6GONBlM3HASCG_C_dOYEP0VYy8PZDUZ_EJ07Z7Frs1eIlpwVzm3Ossl9D8obLtSQgNJo2wnLh12o6JSusg5RvIqnOhI49a4v4SjCYiEJWp8l_eX5YQIsKrEtGSOXqBR7tghwdKvn4UMvXC9-NLPoBV89M_0QZ8FROLQLwgd5sbP4hiU4fVoGzUURwyua_b5FREXnn5ZXv41_gqQ9qCefhreaAgfj3vWgbx5GoVpcWXV81dG0Tl6ir428TYH5SWRRJQIBoFG1ltubWyf05nZ8dBADb4KSraP92ENNJRHRsxdC6h6_m8P-EixrdPhtzXwfmyqH-DcxBDSOFw44","UiLocales":null,"Nonce":"636988556081089206.YWY4MDQ4MDgtYTE0NS00OTk4LTliYzYtMGI3Mjk3NjA4OTQzMGNjN2UwYzItNWY2My00NjFkLTg1OWItMjFjOWM0YTQ0ZGZm","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"519a3cab3807bf74cb374d4dec6f55da","Raw":{"client_id":"admin","redirect_uri":"http://localhost:9002/signin-oidc","response_type":"code id_token","scope":"openid profile email restapi","response_mode":"form_post","nonce":"636988556081089206.YWY4MDQ4MDgtYTE0NS00OTk4LTliYzYtMGI3Mjk3NjA4OTQzMGNjN2UwYzItNWY2My00NjFkLTg1OWItMjFjOWM0YTQ0ZGZm","state":"CfDJ8LoK4IR6GONBlM3HASCG_C_dOYEP0VYy8PZDUZ_EJ07Z7Frs1eIlpwVzm3Ossl9D8obLtSQgNJo2wnLh12o6JSusg5RvIqnOhI49a4v4SjCYiEJWp8l_eX5YQIsKrEtGSOXqBR7tghwdKvn4UMvXC9-NLPoBV89M_0QZ8FROLQLwgd5sbP4hiU4fVoGzUURwyua_b5FREXnn5ZXv41_gqQ9qCefhreaAgfj3vWgbx5GoVpcWXV81dG0Tl6ir428TYH5SWRRJQIBoFG1ltubWyf05nZ8dBADb4KSraP92ENNJRHRsxdC6h6_m8P-EixrdPhtzXwfmyqH-DcxBDSOFw44","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-16 14:33:40.636 +08:00 [DBG] user_consent grant with value: admin|c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 not found in store.
+2019-07-16 14:33:40.636 +08:00 [DBG] Found no prior consent from consent store, consent is required
+2019-07-16 14:33:40.643 +08:00 [INF] User consented to scopes: ["openid","profile","email","restapi"]
+2019-07-16 14:33:40.645 +08:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","email","restapi"]
+2019-07-16 14:33:40.648 +08:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 14:33:40.659 +08:00 [DBG] Creating Hybrid Flow response.
+2019-07-16 14:33:40.673 +08:00 [DBG] Creating Implicit Flow response.
+2019-07-16 14:33:40.680 +08:00 [DBG] Getting claims for identity token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 and client: admin
+2019-07-16 14:33:40.683 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-16 14:33:40.730 +08:00 [INF] {"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":"http://localhost:9002/signin-oidc","Endpoint":"Authorize","SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","Scopes":"openid profile email restapi","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****Gvyw","$type":"Token"},{"TokenType":"code","TokenValue":"****7094","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO9MTRE0N78:0000000A","TimeStamp":"2019-07-16T06:33:40.0000000Z","ProcessId":3780,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-16 14:33:40.737 +08:00 [INF] Authorize endpoint response
+{"SubjectId":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","ClientId":"admin","RedirectUri":"http://localhost:9002/signin-oidc","State":"CfDJ8LoK4IR6GONBlM3HASCG_C_dOYEP0VYy8PZDUZ_EJ07Z7Frs1eIlpwVzm3Ossl9D8obLtSQgNJo2wnLh12o6JSusg5RvIqnOhI49a4v4SjCYiEJWp8l_eX5YQIsKrEtGSOXqBR7tghwdKvn4UMvXC9-NLPoBV89M_0QZ8FROLQLwgd5sbP4hiU4fVoGzUURwyua_b5FREXnn5ZXv41_gqQ9qCefhreaAgfj3vWgbx5GoVpcWXV81dG0Tl6ir428TYH5SWRRJQIBoFG1ltubWyf05nZ8dBADb4KSraP92ENNJRHRsxdC6h6_m8P-EixrdPhtzXwfmyqH-DcxBDSOFw44","Scope":"openid profile email restapi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-07-16 14:33:40.750 +08:00 [DBG] Augmenting SignInContext
+2019-07-16 14:33:40.751 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-16 14:33:40.875 +08:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-07-16 14:33:40.881 +08:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-07-16 14:33:40.881 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-07-16 14:33:40.888 +08:00 [DBG] Start token request.
+2019-07-16 14:33:40.893 +08:00 [DBG] Start client validation
+2019-07-16 14:33:40.897 +08:00 [DBG] Start parsing Basic Authentication secret
+2019-07-16 14:33:40.901 +08:00 [DBG] Start parsing for secret in post body
+2019-07-16 14:33:40.901 +08:00 [DBG] Parser found secret: PostBodySecretParser
+2019-07-16 14:33:40.901 +08:00 [DBG] Secret id found: admin
+2019-07-16 14:33:40.902 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:40.912 +08:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-07-16 14:33:40.912 +08:00 [DBG] Client validation success
+2019-07-16 14:33:40.913 +08:00 [INF] {"ClientId":"admin","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLO9MTRE0N75:00000003","TimeStamp":"2019-07-16T06:33:40.0000000Z","ProcessId":3780,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-07-16 14:33:40.922 +08:00 [DBG] Start token request validation
+2019-07-16 14:33:40.934 +08:00 [DBG] Start validation of authorization code token request
+2019-07-16 14:33:40.943 +08:00 [DBG] Validation of authorization code token request success
+2019-07-16 14:33:40.944 +08:00 [INF] Token request validation success
+{"ClientId":"admin","ClientName":"Admin MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"103707c4fbb548bbd040f06c482a8ec791d44f8bba5080b9c1605451f8b97094","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"admin","client_secret":"***REDACTED***","code":"103707c4fbb548bbd040f06c482a8ec791d44f8bba5080b9c1605451f8b97094","grant_type":"authorization_code","redirect_uri":"http://localhost:9002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-07-16 14:33:40.957 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:40.965 +08:00 [DBG] Getting claims for access token for client: admin
+2019-07-16 14:33:40.966 +08:00 [DBG] Getting claims for access token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6
+2019-07-16 14:33:40.976 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:40.976 +08:00 [DBG] Getting claims for identity token for subject: c08455c0-be3f-4e63-b0c3-4f1bf79b28f6 and client: admin
+2019-07-16 14:33:40.977 +08:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-16 14:33:40.980 +08:00 [INF] {"ClientId":"admin","ClientName":"Admin MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile email restapi","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****o98w","$type":"Token"},{"TokenType":"access_token","TokenValue":"****V1Bg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO9MTRE0N75:00000003","TimeStamp":"2019-07-16T06:33:40.0000000Z","ProcessId":3780,"LocalIpAddress":"::1:8001","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-16 14:33:40.985 +08:00 [DBG] Token request success.
+2019-07-16 14:33:41.020 +08:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-07-16 14:33:41.023 +08:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-07-16 14:33:41.024 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-07-16 14:33:41.029 +08:00 [DBG] Start userinfo request
+2019-07-16 14:33:41.032 +08:00 [DBG] Bearer token found in header
+2019-07-16 14:33:41.050 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:41.054 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:33:41.056 +08:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-07-16 14:33:41.057 +08:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1563258820,"exp":1563262420,"iss":"http://localhost:8001","aud":["http://localhost:8001/resources","restapi"],"client_id":"admin","sub":"c08455c0-be3f-4e63-b0c3-4f1bf79b28f6","auth_time":1563258818,"idp":"local","scope":["openid","profile","email","restapi"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-07-16 14:33:41.064 +08:00 [DBG] Creating userinfo response
+2019-07-16 14:33:41.067 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 14:33:41.069 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 14:33:41.071 +08:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at email email_verified
+2019-07-16 14:33:41.072 +08:00 [DBG] Scopes in access token: openid profile email restapi
+2019-07-16 14:33:41.074 +08:00 [INF] Profile service returned the following claim types: sub name given_name family_name email email_verified website preferred_username
+2019-07-16 14:33:41.075 +08:00 [DBG] End userinfo request
+2019-07-16 14:35:41.162 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:35:41.162 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:35:41.164 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:35:41.164 +08:00 [DBG] No PKCE used.
+2019-07-16 14:35:41.165 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:35:41.165 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:35:42.658 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:35:42.659 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:35:42.660 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:35:42.660 +08:00 [DBG] No PKCE used.
+2019-07-16 14:35:42.661 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:35:42.662 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:35:43.137 +08:00 [DBG] Start authorize request protocol validation
+2019-07-16 14:35:43.137 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:35:43.139 +08:00 [DBG] Checking for PKCE parameters
+2019-07-16 14:35:43.139 +08:00 [DBG] No PKCE used.
+2019-07-16 14:35:43.139 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-16 14:35:43.140 +08:00 [DBG] client configuration validation for client admin succeeded.
+2019-07-16 14:38:38.439 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:38:38.471 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:38:38.480 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:38:38.481 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:38:38.481 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:38:38.481 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:38:38.482 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:38:38.482 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:44:57.926 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:44:57.957 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:44:57.966 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:44:57.966 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:44:57.966 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:44:57.967 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:44:57.967 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:44:57.968 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:48:14.641 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:48:14.675 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:48:14.683 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:48:14.683 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:48:14.683 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:48:14.683 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:48:14.684 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:48:14.685 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:48:50.593 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:48:50.621 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:48:50.628 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:48:50.629 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:48:50.629 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:48:50.629 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:48:50.630 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:48:50.630 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:50:08.241 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:50:08.279 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:50:08.286 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:50:08.287 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:50:08.287 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:50:08.287 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:50:08.287 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:50:08.287 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:50:48.502 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:50:48.533 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:50:48.540 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:50:48.541 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:50:48.541 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:50:48.541 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:50:48.541 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:50:48.541 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:52:11.045 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:52:11.072 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:52:11.080 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:52:11.080 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:52:11.081 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:52:11.081 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:52:11.081 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:52:11.081 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:53:05.512 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:53:05.549 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:53:05.558 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:53:05.558 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:53:05.558 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:53:05.559 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:53:05.559 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:53:05.559 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:56:53.483 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:56:53.516 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:56:53.525 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:56:53.525 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:56:53.526 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:56:53.526 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:56:53.526 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:56:53.526 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 14:57:26.086 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 14:57:26.124 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 14:57:26.133 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 14:57:26.134 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 14:57:26.134 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 14:57:26.135 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 14:57:26.135 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 14:57:26.135 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 15:00:19.303 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 15:00:19.334 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 15:00:19.344 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 15:00:19.344 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 15:00:19.344 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 15:00:19.344 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 15:00:19.344 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 15:00:19.344 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 15:02:24.713 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 15:02:24.744 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 15:02:24.754 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 15:02:24.755 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 15:02:24.755 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 15:02:24.755 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 15:02:24.756 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 15:02:24.756 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-16 15:08:18.793 +08:00 [INF] Starting IdentityServer4 version 2.4.0.0
+2019-07-16 15:08:18.824 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-16 15:08:18.832 +08:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-16 15:08:18.832 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-16 15:08:18.832 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-16 15:08:18.832 +08:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-16 15:08:18.833 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-16 15:08:18.834 +08:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
