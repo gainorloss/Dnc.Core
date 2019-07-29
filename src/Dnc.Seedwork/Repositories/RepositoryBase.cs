@@ -22,7 +22,7 @@ namespace Dnc.Seedwork
 
         public long NextIdentity() => _objectIdGenerator.IntSnowflakeId();
 
-        public abstract Task Add(params TDomainObject[] domainObjects);
+        public abstract Task CreateAsync(params TDomainObject[] domainObjects);
 
         public abstract TDomainObject OfId(TIdentity key);
 
