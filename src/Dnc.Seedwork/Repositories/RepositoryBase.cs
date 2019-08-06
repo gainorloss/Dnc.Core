@@ -7,6 +7,8 @@
 
 using Dnc.ObjectId;
 using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Dnc.Seedwork
@@ -31,6 +33,26 @@ namespace Dnc.Seedwork
         public abstract int Save();
 
         public virtual async Task<int> SaveAsync() => await Task.Run(() => Save());
+
+        public Task BulkCreateAsync(IList<TDomainObject> domainObjects)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task BatchCreateAsync(IList<TDomainObject> domainObjects)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task BatchUpdateAsync(Expression<Func<TDomainObject, bool>> where)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task BatchDeleteAsync(Expression<Func<TDomainObject, bool>> where)
+        {
+            throw new NotImplementedException();
+        }
 
         #region IDisposable Support
         private bool disposedValue = false; // 要检测冗余调用
@@ -65,6 +87,7 @@ namespace Dnc.Seedwork
             // TODO: 如果在以上内容中替代了终结器，则取消注释以下行。
             // GC.SuppressFinalize(this);
         }
+
         #endregion
     }
 }

@@ -16,6 +16,7 @@
     <ProjectReference Include="..\..\src\Dnc.Aspects\Dnc.Aspects.csproj" />
     <ProjectReference Include="..\..\src\Dnc.Core\Dnc.Core.csproj" />
     <ProjectReference Include="..\..\src\Dnc.CQRS\Dnc.CQRS.csproj" />
+    <ProjectReference Include="..\..\src\Dnc.Drawing\Dnc.Drawing.csproj" />
     <ProjectReference Include="..\..\src\Dnc.Events.InMemory\Dnc.Events.InMemory.csproj" />
     <ProjectReference Include="..\..\src\Dnc.Events\Dnc.Events.csproj" />
     <ProjectReference Include="..\..\src\Dnc.ML\Dnc.ML.csproj" />
