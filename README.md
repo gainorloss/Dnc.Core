@@ -22,7 +22,7 @@
   * [x] [Vuev-model原理及示例](./.vue/Vuev-model原理及示例.md)
   * [x] [VuePress搭建在綫文檔](./.vue/VuePress搭建在綫文檔.md)
 * *react*
-  * [x] [react config-overrides.js配置](./.react/react config-overrides.js配置.md)
+  * [x] [reactconfig-overrides.js配置](./.react/react config-overrides.js配置.md)
 * *docker*
   * [x] [docker的特点和优势](./.docker/docker的特点和优势.md)
   * [x] [docker命令启动各大主流中间件、Dockerfile怎么写及docker的使用[拷贝即用]](./.docker/docker命令启动各大主流中间件、Dockerfile怎么写及docker的使用.md)
