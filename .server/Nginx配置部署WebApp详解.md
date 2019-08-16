@@ -33,13 +33,13 @@ nginx -s reload;
 
 ## ps
 
-1. 工作进程
+1. 工作进程 nginx.conf配置
 
 ``` shell
 worker_processes    8;# 服务器几核配置几
 ```
 
-2. 事件处理模型
+2. 事件处理模型 nginx.conf配置
 
 ``` shell
 events{
@@ -50,12 +50,12 @@ events{
 }
 ```
 
-3. http 传输优化 gzip
+3. http 传输优化 gzip 单独文件配置 拷贝即用，更改 server_name location proxy_pass
 
 ``` shell
 gzip on;
 gzip_min_length 1k;
-gzip_buffers    432k;
+gzip_buffers    4 32k;
 gzip_http_version   1.0;
 gzip_comp_level 8;
 gzip_types  text/plain application/x-javascript text/css application/xml;
