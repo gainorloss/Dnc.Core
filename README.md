@@ -3,7 +3,7 @@
 
 # Dnc简介
 基于**StandardLibrary**的快速开发框架，提供了稳定强大、方便易用的事件处理机制和高性能高吞吐的CQRS组件。
-
+![](https://github.com/gainorloss/Dnc.Core/workflows/build/badge.svg)
 # Dnc特性
 
 * 稳定强大、方便易用的事件处理机制
